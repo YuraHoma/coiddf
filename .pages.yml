@@ -1,0 +1,110 @@
+# Pages CMS configuration — https://pagescms.org
+# Edits commit straight to GitHub (this repo), same content as Decap (/admin).
+media:
+  input: src/assets
+  output: /assets
+
+content:
+  - name: news
+    label: Новини
+    type: collection
+    path: src/news
+    filename: '{year}-{month}-{day}-{fields.title}.md'
+    view:
+      primary: title
+      fields: [title, date]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - { name: title, label: Заголовок, type: string }
+      - { name: date, label: Дата, type: date }
+      - { name: image, label: Головне фото, type: image }
+      - { name: excerpt, label: Короткий опис, type: text }
+      - { name: body, label: Повний текст, type: rich-text }
+
+  - name: projects
+    label: Проєкти
+    type: collection
+    path: src/projects
+    filename: '{year}-{month}-{day}-{fields.title}.md'
+    view:
+      primary: title
+      fields: [title, date]
+    fields:
+      - { name: title, label: Назва, type: string }
+      - { name: date, label: Дата, type: date }
+      - { name: excerpt, label: Опис, type: text }
+
+  - name: settings
+    label: Налаштування сайту
+    type: file
+    path: src/_data/site.json
+    fields:
+      - { name: orgFull, label: Повна назва, type: string }
+      - { name: orgShort, label: Скорочення, type: string }
+      - { name: hotline, label: Гаряча лінія, type: string }
+      - { name: donateUrl, label: Посилання «Підтримати», type: string }
+      - name: contacts
+        label: Email-контакти
+        type: object
+        fields:
+          - { name: general, label: Загальний, type: string }
+          - { name: partners, label: Партнерство, type: string }
+          - { name: press, label: Для медіа, type: string }
+
+  - name: team
+    label: Сторінка «Команда»
+    type: file
+    path: src/_data/team.json
+    fields:
+      - name: hero
+        label: Шапка
+        type: object
+        fields:
+          - { name: eyebrow, label: Надзаголовок, type: string }
+          - { name: heading, label: Заголовок, type: string }
+          - { name: lead, label: Опис, type: text }
+      - name: members
+        label: Учасники команди
+        type: object
+        list: true
+        fields:
+          - { name: role, label: Роль, type: string }
+          - { name: name, label: Імʼя, type: string }
+          - { name: bio, label: Біографія, type: text }
+
+  - name: reports
+    label: Сторінка «Звітність»
+    type: file
+    path: src/_data/reports.json
+    fields:
+      - name: hero
+        label: Шапка
+        type: object
+        fields:
+          - { name: eyebrow, label: Надзаголовок, type: string }
+          - { name: heading, label: Заголовок, type: string }
+          - { name: lead, label: Опис, type: text }
+      - { name: items, label: Перелік звітів, type: string, list: true }
+
+  - name: contacts
+    label: Сторінка «Контакти»
+    type: file
+    path: src/_data/contacts.json
+    fields:
+      - name: hero
+        label: Шапка
+        type: object
+        fields:
+          - { name: eyebrow, label: Надзаголовок, type: string }
+          - { name: heading, label: Заголовок, type: string }
+          - { name: lead, label: Опис, type: text }
+      - name: items
+        label: Реквізити
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Назва, type: string }
+          - { name: value, label: Значення, type: string }

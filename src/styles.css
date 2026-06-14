@@ -256,16 +256,12 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
 .brand-mark {
   display: grid;
   place-items: center;
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   flex: 0 0 auto;
-  background: var(--forest);
-  color: var(--lime);
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 0.02em;
+  color: #53763a; /* logo's native brand green on the light header */
 }
+.brand-mark svg { width: 100%; height: 100%; display: block; }
 .brand > span { display: flex; flex-direction: column; line-height: 1.1; }
 .brand strong {
   font-size: 14px;
@@ -967,14 +963,11 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
 .footer-brand-mark {
   display: grid;
   place-items: center;
-  width: 48px; height: 48px;
+  width: 54px; height: 54px;
   flex: 0 0 auto;
-  background: var(--forest);
-  color: var(--lime);
-  border-radius: 12px;
-  font-size: 14px;
-  font-weight: 800;
+  color: #fff; /* logo goes white on the dark footer */
 }
+.footer-brand-mark svg { width: 100%; height: 100%; display: block; }
 .footer-brand-name { display: flex; flex-direction: column; line-height: 1.2; }
 .footer-brand-name strong { font-size: 13px; font-weight: 700; color: var(--white); }
 .footer-nav-cols { display: flex; gap: 48px; }
