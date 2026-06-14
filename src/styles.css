@@ -297,14 +297,6 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
 }
 .nav a:hover { background: var(--surface-2); }
 .nav a.active { color: var(--ink); background: var(--surface-2); }
-.nav a.active::after {
-  content: "";
-  position: absolute;
-  left: 13px; right: 13px; bottom: 3px;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--lime-deep);
-}
 
 .header-right { display: flex; align-items: center; gap: 10px; }
 
@@ -648,7 +640,7 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
   background: var(--forest);
   color: var(--lime);
 }
-.resource-card > span {
+.resource-card > span:not(.resource-icon) {
   display: flex;
   flex-direction: column;
   gap: 2px;
@@ -656,6 +648,7 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
   color: var(--muted);
   line-height: 1.4;
 }
+.resource-icon svg { width: 26px; height: 26px; }
 .resource-card > span strong {
   font-size: 22px;
   font-weight: 800;
@@ -733,7 +726,7 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
   padding-bottom: 22px;
 }
 .news-img-placeholder {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   border-radius: var(--radius);
   background:
     radial-gradient(70% 70% at 30% 20%, rgba(199, 242, 61, 0.18), transparent 60%),
@@ -756,23 +749,29 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
 .news-grid a:last-child:hover { color: var(--green); }
 
 /* news card media — image or placeholder, both clickable */
-.news-card-media { display: block; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16 / 10; }
+.news-card-media { display: block; border-radius: var(--radius); overflow: hidden; aspect-ratio: 16 / 9; }
 .news-card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--t); }
 .news-card-media:hover img { transform: scale(1.03); }
+
+/* "all news" button centred under a grid */
+.news-all-wrap { display: flex; justify-content: center; margin-top: clamp(28px, 4vw, 44px); }
 
 /* news article page */
 .news-article { display: flex; flex-direction: column; }
 .news-article-cover {
   width: 100%;
-  max-height: 460px;
+  aspect-ratio: 16 / 9;
+  max-height: 560px;
   object-fit: cover;
   border-radius: var(--radius-lg);
   margin-bottom: clamp(24px, 3vw, 36px);
 }
-.news-article-body { max-width: 720px; }
+.news-article-body { max-width: 760px; }
 .news-article-body p { margin-bottom: 18px; color: var(--text); font-size: 18px; line-height: 1.7; }
 .news-article-lead { font-size: 21px; font-weight: 600; color: var(--ink); }
-.news-article .wide-action { margin-top: clamp(28px, 4vw, 44px); align-self: flex-start; }
+
+/* "other news" block at the foot of an article */
+.news-more .section-heading { margin-bottom: clamp(28px, 3vw, 40px); }
 
 /* ---------- 17. CTA BAND ---------- */
 .cta-band {

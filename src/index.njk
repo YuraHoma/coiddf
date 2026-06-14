@@ -103,7 +103,7 @@ description: Головна сторінка благодійного фонду
           {%- endfor %}
         </div>
       </section>
-      <section class="section section-light section-top-gap">
+      <section class="section section-light">
         <div class="section-heading center"><h2>{{ home.resources.heading }}</h2></div>
         <div class="report-list">
           {%- for r in home.resources.items %}
@@ -160,17 +160,17 @@ description: Головна сторінка благодійного фонду
         </div>
       </section>
       <section class="section news-preview">
-        <div class="section-heading news-heading">
-          <div>
-            <p class="eyebrow">Новини</p>
-            <h2>{{ home.newsHeading }}</h2>
-          </div>
-          <a class="button button-outline news-all-btn" href="/novyny/">Усі новини ↗</a>
+        <div class="section-heading">
+          <p class="eyebrow">Новини</p>
+          <h2>{{ home.newsHeading }}</h2>
         </div>
         <div class="news-mini-grid">
           {%- for post in collections.news %}{% if loop.index <= 3 %}
 {{ news.newsCard(post, false) }}
           {%- endif %}{% endfor %}
+        </div>
+        <div class="news-all-wrap">
+          <a class="button button-outline news-all-btn" href="/novyny/">Усі новини ↗</a>
         </div>
       </section>
       <section class="cta-band">

@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 ---
+{% import "news-card.njk" as news %}
       <section class="page-hero section-dark">
         <div>
           <p class="eyebrow">Новини</p>
@@ -14,5 +15,22 @@ layout: base.njk
           {% if excerpt %}<p class="news-article-lead">{{ excerpt }}</p>{% endif %}
           {{ content | safe }}
         </div>
-        <a class="wide-action" href="/novyny/">Усі новини <span>↗</span></a>
       </article>
+      <section class="section section-light news-more">
+        <div class="section-heading">
+          <p class="eyebrow">Новини</p>
+          <h2>Інші новини</h2>
+        </div>
+        <div class="news-mini-grid">
+          {%- set shown = 0 -%}
+          {%- for post in collections.news -%}
+          {%- if post.url != page.url and shown < 3 -%}
+{{ news.newsCard(post, false) }}
+          {%- set shown = shown + 1 -%}
+          {%- endif -%}
+          {%- endfor -%}
+        </div>
+        <div class="news-all-wrap">
+          <a class="button button-outline" href="/novyny/">Усі новини ↗</a>
+        </div>
+      </section>
