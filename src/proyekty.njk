@@ -1,0 +1,24 @@
+---
+layout: base.njk
+permalink: /proyekty/
+title: Проєкти | Фонд розвитку міжнародної співпраці
+description: Гуманітарні, освітні та відновлювальні проєкти фонду.
+---
+      <section class="page-hero section-dark">
+        <div>
+          <p class="eyebrow">{{ proyekty.hero.eyebrow }}</p>
+          <h1>{{ proyekty.hero.heading }}</h1>
+          <p class="lead">{{ proyekty.hero.lead }}</p>
+        </div>
+      </section>
+      <section class="section section-light">
+        <div class="project-list">
+          {%- for p in collections.projects %}
+          <article>
+            <span>{{ p.data.date | uadate }}</span>
+            <h3>{{ p.data.title }}</h3>
+            <p>{{ p.data.excerpt }}</p>
+          </article>
+          {%- endfor %}
+        </div>
+      </section>

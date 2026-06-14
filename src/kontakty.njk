@@ -1,0 +1,20 @@
+---
+layout: base.njk
+permalink: /kontakty/
+title: Контакти | Фонд розвитку міжнародної співпраці
+description: Контакти та юридична інформація благодійного фонду.
+---
+      <section class="page-hero section-dark">
+        <div>
+          <p class="eyebrow">{{ contacts.hero.eyebrow }}</p>
+          <h1>{{ contacts.hero.heading }}</h1>
+          <p class="lead">{{ contacts.hero.lead }}</p>
+        </div>
+      </section>
+      <section class="section contacts-page">
+        <div class="contact-list">
+          {%- for c in contacts.items %}
+          <span>{{ c.label }}: {{ c.value }}</span>
+          {%- endfor %}
+        </div>
+      </section>

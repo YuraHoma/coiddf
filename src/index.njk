@@ -1,0 +1,183 @@
+---
+layout: base.njk
+permalink: /
+title: Фонд розвитку міжнародної співпраці | Гуманітарна допомога
+description: Головна сторінка благодійного фонду.
+---
+{% import "icons.njk" as icons %}
+{% import "news-card.njk" as news %}
+      <section class="home-hero">
+        <div class="hero-top">
+          <div class="hero-headline">
+            <p class="hero-org">{{ home.hero.orgBanner | safe }}</p>
+            <h1>{{ home.hero.headline | safe }}</h1>
+          </div>
+          <div class="hero-intro">
+            <p class="lead">{{ home.hero.lead }}</p>
+            <div class="hero-actions">
+              <a class="button button-accent" href="{{ site.donateUrl }}">{{ home.hero.primaryLabel }}
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+              <a class="button button-ghost" href="{{ home.hero.secondaryUrl }}">{{ home.hero.secondaryLabel }}</a>
+            </div>
+          </div>
+        </div>
+        <figure class="hero-figure">
+          <img src="{{ home.hero.image }}" alt="{{ home.hero.imageAlt }}">
+          <div class="hero-stat-card">
+            <span class="hero-stat-label">{{ home.hero.statLabel }}</span>
+            <strong class="hero-stat-value">{{ home.hero.statValue }}</strong>
+            <div class="hero-stat-meta">
+              {%- for m in home.hero.statMeta %}
+              <span>{{ m }}</span>
+              {%- endfor %}
+            </div>
+          </div>
+        </figure>
+      </section>
+      <section class="metrics section-light">
+        {%- for m in home.metrics %}
+        <article><span>{{ m.label }}</span><strong>{{ m.value }}</strong></article>
+        {%- endfor %}
+      </section>
+      <section class="section intro-story">
+        <div class="intro-story-top">
+          <div>
+            <p class="eyebrow">{{ home.mission.eyebrow }}</p>
+            <h2>{{ home.mission.heading }}</h2>
+          </div>
+          <p>{{ home.mission.body }}</p>
+        </div>
+        <div class="intro-photos">
+          {%- for photo in home.mission.photos %}
+          <div class="intro-photo" style="background-image:url('{{ photo }}')"></div>
+          {%- endfor %}
+        </div>
+      </section>
+      <section class="section focus-map">
+        <div class="map-card">
+          <span>{{ home.geography.regionTitle }}</span>
+          <small>{{ home.geography.regionSub }}</small>
+        </div>
+        <div>
+          <h2>{{ home.geography.heading }}</h2>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow">{{ home.focusAreas.eyebrow }}</p>
+          <h2>{{ home.focusAreas.heading }}</h2>
+        </div>
+        <div class="cards-grid">
+          {%- for c in home.focusAreas.items %}
+          <article>
+            <h3>{{ c.title }}</h3>
+            <p>{{ c.text }}</p>
+          </article>
+          {%- endfor %}
+        </div>
+      </section>
+      <section class="section process-section">
+        <div class="process-panel">
+          <div class="section-heading">
+            <p class="eyebrow">{{ home.process.eyebrow }}</p>
+            <h2>{{ home.process.heading }}</h2>
+          </div>
+          <div class="process-grid">
+            {%- for s in home.process.steps %}
+            <article><span>{{ loop.index }}</span><h3>{{ s.title }}</h3><p>{{ s.text }}</p></article>
+            {%- endfor %}
+          </div>
+          <a class="wide-action" href="{{ home.process.ctaUrl }}">{{ home.process.ctaLabel }} <span>↗</span></a>
+        </div>
+      </section>
+      <section class="section impact-feature">
+        <div class="feature-copy">
+          <p class="eyebrow">{{ home.response.eyebrow }}</p>
+          <h2>{{ home.response.heading }}</h2>
+          <p>{{ home.response.body }}</p>
+        </div>
+        <div class="feature-gallery">
+          {%- for img in home.response.images %}
+          <img src="{{ img.src }}" alt="{{ img.alt }}">
+          {%- endfor %}
+        </div>
+      </section>
+      <section class="section section-light section-top-gap">
+        <div class="section-heading center"><h2>{{ home.resources.heading }}</h2></div>
+        <div class="report-list">
+          {%- for r in home.resources.items %}
+          <div class="resource-card">
+            <span class="resource-icon">{{ icons.resourceIcon(r.icon) }}</span>
+            <span>{{ r.title }}{% if r.strong %}<strong>{{ r.strong }}</strong>{% endif %}{{ r.sub }}</span>
+          </div>
+          {%- endfor %}
+        </div>
+      </section>
+      <section class="section partners-section">
+        <div class="section-heading center"><h2>{{ home.partnersHeading }}</h2></div>
+        <div class="partner-logos">
+          <div class="partner-logo-card">
+            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Співпраця з Німеччиною">
+              <rect width="36" height="12" rx="1" fill="#1a1a1a"/>
+              <rect y="12" width="36" height="12" rx="1" fill="#D00000"/>
+              <rect y="24" width="36" height="12" rx="1" fill="#FFCE00"/>
+              <text x="46" y="20" font-family="inherit" font-size="11" font-weight="700" fill="currentColor">GERMAN</text>
+              <text x="46" y="34" font-family="inherit" font-size="11" font-weight="400" fill="currentColor" opacity=".6">COOPERATION</text>
+            </svg>
+          </div>
+          <div class="partner-logo-card">
+            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="100% LIFE">
+              <text x="8" y="32" font-family="inherit" font-size="22" font-weight="800" fill="#C8102E">100%</text>
+              <text x="8" y="46" font-family="inherit" font-size="13" font-weight="700" fill="currentColor" letter-spacing="2">LIFE</text>
+              <text x="60" y="46" font-family="inherit" font-size="10" font-weight="400" fill="currentColor" opacity=".5">Zaporizhzhia</text>
+            </svg>
+          </div>
+          <div class="partner-logo-card">
+            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="ACTED">
+              <rect x="8" y="12" width="28" height="28" rx="4" fill="#E84B23"/>
+              <text x="14" y="31" font-family="inherit" font-size="11" font-weight="800" fill="#fff">ACT</text>
+              <text x="42" y="28" font-family="inherit" font-size="16" font-weight="800" fill="currentColor">ACTED</text>
+              <text x="42" y="40" font-family="inherit" font-size="9" font-weight="400" fill="currentColor" opacity=".5">aid | courage | expertise</text>
+            </svg>
+          </div>
+          <div class="partner-logo-card">
+            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="UFBF">
+              <rect x="8" y="10" width="30" height="30" rx="15" fill="#2B5EA7"/>
+              <text x="15" y="30" font-family="inherit" font-size="11" font-weight="800" fill="#fff">UF</text>
+              <text x="44" y="22" font-family="inherit" font-size="14" font-weight="800" fill="currentColor">UFBF</text>
+              <text x="44" y="36" font-family="inherit" font-size="9" font-weight="400" fill="currentColor" opacity=".5">Ukraine Food Bank</text>
+            </svg>
+          </div>
+          <div class="partner-logo-card">
+            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Samaritan’s Purse">
+              <circle cx="22" cy="24" r="14" fill="#005EB8" opacity=".12"/>
+              <path d="M22 10 L22 38 M10 24 L34 24" stroke="#005EB8" stroke-width="3" stroke-linecap="round"/>
+              <text x="42" y="22" font-family="inherit" font-size="10" font-weight="700" fill="currentColor">Samaritan’s</text>
+              <text x="42" y="35" font-family="inherit" font-size="10" font-weight="700" fill="currentColor">Purse</text>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <section class="section news-preview">
+        <div class="section-heading news-heading">
+          <div>
+            <p class="eyebrow">Новини</p>
+            <h2>{{ home.newsHeading }}</h2>
+          </div>
+          <a class="button button-outline news-all-btn" href="/novyny/">Усі новини ↗</a>
+        </div>
+        <div class="news-mini-grid">
+          {%- for post in collections.news %}{% if loop.index <= 3 %}
+{{ news.newsCard(post, false) }}
+          {%- endif %}{% endfor %}
+        </div>
+      </section>
+      <section class="cta-band">
+        <div>
+          <h2>{{ home.cta.heading }}</h2>
+          <a class="button button-accent" href="{{ site.donateUrl }}">{{ home.cta.buttonLabel }}
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </section>

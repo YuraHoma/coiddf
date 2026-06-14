@@ -1,0 +1,21 @@
+---
+layout: base.njk
+permalink: /novyny/
+title: Новини | Фонд розвитку міжнародної співпраці
+description: Останні новини та оновлення фонду.
+---
+{% import "news-card.njk" as news %}
+      <section class="page-hero section-dark">
+        <div>
+          <p class="eyebrow">Новини</p>
+          <h1>Останні новини та оновлення фонду</h1>
+          <p class="lead">Реагування, видача допомоги та історії громад, яким ми допомагаємо.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="news-grid">
+          {%- for post in collections.news %}
+{{ news.newsCard(post, true) }}
+          {%- endfor %}
+        </div>
+      </section>

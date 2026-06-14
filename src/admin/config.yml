@@ -1,0 +1,375 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Allows local testing with `npx decap-server` (run `npm run cms` alongside the dev server)
+local_backend: true
+
+media_folder: "src/assets"
+public_folder: "/assets"
+locale: "uk"
+
+collections:
+  # ---------------------------------------------------------------- Site settings
+  - name: "settings"
+    label: "Налаштування сайту"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "site"
+        label: "Загальне (назва, контакти, меню)"
+        file: "src/_data/site.json"
+        fields:
+          - { name: orgShort, label: "Логотип — короткий код", widget: string }
+          - { name: orgFull, label: "Повна назва", widget: string }
+          - { name: orgLine1, label: "Назва — рядок 1", widget: string }
+          - { name: orgLine2, label: "Назва — рядок 2", widget: string }
+          - { name: orgEnglish, label: "Назва англійською", widget: string }
+          - { name: edrpou, label: "Код ЄДРПОУ", widget: string }
+          - { name: hotline, label: "Гаряча лінія (як показувати)", widget: string }
+          - { name: hotlineTel, label: "Гаряча лінія для дзвінка (лише цифри)", widget: string }
+          - { name: donateUrl, label: "Посилання кнопки «Підтримати»", widget: string }
+          - name: nav
+            label: "Головне меню"
+            widget: list
+            fields:
+              - { name: label, label: "Назва", widget: string }
+              - { name: href, label: "Посилання", widget: string }
+          - name: footerNavCol1
+            label: "Футер — колонка 1"
+            widget: list
+            fields:
+              - { name: label, label: "Назва", widget: string }
+              - { name: href, label: "Посилання", widget: string }
+          - name: footerNavCol2
+            label: "Футер — колонка 2"
+            widget: list
+            fields:
+              - { name: label, label: "Назва", widget: string }
+              - { name: href, label: "Посилання", widget: string }
+          - name: contacts
+            label: "Контактні email"
+            widget: object
+            fields:
+              - { name: general, label: "Загальний", widget: string }
+              - { name: partners, label: "Партнерство", widget: string }
+              - { name: press, label: "Для медіа", widget: string }
+          - name: socials
+            label: "Соцмережі"
+            widget: object
+            fields:
+              - { name: facebook, label: "Facebook", widget: string, required: false }
+              - { name: instagram, label: "Instagram", widget: string, required: false }
+              - { name: twitter, label: "Twitter / X", widget: string, required: false }
+              - { name: youtube, label: "YouTube", widget: string, required: false }
+
+  # ---------------------------------------------------------------- Homepage
+  - name: "home"
+    label: "Головна сторінка"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "home"
+        label: "Контент головної"
+        file: "src/_data/home.json"
+        fields:
+          - { name: title, label: "SEO-заголовок вкладки", widget: string }
+          - { name: description, label: "SEO-опис", widget: text }
+          - name: hero
+            label: "Головний банер"
+            widget: object
+            fields:
+              - { name: orgBanner, label: "Назва над заголовком (можна <br>)", widget: text }
+              - { name: headline, label: "Заголовок (можна <br> і <span class=\"accent\">слово</span>)", widget: text }
+              - { name: lead, label: "Підзаголовок", widget: text }
+              - { name: primaryLabel, label: "Кнопка 1 — текст", widget: string }
+              - { name: secondaryLabel, label: "Кнопка 2 — текст", widget: string }
+              - { name: secondaryUrl, label: "Кнопка 2 — посилання", widget: string }
+              - { name: image, label: "Фото", widget: image }
+              - { name: imageAlt, label: "Опис фото (alt)", widget: string }
+              - { name: statLabel, label: "Картка — підпис", widget: string }
+              - { name: statValue, label: "Картка — число", widget: string }
+              - name: statMeta
+                label: "Картка — рядки під числом"
+                widget: list
+                field: { name: line, label: "Рядок", widget: string }
+          - name: metrics
+            label: "Цифри впливу"
+            widget: list
+            fields:
+              - { name: value, label: "Число", widget: string }
+              - { name: label, label: "Підпис", widget: string }
+          - name: mission
+            label: "Блок «Чому ми працюємо»"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "Мітка", widget: string }
+              - { name: heading, label: "Заголовок", widget: string }
+              - { name: body, label: "Текст", widget: text }
+              - name: photos
+                label: "Фото"
+                widget: list
+                field: { name: photo, label: "Фото", widget: image }
+          - name: geography
+            label: "Блок «Географія»"
+            widget: object
+            fields:
+              - { name: regionTitle, label: "Район", widget: string }
+              - { name: regionSub, label: "Область", widget: string }
+              - { name: heading, label: "Заголовок", widget: string }
+          - name: focusAreas
+            label: "Напрями допомоги"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "Мітка", widget: string }
+              - { name: heading, label: "Заголовок", widget: string }
+              - name: items
+                label: "Картки"
+                widget: list
+                fields:
+                  - { name: title, label: "Заголовок", widget: string }
+                  - { name: text, label: "Текст", widget: text }
+          - name: process
+            label: "Як ми працюємо"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "Мітка", widget: string }
+              - { name: heading, label: "Заголовок", widget: string }
+              - { name: ctaLabel, label: "Кнопка — текст", widget: string }
+              - { name: ctaUrl, label: "Кнопка — посилання", widget: string }
+              - name: steps
+                label: "Кроки"
+                widget: list
+                fields:
+                  - { name: title, label: "Заголовок", widget: string }
+                  - { name: text, label: "Текст", widget: text }
+          - name: response
+            label: "Блок «Реагування»"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "Мітка", widget: string }
+              - { name: heading, label: "Заголовок", widget: string }
+              - { name: body, label: "Текст", widget: text }
+              - name: images
+                label: "Фото"
+                widget: list
+                fields:
+                  - { name: src, label: "Фото", widget: image }
+                  - { name: alt, label: "Опис (alt)", widget: string }
+          - name: resources
+            label: "Інфраструктура"
+            widget: object
+            fields:
+              - { name: heading, label: "Заголовок", widget: string }
+              - name: items
+                label: "Картки"
+                widget: list
+                fields:
+                  - { name: icon, label: "Іконка", widget: select, options: ["warehouse", "package", "freezer", "van", "truck", "medical"] }
+                  - { name: title, label: "Назва", widget: string }
+                  - { name: strong, label: "Виділене (велике)", widget: string, required: false }
+                  - { name: sub, label: "Підпис", widget: string, required: false }
+          - { name: partnersHeading, label: "Партнери — заголовок", widget: string }
+          - name: cta
+            label: "Заклик (внизу сторінки)"
+            widget: object
+            fields:
+              - { name: heading, label: "Заголовок", widget: string }
+              - { name: buttonLabel, label: "Кнопка — текст", widget: string }
+          - { name: newsHeading, label: "Новини — заголовок", widget: string }
+
+  # ---------------------------------------------------------------- News
+  - name: "news"
+    label: "Новини"
+    label_singular: "Новину"
+    folder: "src/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{date}} — {{title}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { name: title, label: "Заголовок", widget: string }
+      - { name: date, label: "Дата", widget: datetime, format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { name: image, label: "Головне фото", widget: image, required: false }
+      - { name: excerpt, label: "Короткий опис (для списку та початку статті)", widget: text }
+      - { name: body, label: "Повний текст статті", widget: markdown, required: false }
+
+  # ---------------------------------------------------------------- Projects
+  - name: "projects"
+    label: "Проєкти (картки)"
+    label_singular: "Проєкт"
+    folder: "src/projects"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{date}} — {{title}}"
+    sortable_fields: ["date", "title"]
+    fields:
+      - { name: title, label: "Назва проєкту", widget: string }
+      - { name: date, label: "Дата", widget: datetime, format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false, picker_utc: true }
+      - { name: excerpt, label: "Опис", widget: text }
+
+  # ---------------------------------------------------------------- Interior pages
+  - name: "pages"
+    label: "Сторінки"
+    delete: false
+    editor:
+      preview: false
+    files:
+      # ---- Про нас
+      - name: "pronas"
+        label: "Про нас"
+        file: "src/_data/pronas.json"
+        fields:
+          - name: hero
+            label: "Банер сторінки"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "Мітка", widget: string }
+              - { name: heading, label: "Заголовок", widget: text }
+              - { name: lead, label: "Підзаголовок", widget: text }
+              - { name: image, label: "Фото", widget: image }
+              - { name: imageAlt, label: "Опис фото (alt)", widget: string }
+          - name: mission
+            label: "Місія / Чому ми"
+            widget: list
+            fields:
+              - { name: title, label: "Заголовок", widget: string }
+              - { name: body, label: "Текст", widget: text }
+          - name: story
+            label: "Історія (абзаци)"
+            widget: list
+            field: { name: paragraph, label: "Абзац", widget: text }
+          - name: principles
+            label: "Принципи"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "Мітка", widget: string }
+              - { name: heading, label: "Заголовок", widget: string }
+              - name: items
+                label: "Принципи"
+                widget: list
+                fields:
+                  - { name: title, label: "Назва", widget: string }
+                  - { name: text, label: "Текст", widget: text }
+          - name: awards
+            label: "Нагороди"
+            widget: object
+            fields:
+              - { name: heading, label: "Заголовок секції", widget: string }
+              - { name: placeholderTitle, label: "Підпис плейсхолдера", widget: string }
+              - { name: placeholderText, label: "Текст плейсхолдера", widget: text }
+      # ---- Команда
+      - name: "team"
+        label: "Команда"
+        file: "src/_data/team.json"
+        fields:
+          - name: hero
+            label: "Банер сторінки"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "Мітка", widget: string }
+              - { name: heading, label: "Заголовок", widget: text }
+              - { name: lead, label: "Підзаголовок", widget: text }
+          - name: members
+            label: "Учасники команди"
+            label_singular: "Учасника"
+            widget: list
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - { name: role, label: "Роль", widget: string }
+              - { name: name, label: "Ім'я", widget: string }
+              - { name: bio, label: "Опис (необов'язково)", widget: text, required: false }
+      # ---- Проєкти (банер сторінки)
+      - name: "proyekty"
+        label: "Проєкти — банер сторінки"
+        file: "src/_data/proyekty.json"
+        fields:
+          - name: hero
+            label: "Банер сторінки"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "Мітка", widget: string }
+              - { name: heading, label: "Заголовок", widget: text }
+              - { name: lead, label: "Підзаголовок", widget: text }
+      # ---- Отримати допомогу
+      - name: "dopomogty"
+        label: "Отримати допомогу"
+        file: "src/_data/dopomogty.json"
+        fields:
+          - name: hero
+            label: "Банер сторінки"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "Мітка", widget: string }
+              - { name: heading, label: "Заголовок", widget: text }
+              - { name: lead, label: "Підзаголовок", widget: text }
+          - name: cards
+            label: "Картки"
+            widget: list
+            fields:
+              - { name: title, label: "Заголовок", widget: string }
+              - { name: text, label: "Текст", widget: text }
+      # ---- Реквізити
+      - name: "donate"
+        label: "Реквізити (Допомогти нам)"
+        file: "src/_data/donate.json"
+        fields:
+          - name: hero
+            label: "Банер сторінки"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "Мітка", widget: string }
+              - { name: heading, label: "Заголовок", widget: text }
+              - { name: lead, label: "Підзаголовок", widget: text }
+          - name: cards
+            label: "Реквізити"
+            label_singular: "Реквізит"
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { name: title, label: "Заголовок", widget: string }
+              - name: rows
+                label: "Рядки"
+                widget: list
+                summary: "{{fields.label}} {{fields.value}}"
+                fields:
+                  - { name: label, label: "Підпис (необов'язково)", widget: string, required: false }
+                  - { name: value, label: "Значення", widget: string }
+                  - { name: strong, label: "Виділити жирним", widget: boolean, default: false, required: false }
+      # ---- Звітність
+      - name: "reports"
+        label: "Звітність"
+        file: "src/_data/reports.json"
+        fields:
+          - name: hero
+            label: "Банер сторінки"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "Мітка", widget: string }
+              - { name: heading, label: "Заголовок", widget: text }
+              - { name: lead, label: "Підзаголовок", widget: text }
+          - name: items
+            label: "Документи звітності"
+            widget: list
+            field: { name: title, label: "Назва документа", widget: string }
+      # ---- Контакти
+      - name: "contacts"
+        label: "Контакти"
+        file: "src/_data/contacts.json"
+        fields:
+          - name: hero
+            label: "Банер сторінки"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "Мітка", widget: string }
+              - { name: heading, label: "Заголовок", widget: text }
+              - { name: lead, label: "Підзаголовок", widget: text }
+          - name: items
+            label: "Контактні рядки"
+            widget: list
+            summary: "{{fields.label}}: {{fields.value}}"
+            fields:
+              - { name: label, label: "Підпис", widget: string }
+              - { name: value, label: "Значення", widget: string }

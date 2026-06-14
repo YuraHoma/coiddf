@@ -1,0 +1,43 @@
+{
+  "orgShort": "ICDF",
+  "orgFull": "Благодійна організація «Фонд розвитку міжнародної співпраці»",
+  "orgLine1": "Благодійна організація",
+  "orgLine2": "«Фонд розвитку міжнародної співпраці»",
+  "orgEnglish": "Charity Organization \"International Cooperation Development Fund\"",
+  "edrpou": "44806472",
+  "hotline": "0-800-305-350",
+  "hotlineTel": "0800305350",
+  "donateUrl": "/dopomogty-nam/",
+  "nav": [
+    { "href": "/", "label": "Головна" },
+    { "href": "/pro-nas/", "label": "Про нас" },
+    { "href": "/nasha-komanda/", "label": "Команда" },
+    { "href": "/proyekty/", "label": "Проєкти" },
+    { "href": "/dopomogty/", "label": "Допомогти" },
+    { "href": "/zvitnist/", "label": "Звітність" },
+    { "href": "/novyny/", "label": "Новини" },
+    { "href": "/kontakty/", "label": "Контакти" }
+  ],
+  "footerNavCol1": [
+    { "href": "/pro-nas/", "label": "Про нас" },
+    { "href": "/nasha-komanda/", "label": "Наша команда" },
+    { "href": "/proyekty/", "label": "Проєкти" },
+    { "href": "/zvitnist/", "label": "Звітність" }
+  ],
+  "footerNavCol2": [
+    { "href": "/dopomogty/", "label": "Отримати допомогу" },
+    { "href": "/novyny/", "label": "Новини" },
+    { "href": "/kontakty/", "label": "Контакти" }
+  ],
+  "contacts": {
+    "general": "info@icdf.org.ua",
+    "partners": "partners@icdf.org.ua",
+    "press": "press@icdf.org.ua"
+  },
+  "socials": {
+    "facebook": "https://www.facebook.com/",
+    "instagram": "https://www.instagram.com/",
+    "twitter": "https://twitter.com/",
+    "youtube": "https://www.youtube.com/"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "icdf-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "БО «Фонд розвитку міжнародної співпраці» — static site (Eleventy + Decap CMS)",
+  "scripts": {
+    "build": "rm -rf _site && eleventy",
+    "serve": "eleventy --serve --port 8745",
+    "clean": "rm -rf _site"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

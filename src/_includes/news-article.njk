@@ -1,0 +1,18 @@
+---
+layout: base.njk
+---
+      <section class="page-hero section-dark">
+        <div>
+          <p class="eyebrow">Новини</p>
+          <h1>{{ title }}</h1>
+          <p class="lead">{{ date | uadate }}</p>
+        </div>
+      </section>
+      <article class="section news-article">
+        {% if image %}<img class="news-article-cover" src="{{ image }}" alt="{{ title }}">{% endif %}
+        <div class="news-article-body">
+          {% if excerpt %}<p class="news-article-lead">{{ excerpt }}</p>{% endif %}
+          {{ content | safe }}
+        </div>
+        <a class="wide-action" href="/novyny/">Усі новини <span>↗</span></a>
+      </article>

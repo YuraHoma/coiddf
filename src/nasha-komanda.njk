@@ -1,0 +1,24 @@
+---
+layout: base.njk
+permalink: /nasha-komanda/
+title: Наша команда | Фонд розвитку міжнародної співпраці
+description: Команда фонду — засновники, менеджери, бухгалтерія, склад і волонтери.
+---
+      <section class="page-hero section-dark">
+        <div>
+          <p class="eyebrow">{{ team.hero.eyebrow }}</p>
+          <h1>{{ team.hero.heading }}</h1>
+          <p class="lead">{{ team.hero.lead }}</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="team-grid">
+          {%- for m in team.members %}
+          <article>
+            <span>{{ m.role }}</span>
+            <h3>{{ m.name }}</h3>
+            {% if m.bio %}<p>{{ m.bio }}</p>{% endif %}
+          </article>
+          {%- endfor %}
+        </div>
+      </section>

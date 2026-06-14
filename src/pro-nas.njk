@@ -1,0 +1,42 @@
+---
+layout: base.njk
+permalink: /pro-nas/
+title: Про нас | Фонд розвитку міжнародної співпраці
+description: Місія, принципи та історія благодійного фонду.
+---
+      <section class="about-hero">
+        <div>
+          <p class="eyebrow">{{ pronas.hero.eyebrow }}</p>
+          <h1>{{ pronas.hero.heading }}</h1>
+          <p class="lead">{{ pronas.hero.lead }}</p>
+        </div>
+        <img src="{{ pronas.hero.image }}" alt="{{ pronas.hero.imageAlt }}">
+      </section>
+      <section class="section about-layout">
+        <div class="about-note">
+          {%- for m in pronas.mission %}
+          <h3>{{ m.title }}</h3>
+          <p>{{ m.body }}</p>
+          {%- endfor %}
+        </div>
+        <div class="about-copy">
+          {%- for p in pronas.story %}
+          <p>{{ p }}</p>
+          {%- endfor %}
+        </div>
+      </section>
+      <section class="section section-light">
+        <div class="section-heading"><p class="eyebrow">{{ pronas.principles.eyebrow }}</p><h2>{{ pronas.principles.heading }}</h2></div>
+        <div class="principles-grid">
+          {%- for it in pronas.principles.items %}
+          <article><h3>{{ it.title }}</h3><p>{{ it.text }}</p></article>
+          {%- endfor %}
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-heading center"><h2>{{ pronas.awards.heading }}</h2></div>
+        <div class="awards-placeholder">
+          <span>{{ pronas.awards.placeholderTitle }}</span>
+          <p>{{ pronas.awards.placeholderText }}</p>
+        </div>
+      </section>

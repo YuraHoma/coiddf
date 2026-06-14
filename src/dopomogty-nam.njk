@@ -1,0 +1,25 @@
+---
+layout: base.njk
+permalink: /dopomogty-nam/
+title: Допомогти нам | Фонд розвитку міжнародної співпраці
+description: Реквізити для благодійної допомоги фонду — UAH, EUR, USD та переказ на картку.
+---
+      <section class="page-hero section-dark">
+        <div>
+          <p class="eyebrow">{{ donate.hero.eyebrow }}</p>
+          <h1>{{ donate.hero.heading }}</h1>
+          <p class="lead">{{ donate.hero.lead }}</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="bank-grid">
+          {%- for card in donate.cards %}
+          <article>
+            <h3>{{ card.title }}</h3>
+            {%- for row in card.rows %}
+            <p>{% if row.label %}{{ row.label }}: {% endif %}{% if row.strong %}<strong>{{ row.value }}</strong>{% else %}{{ row.value }}{% endif %}</p>
+            {%- endfor %}
+          </article>
+          {%- endfor %}
+        </div>
+      </section>

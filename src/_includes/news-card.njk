@@ -1,0 +1,9 @@
+{% macro newsCard(post, showExcerpt) -%}
+          <article>
+            {% if post.data.image %}<a class="news-card-media" href="{{ post.url }}"><img src="{{ post.data.image }}" alt="{{ post.data.title }}" loading="lazy"></a>{% else %}<a class="news-card-media news-img-placeholder" href="{{ post.url }}" aria-label="{{ post.data.title }}"></a>{% endif %}
+            <span>{{ post.data.date | uadate }}</span>
+            <h3>{{ post.data.title }}</h3>
+            {% if showExcerpt %}<p>{{ post.data.excerpt }}</p>{% endif %}
+            <a href="{{ post.url }}">Детальніше ↗</a>
+          </article>
+{%- endmacro %}

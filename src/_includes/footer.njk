@@ -1,0 +1,67 @@
+    <footer class="footer footer-big">
+      <div class="footer-top">
+        <div class="footer-brand-nav">
+          <a class="footer-brand" href="/" aria-label="{{ site.orgShort }}">
+            <span class="footer-brand-mark">{{ site.orgShort }}</span>
+            <span class="footer-brand-name">
+              <strong>{{ site.orgLine1 | upper }}</strong>
+              <strong>{{ site.orgLine2 | upper }}</strong>
+            </span>
+          </a>
+          <nav class="footer-nav-cols" aria-label="Навігація футера">
+            <div class="footer-nav-col">
+              {%- for item in site.footerNavCol1 %}
+              <a href="{{ item.href }}">{{ item.label }}</a>
+              {%- endfor %}
+            </div>
+            <div class="footer-nav-col">
+              {%- for item in site.footerNavCol2 %}
+              <a href="{{ item.href }}">{{ item.label }}</a>
+              {%- endfor %}
+            </div>
+          </nav>
+        </div>
+        <div class="footer-contacts">
+          <div class="footer-contact-row">
+            <span>Контакти</span>
+            <a href="mailto:{{ site.contacts.general }}">{{ site.contacts.general }} ↗</a>
+          </div>
+          <div class="footer-contact-row">
+            <span>Партнерство</span>
+            <a href="mailto:{{ site.contacts.partners }}">{{ site.contacts.partners }} ↗</a>
+          </div>
+          <div class="footer-contact-row">
+            <span>Для медіа</span>
+            <a href="mailto:{{ site.contacts.press }}">{{ site.contacts.press }} ↗</a>
+          </div>
+        </div>
+        <div class="footer-cta-col">
+          <div class="footer-social-label">Ми в соц. мережах</div>
+          <div class="footer-socials" aria-label="Соціальні мережі">
+            <a href="{{ site.socials.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="{{ site.socials.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="{{ site.socials.twitter }}" target="_blank" rel="noopener" aria-label="Twitter / X">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="{{ site.socials.youtube }}" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            </a>
+          </div>
+          <a class="footer-hotline" href="tel:{{ site.hotlineTel }}">
+            <span>Гаряча лінія</span>
+            <strong>{{ site.hotline }}</strong>
+          </a>
+          <a class="button footer-donate-btn" href="{{ site.donateUrl }}">
+            Допомогти нам <span>↗</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-legal">БО «Фонд розвитку міжнародної співпраці» (Код ЄДРПОУ: {{ site.edrpou }})</span>
+        <span>© 2026 International Cooperation Development Fund. Всі права захищені.</span>
+      </div>
+    </footer>
