@@ -387,22 +387,30 @@ main > section,
   overflow: hidden;
   background: var(--paper);
 }
-/* crossfade A↔B, 12s — теплий ↔ зелений radial.
-   Не сягає padding-bottom секції, щоб 120px ритм-відступ лишався чистим. */
-.home-hero::before,
-.home-hero::after {
+/* Градієнт прив'язаний до .hero-top (реальний контент), а не до секції —
+   тож він завжди точно збігається з висотою банера, скільки б рядків не
+   було в заголовку чи якою б не була висота фото, і ніколи не "розрізає"
+   контент чи не заходить у 120px ритм-відступ після банера. */
+.hero-top {
+  position: relative;
+  z-index: 1;
+}
+.hero-top::before,
+.hero-top::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0;
-  bottom: var(--section-y);
-  z-index: 0;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: -1;
   pointer-events: none;
 }
-.home-hero::before {
-  background: radial-gradient(circle at 50% -5%, #D9E8AC 0%, #F4EFD6 45%, rgba(255,255,255,0) 90%);
+.hero-top::before {
+  background: radial-gradient(circle at 50% -25%, #D9E8AC 0%, #F4EFD6 45%, rgba(255,255,255,0) 90%);
 }
-.home-hero::after {
-  background: radial-gradient(circle at 50% -5%, #F0DCA2 0%, #DCE8C0 45%, rgba(255,255,255,0) 90%);
+.hero-top::after {
+  background: radial-gradient(circle at 50% -25%, #F0DCA2 0%, #DCE8C0 45%, rgba(255,255,255,0) 90%);
   opacity: 0;
   animation: heroCrossfade 12s ease-in-out infinite;
 }
@@ -410,7 +418,7 @@ main > section,
   0%, 100% { opacity: 0; }
   50% { opacity: 1; }
 }
-.hero-top, .hero-figure { position: relative; z-index: 1; }
+.hero-figure { position: relative; z-index: 1; }
 
 /* компактний банер: текст стовпчиком зліва, фото справа */
 .hero-top {
@@ -854,26 +862,33 @@ main > section,
   overflow: hidden;
   background: var(--paper);
 }
-/* Не сягає padding-bottom секції, щоб 120px ритм-відступ лишався чистим. */
-.page-hero::before,
-.about-hero::before {
+/* Градієнт прив'язаний до обгортки контенту (не до секції з її padding),
+   тож завжди точно збігається з висотою банера й ніколи не заходить
+   у 120px ритм-відступ після нього чи не розрізає фото/текст. */
+.page-hero > div,
+.about-hero-row {
+  position: relative;
+  z-index: 1;
+}
+.page-hero > div::before,
+.about-hero-row::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0;
-  bottom: var(--section-y);
-  z-index: 0;
+  top: 0; bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  z-index: -1;
   pointer-events: none;
-  background: radial-gradient(circle at 50% -5%, #D9E8AC 0%, #F4EFD6 45%, rgba(255,255,255,0) 90%);
+  background: radial-gradient(circle at 50% -25%, #D9E8AC 0%, #F4EFD6 45%, rgba(255,255,255,0) 90%);
 }
-.page-hero > *,
-.about-hero > * { position: relative; z-index: 1; }
 
 .page-hero h1 { color: var(--ink); max-width: 20ch; }
 .page-hero .lead { color: var(--muted); margin-top: 18px; }
 .page-hero .hero-actions { margin-top: 28px; }
 .page-hero .hero-actions:empty { display: none; }
 
-.about-hero {
+.about-hero-row {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
   gap: clamp(28px, 5vw, 64px);
@@ -1180,7 +1195,7 @@ main > section,
   .hero-headline .lead { max-width: 60ch; }
   .focus-map,
   .impact-feature,
-  .about-hero,
+  .about-hero-row,
   .about-layout,
   .intro-story-top,
   .cta-band > div { grid-template-columns: 1fr; }
