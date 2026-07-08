@@ -149,7 +149,8 @@ main > section,
   padding-block: 0 var(--section-y);
   padding-inline: max(var(--gutter), calc((100% - var(--container)) / 2));
 }
-.home-hero, .page-hero, .about-hero { padding-top: clamp(48px, 6vw, 88px); }
+/* верх і низ банера рівні — той самий 120px ритм, що й скрізь на сторінці */
+.home-hero, .page-hero, .about-hero { padding-top: var(--section-y); }
 
 .section-heading { max-width: 720px; margin-bottom: clamp(36px, 4vw, 56px); }
 .section-heading.center { margin-inline: auto; text-align: center; }
