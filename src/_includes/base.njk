@@ -131,8 +131,8 @@
         if (reduce || !('IntersectionObserver' in window)) return;
         var sel = '.section-heading,.metrics article,.intro-photos,.intro-story-top > p,' +
           '.map-card,.cards-grid article,.process-grid article,.feature-copy,.feature-gallery,' +
-          '.resource-card,.partner-logo-card,.news-mini-grid article,.news-grid article,' +
-          '.hero-stat-card,.principles-grid article,.about-note,.about-copy,.team-grid article,' +
+          '.resource-card,.partner-marquee,.news-mini-grid article,.news-grid article,' +
+          '.principles-grid article,.about-note,.about-copy,.team-grid article,' +
           '.project-list > *,.contact-list span,.awards-placeholder,.cta-band > div';
         var els = [].slice.call(d.querySelectorAll(sel));
         els.forEach(function (el) {

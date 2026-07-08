@@ -546,22 +546,26 @@ main > section,
   min-height: clamp(240px, 30vw, 360px);
   padding: 28px;
   border-radius: var(--radius-panel);
-  background:
-    linear-gradient(180deg, rgba(25, 27, 21, 0) 35%, rgba(18, 23, 13, 0.88) 100%),
-    radial-gradient(60% 60% at 40% 35%, rgba(169, 206, 119, 0.22), transparent 70%),
-    var(--dark);
+  background: var(--dark);
   position: relative;
   overflow: hidden;
+}
+.map-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% 50%;
+  transform: scale(1.12);
 }
 .map-card::before {
   content: "";
   position: absolute; inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.10) 1px, transparent 1.4px);
-  background-size: 22px 22px;
-  opacity: 0.5;
+  background: linear-gradient(180deg, rgba(25, 27, 21, 0) 35%, rgba(18, 23, 13, 0.9) 100%);
 }
-.map-card span { position: relative; font-family: var(--font-head); font-size: 22px; font-weight: 600; color: #fff; }
-.map-card small { position: relative; font-size: 14px; color: var(--brand-light); font-weight: 500; }
+.map-card span { position: relative; z-index: 1; font-family: var(--font-head); font-size: 22px; font-weight: 600; color: #fff; }
+.map-card small { position: relative; z-index: 1; font-size: 14px; color: var(--brand-light); font-weight: 500; }
 
 /* ---------- 11. CARDS GRID (напрями — картки-фічі з radial-градієнтами) ---------- */
 .cards-grid {
@@ -721,15 +725,30 @@ main > section,
   border-color: var(--line-strong);
 }
 
-/* ---------- 15. PARTNERS ---------- */
-.partner-logos {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+/* ---------- 15. PARTNERS (marquee, безкінечна прокрутка) ---------- */
+.partner-marquee {
+  overflow: hidden;
+  margin-inline: calc(var(--gutter) * -1);
+  padding-inline: var(--gutter);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.partner-track {
+  display: flex;
+  width: max-content;
   gap: 16px;
+  animation: marquee 32s linear infinite;
+}
+.partner-marquee:hover .partner-track { animation-play-state: paused; }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 .partner-logo-card {
   display: grid;
   place-items: center;
+  flex: 0 0 auto;
+  width: 200px;
   padding: 26px 20px;
   background: #fff;
   border: 1px solid var(--line);
@@ -1169,7 +1188,6 @@ main > section,
   .news-grid,
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .principles-grid { grid-template-columns: 1fr; }
-  .partner-logos { grid-template-columns: repeat(3, 1fr); }
   .intro-photos { grid-template-columns: 1fr 1fr; grid-auto-rows: clamp(150px, 30vw, 220px); }
   .metrics { grid-template-columns: 1fr; gap: 0; }
   .metrics article { padding: 18px 0; }
@@ -1205,8 +1223,8 @@ main > section,
   .feature-gallery { grid-template-columns: 1fr; }
   .cards-grid article { min-height: 240px; }
   .feature-gallery img:first-child { grid-row: auto; min-height: 240px; }
-  .partner-logos { grid-template-columns: repeat(2, 1fr); }
   .intro-photos { grid-template-columns: 1fr; }
+  .partner-logo-card { width: 160px; padding: 20px 16px; }
 
   .news-heading { flex-direction: column; align-items: flex-start; }
   .news-heading .button { width: 100%; }

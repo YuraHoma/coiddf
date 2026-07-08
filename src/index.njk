@@ -6,6 +6,48 @@ description: Головна сторінка благодійного фонду
 ---
 {% import "icons.njk" as icons %}
 {% import "news-card.njk" as news %}
+{% macro partnerLogos() %}
+          <div class="partner-logo-card">
+            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Співпраця з Німеччиною">
+              <rect width="36" height="12" rx="1" fill="#1a1a1a"/>
+              <rect y="12" width="36" height="12" rx="1" fill="#D00000"/>
+              <rect y="24" width="36" height="12" rx="1" fill="#FFCE00"/>
+              <text x="46" y="20" font-family="inherit" font-size="11" font-weight="700" fill="currentColor">GERMAN</text>
+              <text x="46" y="34" font-family="inherit" font-size="11" font-weight="400" fill="currentColor" opacity=".6">COOPERATION</text>
+            </svg>
+          </div>
+          <div class="partner-logo-card">
+            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="100% LIFE">
+              <text x="8" y="32" font-family="inherit" font-size="22" font-weight="800" fill="#C8102E">100%</text>
+              <text x="8" y="46" font-family="inherit" font-size="13" font-weight="700" fill="currentColor" letter-spacing="2">LIFE</text>
+              <text x="60" y="46" font-family="inherit" font-size="10" font-weight="400" fill="currentColor" opacity=".5">Zaporizhzhia</text>
+            </svg>
+          </div>
+          <div class="partner-logo-card">
+            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="ACTED">
+              <rect x="8" y="12" width="28" height="28" rx="4" fill="#E84B23"/>
+              <text x="14" y="31" font-family="inherit" font-size="11" font-weight="800" fill="#fff">ACT</text>
+              <text x="42" y="28" font-family="inherit" font-size="16" font-weight="800" fill="currentColor">ACTED</text>
+              <text x="42" y="40" font-family="inherit" font-size="9" font-weight="400" fill="currentColor" opacity=".5">aid | courage | expertise</text>
+            </svg>
+          </div>
+          <div class="partner-logo-card">
+            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="UFBF">
+              <rect x="8" y="10" width="30" height="30" rx="15" fill="#2B5EA7"/>
+              <text x="15" y="30" font-family="inherit" font-size="11" font-weight="800" fill="#fff">UF</text>
+              <text x="44" y="22" font-family="inherit" font-size="14" font-weight="800" fill="currentColor">UFBF</text>
+              <text x="44" y="36" font-family="inherit" font-size="9" font-weight="400" fill="currentColor" opacity=".5">Ukraine Food Bank</text>
+            </svg>
+          </div>
+          <div class="partner-logo-card">
+            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Samaritan’s Purse">
+              <circle cx="22" cy="24" r="14" fill="#005EB8" opacity=".12"/>
+              <path d="M22 10 L22 38 M10 24 L34 24" stroke="#005EB8" stroke-width="3" stroke-linecap="round"/>
+              <text x="42" y="22" font-family="inherit" font-size="10" font-weight="700" fill="currentColor">Samaritan’s</text>
+              <text x="42" y="35" font-family="inherit" font-size="10" font-weight="700" fill="currentColor">Purse</text>
+            </svg>
+          </div>
+{% endmacro %}
       <section class="home-hero">
         <div class="hero-top">
           <div class="hero-headline">
@@ -45,6 +87,7 @@ description: Головна сторінка благодійного фонду
       </section>
       <section class="section focus-map">
         <div class="map-card">
+          <img src="/assets/map-polohy-raion.svg" alt="Карта Пологівського району на території Запорізької області" loading="lazy">
           <span>{{ home.geography.regionTitle }}</span>
           <small>{{ home.geography.regionSub }}</small>
         </div>
@@ -108,46 +151,10 @@ description: Головна сторінка благодійного фонду
       </section>
       <section class="section partners-section">
         <div class="section-heading center"><p class="eyebrow">{{ home.partners.eyebrow }}</p><h2>{{ home.partners.heading }}</h2></div>
-        <div class="partner-logos">
-          <div class="partner-logo-card">
-            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Співпраця з Німеччиною">
-              <rect width="36" height="12" rx="1" fill="#1a1a1a"/>
-              <rect y="12" width="36" height="12" rx="1" fill="#D00000"/>
-              <rect y="24" width="36" height="12" rx="1" fill="#FFCE00"/>
-              <text x="46" y="20" font-family="inherit" font-size="11" font-weight="700" fill="currentColor">GERMAN</text>
-              <text x="46" y="34" font-family="inherit" font-size="11" font-weight="400" fill="currentColor" opacity=".6">COOPERATION</text>
-            </svg>
-          </div>
-          <div class="partner-logo-card">
-            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="100% LIFE">
-              <text x="8" y="32" font-family="inherit" font-size="22" font-weight="800" fill="#C8102E">100%</text>
-              <text x="8" y="46" font-family="inherit" font-size="13" font-weight="700" fill="currentColor" letter-spacing="2">LIFE</text>
-              <text x="60" y="46" font-family="inherit" font-size="10" font-weight="400" fill="currentColor" opacity=".5">Zaporizhzhia</text>
-            </svg>
-          </div>
-          <div class="partner-logo-card">
-            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="ACTED">
-              <rect x="8" y="12" width="28" height="28" rx="4" fill="#E84B23"/>
-              <text x="14" y="31" font-family="inherit" font-size="11" font-weight="800" fill="#fff">ACT</text>
-              <text x="42" y="28" font-family="inherit" font-size="16" font-weight="800" fill="currentColor">ACTED</text>
-              <text x="42" y="40" font-family="inherit" font-size="9" font-weight="400" fill="currentColor" opacity=".5">aid | courage | expertise</text>
-            </svg>
-          </div>
-          <div class="partner-logo-card">
-            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="UFBF">
-              <rect x="8" y="10" width="30" height="30" rx="15" fill="#2B5EA7"/>
-              <text x="15" y="30" font-family="inherit" font-size="11" font-weight="800" fill="#fff">UF</text>
-              <text x="44" y="22" font-family="inherit" font-size="14" font-weight="800" fill="currentColor">UFBF</text>
-              <text x="44" y="36" font-family="inherit" font-size="9" font-weight="400" fill="currentColor" opacity=".5">Ukraine Food Bank</text>
-            </svg>
-          </div>
-          <div class="partner-logo-card">
-            <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Samaritan’s Purse">
-              <circle cx="22" cy="24" r="14" fill="#005EB8" opacity=".12"/>
-              <path d="M22 10 L22 38 M10 24 L34 24" stroke="#005EB8" stroke-width="3" stroke-linecap="round"/>
-              <text x="42" y="22" font-family="inherit" font-size="10" font-weight="700" fill="currentColor">Samaritan’s</text>
-              <text x="42" y="35" font-family="inherit" font-size="10" font-weight="700" fill="currentColor">Purse</text>
-            </svg>
+        <div class="partner-marquee">
+          <div class="partner-track">
+            {{ partnerLogos() }}
+            {{ partnerLogos() }}
           </div>
         </div>
       </section>
