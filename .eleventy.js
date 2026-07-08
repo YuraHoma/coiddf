@@ -1,4 +1,21 @@
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+
 module.exports = function (eleventyConfig) {
+  // Optimize every <img> in the output HTML: WebP + responsive srcset,
+  // width/height attributes (no layout shift). Single format keeps <img>
+  // un-wrapped (no <picture>), so existing CSS selectors still match.
+  // Attributes set in templates (loading, sizes, fetchpriority) win over
+  // the defaults below.
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    formats: ["webp"],
+    widths: [480, 800, 1200, 1600],
+    urlPath: "/assets/opt/",
+    outputDir: "_site/assets/opt/",
+    htmlOptions: {
+      imgAttributes: { loading: "lazy", decoding: "async", sizes: "auto" },
+    },
+  });
+
   // Static passthrough — styles, images, misc files copied as-is.
   eleventyConfig.addPassthroughCopy({ "src/styles.css": "styles.css" });
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });

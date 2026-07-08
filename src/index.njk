@@ -23,7 +23,7 @@ description: Головна сторінка благодійного фонду
           </div>
         </div>
         <figure class="hero-figure">
-          <img src="{{ home.hero.image }}" alt="{{ home.hero.imageAlt }}">
+          <img src="{{ home.hero.image }}" alt="{{ home.hero.imageAlt }}" loading="eager" fetchpriority="high" sizes="(min-width: 901px) 90vw, 100vw">
           <div class="hero-stat-card">
             <span class="hero-stat-label">{{ home.hero.statLabel }}</span>
             <strong class="hero-stat-value">{{ home.hero.statValue }}</strong>
@@ -49,9 +49,9 @@ description: Головна сторінка благодійного фонду
           <p>{{ home.mission.body }}</p>
         </div>
         <div class="intro-photos">
-          {%- for photo in home.mission.photos %}
-          <div class="intro-photo" style="background-image:url('{{ photo }}')"></div>
-          {%- endfor %}
+          {%- for photo in home.mission.photos %}{% if photo %}
+          <img class="intro-photo" src="{{ photo }}" alt="">
+          {%- endif %}{% endfor %}
         </div>
       </section>
       <section class="section focus-map">
