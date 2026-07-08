@@ -387,12 +387,14 @@ main > section,
   overflow: hidden;
   background: var(--paper);
 }
-/* crossfade A↔B, 12s — теплий ↔ зелений radial */
+/* crossfade A↔B, 12s — теплий ↔ зелений radial.
+   Не сягає padding-bottom секції, щоб 120px ритм-відступ лишався чистим. */
 .home-hero::before,
 .home-hero::after {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0; left: 0; right: 0;
+  bottom: var(--section-y);
   z-index: 0;
   pointer-events: none;
 }
@@ -852,11 +854,13 @@ main > section,
   overflow: hidden;
   background: var(--paper);
 }
+/* Не сягає padding-bottom секції, щоб 120px ритм-відступ лишався чистим. */
 .page-hero::before,
 .about-hero::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0; left: 0; right: 0;
+  bottom: var(--section-y);
   z-index: 0;
   pointer-events: none;
   background: radial-gradient(circle at 50% -5%, #D9E8AC 0%, #F4EFD6 45%, rgba(255,255,255,0) 90%);
