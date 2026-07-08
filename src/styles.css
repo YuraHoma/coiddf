@@ -610,7 +610,6 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
 .feature-gallery img:first-child { grid-row: span 2; min-height: 320px; }
 
 /* ---------- 14. RESOURCES (infrastructure) ---------- */
-.section-top-gap { padding-top: 0; }
 .report-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -701,12 +700,6 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
 .partner-logo-card svg { width: 100%; height: auto; max-height: 48px; }
 
 /* ---------- 16. NEWS ---------- */
-.news-heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
-}
 .news-mini-grid,
 .news-grid {
   display: grid;
@@ -1115,8 +1108,6 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
   .partner-logos { grid-template-columns: repeat(2, 1fr); }
   .intro-photos { grid-template-columns: 1fr; }
 
-  .news-heading { flex-direction: column; align-items: flex-start; }
-  .news-heading .button { width: 100%; }
   .footer-top { grid-template-columns: 1fr; gap: 34px; }
   .footer-cta-col { grid-column: auto; }
   .footer-nav-cols { gap: 40px; }
