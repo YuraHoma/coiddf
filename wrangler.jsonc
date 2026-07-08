@@ -1,0 +1,9 @@
+// Прев'ю-деплой редизайну на Cloudflare Workers (окремий воркер, прод не чіпає).
+// URL: https://icdf-preview.<ваш-сабдомен>.workers.dev
+{
+  "name": "icdf-preview",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": "./_site"
+  }
+}

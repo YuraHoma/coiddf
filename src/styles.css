@@ -248,9 +248,16 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(16px) saturate(140%);
   -webkit-backdrop-filter: blur(16px) saturate(140%);
-  transition: transform 360ms var(--ease), box-shadow var(--t);
+  transition: transform 360ms var(--ease), box-shadow var(--t),
+              padding 360ms var(--ease), background 360ms var(--ease);
 }
 .site-header.header-hidden { transform: translateY(-102%); }
+/* при скролі хедер стискається і стає щільнішим */
+.site-header.scrolled {
+  padding-block: 7px;
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 24px -12px rgba(14, 20, 10, 0.14);
+}
 
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand-mark {

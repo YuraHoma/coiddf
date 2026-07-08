@@ -43,6 +43,7 @@
           ticking = true;
           requestAnimationFrame(function () {
             var y = window.pageYOffset || 0;
+            if (header) header.classList.toggle('scrolled', y > 24);
             if (header && !header.classList.contains('nav-open')) {
               if (y > 120 && y > lastY) header.classList.add('header-hidden');
               else header.classList.remove('header-hidden');
@@ -53,6 +54,58 @@
         }, { passive: true });
 
         var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        /* лічильники цифр: докручуються при появі у в'юпорті */
+        if (!reduce && 'IntersectionObserver' in window) {
+          var fmt = function (n) { return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); };
+          var counters = [].slice.call(d.querySelectorAll('.metrics strong, .hero-stat-value'))
+            .filter(function (el) { return !el.children.length && /\d/.test(el.textContent); });
+          var cio = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+              if (!e.isIntersecting) return;
+              cio.unobserve(e.target);
+              var el = e.target;
+              var finalText = el.textContent.trim();
+              var total = parseInt(finalText.replace(/\D/g, ''), 10);
+              if (!total) return;
+              var t0 = null, dur = 1400;
+              var step = function (ts) {
+                if (!t0) t0 = ts;
+                var p = Math.min((ts - t0) / dur, 1);
+                var eased = 1 - Math.pow(1 - p, 3);
+                el.textContent = fmt(Math.round(total * eased));
+                if (p < 1) requestAnimationFrame(step);
+                else el.textContent = finalText;
+              };
+              requestAnimationFrame(step);
+            });
+          }, { threshold: 0.4 });
+          counters.forEach(function (el) { cio.observe(el); });
+        }
+
+        /* ротація акцентного слова в H1, інтервал 2.2s */
+        var accent = d.querySelector('.hero-top h1 .accent');
+        if (accent && !reduce) {
+          var words = ['націю', 'родини', 'громади', 'майбутнє'];
+          var wi = Math.max(0, words.indexOf(accent.textContent.trim()));
+          var show = 'opacity 280ms ease, transform 280ms ease';
+          accent.style.display = 'inline-block';
+          accent.style.transition = show;
+          setInterval(function () {
+            accent.style.opacity = '0';
+            accent.style.transform = 'translateY(0.45em)';
+            setTimeout(function () {
+              wi = (wi + 1) % words.length;
+              accent.textContent = words[wi];
+              accent.style.transition = 'none';
+              accent.style.transform = 'translateY(-0.45em)';
+              void accent.offsetHeight;
+              accent.style.transition = show;
+              accent.style.opacity = '1';
+              accent.style.transform = 'translateY(0)';
+            }, 300);
+          }, 2200);
+        }
         if (reduce || !('IntersectionObserver' in window)) return;
         var sel = '.section-heading,.metrics article,.intro-photos,.intro-story-top > p,' +
           '.map-card,.cards-grid article,.process-grid article,.feature-copy,.feature-gallery,' +
