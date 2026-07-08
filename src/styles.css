@@ -506,21 +506,22 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
 .hero-stat-meta span { font-size: 13px; color: var(--muted); font-weight: 500; }
 .hero-stat-meta span::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 9px; border-radius: 50%; background: var(--brand); vertical-align: middle; }
 
-/* ---------- 8. METRICS (темна секція інсайтів) ---------- */
+/* ---------- 8. METRICS (світла стрічка цифр) ---------- */
 .metrics {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  background: var(--dark);
+  gap: clamp(20px, 3vw, 40px);
+  padding-block: clamp(48px, 6vw, 80px);
 }
 .metrics article {
   display: flex;
   flex-direction: column-reverse;
   gap: 10px;
-  padding: clamp(26px, 3vw, 36px);
-  border-radius: var(--radius-panel);
-  background: var(--dark-2);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 6px 0;
+}
+.metrics article + article {
+  border-left: 1px solid var(--line);
+  padding-left: clamp(20px, 3vw, 40px);
 }
 .metrics strong {
   font-family: var(--font-head);
@@ -529,12 +530,12 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
   letter-spacing: -0.02em;
   line-height: 1;
   font-variant-numeric: tabular-nums;
-  background: var(--grad-number);
+  background: linear-gradient(100deg, var(--brand-bright), var(--brand-deep));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
-.metrics span { font-size: 14.5px; font-weight: 500; color: var(--on-dark-muted); }
+.metrics span { font-size: 14.5px; font-weight: 500; color: var(--muted); }
 
 /* ---------- 9. MISSION / INTRO-STORY ---------- */
 .intro-story-top {
@@ -1196,7 +1197,9 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
   .principles-grid { grid-template-columns: 1fr; }
   .partner-logos { grid-template-columns: repeat(3, 1fr); }
   .intro-photos { grid-template-columns: 1fr 1fr; grid-auto-rows: clamp(150px, 30vw, 220px); }
-  .metrics { grid-template-columns: 1fr; gap: 14px; }
+  .metrics { grid-template-columns: 1fr; gap: 0; }
+  .metrics article { padding: 18px 0; }
+  .metrics article + article { border-left: 0; border-top: 1px solid var(--line); padding-left: 0; padding-top: 18px; }
 
   .footer-top { grid-template-columns: 1fr 1fr; gap: 36px 40px; }
   .footer-cta-col { grid-column: 1 / -1; }
