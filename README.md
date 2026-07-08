@@ -23,7 +23,10 @@ npm run build   # збірка у _site/
 
 ## Деплой
 
-Cloudflare збирає сайт командою `npm run build` і роздає папку `_site`.
+Cloudflare Workers (конфігурація — `wrangler.jsonc`): збірка `npm run build`, роздається папка `_site`.
+
+- **Автодеплой:** кожен push у `main` збирається й деплоїться через Cloudflare Workers Builds (репозиторій підключено в дашборді: Workers & Pages → coiddf → Settings → Build).
+- **Вручну:** `npm run deploy` (потрібен вхід через `npx wrangler login` або `CLOUDFLARE_API_TOKEN`).
 
 ## Перед публічним запуском
 
