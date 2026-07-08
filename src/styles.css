@@ -690,17 +690,6 @@ main > section,
   padding: clamp(36px, 5vw, 64px);
 }
 .infra-panel h2 { color: #fff; }
-.infra-panel .resource-card {
-  background: var(--dark-2);
-  border-color: rgba(255, 255, 255, 0.06);
-}
-.infra-panel .resource-card:hover { box-shadow: 0 14px 30px -12px rgba(0, 0, 0, 0.5); }
-.infra-panel .resource-icon {
-  background: rgba(169, 206, 119, 0.14);
-  color: var(--brand-light);
-}
-.infra-panel .resource-card > span:not(.resource-icon) { color: var(--on-dark-muted); }
-.infra-panel .resource-card > span strong { color: #fff; }
 .report-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
