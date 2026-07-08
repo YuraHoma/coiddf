@@ -1,0 +1,15 @@
+{
+  "name": "coiddf",
+  "compatibility_date": "2026-06-14",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "_site",
+    // serve our custom /404.html for missing paths
+    "not_found_handling": "404-page"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}

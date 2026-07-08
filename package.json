@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rm -rf _site && eleventy",
     "serve": "eleventy --serve --port 8745",
-    "clean": "rm -rf _site"
+    "clean": "rm -rf _site",
+    "deploy": "npm run build && npx wrangler deploy"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
