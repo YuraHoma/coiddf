@@ -1,10 +1,9 @@
 module.exports = function (eleventyConfig) {
-  // Static passthrough — styles, images, CMS admin, misc files copied as-is.
+  // Static passthrough — styles, images, misc files copied as-is.
   eleventyConfig.addPassthroughCopy({ "src/styles.css": "styles.css" });
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
-  eleventyConfig.addPassthroughCopy({ "src/admin": "admin" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
-  eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
+  eleventyConfig.addPassthroughCopy({ "src/_headers": "_headers" });
 
   // Newest news first
   eleventyConfig.addCollection("news", (api) =>
@@ -14,12 +13,14 @@ module.exports = function (eleventyConfig) {
     api.getFilteredByGlob("src/projects/*.md").sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
   );
 
-  // Format an ISO date as DD.MM.YYYY for display
+  // Format an ISO date as DD.MM.YYYY for display.
+  // UTC methods: front-matter dates are parsed as UTC midnight, local getters
+  // would shift the day on build machines west of UTC.
   eleventyConfig.addFilter("uadate", (value) => {
     const d = new Date(value);
     if (isNaN(d)) return value;
     const p = (n) => String(n).padStart(2, "0");
-    return `${p(d.getDate())}.${p(d.getMonth() + 1)}.${d.getFullYear()}`;
+    return `${p(d.getUTCDate())}.${p(d.getUTCMonth() + 1)}.${d.getUTCFullYear()}`;
   });
 
   return {

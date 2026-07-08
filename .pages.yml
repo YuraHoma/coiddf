@@ -1,10 +1,11 @@
 # Pages CMS configuration — https://pagescms.org
-# Edits commit straight to GitHub (this repo), same content as Decap (/admin).
+# Єдина CMS проєкту. Редагування комітяться напряму в цей GitHub-репозиторій.
 media:
   input: src/assets
   output: /assets
 
 content:
+  # ---------------------------------------------------------------- Новини
   - name: news
     label: Новини
     type: collection
@@ -18,93 +19,358 @@ content:
         sort: date
         order: desc
     fields:
-      - { name: title, label: Заголовок, type: string }
-      - { name: date, label: Дата, type: date }
+      - { name: title, label: Заголовок, type: string, required: true }
+      - { name: date, label: Дата, type: date, required: true }
       - { name: image, label: Головне фото, type: image }
-      - { name: excerpt, label: Короткий опис, type: text }
-      - { name: body, label: Повний текст, type: rich-text }
+      - { name: excerpt, label: Короткий опис (для списку та початку статті), type: text, required: true }
+      - { name: body, label: Повний текст статті, type: rich-text }
 
+  # ---------------------------------------------------------------- Проєкти
   - name: projects
-    label: Проєкти
+    label: Проєкти (картки)
     type: collection
     path: src/projects
     filename: '{year}-{month}-{day}-{fields.title}.md'
     view:
       primary: title
       fields: [title, date]
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
     fields:
-      - { name: title, label: Назва, type: string }
-      - { name: date, label: Дата, type: date }
-      - { name: excerpt, label: Опис, type: text }
+      - { name: title, label: Назва проєкту, type: string, required: true }
+      - { name: date, label: Дата, type: date, required: true }
+      - { name: excerpt, label: Опис, type: text, required: true }
 
+  # ---------------------------------------------------------------- Налаштування сайту
   - name: settings
-    label: Налаштування сайту
+    label: Налаштування сайту (назва, меню, контакти)
     type: file
     path: src/_data/site.json
     fields:
+      - { name: url, label: 'Адреса сайту (без / в кінці)', type: string }
+      - { name: orgShort, label: Логотип — короткий код, type: string }
       - { name: orgFull, label: Повна назва, type: string }
-      - { name: orgShort, label: Скорочення, type: string }
-      - { name: hotline, label: Гаряча лінія, type: string }
-      - { name: donateUrl, label: Посилання «Підтримати», type: string }
+      - { name: orgLine1, label: Назва — рядок 1 (футер), type: string }
+      - { name: orgLine2, label: Назва — рядок 2 (футер), type: string }
+      - { name: orgEnglish, label: Назва англійською, type: string }
+      - { name: edrpou, label: Код ЄДРПОУ, type: string }
+      - { name: hotline, label: Гаряча лінія (як показувати), type: string }
+      - { name: hotlineTel, label: Гаряча лінія для дзвінка (лише цифри), type: string }
+      - { name: donateUrl, label: Посилання кнопки «Підтримати», type: string }
+      - name: nav
+        label: Головне меню
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Назва, type: string }
+          - { name: href, label: Посилання, type: string }
+      - name: footerNavCol1
+        label: Футер — колонка 1
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Назва, type: string }
+          - { name: href, label: Посилання, type: string }
+      - name: footerNavCol2
+        label: Футер — колонка 2
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Назва, type: string }
+          - { name: href, label: Посилання, type: string }
       - name: contacts
-        label: Email-контакти
+        label: Контактні email
         type: object
         fields:
           - { name: general, label: Загальний, type: string }
           - { name: partners, label: Партнерство, type: string }
           - { name: press, label: Для медіа, type: string }
+      - name: socials
+        label: Соцмережі
+        type: object
+        fields:
+          - { name: facebook, label: Facebook, type: string }
+          - { name: instagram, label: Instagram, type: string }
+          - { name: twitter, label: Twitter / X, type: string }
+          - { name: youtube, label: YouTube, type: string }
 
+  # ---------------------------------------------------------------- Головна сторінка
+  - name: home
+    label: Головна сторінка
+    type: file
+    path: src/_data/home.json
+    fields:
+      - { name: title, label: SEO-заголовок вкладки, type: string }
+      - { name: description, label: SEO-опис, type: text }
+      - name: hero
+        label: Головний банер
+        type: object
+        fields:
+          - { name: orgBanner, label: 'Назва над заголовком (можна <br>)', type: text }
+          - { name: headline, label: 'Заголовок (можна <br> і <span class="accent">слово</span>)', type: text }
+          - { name: lead, label: Підзаголовок, type: text }
+          - { name: primaryLabel, label: Кнопка 1 — текст, type: string }
+          - { name: secondaryLabel, label: Кнопка 2 — текст, type: string }
+          - { name: secondaryUrl, label: Кнопка 2 — посилання, type: string }
+          - { name: image, label: Фото, type: image }
+          - { name: imageAlt, label: Опис фото (alt), type: string }
+          - { name: statLabel, label: Картка — підпис, type: string }
+          - { name: statValue, label: Картка — число, type: string }
+          - { name: statMeta, label: Картка — рядки під числом, type: string, list: true }
+      - name: metrics
+        label: Цифри впливу
+        type: object
+        list: true
+        fields:
+          - { name: value, label: Число, type: string }
+          - { name: label, label: Підпис, type: string }
+      - name: mission
+        label: Блок «Чому ми працюємо»
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: string }
+          - { name: body, label: Текст, type: text }
+          - { name: photos, label: Фото, type: image, list: true }
+      - name: geography
+        label: Блок «Географія»
+        type: object
+        fields:
+          - { name: regionTitle, label: Район, type: string }
+          - { name: regionSub, label: Область, type: string }
+          - { name: heading, label: Заголовок, type: string }
+      - name: focusAreas
+        label: Напрями допомоги
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: string }
+          - name: items
+            label: Картки
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Заголовок, type: string }
+              - { name: text, label: Текст, type: text }
+      - name: process
+        label: Як ми працюємо
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: string }
+          - { name: ctaLabel, label: Кнопка — текст, type: string }
+          - { name: ctaUrl, label: Кнопка — посилання, type: string }
+          - name: steps
+            label: Кроки
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Заголовок, type: string }
+              - { name: text, label: Текст, type: text }
+      - name: response
+        label: Блок «Реагування»
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: string }
+          - { name: body, label: Текст, type: text }
+          - name: images
+            label: Фото
+            type: object
+            list: true
+            fields:
+              - { name: src, label: Фото, type: image }
+              - { name: alt, label: Опис (alt), type: string }
+      - name: resources
+        label: Інфраструктура
+        type: object
+        fields:
+          - { name: heading, label: Заголовок, type: string }
+          - name: items
+            label: Картки
+            type: object
+            list: true
+            fields:
+              - name: icon
+                label: Іконка
+                type: select
+                options:
+                  values: [warehouse, package, freezer, van, truck, medical]
+              - { name: title, label: Назва, type: string }
+              - { name: strong, label: Виділене (велике), type: string }
+              - { name: sub, label: Підпис, type: string }
+      - { name: partnersHeading, label: Партнери — заголовок, type: string }
+      - name: cta
+        label: Заклик (внизу сторінки)
+        type: object
+        fields:
+          - { name: heading, label: Заголовок, type: string }
+          - { name: buttonLabel, label: Кнопка — текст, type: string }
+      - { name: newsHeading, label: Новини — заголовок, type: string }
+
+  # ---------------------------------------------------------------- Сторінка «Про нас»
+  - name: pronas
+    label: Сторінка «Про нас»
+    type: file
+    path: src/_data/pronas.json
+    fields:
+      - name: hero
+        label: Банер сторінки
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: text }
+          - { name: lead, label: Підзаголовок, type: text }
+          - { name: image, label: Фото, type: image }
+          - { name: imageAlt, label: Опис фото (alt), type: string }
+      - name: mission
+        label: Місія / Чому ми
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Заголовок, type: string }
+          - { name: body, label: Текст, type: text }
+      - { name: story, label: Історія (абзаци), type: text, list: true }
+      - name: principles
+        label: Принципи
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: string }
+          - name: items
+            label: Принципи
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Назва, type: string }
+              - { name: text, label: Текст, type: text }
+      - name: awards
+        label: Нагороди
+        type: object
+        fields:
+          - { name: heading, label: Заголовок секції, type: string }
+          - { name: placeholderTitle, label: Підпис плейсхолдера, type: string }
+          - { name: placeholderText, label: Текст плейсхолдера, type: text }
+
+  # ---------------------------------------------------------------- Сторінка «Команда»
   - name: team
     label: Сторінка «Команда»
     type: file
     path: src/_data/team.json
     fields:
       - name: hero
-        label: Шапка
+        label: Банер сторінки
         type: object
         fields:
-          - { name: eyebrow, label: Надзаголовок, type: string }
-          - { name: heading, label: Заголовок, type: string }
-          - { name: lead, label: Опис, type: text }
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: text }
+          - { name: lead, label: Підзаголовок, type: text }
       - name: members
         label: Учасники команди
         type: object
         list: true
         fields:
           - { name: role, label: Роль, type: string }
-          - { name: name, label: Імʼя, type: string }
-          - { name: bio, label: Біографія, type: text }
+          - { name: name, label: "Ім'я", type: string }
+          - { name: bio, label: "Опис (необов'язково)", type: text }
 
+  # ---------------------------------------------------------------- Сторінка «Проєкти» (банер)
+  - name: proyekty
+    label: Сторінка «Проєкти» — банер
+    type: file
+    path: src/_data/proyekty.json
+    fields:
+      - name: hero
+        label: Банер сторінки
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: text }
+          - { name: lead, label: Підзаголовок, type: text }
+
+  # ---------------------------------------------------------------- Сторінка «Отримати допомогу»
+  - name: dopomogty
+    label: Сторінка «Отримати допомогу»
+    type: file
+    path: src/_data/dopomogty.json
+    fields:
+      - name: hero
+        label: Банер сторінки
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: text }
+          - { name: lead, label: Підзаголовок, type: text }
+      - name: cards
+        label: Картки
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Заголовок, type: string }
+          - { name: text, label: Текст, type: text }
+
+  # ---------------------------------------------------------------- Сторінка «Допомогти нам» (реквізити)
+  - name: donate
+    label: Сторінка «Допомогти нам» (реквізити)
+    type: file
+    path: src/_data/donate.json
+    fields:
+      - name: hero
+        label: Банер сторінки
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: text }
+          - { name: lead, label: Підзаголовок, type: text }
+      - name: cards
+        label: Реквізити
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Заголовок, type: string }
+          - name: rows
+            label: Рядки
+            type: object
+            list: true
+            fields:
+              - { name: label, label: "Підпис (необов'язково)", type: string }
+              - { name: value, label: Значення, type: string }
+              - { name: strong, label: Виділити жирним, type: boolean }
+
+  # ---------------------------------------------------------------- Сторінка «Звітність»
   - name: reports
     label: Сторінка «Звітність»
     type: file
     path: src/_data/reports.json
     fields:
       - name: hero
-        label: Шапка
+        label: Банер сторінки
         type: object
         fields:
-          - { name: eyebrow, label: Надзаголовок, type: string }
-          - { name: heading, label: Заголовок, type: string }
-          - { name: lead, label: Опис, type: text }
-      - { name: items, label: Перелік звітів, type: string, list: true }
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: text }
+          - { name: lead, label: Підзаголовок, type: text }
+      - { name: items, label: Документи звітності, type: string, list: true }
 
+  # ---------------------------------------------------------------- Сторінка «Контакти»
   - name: contacts
     label: Сторінка «Контакти»
     type: file
     path: src/_data/contacts.json
     fields:
       - name: hero
-        label: Шапка
+        label: Банер сторінки
         type: object
         fields:
-          - { name: eyebrow, label: Надзаголовок, type: string }
-          - { name: heading, label: Заголовок, type: string }
-          - { name: lead, label: Опис, type: text }
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: text }
+          - { name: lead, label: Підзаголовок, type: text }
       - name: items
-        label: Реквізити
+        label: Контактні рядки
         type: object
         list: true
         fields:
-          - { name: label, label: Назва, type: string }
+          - { name: label, label: Підпис, type: string }
           - { name: value, label: Значення, type: string }

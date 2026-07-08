@@ -1,36 +1,34 @@
-# Client Preview Deploy
+# Сайт БО «Фонд розвитку міжнародної співпраці» (ICDF)
 
-Static preview for the charity website redesign.
+Статичний сайт на [Eleventy](https://www.11ty.dev/) з редагуванням контенту через [Pages CMS](https://pagescms.org).
 
-## Deploy Options
+- **Продакшн:** https://coiddf.homchenkoyura.workers.dev/ (Cloudflare)
+- **CMS:** Pages CMS — конфігурація у `.pages.yml`, редагування комітяться напряму в цей репозиторій.
 
-### Vercel
-
-```bash
-npx vercel deploy --prod --yes
-```
-
-Run from this folder:
+## Розробка
 
 ```bash
-cd outputs/client-deploy
+npm install
+npm run serve   # дев-сервер на http://localhost:8745
+npm run build   # збірка у _site/
 ```
 
-### Netlify
+## Структура
 
-```bash
-npx netlify-cli deploy --prod --dir .
-```
+- `src/_data/*.json` — контент сторінок (редагується через Pages CMS)
+- `src/news/*.md`, `src/projects/*.md` — новини та проєкти
+- `src/_includes/` — шаблони (Nunjucks)
+- `src/_headers` — security-заголовки для Cloudflare
+- `.pages.yml` — схема Pages CMS
 
-Run from this folder:
+## Деплой
 
-```bash
-cd outputs/client-deploy
-```
+Cloudflare збирає сайт командою `npm run build` і роздає папку `_site`.
 
-## Notes
+## Перед публічним запуском
 
-- Replace reference images with owned photos before final public launch.
-- Replace placeholder metrics with verified values.
-- Connect donation flow before accepting payments.
-
+- Замінити референсні фото на власні та оптимізувати їх (PNG по ~2 МБ).
+- Замінити плейсхолдерні метрики на верифіковані значення.
+- Замінити намальовані логотипи партнерів на офіційні (з дозволу).
+- Вказати реальні посилання на соцмережі у налаштуваннях сайту.
+- Додати файли документів на сторінку «Звітність».

@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }}</title>
     <meta name="description" content="{{ description or excerpt }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+    <meta property="og:type" content="{% if page.url and '/novyny/' in page.url and page.url != '/novyny/' %}article{% else %}website{% endif %}">
+    <meta property="og:site_name" content="{{ site.orgFull }}">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ description or excerpt }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}{{ image or '/assets/community-aid.png' }}">
+    <meta property="og:locale" content="uk_UA">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -72,19 +82,6 @@
         }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
         els.forEach(function (el) { io.observe(el); });
       })();
-    </script>
-    <!-- Netlify Identity — completes Decap CMS email invites and login -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", function (user) {
-          if (!user) {
-            window.netlifyIdentity.on("login", function () {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
     </script>
   </body>
 </html>
