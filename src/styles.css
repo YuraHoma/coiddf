@@ -485,14 +485,13 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
   gap: 14px;
 }
 .intro-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: var(--radius);
-  background-size: cover;
-  background-position: center;
   background-color: var(--surface-2);
 }
 .intro-photo:first-child { grid-row: span 1; }
-/* hide the empty placeholder tiles */
-.intro-photo:not([style*="background-image"]) { display: none; }
 
 /* ---------- 10. FOCUS MAP (geography) ---------- */
 .focus-map {
