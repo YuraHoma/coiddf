@@ -103,15 +103,17 @@ description: Головна сторінка благодійного фонду
           {%- endfor %}
         </div>
       </section>
-      <section class="section section-light">
-        <div class="section-heading center"><h2>{{ home.resources.heading }}</h2></div>
-        <div class="report-list">
-          {%- for r in home.resources.items %}
-          <div class="resource-card">
-            <span class="resource-icon">{{ icons.resourceIcon(r.icon) }}</span>
-            <span>{{ r.title }}{% if r.strong %}<strong>{{ r.strong }}</strong>{% endif %}{{ r.sub }}</span>
+      <section class="section infra-section">
+        <div class="infra-panel">
+          <div class="section-heading center"><h2>{{ home.resources.heading }}</h2></div>
+          <div class="report-list">
+            {%- for r in home.resources.items %}
+            <div class="resource-card">
+              <span class="resource-icon">{{ icons.resourceIcon(r.icon) }}</span>
+              <span>{{ r.title }}{% if r.strong %}<strong>{{ r.strong }}</strong>{% endif %}{{ r.sub }}</span>
+            </div>
+            {%- endfor %}
           </div>
-          {%- endfor %}
         </div>
       </section>
       <section class="section partners-section">
