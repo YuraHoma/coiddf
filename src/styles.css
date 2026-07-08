@@ -150,8 +150,6 @@ main > section,
   padding-inline: max(var(--gutter), calc((100% - var(--container)) / 2));
 }
 .home-hero, .page-hero, .about-hero { padding-top: clamp(48px, 6vw, 88px); }
-/* кольорові стрічки потребують власного внутрішнього верхнього відступу */
-.section-light, .section-dark { padding-top: var(--section-y); }
 
 .section-heading { max-width: 720px; margin-bottom: clamp(36px, 4vw, 56px); }
 .section-heading.center { margin-inline: auto; text-align: center; }
@@ -412,21 +410,21 @@ main > section,
 }
 .hero-top, .hero-figure { position: relative; z-index: 1; }
 
+/* компактний банер: текст стовпчиком зліва, фото справа */
 .hero-top {
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
-  gap: clamp(24px, 4vw, 64px);
-  align-items: end;
-  margin-bottom: clamp(36px, 4.5vw, 56px);
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
 }
-.hero-headline { align-self: end; }
+.hero-headline { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+.hero-headline .lead { color: var(--muted); max-width: 46ch; }
 
 /* бейдж-пігулка над H1 */
 .hero-org {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 22px;
   padding: 8px 16px;
   border-radius: var(--radius-pill);
   background: #fff;
@@ -447,9 +445,7 @@ main > section,
   background-clip: text;
   color: transparent;
 }
-.hero-intro { display: flex; flex-direction: column; gap: 24px; padding-bottom: 6px; }
-.hero-intro .lead { color: var(--muted); max-width: 44ch; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
 
 /* вхід банера: stagger fade-up */
 @keyframes fadeUp {
@@ -458,13 +454,13 @@ main > section,
 }
 .hero-org,
 .hero-headline h1,
-.hero-intro .lead,
+.hero-headline .lead,
 .hero-actions,
 .hero-figure { animation: fadeUp 700ms var(--ease) both; }
 .hero-headline h1 { animation-delay: 90ms; }
-.hero-intro .lead { animation-delay: 180ms; }
-.hero-actions     { animation-delay: 270ms; }
-.hero-figure      { animation-delay: 360ms; }
+.hero-headline .lead { animation-delay: 180ms; }
+.hero-actions       { animation-delay: 270ms; }
+.hero-figure        { animation-delay: 360ms; }
 
 .hero-figure {
   margin: 0;
@@ -472,50 +468,16 @@ main > section,
   overflow: hidden;
   box-shadow: var(--shadow-hero);
 }
-.hero-figure { position: relative; }
 .hero-figure img {
   width: 100%;
-  height: clamp(320px, 44vw, 540px);
+  height: clamp(280px, 30vw, 400px);
   object-fit: cover;
 }
-.hero-stat-card {
-  position: absolute;
-  left: clamp(16px, 2vw, 28px);
-  bottom: clamp(16px, 2vw, 28px);
-  width: min(360px, 78%);
-  padding: 22px 24px;
-  border-radius: var(--radius-card);
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(255, 255, 255, 0.65);
-  box-shadow: var(--shadow-card);
-  backdrop-filter: blur(18px) saturate(150%);
-  -webkit-backdrop-filter: blur(18px) saturate(150%);
-  color: var(--ink);
-}
-.hero-stat-label { font-size: 13px; font-weight: 600; color: var(--muted); }
-.hero-stat-value {
-  display: block;
-  margin: 6px 0 14px;
-  font-family: var(--font-head);
-  font-size: clamp(38px, 4.2vw, 54px);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-  background: linear-gradient(100deg, var(--brand-bright), var(--brand-deep));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.hero-stat-value span { font-size: 0.42em; font-weight: 600; letter-spacing: 0; }
-.hero-stat-meta { display: flex; flex-direction: column; gap: 6px; padding-top: 14px; border-top: 1px solid var(--line); }
-.hero-stat-meta span { font-size: 13px; color: var(--muted); font-weight: 500; }
-.hero-stat-meta span::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 9px; border-radius: 50%; background: var(--brand); vertical-align: middle; }
 
-/* ---------- 8. METRICS (світла стрічка цифр) ---------- */
+/* ---------- 8. METRICS (світла стрічка цифр, 4 пункти) ---------- */
 .metrics {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: clamp(20px, 3vw, 40px);
 }
 .metrics article {
@@ -530,10 +492,11 @@ main > section,
 }
 .metrics strong {
   font-family: var(--font-head);
-  font-size: clamp(40px, 4.6vw, 54px);
+  font-size: clamp(30px, 2.6vw, 42px);
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1;
+  white-space: nowrap;
   font-variant-numeric: tabular-nums;
   background: linear-gradient(100deg, var(--brand-bright), var(--brand-deep));
   -webkit-background-clip: text;
@@ -681,15 +644,14 @@ main > section,
 }
 .feature-gallery img:first-child { grid-row: span 2; min-height: 320px; }
 
-/* ---------- 14. RESOURCES (інфраструктура — темна панель як «Як ми працюємо») ---------- */
+/* ---------- 14. RESOURCES (інфраструктура — світлий контейнер) ---------- */
 .section-top-gap { padding-top: 0; }
 .infra-panel {
-  background: var(--dark);
-  color: var(--on-dark);
+  background: var(--surface);
   border-radius: var(--radius-panel);
   padding: clamp(36px, 5vw, 64px);
 }
-.infra-panel h2 { color: #fff; }
+.infra-panel .resource-card { background: #fff; }
 .report-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1191,8 +1153,8 @@ main > section,
   .nav a { padding: 13px 14px; font-size: 16px; border-radius: 12px; }
   .site-header.header-hidden { transform: none; }
 
-  .hero-top { grid-template-columns: 1fr; gap: 22px; align-items: start; }
-  .hero-intro .lead { max-width: 60ch; }
+  .hero-top { grid-template-columns: 1fr; gap: 28px; }
+  .hero-headline .lead { max-width: 60ch; }
   .focus-map,
   .impact-feature,
   .about-hero,

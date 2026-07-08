@@ -11,8 +11,6 @@ description: Головна сторінка благодійного фонду
           <div class="hero-headline">
             <p class="hero-org">{{ home.hero.orgBanner | safe }}</p>
             <h1>{{ home.hero.headline | safe }}</h1>
-          </div>
-          <div class="hero-intro">
             <p class="lead">{{ home.hero.lead }}</p>
             <div class="hero-actions">
               <a class="button button-accent" href="{{ site.donateUrl }}">{{ home.hero.primaryLabel }}
@@ -21,19 +19,10 @@ description: Головна сторінка благодійного фонду
               <a class="button button-ghost" href="{{ home.hero.secondaryUrl }}">{{ home.hero.secondaryLabel }}</a>
             </div>
           </div>
+          <figure class="hero-figure">
+            <img src="{{ home.hero.image }}" alt="{{ home.hero.imageAlt }}" width="1448" height="1086" fetchpriority="high">
+          </figure>
         </div>
-        <figure class="hero-figure">
-          <img src="{{ home.hero.image }}" alt="{{ home.hero.imageAlt }}">
-          <div class="hero-stat-card">
-            <span class="hero-stat-label">{{ home.hero.statLabel }}</span>
-            <strong class="hero-stat-value">{{ home.hero.statValue }}</strong>
-            <div class="hero-stat-meta">
-              {%- for m in home.hero.statMeta %}
-              <span>{{ m }}</span>
-              {%- endfor %}
-            </div>
-          </div>
-        </figure>
       </section>
       <section class="metrics">
         {%- for m in home.metrics %}
@@ -60,6 +49,7 @@ description: Головна сторінка благодійного фонду
           <small>{{ home.geography.regionSub }}</small>
         </div>
         <div>
+          <p class="eyebrow">{{ home.geography.eyebrow }}</p>
           <h2>{{ home.geography.heading }}</h2>
         </div>
       </section>
@@ -99,13 +89,13 @@ description: Головна сторінка благодійного фонду
         </div>
         <div class="feature-gallery">
           {%- for img in home.response.images %}
-          <img src="{{ img.src }}" alt="{{ img.alt }}">
+          <img src="{{ img.src }}" alt="{{ img.alt }}" width="1448" height="1086" loading="lazy" decoding="async">
           {%- endfor %}
         </div>
       </section>
       <section class="section infra-section">
         <div class="infra-panel">
-          <div class="section-heading center"><h2>{{ home.resources.heading }}</h2></div>
+          <div class="section-heading center"><p class="eyebrow">{{ home.resources.eyebrow }}</p><h2>{{ home.resources.heading }}</h2></div>
           <div class="report-list">
             {%- for r in home.resources.items %}
             <div class="resource-card">
@@ -117,7 +107,7 @@ description: Головна сторінка благодійного фонду
         </div>
       </section>
       <section class="section partners-section">
-        <div class="section-heading center"><h2>{{ home.partnersHeading }}</h2></div>
+        <div class="section-heading center"><p class="eyebrow">{{ home.partners.eyebrow }}</p><h2>{{ home.partners.heading }}</h2></div>
         <div class="partner-logos">
           <div class="partner-logo-card">
             <svg viewBox="0 0 120 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Співпраця з Німеччиною">

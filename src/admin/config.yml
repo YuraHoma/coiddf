@@ -89,12 +89,6 @@ collections:
               - { name: secondaryUrl, label: "Кнопка 2 — посилання", widget: string }
               - { name: image, label: "Фото", widget: image }
               - { name: imageAlt, label: "Опис фото (alt)", widget: string }
-              - { name: statLabel, label: "Картка — підпис", widget: string }
-              - { name: statValue, label: "Картка — число", widget: string }
-              - name: statMeta
-                label: "Картка — рядки під числом"
-                widget: list
-                field: { name: line, label: "Рядок", widget: string }
           - name: metrics
             label: "Цифри впливу"
             widget: list
@@ -116,6 +110,7 @@ collections:
             label: "Блок «Географія»"
             widget: object
             fields:
+              - { name: eyebrow, label: "Мітка", widget: string }
               - { name: regionTitle, label: "Район", widget: string }
               - { name: regionSub, label: "Область", widget: string }
               - { name: heading, label: "Заголовок", widget: string }
@@ -162,6 +157,7 @@ collections:
             label: "Інфраструктура"
             widget: object
             fields:
+              - { name: eyebrow, label: "Мітка", widget: string }
               - { name: heading, label: "Заголовок", widget: string }
               - name: items
                 label: "Картки"
@@ -171,7 +167,12 @@ collections:
                   - { name: title, label: "Назва", widget: string }
                   - { name: strong, label: "Виділене (велике)", widget: string, required: false }
                   - { name: sub, label: "Підпис", widget: string, required: false }
-          - { name: partnersHeading, label: "Партнери — заголовок", widget: string }
+          - name: partners
+            label: "Партнери"
+            widget: object
+            fields:
+              - { name: eyebrow, label: "Мітка", widget: string }
+              - { name: heading, label: "Заголовок", widget: string }
           - name: cta
             label: "Заклик (внизу сторінки)"
             widget: object
