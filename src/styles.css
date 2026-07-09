@@ -339,7 +339,6 @@ main > section,
   border-radius: var(--radius-pill);
   background: #fff;
   border: 1px solid var(--line);
-  box-shadow: var(--shadow-pill);
   transition: border-color var(--t), transform var(--t);
 }
 .hotline-pill:hover { border-color: var(--line-strong); transform: translateY(-1px); }
@@ -388,22 +387,26 @@ main > section,
   overflow: hidden;
   background: var(--paper);
 }
-/* crossfade A↔B, 12s — теплий ↔ зелений radial.
-   Не сягає padding-bottom секції, щоб 120px ритм-відступ лишався чистим. */
+/* crossfade A↔B, 12s — теплий ↔ зелений.
+   Еліпс тягнеться до країв екрану, а лінійний шар зверху гарантовано
+   розчиняє низ у чистий білий — жодної видимої межі бути не може. */
 .home-hero::before,
 .home-hero::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0;
-  bottom: var(--section-y);
+  inset: 0;
   z-index: 0;
   pointer-events: none;
 }
 .home-hero::before {
-  background: radial-gradient(circle at 50% -5%, #D9E8AC 0%, #F4EFD6 40%, rgba(255,255,255,0) 68%);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0) 45%, #ffffff 92%),
+    radial-gradient(ellipse 140% 120% at 50% -20%, #D9E8AC 0%, #F4EFD6 45%, #F4F3E8 100%);
 }
 .home-hero::after {
-  background: radial-gradient(circle at 50% -5%, #F0DCA2 0%, #DCE8C0 40%, rgba(255,255,255,0) 68%);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0) 45%, #ffffff 92%),
+    radial-gradient(ellipse 140% 120% at 50% -20%, #F0DCA2 0%, #DCE8C0 45%, #F0F2E6 100%);
   opacity: 0;
   animation: heroCrossfade 12s ease-in-out infinite;
 }
@@ -855,16 +858,17 @@ main > section,
   overflow: hidden;
   background: var(--paper);
 }
-/* Не сягає padding-bottom секції, щоб 120px ритм-відступ лишався чистим. */
+/* Еліпс до країв екрану + лінійне розчинення низу в чистий білий. */
 .page-hero::before,
 .about-hero::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0;
-  bottom: var(--section-y);
+  inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: radial-gradient(circle at 50% -5%, #D9E8AC 0%, #F4EFD6 40%, rgba(255,255,255,0) 68%);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0) 45%, #ffffff 92%),
+    radial-gradient(ellipse 140% 120% at 50% -20%, #D9E8AC 0%, #F4EFD6 45%, #F4F3E8 100%);
 }
 .page-hero > *,
 .about-hero > * { position: relative; z-index: 1; }
