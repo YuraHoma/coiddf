@@ -105,7 +105,9 @@
           counters.forEach(function (el) { cio.observe(el); });
         }
 
-        /* ротація акцентного слова в H1, інтервал 2.2s */
+        /* ротація акцентного слова в H1, інтервал 2.2s.
+           Ширина фіксується під найдовше слово, щоб перенос рядків
+           заголовка не змінювався і сторінка не "стрибала". */
         var accent = d.querySelector('.hero-top h1 .accent');
         if (accent && !reduce) {
           var words = ['націю', 'родини', 'громади', 'майбутнє'];
@@ -113,6 +115,13 @@
           var show = 'opacity 280ms ease, transform 280ms ease';
           accent.style.display = 'inline-block';
           accent.style.transition = show;
+          var maxWidth = 0;
+          words.forEach(function (w) {
+            accent.textContent = w;
+            maxWidth = Math.max(maxWidth, accent.getBoundingClientRect().width);
+          });
+          accent.style.width = Math.ceil(maxWidth) + 'px';
+          accent.textContent = words[wi];
           setInterval(function () {
             accent.style.opacity = '0';
             accent.style.transform = 'translateY(0.45em)';
