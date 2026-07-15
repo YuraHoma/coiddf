@@ -38,25 +38,24 @@
         <div class="footer-cta-col">
           <div class="footer-social-label">Ми в соц. мережах</div>
           <div class="footer-socials" aria-label="Соціальні мережі">
+            {%- if site.socials.facebook %}
             <a href="{{ site.socials.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
-            <a href="{{ site.socials.instagram }}" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
+            {%- endif %}
+            {%- if site.socials.twitter %}
             <a href="{{ site.socials.twitter }}" target="_blank" rel="noopener" aria-label="Twitter / X">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href="{{ site.socials.youtube }}" target="_blank" rel="noopener" aria-label="YouTube">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.4a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg>
+            {%- endif %}
+            {%- if site.socials.linkedin %}
+            <a href="{{ site.socials.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55z"/></svg>
             </a>
+            {%- endif %}
           </div>
-          <a class="footer-hotline" href="tel:{{ site.hotlineTel }}">
-            <span>Гаряча лінія</span>
-            <strong>{{ site.hotline }}</strong>
-          </a>
-          <a class="button footer-donate-btn" href="{{ site.donateUrl }}">
-            Допомогти нам <span>↗</span>
+          <a class="button footer-donate-btn" href="{{ site.contactUrl }}">
+            Зв'язатися з нами <span>↗</span>
           </a>
         </div>
       </div>

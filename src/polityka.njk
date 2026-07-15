@@ -1,0 +1,24 @@
+---
+layout: base.njk
+permalink: /polityka/
+title: Політика | Фонд розвитку міжнародної співпраці
+description: Політика конфіденційності та обробки звернень фонду.
+---
+      <section class="page-hero section-dark">
+        <div>
+          <p class="eyebrow">{{ policy.hero.eyebrow }}</p>
+          <h1>{{ policy.hero.heading }}</h1>
+          <p class="lead">{{ policy.hero.lead }}</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="policy-body">
+          {%- for s in policy.sections %}
+          <div>
+            <h3>{{ s.title }}</h3>
+            <p>{{ s.body }}</p>
+          </div>
+          {%- endfor %}
+        </div>
+        <p class="form-note">{{ policy.note }}</p>
+      </section>
