@@ -36,6 +36,7 @@
           </div>
         </div>
         <div class="footer-cta-col">
+          {%- if site.socials.facebook or site.socials.twitter or site.socials.linkedin %}
           <div class="footer-social-label">Ми в соц. мережах</div>
           <div class="footer-socials" aria-label="Соціальні мережі">
             {%- if site.socials.facebook %}
@@ -54,7 +55,8 @@
             </a>
             {%- endif %}
           </div>
-          <a class="button footer-donate-btn" href="{{ site.contactUrl }}">
+          {%- endif %}
+          <a class="button footer-contact-btn" href="{{ site.contactUrl }}">
             Зв'язатися з нами <span>↗</span>
           </a>
         </div>
