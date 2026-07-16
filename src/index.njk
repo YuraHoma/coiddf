@@ -12,8 +12,6 @@ description: Головна сторінка благодійного фонду
           <div class="hero-headline">
             <p class="hero-org">{{ home.hero.orgBanner | safe }}</p>
             <h1>{{ home.hero.headline | safe }}</h1>
-          </div>
-          <div class="hero-intro">
             <p class="lead">{{ home.hero.lead }}</p>
             <div class="hero-actions">
               <a class="button button-accent" href="{{ site.contactUrl }}">{{ home.hero.primaryLabel }}
@@ -22,10 +20,10 @@ description: Головна сторінка благодійного фонду
               <a class="button button-ghost" href="{{ home.hero.secondaryUrl }}">{{ home.hero.secondaryLabel }}</a>
             </div>
           </div>
+          <figure class="hero-figure">
+            <img src="{{ home.hero.image }}" alt="{{ home.hero.imageAlt }}" loading="eager" fetchpriority="high" sizes="(min-width: 901px) 50vw, 100vw">
+          </figure>
         </div>
-        <figure class="hero-figure">
-          <img src="{{ home.hero.image }}" alt="{{ home.hero.imageAlt }}" loading="eager" fetchpriority="high" sizes="(min-width: 901px) 90vw, 100vw">
-        </figure>
       </section>
       <section class="section intro-story">
         <div class="intro-story-top">
@@ -43,10 +41,12 @@ description: Головна сторінка благодійного фонду
       </section>
       <section class="section focus-map">
         <div class="map-card">
+          <img src="/assets/map-polohy-raion.svg" alt="Карта Пологівського району на території Запорізької області" loading="lazy" eleventy:ignore>
           <span>{{ home.geography.regionTitle }}</span>
           <small>{{ home.geography.regionSub }}</small>
         </div>
         <div>
+          <p class="eyebrow">{{ home.geography.eyebrow }}</p>
           <h2>{{ home.geography.heading }}</h2>
         </div>
       </section>
@@ -90,23 +90,30 @@ description: Головна сторінка благодійного фонду
           {%- endfor %}
         </div>
       </section>
-      <section class="section section-light">
-        <div class="section-heading center"><h2>{{ home.resources.heading }}</h2></div>
-        <div class="report-list">
-          {%- for r in home.resources.items %}
-          <div class="resource-card">
-            <span class="resource-icon">{{ icons.resourceIcon(r.icon) }}</span>
-            <span>{{ r.title }}{% if r.strong %}<strong>{{ r.strong }}</strong>{% endif %}{{ r.sub }}</span>
+      <section class="section infra-section">
+        <div class="infra-panel">
+          <div class="section-heading center"><h2>{{ home.resources.heading }}</h2></div>
+          <div class="report-list">
+            {%- for r in home.resources.items %}
+            <div class="resource-card">
+              <span class="resource-icon">{{ icons.resourceIcon(r.icon) }}</span>
+              <span>{{ r.title }}{% if r.strong %}<strong>{{ r.strong }}</strong>{% endif %}{{ r.sub }}</span>
+            </div>
+            {%- endfor %}
           </div>
-          {%- endfor %}
         </div>
       </section>
       <section class="section partners-section">
         <div class="section-heading center"><h2>{{ home.partnersHeading }}</h2></div>
-        <div class="partner-logos">
-          {%- for p in partners.items %}
-          <div class="partner-logo-card">{{ logos.logo(p.key) }}</div>
-          {%- endfor %}
+        <div class="partner-marquee">
+          <div class="partner-track">
+            {%- for p in partners.items %}
+            <div class="partner-logo-card">{{ logos.logo(p.key) }}</div>
+            {%- endfor %}
+            {%- for p in partners.items %}
+            <div class="partner-logo-card">{{ logos.logo(p.key) }}</div>
+            {%- endfor %}
+          </div>
         </div>
         <div class="news-all-wrap">
           <a class="button button-outline" href="/partnery/">Усі партнери ↗</a>
