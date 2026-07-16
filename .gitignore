@@ -3,3 +3,6 @@ _site/
 .wrangler/
 .DS_Store
 *.bak*
+
+# local agent workspaces
+.claude/

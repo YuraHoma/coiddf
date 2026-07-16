@@ -1,5 +1,5 @@
 {
-  "name": "icdf-site",
+  "name": "coiddf",
   "version": "1.0.0",
   "private": true,
   "description": "БО «Фонд розвитку міжнародної співпраці» — static site (Eleventy + Pages CMS)",
