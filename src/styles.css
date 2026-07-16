@@ -35,7 +35,6 @@
   --container: 1240px;
   --gutter: clamp(20px, 5vw, 64px);
   --section-y: clamp(64px, 8vw, 116px);
-  --radius-sm: 12px;
   --radius: 20px;
   --radius-lg: 28px;
   --radius-pill: 999px;
@@ -150,8 +149,8 @@ main > section,
 /* Kill doubled vertical gaps: when a plain (paper) section directly follows
    another plain section, drop its top padding so the rhythm is a single gap,
    not stacked top+bottom. Coloured bands keep their own padding. */
-main > section.section:not(.section-light):not(.section-dark):not(.focus-map):not(.cta-band):not(.metrics)
-  + section.section:not(.section-light):not(.section-dark):not(.focus-map):not(.cta-band):not(.metrics) {
+main > section.section:not(.section-light):not(.section-dark):not(.focus-map):not(.cta-band)
+  + section.section:not(.section-light):not(.section-dark):not(.focus-map):not(.cta-band) {
   padding-top: 0;
 }
 
@@ -179,14 +178,14 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
 /* primary — lime on ink text (high contrast) */
 .button-accent,
 .btn-support,
-.footer-donate-btn {
+.footer-contact-btn {
   background: var(--lime);
   color: var(--ink);
   border-color: var(--lime);
 }
 .button-accent:hover,
 .btn-support:hover,
-.footer-donate-btn:hover {
+.footer-contact-btn:hover {
   background: var(--lime-deep);
   border-color: var(--lime-deep);
   box-shadow: 0 10px 26px -10px rgba(124, 168, 12, 0.7);
@@ -295,32 +294,6 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
 .nav a.active { color: var(--ink); background: var(--surface-2); }
 
 .header-right { display: flex; align-items: center; gap: 10px; }
-
-.lang-select-wrap { position: relative; display: inline-flex; }
-.lang-select-wrap::after {
-  content: "";
-  position: absolute;
-  right: 11px; top: 50%;
-  width: 7px; height: 7px;
-  border-right: 2px solid var(--muted);
-  border-bottom: 2px solid var(--muted);
-  transform: translateY(-65%) rotate(45deg);
-  pointer-events: none;
-}
-.lang-select {
-  appearance: none;
-  -webkit-appearance: none;
-  padding: 9px 30px 9px 14px;
-  border: 1.5px solid var(--line-strong);
-  border-radius: var(--radius-pill);
-  background: transparent;
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--ink);
-  cursor: pointer;
-  transition: border-color var(--t);
-}
-.lang-select:hover { border-color: var(--ink); }
 
 /* hamburger (mobile only) */
 .nav-toggle {
@@ -608,6 +581,11 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
   border-color: var(--line-strong);
+}
+.report-note {
+  margin-top: 18px;
+  font-size: 14.5px;
+  color: var(--muted);
 }
 
 /* ---------- 15. PARTNERS (logo wall) ---------- */
@@ -963,7 +941,7 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
   transition: background var(--t), color var(--t), transform var(--t);
 }
 .footer-socials a:hover { background: var(--lime); color: var(--ink); transform: translateY(-2px); }
-.footer-donate-btn { margin-top: 4px; }
+.footer-contact-btn { margin-top: 4px; }
 
 .footer-bottom {
   display: flex;
@@ -998,7 +976,7 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
 
   /* language switch + contact button stay visible in the bar */
   .header-right { order: 2; display: flex; flex-direction: row; align-items: center; gap: 8px; }
-  .lang-select { padding: 9px 26px 9px 12px; font-size: 13px; }
+  
   .btn-support { padding: 11px 15px; font-size: 13.5px; }
   .btn-support svg { display: none; }
 
@@ -1018,7 +996,6 @@ main > section.section:not(.section-light):not(.section-dark):not(.focus-map):no
   .site-header.nav-open .nav { display: flex; }
   .site-header.nav-open { box-shadow: var(--shadow); }
   .nav a { padding: 13px 14px; font-size: 16px; border-radius: 12px; }
-  .nav a.active::after { display: none; }
   .site-header.header-hidden { transform: none; } /* never hide on mobile */
 
   /* layout collapses */

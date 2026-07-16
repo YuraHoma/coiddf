@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }}</title>
     <meta name="description" content="{{ description or excerpt }}">
+    {%- if noindex %}
+    <meta name="robots" content="noindex">
+    {%- else %}
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    {%- endif %}
     <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
     <meta property="og:type" content="{% if page.url and '/novyny/' in page.url and page.url != '/novyny/' %}article{% else %}website{% endif %}">
     <meta property="og:site_name" content="{{ site.orgFull }}">
@@ -64,10 +68,10 @@
 
         var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (reduce || !('IntersectionObserver' in window)) return;
-        var sel = '.section-heading,.metrics article,.intro-photos,.intro-story-top > p,' +
+        var sel = '.section-heading,.intro-photos,.intro-story-top > p,' +
           '.map-card,.cards-grid article,.process-grid article,.feature-copy,.feature-gallery,' +
           '.resource-card,.partner-logo-card,.news-mini-grid article,.news-grid article,' +
-          '.hero-stat-card,.principles-grid article,.about-note,.about-copy,.team-grid article,' +
+          '.principles-grid article,.about-note,.about-copy,.team-grid article,' +
           '.project-list > *,.contact-list span,.awards-placeholder,.cta-band > div';
         var els = [].slice.call(d.querySelectorAll(sel));
         els.forEach(function (el) {

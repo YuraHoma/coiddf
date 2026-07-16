@@ -346,6 +346,20 @@ content:
           - { name: body, label: Текст, type: text }
       - { name: note, label: Примітка внизу сторінки, type: text }
 
+  # ---------------------------------------------------------------- Сторінка «Новини» (банер)
+  - name: novyny
+    label: Сторінка «Новини» (банер)
+    type: file
+    path: src/_data/novyny.json
+    fields:
+      - name: hero
+        label: Банер сторінки
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: text }
+          - { name: lead, label: Підзаголовок, type: text }
+
   # ---------------------------------------------------------------- Сторінка «Звітність»
   - name: reports
     label: Сторінка «Звітність»
@@ -360,6 +374,7 @@ content:
           - { name: heading, label: Заголовок, type: text }
           - { name: lead, label: Підзаголовок, type: text }
       - { name: items, label: Документи звітності, type: string, list: true }
+      - { name: note, label: Примітка під списком, type: text }
 
   # ---------------------------------------------------------------- Сторінка «Правова інформація»
   - name: legal
