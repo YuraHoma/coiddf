@@ -62,8 +62,8 @@
       { "icon": "warehouse", "title": "Складські приміщення", "strong": "1200 кв.м", "sub": "у м. Запоріжжя" },
       { "icon": "package", "title": "Обладнання для фасування", "strong": "сипучих продуктів", "sub": "та розливу води" },
       { "icon": "freezer", "title": "Морозильні камери", "strong": "72 кв.м", "sub": "до −18°C" },
-      { "icon": "van", "title": "3 вантажні фургони", "strong": "2,5 тн", "sub": "" },
-      { "icon": "truck", "title": "3 вантажні фургони", "strong": "20 тн", "sub": "" },
+      { "icon": "van", "title": "3 вантажні фургони", "strong": "2,5 т", "sub": "" },
+      { "icon": "truck", "title": "3 вантажні фургони", "strong": "20 т", "sub": "" },
       { "icon": "medical", "title": "Медична допомога", "strong": "", "sub": "" }
     ]
   },
