@@ -125,6 +125,7 @@ content:
         label: Блок «Географія»
         type: object
         fields:
+          - { name: eyebrow, label: Мітка, type: string }
           - { name: regionTitle, label: Район, type: string }
           - { name: regionSub, label: Область, type: string }
           - { name: heading, label: Заголовок, type: string }
