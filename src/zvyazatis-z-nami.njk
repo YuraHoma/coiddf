@@ -1,0 +1,57 @@
+---
+layout: base.njk
+permalink: /zvyazatis-z-nami/
+title: Зв'язатися з нами | Фонд розвитку міжнародної співпраці
+description: Форма зворотного зв'язку — запити, скарги та кар'єрні можливості.
+---
+      <section class="page-hero section-dark">
+        <div>
+          <p class="eyebrow">{{ feedback.hero.eyebrow }}</p>
+          <h1>{{ feedback.hero.heading }}</h1>
+          <p class="lead">{{ feedback.hero.lead }}</p>
+        </div>
+      </section>
+      <section class="section">
+        <form class="feedback-form" id="feedback-form" novalidate>
+          <div class="form-row">
+            <label for="fb-name">Ім'я</label>
+            <input type="text" id="fb-name" name="name" required>
+          </div>
+          <div class="form-row">
+            <label for="fb-email">Email</label>
+            <input type="email" id="fb-email" name="email" required>
+          </div>
+          <div class="form-row">
+            <label for="fb-category">Категорія звернення</label>
+            <select id="fb-category" name="category" required>
+              {%- for c in feedback.categories %}
+              <option value="{{ c }}">{{ c }}</option>
+              {%- endfor %}
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="fb-message">Повідомлення</label>
+            <textarea id="fb-message" name="message" rows="6" required></textarea>
+          </div>
+          <button class="button button-accent" type="submit">Надіслати<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></button>
+          <p class="form-note">Після натискання «Надіслати» відкриється ваш поштовий клієнт із заповненим листом на адресу {{ feedback.submitEmail }}.</p>
+        </form>
+      </section>
+      <script>
+        (function () {
+          var form = document.getElementById("feedback-form");
+          if (!form) return;
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var name = form.name.value.trim();
+            var email = form.email.value.trim();
+            var category = form.category.value;
+            var message = form.message.value.trim();
+            var subject = encodeURIComponent("[" + category + "] Звернення від " + name);
+            var body = encodeURIComponent(
+              "Ім'я: " + name + "\nEmail: " + email + "\nКатегорія: " + category + "\n\n" + message
+            );
+            window.location.href = "mailto:{{ feedback.submitEmail }}?subject=" + subject + "&body=" + body;
+          });
+        })();
+      </script>

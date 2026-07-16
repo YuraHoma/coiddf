@@ -1,0 +1,20 @@
+---
+layout: base.njk
+permalink: /pravova-informaciya/
+title: Правова інформація | Фонд розвитку міжнародної співпраці
+description: Реєстраційні дані та реквізити благодійного фонду.
+---
+      <section class="page-hero section-dark">
+        <div>
+          <p class="eyebrow">{{ legal.hero.eyebrow }}</p>
+          <h1>{{ legal.hero.heading }}</h1>
+          <p class="lead">{{ legal.hero.lead }}</p>
+        </div>
+      </section>
+      <section class="section contacts-page">
+        <div class="contact-list">
+          {%- for c in legal.items %}
+          <span>{{ c.label }}: {{ c.value }}</span>
+          {%- endfor %}
+        </div>
+      </section>

@@ -56,9 +56,7 @@ content:
       - { name: orgLine2, label: Назва — рядок 2 (футер), type: string }
       - { name: orgEnglish, label: Назва англійською, type: string }
       - { name: edrpou, label: Код ЄДРПОУ, type: string }
-      - { name: hotline, label: Гаряча лінія (як показувати), type: string }
-      - { name: hotlineTel, label: Гаряча лінія для дзвінка (лише цифри), type: string }
-      - { name: donateUrl, label: Посилання кнопки «Підтримати», type: string }
+      - { name: contactUrl, label: Посилання кнопки «Зв'язатися з нами», type: string }
       - name: nav
         label: Головне меню
         type: object
@@ -92,9 +90,8 @@ content:
         type: object
         fields:
           - { name: facebook, label: Facebook, type: string }
-          - { name: instagram, label: Instagram, type: string }
           - { name: twitter, label: Twitter / X, type: string }
-          - { name: youtube, label: YouTube, type: string }
+          - { name: linkedin, label: LinkedIn, type: string }
 
   # ---------------------------------------------------------------- Головна сторінка
   - name: home
@@ -116,16 +113,6 @@ content:
           - { name: secondaryUrl, label: Кнопка 2 — посилання, type: string }
           - { name: image, label: Фото, type: image }
           - { name: imageAlt, label: Опис фото (alt), type: string }
-          - { name: statLabel, label: Картка — підпис, type: string }
-          - { name: statValue, label: Картка — число, type: string }
-          - { name: statMeta, label: Картка — рядки під числом, type: string, list: true }
-      - name: metrics
-        label: Цифри впливу
-        type: object
-        list: true
-        fields:
-          - { name: value, label: Число, type: string }
-          - { name: label, label: Підпис, type: string }
       - name: mission
         label: Блок «Чому ми працюємо»
         type: object
@@ -276,9 +263,9 @@ content:
           - { name: name, label: "Ім'я", type: string }
           - { name: bio, label: "Опис (необов'язково)", type: text }
 
-  # ---------------------------------------------------------------- Сторінка «Проєкти» (банер)
+  # ---------------------------------------------------------------- Сторінка «Проєкти»
   - name: proyekty
-    label: Сторінка «Проєкти» — банер
+    label: Сторінка «Проєкти»
     type: file
     path: src/_data/proyekty.json
     fields:
@@ -289,55 +276,75 @@ content:
           - { name: eyebrow, label: Мітка, type: string }
           - { name: heading, label: Заголовок, type: text }
           - { name: lead, label: Підзаголовок, type: text }
-
-  # ---------------------------------------------------------------- Сторінка «Отримати допомогу»
-  - name: dopomogty
-    label: Сторінка «Отримати допомогу»
-    type: file
-    path: src/_data/dopomogty.json
-    fields:
-      - name: hero
-        label: Банер сторінки
+      - name: model
+        label: Блок «Як розподіляється допомога»
         type: object
         fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: text }
-          - { name: lead, label: Підзаголовок, type: text }
-      - name: cards
-        label: Картки
-        type: object
-        list: true
-        fields:
-          - { name: title, label: Заголовок, type: string }
-          - { name: text, label: Текст, type: text }
-
-  # ---------------------------------------------------------------- Сторінка «Допомогти нам» (реквізити)
-  - name: donate
-    label: Сторінка «Допомогти нам» (реквізити)
-    type: file
-    path: src/_data/donate.json
-    fields:
-      - name: hero
-        label: Банер сторінки
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: text }
-          - { name: lead, label: Підзаголовок, type: text }
-      - name: cards
-        label: Реквізити
-        type: object
-        list: true
-        fields:
-          - { name: title, label: Заголовок, type: string }
-          - name: rows
-            label: Рядки
+          - { name: heading, label: Заголовок, type: string }
+          - name: items
+            label: Пункти
             type: object
             list: true
             fields:
-              - { name: label, label: "Підпис (необов'язково)", type: string }
-              - { name: value, label: Значення, type: string }
-              - { name: strong, label: Виділити жирним, type: boolean }
+              - { name: title, label: Заголовок, type: string }
+              - { name: text, label: Текст, type: text }
+
+  # ---------------------------------------------------------------- Партнери
+  - name: partners
+    label: Партнери
+    type: file
+    path: src/_data/partners.json
+    fields:
+      - name: items
+        label: Партнери
+        type: object
+        list: true
+        fields:
+          - name: key
+            label: Лого
+            type: select
+            options:
+              values: [german, life100, acted, ufbf, samaritans]
+          - { name: name, label: Назва, type: string }
+          - { name: description, label: Опис, type: text }
+
+  # ---------------------------------------------------------------- Сторінка «Зв'язатися з нами»
+  - name: feedback
+    label: Сторінка «Зв'язатися з нами»
+    type: file
+    path: src/_data/feedback.json
+    fields:
+      - name: hero
+        label: Банер сторінки
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: text }
+          - { name: lead, label: Підзаголовок, type: text }
+      - { name: categories, label: Категорії звернень, type: string, list: true }
+      - { name: submitEmail, label: Email для надсилання, type: string }
+
+  # ---------------------------------------------------------------- Сторінка «Політика»
+  - name: policy
+    label: Сторінка «Політика»
+    type: file
+    path: src/_data/policy.json
+    fields:
+      - name: hero
+        label: Банер сторінки
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: text }
+          - { name: lead, label: Підзаголовок, type: text }
+      - name: sections
+        label: Розділи
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Заголовок, type: string }
+          - { name: body, label: Текст, type: text }
+      - { name: note, label: Примітка внизу сторінки, type: text }
 
   # ---------------------------------------------------------------- Сторінка «Звітність»
   - name: reports
@@ -354,11 +361,11 @@ content:
           - { name: lead, label: Підзаголовок, type: text }
       - { name: items, label: Документи звітності, type: string, list: true }
 
-  # ---------------------------------------------------------------- Сторінка «Контакти»
-  - name: contacts
-    label: Сторінка «Контакти»
+  # ---------------------------------------------------------------- Сторінка «Правова інформація»
+  - name: legal
+    label: Сторінка «Правова інформація»
     type: file
-    path: src/_data/contacts.json
+    path: src/_data/legal.json
     fields:
       - name: hero
         label: Банер сторінки

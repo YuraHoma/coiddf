@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "key": "german", "name": "German Cooperation", "description": "Партнерство в рамках програм міжнародної гуманітарної допомоги." },
+    { "key": "life100", "name": "100% LIFE Запоріжжя", "description": "Регіональна партнерська організація в Запорізькій області." },
+    { "key": "acted", "name": "ACTED", "description": "Міжнародна гуманітарна організація — постачання допомоги та експертна підтримка." },
+    { "key": "ufbf", "name": "Ukraine Food Bank", "description": "Партнер із забезпечення продуктами харчування." },
+    { "key": "samaritans", "name": "Samaritan's Purse", "description": "Міжнародний партнер із гуманітарного реагування." }
+  ]
+}

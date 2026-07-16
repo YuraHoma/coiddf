@@ -1,0 +1,25 @@
+---
+layout: base.njk
+permalink: /partnery/
+title: Партнери | Фонд розвитку міжнародної співпраці
+description: Українські та міжнародні партнери фонду.
+---
+{% import "partner-logos.njk" as logos %}
+      <section class="page-hero section-dark">
+        <div>
+          <p class="eyebrow">Партнери</p>
+          <h1>Працюємо разом з українськими та міжнародними партнерами.</h1>
+          <p class="lead">Фонд співпрацює виключно з міжнародними партнерами через бюджетні програми гуманітарної допомоги — без приватних зборів коштів.</p>
+        </div>
+      </section>
+      <section class="section section-light">
+        <div class="partners-grid">
+          {%- for p in partners.items %}
+          <article class="partner-detail-card">
+            <div class="partner-detail-mark">{{ logos.logo(p.key) }}</div>
+            <h3>{{ p.name }}</h3>
+            <p>{{ p.description }}</p>
+          </article>
+          {%- endfor %}
+        </div>
+      </section>
