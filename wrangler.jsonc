@@ -1,5 +1,7 @@
 {
-  "name": "coiddf",
+  // Основний воркер сайту — адреса, яку має клієнт:
+  // https://icdf-preview.homchenkoyura.workers.dev
+  "name": "icdf-preview",
   "compatibility_date": "2026-06-14",
   "observability": {
     "enabled": true

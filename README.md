@@ -2,7 +2,7 @@
 
 Статичний сайт на [Eleventy](https://www.11ty.dev/) з редагуванням контенту через [Pages CMS](https://pagescms.org).
 
-- **Продакшн:** https://coiddf.homchenkoyura.workers.dev/ (Cloudflare)
+- **Продакшн:** https://icdf-preview.homchenkoyura.workers.dev/ (Cloudflare)
 - **CMS:** Pages CMS — конфігурація у `.pages.yml`, редагування комітяться напряму в цей репозиторій.
 
 ## Розробка
