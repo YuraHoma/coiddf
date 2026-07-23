@@ -38,20 +38,6 @@ description: Головна сторінка благодійного фонду
           </div>
         </div>
       </section>
-      <section class="section intro-story">
-        <div class="intro-story-top">
-          <div>
-            <p class="eyebrow">{{ home.mission.eyebrow }}</p>
-            <h2>{{ home.mission.heading }}</h2>
-          </div>
-          <p>{{ home.mission.body }}</p>
-        </div>
-        <div class="intro-photos">
-          {%- for photo in home.mission.photos %}{% if photo %}
-          <img class="intro-photo" src="{{ photo }}" alt="">
-          {%- endif %}{% endfor %}
-        </div>
-      </section>
       <section class="section">
         <div class="section-heading center">
           <p class="eyebrow">{{ home.focusAreas.eyebrow }}</p>
