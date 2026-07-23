@@ -41,6 +41,7 @@ content:
     fields:
       - { name: title, label: Назва проєкту, type: string, required: true }
       - { name: date, label: Дата, type: date, required: true }
+      - { name: image, label: Фото проєкту, type: image, required: true }
       - { name: excerpt, label: Опис, type: text, required: true }
 
   # ---------------------------------------------------------------- Налаштування сайту
@@ -262,6 +263,7 @@ content:
         fields:
           - { name: role, label: Роль, type: string }
           - { name: name, label: "Ім'я", type: string }
+          - { name: photo, label: "Фото (необов'язково)", type: image }
           - { name: bio, label: "Опис (необов'язково)", type: text }
 
   # ---------------------------------------------------------------- Сторінка «Проєкти»
