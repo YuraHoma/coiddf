@@ -178,8 +178,7 @@ content:
         label: Блок «Партнери»
         type: object
         fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: string }
+          - { name: eyebrow, label: Текст мітки, type: string }
       - name: cta
         label: Заклик (внизу сторінки)
         type: object
