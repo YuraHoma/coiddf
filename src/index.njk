@@ -25,6 +25,22 @@ description: Головна сторінка благодійного фонду
           </figure>
         </div>
       </section>
+      <section class="section partners-section">
+        <div class="section-heading center"><h2>{{ home.partnersHeading }}</h2></div>
+        <div class="partner-marquee">
+          <div class="partner-track">
+            {%- for p in partners.items %}
+            <div class="partner-logo-card">{{ logos.logo(p.key) }}</div>
+            {%- endfor %}
+            {%- for p in partners.items %}
+            <div class="partner-logo-card">{{ logos.logo(p.key) }}</div>
+            {%- endfor %}
+          </div>
+        </div>
+        <div class="news-all-wrap">
+          <a class="button button-outline" href="/partnery/">Усі партнери ↗</a>
+        </div>
+      </section>
       <section class="section intro-story">
         <div class="intro-story-top">
           <div>
@@ -76,18 +92,6 @@ description: Головна сторінка благодійного фонду
           <a class="wide-action" href="{{ home.process.ctaUrl }}">{{ home.process.ctaLabel }} <span>↗</span></a>
         </div>
       </section>
-      <section class="section impact-feature">
-        <div class="feature-copy">
-          <p class="eyebrow">{{ home.response.eyebrow }}</p>
-          <h2>{{ home.response.heading }}</h2>
-          <p>{{ home.response.body }}</p>
-        </div>
-        <div class="feature-gallery">
-          {%- for img in home.response.images %}
-          <img src="{{ img.src }}" alt="{{ img.alt }}">
-          {%- endfor %}
-        </div>
-      </section>
       <section class="section infra-section">
         <div class="section-heading center"><h2>{{ home.resources.heading }}</h2></div>
         <div class="report-list">
@@ -97,22 +101,6 @@ description: Головна сторінка благодійного фонду
             <span>{{ r.title }}{% if r.strong %}<strong>{{ r.strong }}</strong>{% endif %}{{ r.sub }}</span>
           </div>
           {%- endfor %}
-        </div>
-      </section>
-      <section class="section partners-section">
-        <div class="section-heading center"><h2>{{ home.partnersHeading }}</h2></div>
-        <div class="partner-marquee">
-          <div class="partner-track">
-            {%- for p in partners.items %}
-            <div class="partner-logo-card">{{ logos.logo(p.key) }}</div>
-            {%- endfor %}
-            {%- for p in partners.items %}
-            <div class="partner-logo-card">{{ logos.logo(p.key) }}</div>
-            {%- endfor %}
-          </div>
-        </div>
-        <div class="news-all-wrap">
-          <a class="button button-outline" href="/partnery/">Усі партнери ↗</a>
         </div>
       </section>
       <section class="section news-preview">

@@ -156,20 +156,6 @@ content:
             fields:
               - { name: title, label: Заголовок, type: string }
               - { name: text, label: Текст, type: text }
-      - name: response
-        label: Блок «Реагування»
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: string }
-          - { name: body, label: Текст, type: text }
-          - name: images
-            label: Фото
-            type: object
-            list: true
-            fields:
-              - { name: src, label: Фото, type: image }
-              - { name: alt, label: Опис (alt), type: string }
       - name: resources
         label: Інфраструктура
         type: object
