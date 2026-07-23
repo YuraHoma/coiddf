@@ -456,12 +456,6 @@ main > section,
 .intro-photo:not([style*="background-image"]) { display: none; }
 
 /* ---------- 10. FOCUS MAP (географія) ---------- */
-.focus-map {
-  display: grid;
-  grid-template-columns: 1fr 1.1fr;
-  gap: clamp(28px, 5vw, 64px);
-  align-items: center;
-}
 .focus-map h2 { color: var(--ink); }
 /* світла картка з картою України; домашня область виділена у самому SVG */
 .map-card {
@@ -469,6 +463,9 @@ main > section,
   flex-direction: column;
   justify-content: flex-end;
   gap: 6px;
+  width: 100%;
+  max-width: 640px;
+  margin-inline: auto;
   min-height: clamp(260px, 32vw, 400px);
   padding: 28px;
   border-radius: var(--radius-panel);
@@ -1137,7 +1134,6 @@ main > section,
 
   .hero-top { grid-template-columns: 1fr; gap: 28px; }
   .hero-headline .lead { max-width: 60ch; }
-  .focus-map,
   .impact-feature,
   .about-hero,
   .about-layout,
