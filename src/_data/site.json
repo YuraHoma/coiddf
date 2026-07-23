@@ -35,8 +35,8 @@
     "press": "press@icdf.org.ua"
   },
   "socials": {
-    "facebook": "",
-    "twitter": "",
-    "linkedin": ""
+    "facebook": "https://example.com/facebook-test-link",
+    "twitter": "https://example.com/twitter-test-link",
+    "linkedin": "https://example.com/linkedin-test-link"
   }
 }
