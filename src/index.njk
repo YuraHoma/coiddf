@@ -52,15 +52,6 @@ description: Головна сторінка благодійного фонду
           {%- endif %}{% endfor %}
         </div>
       </section>
-      <section class="section focus-map">
-        <div class="section-heading center">
-          <p class="eyebrow">{{ home.geography.eyebrow }}</p>
-          <h2>{{ home.geography.heading }}</h2>
-        </div>
-        <div class="map-card">
-          <img src="/assets/map-ukraine-oblasts.svg" alt="Карта областей України; Запорізька область — домашній регіон фонду — виділена кольором" loading="lazy" eleventy:ignore>
-        </div>
-      </section>
       <section class="section">
         <div class="section-heading center">
           <p class="eyebrow">{{ home.focusAreas.eyebrow }}</p>
@@ -73,6 +64,15 @@ description: Головна сторінка благодійного фонду
             <p>{{ c.text }}</p>
           </article>
           {%- endfor %}
+        </div>
+      </section>
+      <section class="section focus-map">
+        <div class="section-heading center">
+          <p class="eyebrow">{{ home.geography.eyebrow }}</p>
+          <h2>{{ home.geography.heading }}</h2>
+        </div>
+        <div class="map-card">
+          <img src="/assets/map-ukraine-oblasts.svg" alt="Карта областей України; Запорізька область — домашній регіон фонду — виділена кольором" loading="lazy" eleventy:ignore>
         </div>
       </section>
       <section class="section process-section">
