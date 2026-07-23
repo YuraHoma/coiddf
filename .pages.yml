@@ -174,7 +174,12 @@ content:
               - { name: title, label: Назва, type: string }
               - { name: strong, label: Виділене (велике), type: string }
               - { name: sub, label: Підпис, type: string }
-      - { name: partnersHeading, label: Партнери — заголовок, type: string }
+      - name: partners
+        label: Блок «Партнери»
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: string }
       - name: cta
         label: Заклик (внизу сторінки)
         type: object

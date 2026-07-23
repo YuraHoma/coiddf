@@ -14,8 +14,7 @@
     { "href": "/proyekty/", "label": "Проєкти" },
     { "href": "/partnery/", "label": "Партнери" },
     { "href": "/zvitnist/", "label": "Звітність" },
-    { "href": "/pravova-informaciya/", "label": "Правова інформація" },
-    { "href": "/polityka/", "label": "Політика" }
+    { "href": "/pravova-informaciya/", "label": "Правова інформація" }
   ],
   "footerNavCol1": [
     { "href": "/pro-nas/", "label": "Про нас" },

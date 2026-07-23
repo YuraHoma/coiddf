@@ -126,7 +126,7 @@ p { text-wrap: pretty; }
 
 .eyebrow {
   display: inline-block;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 1px;
