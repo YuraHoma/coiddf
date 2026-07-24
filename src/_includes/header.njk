@@ -1,17 +1,17 @@
     <header class="site-header">
-      <a class="brand" href="/" aria-label="{{ site.orgFull }}">
+      <a class="brand" href="{{ '/en/' if locale == 'en' else '/' }}" aria-label="{{ site.orgFull }}">
         <span class="brand-mark">{% include "logo.njk" %}</span>
       </a>
-      <button class="nav-toggle" type="button" aria-label="Меню" aria-expanded="false"><span></span></button>
-      <nav class="nav" aria-label="Головна навігація">
+      <button class="nav-toggle" type="button" aria-label="{{ 'Menu' if locale == 'en' else 'Меню' }}" aria-expanded="false"><span></span></button>
+      <nav class="nav" aria-label="{{ 'Main navigation' if locale == 'en' else 'Головна навігація' }}">
         {%- for item in site.nav %}
         <a href="{{ item.href }}"{% if page.url == item.href %} class="active"{% endif %}>{{ item.label }}</a>
         {%- endfor %}
       </nav>
       <div class="header-right">
-        <button class="lang-toggle" type="button" aria-label="Switch language / Змінити мову">EN</button>
+        <a class="lang-toggle" href="{{ altUrl }}" aria-label="Switch language / Змінити мову">{{ "UA" if locale == "en" else "EN" }}</a>
         <a class="btn-support" href="{{ site.contactUrl }}">
-          Зв'язатися з нами
+          {{ "Contact us" if locale == "en" else "Зв'язатися з нами" }}
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
         </a>
       </div>

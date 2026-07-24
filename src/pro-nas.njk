@@ -1,8 +1,18 @@
 ---
 layout: base.njk
-permalink: /pro-nas/
+pagination:
+  data: locales
+  size: 1
+  alias: locale
+  addAllPagesToCollections: true
+permalink: "{{ '/en/pro-nas/' if locale == 'en' else '/pro-nas/' }}"
 title: Про нас | Фонд розвитку міжнародної співпраці
 description: Місія, принципи та історія благодійного фонду.
+enTitle: About Us | International Cooperation Development Fund
+enDescription: Mission, principles and history of the charitable foundation.
+eleventyComputed:
+  title: "{{ enTitle if locale == 'en' else title }}"
+  description: "{{ enDescription if locale == 'en' else description }}"
 ---
       <section class="about-hero">
         <div>

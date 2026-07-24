@@ -304,6 +304,9 @@ main > section,
 
 /* перемикач мов (Google Translate) */
 .lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 36px;
   padding: 0 14px;
   border: 1px solid var(--line-strong);
@@ -314,17 +317,11 @@ main > section,
   font-size: 13.5px;
   font-weight: 600;
   letter-spacing: 0.02em;
+  text-decoration: none;
   cursor: pointer;
   transition: border-color var(--t), background var(--t);
 }
 .lang-toggle:hover { border-color: var(--ink); background: var(--surface); }
-
-/* приховуємо стандартний банер/бейдж Google Translate — керуємо перемиканням самі */
-.goog-te-banner-frame.skiptranslate,
-.goog-te-gadget-icon,
-body > .skiptranslate { display: none !important; }
-body { top: 0 !important; position: static !important; }
-.goog-text-highlight { background: none !important; box-shadow: none !important; }
 
 /* гамбургер (mobile) */
 .nav-toggle {

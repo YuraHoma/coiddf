@@ -30,6 +30,33 @@ module.exports = function (eleventyConfig) {
     api.getFilteredByGlob("src/projects/*.md").sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
   );
 
+  // i18n: кожна сторінка з pagination.data = "locales" рендериться двічі —
+  // раз як українська (locale="uk", /...), раз як англійська (locale="en",
+  // /en/...). eleventyComputed тут підміняє відповідний блок даних на
+  // перекладену версію з src/_data/en.js, коли locale === "en" — тіло
+  // шаблону лишається незмінним, бо звертається до тих самих home.*,
+  // team.* тощо.
+  eleventyConfig.addGlobalData("locales", ["uk", "en"]);
+  eleventyConfig.addGlobalData("locale", "uk");
+  const localizedKeys = [
+    "site",
+    "home",
+    "pronas",
+    "team",
+    "partners",
+    "novyny",
+    "proyekty",
+    "legal",
+    "policy",
+    "reports",
+    "feedback",
+  ];
+  const computed = {};
+  for (const key of localizedKeys) {
+    computed[key] = (data) => (data.locale === "en" && data.en ? data.en[key] : data[key]);
+  }
+  eleventyConfig.addGlobalData("eleventyComputed", computed);
+
   // Format an ISO date as DD.MM.YYYY for display.
   // UTC methods: front-matter dates are parsed as UTC midnight, local getters
   // would shift the day on build machines west of UTC.

@@ -1,8 +1,18 @@
 ---
 layout: base.njk
-permalink: /nasha-komanda/
+pagination:
+  data: locales
+  size: 1
+  alias: locale
+  addAllPagesToCollections: true
+permalink: "{{ '/en/nasha-komanda/' if locale == 'en' else '/nasha-komanda/' }}"
 title: Наша команда | Фонд розвитку міжнародної співпраці
 description: Команда фонду — засновники, менеджери, бухгалтерія, склад і волонтери.
+enTitle: Our Team | International Cooperation Development Fund
+enDescription: The foundation's team includes founders, managers, accounting, staff and volunteers.
+eleventyComputed:
+  title: "{{ enTitle if locale == 'en' else title }}"
+  description: "{{ enDescription if locale == 'en' else description }}"
 ---
       <section class="page-hero">
         <div>

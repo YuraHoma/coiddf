@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-img": "^6.0.4"
+    "@11ty/eleventy-img": "^6.0.4",
+    "gray-matter": "^4.0.3",
+    "markdown-it": "^14.3.0"
   }
 }

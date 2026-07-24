@@ -1,14 +1,14 @@
     <footer class="footer footer-big">
       <div class="footer-top">
         <div class="footer-brand-nav">
-          <a class="footer-brand" href="/" aria-label="{{ site.orgShort }}">
+          <a class="footer-brand" href="{{ '/en/' if locale == 'en' else '/' }}" aria-label="{{ site.orgShort }}">
             <span class="footer-brand-mark">{% include "logo.njk" %}</span>
             <span class="footer-brand-name">
               <strong>{{ site.orgLine1 | upper }}</strong>
               <strong>{{ site.orgLine2 | upper }}</strong>
             </span>
           </a>
-          <nav class="footer-nav-cols" aria-label="Навігація футера">
+          <nav class="footer-nav-cols" aria-label="{{ 'Footer navigation' if locale == 'en' else 'Навігація футера' }}">
             <div class="footer-nav-col">
               {%- for item in site.footerNavCol1 %}
               <a href="{{ item.href }}">{{ item.label }}</a>
@@ -23,22 +23,22 @@
         </div>
         <div class="footer-contacts">
           <div class="footer-contact-row">
-            <span>Контакти</span>
+            <span>{{ "Contact" if locale == "en" else "Контакти" }}</span>
             <a href="mailto:{{ site.contacts.general }}">{{ site.contacts.general }} ↗</a>
           </div>
           <div class="footer-contact-row">
-            <span>Партнерство</span>
+            <span>{{ "Partnership" if locale == "en" else "Партнерство" }}</span>
             <a href="mailto:{{ site.contacts.partners }}">{{ site.contacts.partners }} ↗</a>
           </div>
           <div class="footer-contact-row">
-            <span>Для медіа</span>
+            <span>{{ "For media" if locale == "en" else "Для медіа" }}</span>
             <a href="mailto:{{ site.contacts.press }}">{{ site.contacts.press }} ↗</a>
           </div>
         </div>
         <div class="footer-cta-col">
           {%- if site.socials.facebook or site.socials.twitter or site.socials.linkedin %}
-          <div class="footer-social-label">Ми в соц. мережах</div>
-          <div class="footer-socials" aria-label="Соціальні мережі">
+          <div class="footer-social-label">{{ "Follow us" if locale == "en" else "Ми в соц. мережах" }}</div>
+          <div class="footer-socials" aria-label="{{ 'Social media' if locale == 'en' else 'Соціальні мережі' }}">
             {%- if site.socials.facebook %}
             <a href="{{ site.socials.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -57,12 +57,12 @@
           </div>
           {%- endif %}
           <a class="button footer-contact-btn" href="{{ site.contactUrl }}">
-            Зв'язатися з нами <span>↗</span>
+            {{ "Contact us" if locale == "en" else "Зв'язатися з нами" }} <span>↗</span>
           </a>
         </div>
       </div>
       <div class="footer-bottom">
-        <span class="footer-legal">БО «Фонд розвитку міжнародної співпраці» (Код ЄДРПОУ: {{ site.edrpou }})</span>
-        <span>© 2026 International Cooperation Development Fund. Всі права захищені.</span>
+        <span class="footer-legal">{{ "Charity Organization \"International Cooperation Development Fund\" (EDRPOU code: " if locale == "en" else "БО «Фонд розвитку міжнародної співпраці» (Код ЄДРПОУ: " }}{{ site.edrpou }})</span>
+        <span>© 2026 International Cooperation Development Fund. {{ "All rights reserved." if locale == "en" else "Всі права захищені." }}</span>
       </div>
     </footer>

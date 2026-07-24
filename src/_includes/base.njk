@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="uk">
+{%- set altUrl = page.url.slice(3) if locale == "en" else "/en" + page.url %}
+<html lang="{{ locale }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +10,9 @@
     <meta name="robots" content="noindex">
     {%- else %}
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="alternate" hreflang="uk" href="{{ site.url }}{{ page.url if locale == 'uk' else altUrl }}">
+    <link rel="alternate" hreflang="en" href="{{ site.url }}{{ page.url if locale == 'en' else altUrl }}">
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ page.url if locale == 'uk' else altUrl }}">
     {%- endif %}
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
@@ -21,7 +25,7 @@
     <meta property="og:description" content="{{ description or excerpt }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:image" content="{{ site.url }}{{ image or '/assets/og-image.jpg' }}">
-    <meta property="og:locale" content="uk_UA">
+    <meta property="og:locale" content="{{ 'en_US' if locale == 'en' else 'uk_UA' }}">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,13 +38,6 @@
 {{ content | safe }}
     </main>
 {% include "footer.njk" %}
-    <div id="google_translate_element" style="display:none"></div>
-    <script>
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({ pageLanguage: 'uk', includedLanguages: 'en', autoDisplay: false }, 'google_translate_element');
-      }
-    </script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async></script>
     <script>
       (function () {
         var d = document, root = d.documentElement;
@@ -59,26 +56,6 @@
               header.classList.remove('nav-open');
               toggle.setAttribute('aria-expanded', 'false');
             });
-          });
-        }
-
-        /* перемикач мов: перекладає сторінку на місці через Google Translate
-           Element (cookie googtrans + reload). Без cookie для конкретного
-           хоста браузер часто не читає googtrans при першому запиті сторінки —
-           тому пишемо і host-cookie, і path-cookie. */
-        var langBtn = d.querySelector('.lang-toggle');
-        if (langBtn) {
-          var m = document.cookie.match(/googtrans=\/uk\/(\w+)/);
-          var isEn = !!m && m[1] === 'en';
-          langBtn.textContent = isEn ? 'UA' : 'EN';
-          langBtn.addEventListener('click', function () {
-            var target = isEn ? 'uk' : 'en';
-            var expires = 'expires=Fri, 31 Dec 9999 23:59:59 GMT';
-            var cookie = 'googtrans=/uk/' + target + '; path=/; ' + expires;
-            document.cookie = cookie;
-            document.cookie = cookie + '; domain=' + location.hostname;
-            document.cookie = cookie + '; domain=.' + location.hostname;
-            location.reload();
           });
         }
 
@@ -104,7 +81,9 @@
            найдовше слово, щоб заголовок не перескакував між словами. */
         var accent = d.querySelector('.hero-top h1 .accent');
         if (accent && !reduce) {
-          var words = ['націю', 'родини', 'громади', 'майбутнє'];
+          var words = root.lang === 'en'
+            ? ['nation', 'families', 'communities', 'future']
+            : ['націю', 'родини', 'громади', 'майбутнє'];
           var wi = Math.max(0, words.indexOf(accent.textContent.trim()));
           var show = 'opacity 280ms ease, transform 280ms ease';
           accent.style.display = 'inline-block';

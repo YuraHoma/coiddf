@@ -1,8 +1,18 @@
 ---
 layout: base.njk
-permalink: /
+pagination:
+  data: locales
+  size: 1
+  alias: locale
+  addAllPagesToCollections: true
+permalink: "{{ '/en/' if locale == 'en' else '/' }}"
 title: Фонд розвитку міжнародної співпраці | Гуманітарна допомога
 description: Головна сторінка благодійного фонду.
+enTitle: International Cooperation Development Fund | Humanitarian Aid
+enDescription: The main page of the charity fund.
+eleventyComputed:
+  title: "{{ enTitle if locale == 'en' else title }}"
+  description: "{{ enDescription if locale == 'en' else description }}"
 ---
 {% import "icons.njk" as icons %}
 {% import "news-card.njk" as news %}
@@ -58,7 +68,7 @@ description: Головна сторінка благодійного фонду
           <h2>{{ home.geography.heading }}</h2>
         </div>
         <div class="map-card">
-          <img src="/assets/map-ukraine-oblasts.svg" alt="Карта областей України; Запорізька область — домашній регіон фонду — виділена кольором" loading="lazy" eleventy:ignore>
+          <img src="/assets/map-ukraine-oblasts.svg" alt="{{ "Map of Ukraine's oblasts; Zaporizhzhia oblast — the fund's home region — highlighted in color" if locale == 'en' else 'Карта областей України; Запорізька область — домашній регіон фонду — виділена кольором' }}" loading="lazy" eleventy:ignore>
           {%- for m in home.geography.markers %}
           <span class="map-pin" style="left: {{ m.left }}%; top: {{ m.top }}%;" aria-label="{{ m.label }}"></span>
           {%- endfor %}
@@ -91,16 +101,17 @@ description: Головна сторінка благодійного фонду
       </section>
       <section class="section news-preview">
         <div class="section-heading center">
-          <p class="eyebrow">Новини</p>
+          <p class="eyebrow">{{ "News" if locale == "en" else "Новини" }}</p>
           <h2>{{ home.newsHeading }}</h2>
         </div>
         <div class="news-mini-grid">
-          {%- for post in collections.news %}{% if loop.index <= 3 %}
-{{ news.newsCard(post, false) }}
+          {%- set newsList = en.newsPosts if locale == "en" else collections.news -%}
+          {%- for post in newsList %}{% if loop.index <= 3 %}
+{{ news.newsCard(post, false, locale) }}
           {%- endif %}{% endfor %}
         </div>
         <div class="news-all-wrap">
-          <a class="button button-outline news-all-btn" href="/novyny/">Усі новини ↗</a>
+          <a class="button button-outline news-all-btn" href="{{ '/en/novyny/' if locale == 'en' else '/novyny/' }}">{{ "All news ↗" if locale == "en" else "Усі новини ↗" }}</a>
         </div>
       </section>
       <section class="cta-band">

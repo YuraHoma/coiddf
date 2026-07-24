@@ -1,8 +1,18 @@
 ---
 layout: base.njk
-permalink: /novyny/
+pagination:
+  data: locales
+  size: 1
+  alias: locale
+  addAllPagesToCollections: true
+permalink: "{{ '/en/novyny/' if locale == 'en' else '/novyny/' }}"
 title: Новини | Фонд розвитку міжнародної співпраці
 description: Останні новини та оновлення фонду.
+enTitle: News | International Cooperation Development Fund
+enDescription: Latest fund news and updates.
+eleventyComputed:
+  title: "{{ enTitle if locale == 'en' else title }}"
+  description: "{{ enDescription if locale == 'en' else description }}"
 ---
 {% import "news-card.njk" as news %}
       <section class="page-hero">
@@ -14,8 +24,9 @@ description: Останні новини та оновлення фонду.
       </section>
       <section class="section">
         <div class="news-grid">
-          {%- for post in collections.news %}
-{{ news.newsCard(post, true) }}
+          {%- set newsList = en.newsPosts if locale == "en" else collections.news %}
+          {%- for post in newsList %}
+{{ news.newsCard(post, true, locale) }}
           {%- endfor %}
         </div>
       </section>

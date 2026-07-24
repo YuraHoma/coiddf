@@ -1,15 +1,25 @@
 ---
 layout: base.njk
-permalink: /partnery/
+pagination:
+  data: locales
+  size: 1
+  alias: locale
+  addAllPagesToCollections: true
+permalink: "{{ '/en/partnery/' if locale == 'en' else '/partnery/' }}"
 title: Партнери | Фонд розвитку міжнародної співпраці
 description: Українські та міжнародні партнери фонду.
+enTitle: Partners | International Cooperation Development Fund
+enDescription: Ukrainian and international partners of the fund.
+eleventyComputed:
+  title: "{{ enTitle if locale == 'en' else title }}"
+  description: "{{ enDescription if locale == 'en' else description }}"
 ---
 {% import "partner-logos.njk" as logos %}
       <section class="page-hero">
         <div>
-          <p class="eyebrow">Партнери</p>
-          <h1>Працюємо разом з українськими та міжнародними партнерами.</h1>
-          <p class="lead">Фонд співпрацює виключно з міжнародними партнерами через бюджетні програми гуманітарної допомоги — без приватних зборів коштів.</p>
+          <p class="eyebrow">{{ partners.hero.eyebrow }}</p>
+          <h1>{{ partners.hero.heading }}</h1>
+          <p class="lead">{{ partners.hero.lead }}</p>
         </div>
       </section>
       <section class="section">

@@ -1,8 +1,18 @@
 ---
 layout: base.njk
-permalink: /pravova-informaciya/
+pagination:
+  data: locales
+  size: 1
+  alias: locale
+  addAllPagesToCollections: true
+permalink: "{{ '/en/pravova-informaciya/' if locale == 'en' else '/pravova-informaciya/' }}"
 title: Правова інформація | Фонд розвитку міжнародної співпраці
 description: Реєстраційні дані та реквізити благодійного фонду.
+enTitle: Legal Information | International Cooperation Development Fund
+enDescription: Registration data and details of the charity fund.
+eleventyComputed:
+  title: "{{ enTitle if locale == 'en' else title }}"
+  description: "{{ enDescription if locale == 'en' else description }}"
 ---
       <section class="page-hero">
         <div>

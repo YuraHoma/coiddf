@@ -1,0 +1,14 @@
+---
+layout: news-article.njk
+pagination:
+  data: en.newsPosts
+  size: 1
+  alias: post
+  addAllPagesToCollections: true
+permalink: "{{ post.url }}"
+locale: en
+eleventyComputed:
+  title: "{{ post.title }} | International Cooperation Development Fund"
+  description: "{{ post.excerpt }}"
+  image: "{{ post.image }}"
+---

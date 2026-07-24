@@ -2,35 +2,42 @@
 layout: base.njk
 ---
 {% import "news-card.njk" as news %}
+{%- set isEn = locale == "en" -%}
+{%- set pTitle = post.title if isEn else title -%}
+{%- set pDate = post.date if isEn else date -%}
+{%- set pImage = post.image if isEn else image -%}
+{%- set pExcerpt = post.excerpt if isEn else excerpt -%}
+{%- set pContent = post.contentHtml if isEn else content -%}
       <section class="page-hero">
         <div>
-          <p class="eyebrow">Новини</p>
-          <h1>{{ title }}</h1>
-          <p class="lead">{{ date | uadate }}</p>
+          <p class="eyebrow">{{ "News" if isEn else "Новини" }}</p>
+          <h1>{{ pTitle }}</h1>
+          <p class="lead">{{ pDate | uadate }}</p>
         </div>
       </section>
       <article class="section news-article">
-        {% if image %}<img class="news-article-cover" src="{{ image }}" alt="{{ title }}">{% endif %}
+        {% if pImage %}<img class="news-article-cover" src="{{ pImage }}" alt="{{ pTitle }}">{% endif %}
         <div class="news-article-body">
-          {% if excerpt %}<p class="news-article-lead">{{ excerpt }}</p>{% endif %}
-          {{ content | safe }}
+          {% if pExcerpt %}<p class="news-article-lead">{{ pExcerpt }}</p>{% endif %}
+          {{ pContent | safe }}
         </div>
       </article>
       <section class="section news-more">
         <div class="section-heading">
-          <p class="eyebrow">Новини</p>
-          <h2>Інші новини</h2>
+          <p class="eyebrow">{{ "News" if isEn else "Новини" }}</p>
+          <h2>{{ "More news" if isEn else "Інші новини" }}</h2>
         </div>
         <div class="news-mini-grid">
           {%- set shown = 0 -%}
-          {%- for post in collections.news -%}
-          {%- if post.url != page.url and shown < 3 -%}
-{{ news.newsCard(post, false) }}
+          {%- set otherList = en.newsPosts if isEn else collections.news -%}
+          {%- for item in otherList -%}
+          {%- if item.url != page.url and shown < 3 -%}
+{{ news.newsCard(item, false, locale) }}
           {%- set shown = shown + 1 -%}
           {%- endif -%}
           {%- endfor -%}
         </div>
         <div class="news-all-wrap">
-          <a class="button button-outline" href="/novyny/">Усі новини ↗</a>
+          <a class="button button-outline" href="{{ '/en/novyny/' if isEn else '/novyny/' }}">{{ "All news ↗" if isEn else "Усі новини ↗" }}</a>
         </div>
       </section>
