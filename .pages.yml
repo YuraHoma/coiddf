@@ -128,6 +128,14 @@ content:
         fields:
           - { name: eyebrow, label: Мітка, type: string }
           - { name: heading, label: Заголовок, type: string }
+          - name: markers
+            label: "Мітки на карті (координати у % від зображення карти)"
+            type: object
+            list: true
+            fields:
+              - { name: label, label: Назва (для довідки), type: string }
+              - { name: left, label: "Позиція зліва, %", type: number }
+              - { name: top, label: "Позиція зверху, %", type: number }
       - name: focusAreas
         label: Напрями допомоги
         type: object

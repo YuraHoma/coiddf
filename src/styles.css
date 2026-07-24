@@ -213,7 +213,12 @@ main > section,
   color: var(--ink);
   border-color: var(--line-strong);
 }
-.button-outline:hover { border-color: var(--ink); transform: translateY(-2px); box-shadow: var(--shadow-card); }
+.button-outline:hover {
+  background: var(--grad-cta);
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(90, 125, 61, 0.35);
+}
 
 .wide-action {
   display: inline-flex;
@@ -296,6 +301,30 @@ main > section,
 
 /* усі елементи хедера — висота 36px, radius 14px */
 .site-header .btn-support { height: 36px; padding: 0 16px; font-size: 14px; }
+
+/* перемикач мов (Google Translate) */
+.lang-toggle {
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-btn);
+  background: transparent;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: border-color var(--t), background var(--t);
+}
+.lang-toggle:hover { border-color: var(--ink); background: var(--surface); }
+
+/* приховуємо стандартний банер/бейдж Google Translate — керуємо перемиканням самі */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-icon,
+body > .skiptranslate { display: none !important; }
+body { top: 0 !important; position: static !important; }
+.goog-text-highlight { background: none !important; box-shadow: none !important; }
 
 /* гамбургер (mobile) */
 .nav-toggle {
@@ -459,6 +488,7 @@ main > section,
 .focus-map h2 { color: var(--ink); }
 /* карта України без картки-контейнера — просто зображення, по центру */
 .map-card {
+  position: relative;
   width: 100%;
   max-width: 920px;
   margin-inline: auto;
@@ -467,6 +497,26 @@ main > section,
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+/* мітка-піна: біле кільце + брендова крапка, з тінню */
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(18, 23, 13, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.map-pin::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--brand);
 }
 
 /* ---------- 11. CARDS GRID (напрями — картки-фічі з radial-градієнтами) ---------- */

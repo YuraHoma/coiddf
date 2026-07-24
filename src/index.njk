@@ -59,6 +59,9 @@ description: Головна сторінка благодійного фонду
         </div>
         <div class="map-card">
           <img src="/assets/map-ukraine-oblasts.svg" alt="Карта областей України; Запорізька область — домашній регіон фонду — виділена кольором" loading="lazy" eleventy:ignore>
+          {%- for m in home.geography.markers %}
+          <span class="map-pin" style="left: {{ m.left }}%; top: {{ m.top }}%;" aria-label="{{ m.label }}"></span>
+          {%- endfor %}
         </div>
       </section>
       <section class="section process-section">
