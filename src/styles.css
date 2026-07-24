@@ -319,6 +319,13 @@ main > section,
 }
 .lang-toggle:hover { border-color: var(--ink); background: var(--surface); }
 
+/* приховуємо стандартний банер/бейдж Google Translate — керуємо перемиканням самі */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-icon,
+body > .skiptranslate { display: none !important; }
+body { top: 0 !important; position: static !important; }
+.goog-text-highlight { background: none !important; box-shadow: none !important; }
+
 /* гамбургер (mobile) */
 .nav-toggle {
   display: none;
