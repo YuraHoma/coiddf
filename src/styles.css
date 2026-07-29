@@ -989,7 +989,15 @@ main > section,
   overflow: hidden;
   background: var(--surface-2);
 }
-.team-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* object-position: top — портрети кадруються від верху, щоб квадратний
+   кроп ніколи не зрізав голову на знімках у повний зріст */
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
 .team-grid > article > span,
 .team-grid > article > h3,
 .team-grid > article > p { margin-inline: 26px; }
