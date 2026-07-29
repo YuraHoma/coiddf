@@ -832,7 +832,7 @@ main > section,
 .about-hero .lead { color: var(--muted); margin-top: 18px; }
 .about-hero img {
   width: 100%;
-  height: clamp(280px, 34vw, 440px);
+  height: clamp(320px, 38vw, 500px);
   object-fit: cover;
   border-radius: var(--radius-media);
   box-shadow: var(--shadow-hero);
