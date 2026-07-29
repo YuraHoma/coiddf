@@ -217,7 +217,36 @@ content:
         fields:
           - { name: title, label: Заголовок, type: string }
           - { name: body, label: Текст, type: text }
-      - { name: story, label: Історія (абзаци), type: text, list: true }
+      - { name: storyHighlight, label: Врізка-твердження (велике речення в тексті), type: text }
+      - { name: story, label: Основний текст (абзаци), type: text, list: true }
+      - name: approach
+        label: Наш підхід
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: string }
+          - name: items
+            label: Картки підходу
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Заголовок, type: string }
+              - { name: text, label: Текст, type: text }
+      - name: capacity
+        label: Інституційна спроможність
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: string }
+          - { name: intro, label: Вступний текст, type: text }
+          - name: items
+            label: Елементи спроможності
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Назва, type: string }
+              - { name: text, label: Підпис, type: text }
+          - { name: note, label: Підсумковий текст, type: text }
       - name: principles
         label: Принципи
         type: object

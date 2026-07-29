@@ -7,9 +7,9 @@ pagination:
   addAllPagesToCollections: true
 permalink: "{{ '/en/pro-nas/' if locale == 'en' else '/pro-nas/' }}"
 title: Про нас | Фонд розвитку міжнародної співпраці
-description: Місія, принципи та історія благодійного фонду.
+description: Місія, стратегія, підхід та принципи благодійного фонду.
 enTitle: About Us | International Cooperation Development Fund
-enDescription: Mission, principles and history of the charitable foundation.
+enDescription: Mission, strategy, approach and principles of the charitable foundation.
 eleventyComputed:
   title: "{{ enTitle if locale == 'en' else title }}"
   description: "{{ enDescription if locale == 'en' else description }}"
@@ -32,7 +32,30 @@ eleventyComputed:
         <div class="about-copy">
           {%- for p in pronas.story %}
           <p>{{ p }}</p>
+          {%- if loop.first and pronas.storyHighlight %}
+          <p class="story-highlight">{{ pronas.storyHighlight }}</p>
+          {%- endif %}
           {%- endfor %}
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-heading center"><p class="eyebrow">{{ pronas.approach.eyebrow }}</p><h2>{{ pronas.approach.heading }}</h2></div>
+        <div class="cards-grid">
+          {%- for it in pronas.approach.items %}
+          <article><h3>{{ it.title }}</h3><p>{{ it.text }}</p></article>
+          {%- endfor %}
+        </div>
+      </section>
+      <section class="section">
+        <div class="capacity-panel">
+          <div class="section-heading center"><p class="eyebrow">{{ pronas.capacity.eyebrow }}</p><h2>{{ pronas.capacity.heading }}</h2></div>
+          <p class="capacity-intro">{{ pronas.capacity.intro }}</p>
+          <div class="capacity-grid">
+            {%- for it in pronas.capacity.items %}
+            <article><h3>{{ it.title }}</h3><p>{{ it.text }}</p></article>
+            {%- endfor %}
+          </div>
+          <p class="capacity-note">{{ pronas.capacity.note }}</p>
         </div>
       </section>
       <section class="section">
