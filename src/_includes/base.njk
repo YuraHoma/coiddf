@@ -112,10 +112,10 @@
         }
         if (reduce || !('IntersectionObserver' in window)) return;
         var sel = '.section-heading,.intro-photos,.intro-story-top > p,' +
-          '.cards-grid article,' +
-          '.partner-detail-card,.news-mini-grid article,.news-grid article,' +
+          '.map-card,.cards-grid article,.process-grid article,' +
+          '.resource-card,.partner-marquee,.partner-detail-card,.news-mini-grid article,.news-grid article,' +
           '.principles-grid article,.about-note,.about-copy,.team-grid article,.feedback-form,' +
-          '.project-list > *,.contact-list span,.award-card';
+          '.project-list > *,.contact-list span,.award-card,.cta-band > div';
         var els = [].slice.call(d.querySelectorAll(sel));
         els.forEach(function (el) {
           el.setAttribute('data-reveal', '');
