@@ -236,8 +236,14 @@ content:
         type: object
         fields:
           - { name: heading, label: Заголовок секції, type: string }
-          - { name: placeholderTitle, label: Підпис плейсхолдера, type: string }
-          - { name: placeholderText, label: Текст плейсхолдера, type: text }
+          - name: items
+            label: Подяки / нагороди
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Підпис, type: text }
+              - { name: image, label: Скан (українська версія), type: image }
+              - { name: imageEn, label: Скан (англійська версія), type: image }
 
   # ---------------------------------------------------------------- Сторінка «Команда»
   - name: team
