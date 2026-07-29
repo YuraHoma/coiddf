@@ -22,14 +22,28 @@ eleventyComputed:
         </div>
       </section>
       <section class="section">
-        <div class="team-grid">
+        <div class="team-leads">
           {%- for m in team.members %}
+          {%- if loop.index0 < 2 %}
           <article>
             <div class="team-photo">{% if m.photo %}<img src="{{ m.photo }}" alt="{{ m.name or m.role }}" loading="lazy">{% endif %}</div>
             <span>{{ m.role }}</span>
             {% if m.name %}<h3>{{ m.name }}</h3>{% endif %}
             {% if m.bio %}<p>{{ m.bio }}</p>{% endif %}
           </article>
+          {%- endif %}
+          {%- endfor %}
+        </div>
+        <div class="team-grid team-grid--staff">
+          {%- for m in team.members %}
+          {%- if loop.index0 >= 2 %}
+          <article>
+            <div class="team-photo">{% if m.photo %}<img src="{{ m.photo }}" alt="{{ m.name or m.role }}" loading="lazy">{% endif %}</div>
+            <span>{{ m.role }}</span>
+            {% if m.name %}<h3>{{ m.name }}</h3>{% endif %}
+            {% if m.bio %}<p>{{ m.bio }}</p>{% endif %}
+          </article>
+          {%- endif %}
           {%- endfor %}
         </div>
       </section>
