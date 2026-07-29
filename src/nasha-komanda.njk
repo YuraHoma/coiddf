@@ -25,9 +25,9 @@ eleventyComputed:
         <div class="team-grid">
           {%- for m in team.members %}
           <article>
-            <div class="team-photo">{% if m.photo %}<img src="{{ m.photo }}" alt="{{ m.name }}" loading="lazy">{% endif %}</div>
+            <div class="team-photo">{% if m.photo %}<img src="{{ m.photo }}" alt="{{ m.name or m.role }}" loading="lazy">{% endif %}</div>
             <span>{{ m.role }}</span>
-            <h3>{{ m.name }}</h3>
+            {% if m.name %}<h3>{{ m.name }}</h3>{% endif %}
             {% if m.bio %}<p>{{ m.bio }}</p>{% endif %}
           </article>
           {%- endfor %}

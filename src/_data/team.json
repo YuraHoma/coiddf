@@ -64,6 +64,66 @@
       "name": "Альона Подмазка",
       "photo": "",
       "bio": "Бере участь у щоденній операційній роботі команди фонду."
+    },
+    {
+      "role": "Засновник фонду, керівник напряму міжнародних відносин та партнерства",
+      "name": "",
+      "photo": "/assets/team-founder-partnerships.jpg",
+      "bio": "Багаторічний номінант і лауреат міжнародних нагород за професійні досягнення у сфері реалізації масштабних міжнародних проєктів, зокрема відзнаки «Top Performer» від Washington Group International, United Research Services, AECOM."
+    },
+    {
+      "role": "Засновниця та директорка фонду",
+      "name": "",
+      "photo": "/assets/team-director.jpg",
+      "bio": "Кандидатка юридичних наук (адміністративне право та процес; фінансове право; інформаційне право). Членкиня Асоціації правників України (комітет з міжнародного права, комітет з податкового та митного права)."
+    },
+    {
+      "role": "Технічний керівник",
+      "name": "",
+      "photo": "/assets/team-technical-lead.jpg",
+      "bio": ""
+    },
+    {
+      "role": "Бухгалтер",
+      "name": "",
+      "photo": "/assets/team-accountant-2.jpg",
+      "bio": ""
+    },
+    {
+      "role": "Фахівчиня з договірної роботи",
+      "name": "",
+      "photo": "/assets/team-contracts-specialist.jpg",
+      "bio": ""
+    },
+    {
+      "role": "Адміністраторка",
+      "name": "",
+      "photo": "/assets/team-administrator.jpg",
+      "bio": ""
+    },
+    {
+      "role": "Фахівець з управління логістикою",
+      "name": "",
+      "photo": "/assets/team-logistics.jpg",
+      "bio": ""
+    },
+    {
+      "role": "Перекладач",
+      "name": "",
+      "photo": "/assets/team-translator.jpg",
+      "bio": ""
+    },
+    {
+      "role": "Інспектор з вхідного контролю якості товарів",
+      "name": "",
+      "photo": "/assets/team-qc-inspector-1.jpg",
+      "bio": ""
+    },
+    {
+      "role": "Інспектор з вхідного контролю якості товарів",
+      "name": "",
+      "photo": "/assets/team-qc-inspector-2.jpg",
+      "bio": ""
     }
   ]
 }
