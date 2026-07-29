@@ -765,19 +765,34 @@ main > section,
 }
 .principles-grid p { color: var(--muted); font-size: 15px; }
 
-.awards-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: clamp(48px, 7vw, 90px);
-  text-align: center;
-  background: #fff;
-  border: 1.5px dashed var(--line-strong);
-  border-radius: var(--radius-panel);
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
-.awards-placeholder span { font-size: 20px; font-weight: 600; color: var(--ink); }
-.awards-placeholder p { color: var(--muted); max-width: 48ch; }
+.award-card {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: #fff;
+}
+.award-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top;
+  transition: transform var(--t);
+}
+.award-card a:hover img { transform: scale(1.03); }
+.award-card figcaption {
+  padding: 16px 18px;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--muted);
+}
 
 /* ---------- 20. GENERIC GRIDS (команда / проєкти / контакти) ---------- */
 .team-grid,
@@ -1047,7 +1062,8 @@ main > section,
   .report-list,
   .news-mini-grid,
   .news-grid,
-  .partners-grid { grid-template-columns: repeat(2, 1fr); }
+  .partners-grid,
+  .awards-grid { grid-template-columns: repeat(2, 1fr); }
   .principles-grid { grid-template-columns: 1fr; }
   .intro-photos { grid-template-columns: 1fr 1fr; grid-auto-rows: clamp(150px, 30vw, 220px); }
 
@@ -1063,7 +1079,8 @@ main > section,
   .report-list,
   .news-mini-grid,
   .news-grid,
-  .partners-grid { grid-template-columns: 1fr; }
+  .partners-grid,
+  .awards-grid { grid-template-columns: 1fr; }
   .cards-grid article { min-height: 240px; }
   .intro-photos { grid-template-columns: 1fr; }
 

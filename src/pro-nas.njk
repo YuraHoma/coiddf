@@ -45,8 +45,14 @@ eleventyComputed:
       </section>
       <section class="section">
         <div class="section-heading center"><h2>{{ pronas.awards.heading }}</h2></div>
-        <div class="awards-placeholder">
-          <span>{{ pronas.awards.placeholderTitle }}</span>
-          <p>{{ pronas.awards.placeholderText }}</p>
+        <div class="awards-grid">
+          {%- for a in pronas.awards.items %}
+          <figure class="award-card">
+            <a href="{{ a.imageEn if locale == 'en' else a.image }}" target="_blank" rel="noopener">
+              <img src="{{ a.imageEn if locale == 'en' else a.image }}" alt="{{ a.title }}" loading="lazy">
+            </a>
+            <figcaption>{{ a.title }}</figcaption>
+          </figure>
+          {%- endfor %}
         </div>
       </section>
