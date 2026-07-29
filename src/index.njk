@@ -22,6 +22,7 @@ eleventyComputed:
           <div class="hero-headline">
             <p class="hero-org">{{ home.hero.orgBanner | safe }}</p>
             <h1>{{ home.hero.headline | safe }}</h1>
+            <p class="hero-tagline">{{ home.hero.tagline }}</p>
             <p class="lead">{{ home.hero.lead }}</p>
             <div class="hero-actions">
               <a class="button button-accent" href="{{ site.contactUrl }}">{{ home.hero.primaryLabel }}
@@ -53,9 +54,10 @@ eleventyComputed:
           <p class="eyebrow">{{ home.focusAreas.eyebrow }}</p>
           <h2>{{ home.focusAreas.heading }}</h2>
         </div>
-        <div class="cards-grid">
+        <div class="cards-grid pillars-grid">
           {%- for c in home.focusAreas.items %}
           <article>
+            <div class="pillar-media"><img src="{{ c.image }}" alt="" loading="lazy" sizes="(min-width: 901px) 25vw, 50vw"></div>
             <h3>{{ c.title }}</h3>
             <p>{{ c.text }}</p>
           </article>
