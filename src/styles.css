@@ -986,9 +986,10 @@ main > section,
   width: 100%;
   aspect-ratio: 1 / 1;
   flex: 0 0 auto;
+  overflow: hidden;
   background: var(--surface-2);
 }
-.team-photo img { width: 100%; height: 100%; object-fit: cover; }
+.team-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .team-grid > article > span,
 .team-grid > article > h3,
 .team-grid > article > p { margin-inline: 26px; }
