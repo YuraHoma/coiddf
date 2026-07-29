@@ -14,9 +14,13 @@ eleventyComputed:
   title: "{{ enTitle if locale == 'en' else title }}"
   description: "{{ enDescription if locale == 'en' else description }}"
 ---
-{% import "icons.njk" as icons %}
-{% import "news-card.njk" as news %}
-{% import "partner-logos.njk" as logos %}
+      <section class="section registration-strip">
+        <div class="registration-strip-inner">
+          {%- for r in home.registration %}
+          <span>{{ r.label }}: {{ r.value }}</span>
+          {%- endfor %}
+        </div>
+      </section>
       <section class="home-hero">
         <div class="hero-top">
           <div class="hero-headline">
@@ -36,19 +40,6 @@ eleventyComputed:
           </figure>
         </div>
       </section>
-      <section class="section partners-section">
-        <div class="section-heading center"><p class="eyebrow">{{ home.partners.eyebrow }}</p></div>
-        <div class="partner-marquee">
-          <div class="partner-track">
-            {%- for p in partners.items %}
-            <div class="partner-logo-card">{{ logos.logo(p.key) }}</div>
-            {%- endfor %}
-            {%- for p in partners.items %}
-            <div class="partner-logo-card">{{ logos.logo(p.key) }}</div>
-            {%- endfor %}
-          </div>
-        </div>
-      </section>
       <section class="section">
         <div class="section-heading center">
           <p class="eyebrow">{{ home.focusAreas.eyebrow }}</p>
@@ -62,65 +53,5 @@ eleventyComputed:
             <p>{{ c.text }}</p>
           </article>
           {%- endfor %}
-        </div>
-      </section>
-      <section class="section focus-map">
-        <div class="section-heading center">
-          <p class="eyebrow">{{ home.geography.eyebrow }}</p>
-          <h2>{{ home.geography.heading }}</h2>
-        </div>
-        <div class="map-card">
-          <img src="/assets/map-ukraine-oblasts.svg" alt="{{ "Map of Ukraine's oblasts; Zaporizhzhia oblast — the fund's home region — highlighted in color" if locale == 'en' else 'Карта областей України; Запорізька область — домашній регіон фонду — виділена кольором' }}" loading="lazy" eleventy:ignore>
-          {%- for m in home.geography.markers %}
-          <span class="map-pin" style="left: {{ m.left }}%; top: {{ m.top }}%;" aria-label="{{ m.label }}"></span>
-          {%- endfor %}
-        </div>
-      </section>
-      <section class="section process-section">
-        <div class="process-panel">
-          <div class="section-heading center">
-            <p class="eyebrow">{{ home.process.eyebrow }}</p>
-            <h2>{{ home.process.heading }}</h2>
-          </div>
-          <div class="process-grid">
-            {%- for s in home.process.steps %}
-            <article><span>{{ loop.index }}</span><h3>{{ s.title }}</h3><p>{{ s.text }}</p></article>
-            {%- endfor %}
-          </div>
-          <a class="wide-action" href="{{ home.process.ctaUrl }}">{{ home.process.ctaLabel }} <span>↗</span></a>
-        </div>
-      </section>
-      <section class="section infra-section">
-        <div class="section-heading center"><h2>{{ home.resources.heading }}</h2></div>
-        <div class="report-list">
-          {%- for r in home.resources.items %}
-          <div class="resource-card">
-            <span class="resource-icon">{{ icons.resourceIcon(r.icon) }}</span>
-            <span>{{ r.title }}{% if r.strong %}<strong>{{ r.strong }}</strong>{% endif %}{{ r.sub }}</span>
-          </div>
-          {%- endfor %}
-        </div>
-      </section>
-      <section class="section news-preview">
-        <div class="section-heading center">
-          <p class="eyebrow">{{ "News" if locale == "en" else "Новини" }}</p>
-          <h2>{{ home.newsHeading }}</h2>
-        </div>
-        <div class="news-mini-grid">
-          {%- set newsList = en.newsPosts if locale == "en" else collections.news -%}
-          {%- for post in newsList %}{% if loop.index <= 3 %}
-{{ news.newsCard(post, false, locale) }}
-          {%- endif %}{% endfor %}
-        </div>
-        <div class="news-all-wrap">
-          <a class="button button-outline news-all-btn" href="{{ '/en/novyny/' if locale == 'en' else '/novyny/' }}">{{ "All news ↗" if locale == "en" else "Усі новини ↗" }}</a>
-        </div>
-      </section>
-      <section class="cta-band">
-        <div>
-          <h2>{{ home.cta.heading }}</h2>
-          <a class="button button-accent" href="{{ site.contactUrl }}">{{ home.cta.buttonLabel }}
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-          </a>
         </div>
       </section>

@@ -1,6 +1,12 @@
 {
   "title": "Фонд розвитку міжнародної співпраці | Гуманітарна допомога",
   "description": "Головна сторінка благодійного фонду.",
+  "registration": [
+    { "label": "D-U-N-S Number", "value": "53-839-7077" },
+    { "label": "NCAGE code", "value": "A5GUJ" },
+    { "label": "Participant Identification Code (PIC)", "value": "864692048" },
+    { "label": "SAM.gov unique entity ID", "value": "EQ98UV8F1W73" }
+  ],
   "hero": {
     "orgBanner": "Благодійна організація «Фонд розвитку міжнародної співпраці»",
     "tagline": "Бережемо життя — створюємо майбутнє разом!",
