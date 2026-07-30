@@ -815,14 +815,19 @@ main > section,
 
 .about-hero {
   display: grid;
-  /* Банер широкоформатний (≈2.2:1) — тому текст зверху, зображення
-     на всю ширину під ним. У колонці збоку кроп зрізав би крайні
+  /* Банер широкоформатний (≈2.2:1): йде зверху на всю ширину, під ним
+     центрований заголовок. У колонці збоку кроп зрізав би крайні
      прапори, зокрема США. */
   grid-template-columns: 1fr;
   gap: clamp(28px, 4vw, 48px);
 }
-.about-hero h1 { color: var(--ink); max-width: 24ch; }
-.about-hero .lead { color: var(--muted); margin-top: 18px; max-width: 62ch; }
+.about-hero > div { text-align: center; }
+.about-hero h1 { color: var(--ink); max-width: 24ch; margin-inline: auto; }
+.about-hero .lead {
+  color: var(--muted);
+  margin: 18px auto 0;
+  max-width: 62ch;
+}
 .about-hero img {
   width: 100%;
   height: auto;

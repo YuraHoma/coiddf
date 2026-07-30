@@ -15,12 +15,12 @@ eleventyComputed:
   description: "{{ enDescription if locale == 'en' else description }}"
 ---
       <section class="about-hero">
+        <img src="{{ pronas.hero.image }}" alt="{{ pronas.hero.imageAlt }}">
         <div>
           <p class="eyebrow">{{ pronas.hero.eyebrow }}</p>
           <h1>{{ pronas.hero.heading }}</h1>
           <p class="lead">{{ pronas.hero.lead }}</p>
         </div>
-        <img src="{{ pronas.hero.image }}" alt="{{ pronas.hero.imageAlt }}">
       </section>
       <section class="section about-layout">
         <div class="about-note">
