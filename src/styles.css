@@ -175,6 +175,10 @@ main > article,
   padding: 0 22px;
   border: 1px solid transparent;
   border-radius: var(--radius-btn);
+  /* Градієнт має відлічуватися від border-box. Інакше він розмічається
+     по padding-box, а фарбується по border-box — і під прозорою 1px
+     рамкою браузер повторює плитку, лишаючи темну смужку зліва. */
+  background-origin: border-box;
   font-family: var(--font-body);
   font-size: 15px;
   font-weight: 600;
@@ -192,7 +196,9 @@ main > article,
 .button-accent,
 .btn-support,
 .footer-contact-btn {
-  background: var(--grad-cta);
+  /* background-image, а не скорочене background: скорочення скидало б
+     background-origin: border-box із базового правила. */
+  background-image: var(--grad-cta);
   color: var(--ink);
 }
 .button-accent:hover,
@@ -212,12 +218,15 @@ main > article,
 
 /* вторинна — біла з межею */
 .button-outline {
-  background: var(--paper);
+  /* background-color, а не скорочене background — інакше скидається
+     background-origin: border-box, і при наведенні градієнт лишає
+     смужку під рамкою. */
+  background-color: var(--paper);
   color: var(--ink);
   border-color: var(--line-strong);
 }
 .button-outline:hover {
-  background: var(--grad-cta);
+  background-image: var(--grad-cta);
   border-color: transparent;
 }
 
@@ -971,8 +980,18 @@ main > article,
   border-radius: 50%;
   background: var(--brand-light);
 }
-.capacity-grid h3 { font-size: 16px; font-weight: 600; color: var(--text); }
-.capacity-grid p { color: var(--muted); font-size: 14px; line-height: 1.4; }
+/* Пункт — одне речення клієнта: іменникова частина жирна, пояснення
+   тонке, обидві в одному рядку, щоб речення не розривалося. */
+.capacity-grid p { color: var(--muted); font-size: 15px; line-height: 1.5; }
+.capacity-grid strong { color: var(--text); font-weight: 600; }
+.capacity-list-intro {
+  max-width: 78ch;
+  margin: 0 auto clamp(18px, 2.5vw, 26px);
+  text-align: center;
+  font-weight: 600;
+  color: var(--ink);
+  font-size: 16px;
+}
 @media (max-width: 700px) {
   .capacity-grid { grid-template-columns: 1fr; }
 }

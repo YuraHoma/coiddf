@@ -50,9 +50,12 @@ eleventyComputed:
         <div class="capacity-panel">
           <div class="section-heading center"><p class="eyebrow">{{ pronas.capacity.eyebrow }}</p><h2>{{ pronas.capacity.heading }}</h2></div>
           <p class="capacity-intro">{{ pronas.capacity.intro }}</p>
+          {%- if pronas.capacity.listIntro %}
+          <p class="capacity-list-intro">{{ pronas.capacity.listIntro }}</p>
+          {%- endif %}
           <div class="capacity-grid">
             {%- for it in pronas.capacity.items %}
-            <article><h3>{{ it.title }}</h3><p>{{ it.text }}</p></article>
+            <article><p><strong>{{ it.title }}</strong> {{ it.text }}</p></article>
             {%- endfor %}
           </div>
           <p class="capacity-note">{{ pronas.capacity.note }}</p>
