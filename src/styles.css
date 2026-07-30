@@ -984,6 +984,9 @@ main > article,
    тонке, обидві в одному рядку, щоб речення не розривалося. */
 .capacity-grid p { color: var(--muted); font-size: 15px; line-height: 1.5; }
 .capacity-grid strong { color: var(--text); font-weight: 600; }
+/* Перша літера завжди велика — машинний переклад подекуди повертає малу,
+   і так це не залежить від мови й від чергового прогону перекладу. */
+.capacity-grid p::first-letter { text-transform: uppercase; }
 .capacity-list-intro {
   max-width: 78ch;
   margin: 0 auto clamp(18px, 2.5vw, 26px);
