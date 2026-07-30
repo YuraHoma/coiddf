@@ -815,16 +815,17 @@ main > section,
 
 .about-hero {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: clamp(28px, 5vw, 64px);
-  align-items: center;
+  /* Банер широкоформатний (≈2.2:1) — тому текст зверху, зображення
+     на всю ширину під ним. У колонці збоку кроп зрізав би крайні
+     прапори, зокрема США. */
+  grid-template-columns: 1fr;
+  gap: clamp(28px, 4vw, 48px);
 }
-.about-hero h1 { color: var(--ink); }
-.about-hero .lead { color: var(--muted); margin-top: 18px; }
+.about-hero h1 { color: var(--ink); max-width: 24ch; }
+.about-hero .lead { color: var(--muted); margin-top: 18px; max-width: 62ch; }
 .about-hero img {
   width: 100%;
-  height: clamp(320px, 38vw, 500px);
-  object-fit: cover;
+  height: auto;
   border-radius: var(--radius-media);
   box-shadow: var(--shadow-hero);
 }
