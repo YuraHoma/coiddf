@@ -26,11 +26,11 @@ eleventyComputed:
           <p class="eyebrow">{{ proyekty.directions.eyebrow }}</p>
           <h2>{{ proyekty.directions.heading }}</h2>
         </div>
-        <div class="directions-grid">
+        <div class="cards-grid cards-grid--four">
           {%- for d in proyekty.directions.items %}
           <article>
             <h3>{{ d.title }}</h3>
-            <div class="direction-media">{% if d.image %}<img src="{{ d.image }}" alt="{{ d.title }}" loading="lazy">{% endif %}</div>
+            {% if d.text %}<p>{{ d.text }}</p>{% endif %}
           </article>
           {%- endfor %}
         </div>

@@ -323,7 +323,7 @@ content:
             list: true
             fields:
               - { name: title, label: Назва напряму, type: string }
-              - { name: image, label: Фото, type: image }
+              - { name: text, label: "Опис (необов'язково)", type: text }
       - { name: projectsHeading, label: 'Заголовок над списком проєктів', type: string }
       - { name: detailsLabel, label: 'Текст кнопки на картці проєкту', type: string }
       - name: model

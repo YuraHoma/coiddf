@@ -219,8 +219,6 @@ main > article,
 .button-outline:hover {
   background: var(--grad-cta);
   border-color: transparent;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(90, 125, 61, 0.35);
 }
 
 .wide-action {
@@ -790,36 +788,14 @@ main > article,
 .project-article-lead { font-size: 20px; font-weight: 500; color: var(--ink); }
 .project-more .section-heading { margin-bottom: clamp(28px, 3vw, 40px); }
 
-/* ---------- Напрями проєктів ---------- */
-.directions-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(18px, 2.5vw, 32px);
+/* ---------- Напрями проєктів ----------
+   Той самий компонент, що й картки на головній, лише в чотири колонки. */
+.cards-grid--four { grid-template-columns: repeat(4, 1fr); }
+.cards-grid--four article:nth-child(4) {
+  background: radial-gradient(circle at 50% 0%, #DCE4B4 0%, #E9EFD4 30%, var(--surface) 60%, var(--surface) 100%);
 }
-.directions-grid article { display: flex; flex-direction: column; gap: 16px; }
-.directions-grid h3 {
-  min-height: 3.2em;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.35;
-  text-align: center;
-  color: var(--brand);
-}
-/* Характерна форма з презентації: великий скіс правого нижнього кута. */
-.direction-media {
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-  background: var(--surface-2);
-  border-radius: 20px 20px 46% 20px;
-}
-.direction-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-@media (max-width: 900px) {
-  .directions-grid { grid-template-columns: repeat(2, 1fr); }
-  .directions-grid h3 { min-height: 0; }
-}
-@media (max-width: 520px) {
-  .directions-grid { grid-template-columns: 1fr; }
-}
+/* адаптив не дублюємо — нижче у файлі .cards-grid уже переходить
+   на дві колонки, а потім на одну */
 
 /* ---------- 17. CTA BAND (фірмовий градієнт) ---------- */
 .cta-band { background: var(--paper); }
@@ -1170,9 +1146,10 @@ main > article,
 .project-body span { font-size: 13px; font-weight: 600; color: var(--brand); letter-spacing: 0.02em; }
 .project-body h3 { font-size: 18px; line-height: 1.3; }
 .project-body p { color: var(--muted); font-size: 15px; }
-/* кнопка притискається до низу картки, щоб у ряді вони стояли на одній лінії */
-.project-more-link { align-self: flex-start; margin-top: auto; padding-top: 6px; }
-.project-list > * .project-more-link { margin-top: 14px; }
+/* кнопка притискається до низу картки, щоб у ряді вони стояли на одній лінії.
+   Власних відступів не додаємо — вони збили б текст із центру кнопки. */
+.project-more-link { align-self: flex-start; margin-top: auto; }
+.project-list > * .project-more-link { margin-top: 16px; }
 .contact-list { max-width: 860px; }
 .contact-list span {
   display: block;
