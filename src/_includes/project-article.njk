@@ -31,7 +31,7 @@ layout: base.njk
           {%- set otherList = en.projects if isEn else collections.projects -%}
           {%- for item in otherList -%}
           {%- set itemUrl = item.data.url if isEn else item.url -%}
-          {%- if itemUrl != page.url and shown < 2 -%}
+          {%- if itemUrl != page.url and shown < 3 -%}
           <article>
             {% if item.data.image %}<div class="project-media"><img src="{{ item.data.image }}" alt="{{ item.data.title }}" loading="lazy"></div>{% else %}<div class="project-media news-img-placeholder"></div>{% endif %}
             <div class="project-body">
