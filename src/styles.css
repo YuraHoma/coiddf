@@ -139,7 +139,10 @@ p { text-wrap: pretty; }
 /* ---------- 4. LAYOUT PRIMITIVES ---------- */
 /* Ритм Sonarum: кожен блок несе лише нижній відступ 120px,
    тож відстань між будь-якими сусідніми блоками завжди однакова. */
+/* main > article — сторінки новини й проєкту загорнуті в <article>,
+   без цього селектора вони лишалися без бічних відступів контейнера. */
 main > section,
+main > article,
 .home-hero,
 .page-hero,
 .about-hero,
@@ -767,6 +770,57 @@ main > section,
 
 .news-more .section-heading { margin-bottom: clamp(28px, 3vw, 40px); }
 
+/* ---------- Сторінка проєкту ---------- */
+.project-article { display: flex; flex-direction: column; }
+.project-article-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 560px;
+  object-fit: cover;
+  border-radius: var(--radius-media);
+  margin-bottom: clamp(24px, 3vw, 36px);
+}
+.project-article-body { max-width: 720px; }
+.project-article-body p { margin-bottom: 18px; color: var(--text); font-size: 17px; line-height: 1.7; }
+.project-article-body h2 { font-size: 24px; margin: 28px 0 12px; color: var(--ink); }
+.project-article-body h3 { font-size: 19px; margin: 22px 0 10px; color: var(--ink); }
+.project-article-body ul,
+.project-article-body ol { margin: 0 0 18px 22px; color: var(--text); font-size: 17px; line-height: 1.7; }
+.project-article-body li { margin-bottom: 8px; }
+.project-article-lead { font-size: 20px; font-weight: 500; color: var(--ink); }
+.project-more .section-heading { margin-bottom: clamp(28px, 3vw, 40px); }
+
+/* ---------- Напрями проєктів ---------- */
+.directions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(18px, 2.5vw, 32px);
+}
+.directions-grid article { display: flex; flex-direction: column; gap: 16px; }
+.directions-grid h3 {
+  min-height: 3.2em;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+  color: var(--brand);
+}
+/* Характерна форма з презентації: великий скіс правого нижнього кута. */
+.direction-media {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--surface-2);
+  border-radius: 20px 20px 46% 20px;
+}
+.direction-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (max-width: 900px) {
+  .directions-grid { grid-template-columns: repeat(2, 1fr); }
+  .directions-grid h3 { min-height: 0; }
+}
+@media (max-width: 520px) {
+  .directions-grid { grid-template-columns: 1fr; }
+}
+
 /* ---------- 17. CTA BAND (фірмовий градієнт) ---------- */
 .cta-band { background: var(--paper); }
 .cta-band > div {
@@ -1116,6 +1170,9 @@ main > section,
 .project-body span { font-size: 13px; font-weight: 600; color: var(--brand); letter-spacing: 0.02em; }
 .project-body h3 { font-size: 18px; line-height: 1.3; }
 .project-body p { color: var(--muted); font-size: 15px; }
+/* кнопка притискається до низу картки, щоб у ряді вони стояли на одній лінії */
+.project-more-link { align-self: flex-start; margin-top: auto; padding-top: 6px; }
+.project-list > * .project-more-link { margin-top: 14px; }
 .contact-list { max-width: 860px; }
 .contact-list span {
   display: block;

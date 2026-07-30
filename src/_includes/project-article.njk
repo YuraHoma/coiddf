@@ -1,0 +1,51 @@
+---
+layout: base.njk
+---
+{%- set isEn = locale == "en" -%}
+{%- set pTitle = project.title if isEn else title -%}
+{%- set pDate = project.date if isEn else date -%}
+{%- set pImage = project.image if isEn else image -%}
+{%- set pExcerpt = project.excerpt if isEn else excerpt -%}
+{%- set pContent = project.contentHtml if isEn else content -%}
+      <section class="page-hero">
+        <div>
+          <p class="eyebrow">{{ "Projects" if isEn else "Проєкти" }}</p>
+          <h1>{{ pTitle }}</h1>
+          <p class="lead">{{ pDate | uadate }}</p>
+        </div>
+      </section>
+      <article class="section project-article">
+        {% if pImage %}<img class="project-article-cover" src="{{ pImage }}" alt="{{ pTitle }}">{% endif %}
+        <div class="project-article-body">
+          {% if pExcerpt %}<p class="project-article-lead">{{ pExcerpt }}</p>{% endif %}
+          {{ pContent | safe }}
+        </div>
+      </article>
+      <section class="section project-more">
+        <div class="section-heading">
+          <p class="eyebrow">{{ "Projects" if isEn else "Проєкти" }}</p>
+          <h2>{{ "Other projects" if isEn else "Інші проєкти" }}</h2>
+        </div>
+        <div class="project-list">
+          {%- set shown = 0 -%}
+          {%- set otherList = en.projects if isEn else collections.projects -%}
+          {%- for item in otherList -%}
+          {%- set itemUrl = item.data.url if isEn else item.url -%}
+          {%- if itemUrl != page.url and shown < 2 -%}
+          <article>
+            {% if item.data.image %}<div class="project-media"><img src="{{ item.data.image }}" alt="{{ item.data.title }}" loading="lazy"></div>{% else %}<div class="project-media news-img-placeholder"></div>{% endif %}
+            <div class="project-body">
+              <span>{{ item.data.date | uadate }}</span>
+              <h3>{{ item.data.title }}</h3>
+              <p>{{ item.data.excerpt }}</p>
+              <a class="button button-outline project-more-link" href="{{ itemUrl }}">{{ "Read more ↗" if isEn else "Детальніше ↗" }}</a>
+            </div>
+          </article>
+          {%- set shown = shown + 1 -%}
+          {%- endif -%}
+          {%- endfor -%}
+        </div>
+        <div class="news-all-wrap">
+          <a class="button button-outline" href="{{ '/en/proyekty/' if isEn else '/proyekty/' }}">{{ "All projects ↗" if isEn else "Усі проєкти ↗" }}</a>
+        </div>
+      </section>

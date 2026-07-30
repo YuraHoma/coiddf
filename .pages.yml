@@ -42,7 +42,8 @@ content:
       - { name: title, label: Назва проєкту, type: string, required: true }
       - { name: date, label: Дата, type: date, required: true }
       - { name: image, label: Фото проєкту, type: image, required: true }
-      - { name: excerpt, label: Опис, type: text, required: true }
+      - { name: excerpt, label: Короткий опис (для картки та початку сторінки), type: text, required: true }
+      - { name: body, label: Повний текст проєкту (сторінка «Детальніше»), type: rich-text }
 
   # ---------------------------------------------------------------- Налаштування сайту
   - name: settings
@@ -310,6 +311,21 @@ content:
           - { name: eyebrow, label: Мітка, type: string }
           - { name: heading, label: Заголовок, type: text }
           - { name: lead, label: Підзаголовок, type: text }
+      - name: directions
+        label: Напрями проєктів
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: string }
+          - name: items
+            label: Напрями
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Назва напряму, type: string }
+              - { name: image, label: Фото, type: image }
+      - { name: projectsHeading, label: 'Заголовок над списком проєктів', type: string }
+      - { name: detailsLabel, label: 'Текст кнопки на картці проєкту', type: string }
       - name: model
         label: Блок «Як розподіляється допомога»
         type: object

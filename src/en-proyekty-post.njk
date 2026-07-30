@@ -1,0 +1,14 @@
+---
+layout: project-article.njk
+pagination:
+  data: en.projects
+  size: 1
+  alias: project
+  addAllPagesToCollections: true
+permalink: "{{ project.url }}"
+locale: en
+eleventyComputed:
+  title: "{{ project.title }} | International Cooperation Development Fund"
+  description: "{{ project.excerpt }}"
+  image: "{{ project.image }}"
+---

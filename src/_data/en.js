@@ -76,10 +76,23 @@ module.exports = function () {
     .readdirSync(PROJECTS_DIR)
     .filter((f) => f.endsWith(".md"))
     .map((f) => {
-      const { data } = matter(fs.readFileSync(path.join(PROJECTS_DIR, f), "utf8"));
+      const { data, content } = matter(fs.readFileSync(path.join(PROJECTS_DIR, f), "utf8"));
+      const slug = f.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, "");
       const title = data.title ? t(data.title) : data.title;
       const excerpt = data.excerpt ? t(data.excerpt) : data.excerpt;
-      return { data: { title, excerpt, date: data.date, image: data.image } };
+      const body = content.trim();
+      const contentHtml = body ? md.render(t(body)) : "";
+      const url = `/en/proyekty/${slug}/`;
+      return {
+        url,
+        slug,
+        title,
+        excerpt,
+        date: data.date,
+        image: data.image,
+        contentHtml,
+        data: { title, excerpt, date: data.date, image: data.image, url },
+      };
     })
     .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));
 
