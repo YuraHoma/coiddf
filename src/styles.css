@@ -823,10 +823,23 @@ main > section,
   grid-template-columns: 1fr;
   gap: clamp(28px, 4vw, 48px);
   padding-inline: 0;
+  padding-top: 0;
 }
 .about-hero > div {
   text-align: center;
   padding-inline: max(var(--gutter), calc((100% - var(--container)) / 2));
+}
+/* На широких екранах заголовок лягає на нижню частину банера — там
+   зображення майже біле (яскравість 240-255), тож темний текст читкий.
+   Нижче 900px банер закороткий для накладання, тому текст іде під ним. */
+@media (min-width: 900px) {
+  .about-hero { gap: 0; }
+  .about-hero img { grid-area: 1 / 1; }
+  .about-hero > div {
+    grid-area: 1 / 1;
+    align-self: end;
+    padding-bottom: clamp(20px, 3.5vw, 48px);
+  }
 }
 .about-hero h1 { color: var(--ink); max-width: 24ch; margin-inline: auto; }
 .about-hero .lead {
