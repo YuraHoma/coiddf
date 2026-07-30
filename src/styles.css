@@ -1228,6 +1228,10 @@ main > section,
   color: var(--brand-light);
 }
 .footer-brand-mark svg { width: 100%; height: 100%; display: block; }
+/* У лого голубка вирізана наскрізь, тож на темному підвалі вона показує
+   тло і губиться. CSS-властивість fill перекриває атрибут у самому SVG,
+   тому герб тут світлішає, а колір клієнта в шапці лишається як є. */
+.footer-brand-mark svg path { fill: var(--brand-light); }
 .footer-brand-name { display: flex; flex-direction: column; line-height: 1.2; }
 .footer-brand-name strong { font-size: 13px; font-weight: 600; color: #fff; }
 .footer-nav-cols { display: flex; gap: 48px; }
