@@ -815,13 +815,19 @@ main > section,
 
 .about-hero {
   display: grid;
-  /* Банер широкоформатний (≈2.2:1): йде зверху на всю ширину, під ним
-     центрований заголовок. У колонці збоку кроп зрізав би крайні
-     прапори, зокрема США. */
+  /* Банер широкоформатний (≈2.2:1): йде зверху на всю ширину екрана,
+     під ним центрований заголовок. У колонці збоку кроп зрізав би
+     крайні прапори, зокрема США.
+     Бічні відступи знято з секції й перенесено на текстовий блок —
+     так зображення виходить за межі контейнера, а текст лишається в ньому. */
   grid-template-columns: 1fr;
   gap: clamp(28px, 4vw, 48px);
+  padding-inline: 0;
 }
-.about-hero > div { text-align: center; }
+.about-hero > div {
+  text-align: center;
+  padding-inline: max(var(--gutter), calc((100% - var(--container)) / 2));
+}
 .about-hero h1 { color: var(--ink); max-width: 24ch; margin-inline: auto; }
 .about-hero .lead {
   color: var(--muted);
@@ -831,8 +837,7 @@ main > section,
 .about-hero img {
   width: 100%;
   height: auto;
-  border-radius: var(--radius-media);
-  box-shadow: var(--shadow-hero);
+  display: block;
 }
 
 /* ---------- 19. ABOUT PAGE BLOCKS ---------- */
