@@ -8,7 +8,10 @@ module.exports = function (eleventyConfig) {
   // the defaults below.
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["webp"],
-    widths: [480, 800, 1200, 1600],
+    // 2400 — для банерів на всю ширину екрана: на широких моніторах
+    // 1600px довелося б розтягувати. Варіант генерується лише для
+    // зображень такого розміру, решти не стосується.
+    widths: [480, 800, 1200, 1600, 2400],
     urlPath: "/assets/opt/",
     outputDir: "_site/assets/opt/",
     htmlOptions: {
