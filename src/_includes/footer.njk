@@ -26,14 +26,18 @@
             <span>{{ "Contact" if locale == "en" else "Контакти" }}</span>
             <a href="mailto:{{ site.contacts.general }}">{{ site.contacts.general }} ↗</a>
           </div>
+          {%- if site.contacts.phone %}
           <div class="footer-contact-row">
-            <span>{{ "Partnership" if locale == "en" else "Партнерство" }}</span>
-            <a href="mailto:{{ site.contacts.partners }}">{{ site.contacts.partners }} ↗</a>
+            <span>{{ "Phone" if locale == "en" else "Телефон" }}</span>
+            <a href="tel:{{ site.contacts.phone | replace(" ", "") }}">{{ site.contacts.phone }} ↗</a>
           </div>
+          {%- endif %}
+          {%- if site.contacts.address %}
           <div class="footer-contact-row">
-            <span>{{ "For media" if locale == "en" else "Для медіа" }}</span>
-            <a href="mailto:{{ site.contacts.press }}">{{ site.contacts.press }} ↗</a>
+            <span>{{ "Address" if locale == "en" else "Адреса" }}</span>
+            <a href="https://maps.google.com/?q={{ site.contacts.address | urlencode }}" target="_blank" rel="noopener">{{ site.contacts.address }} ↗</a>
           </div>
+          {%- endif %}
         </div>
         <div class="footer-cta-col">
           {%- if site.socials.facebook or site.socials.twitter or site.socials.linkedin %}

@@ -31,6 +31,7 @@ eleventyComputed:
           <article>
             <h3>{{ d.title }}</h3>
             {% if d.text %}<p>{{ d.text }}</p>{% endif %}
+            {% if d.motto %}<p class="direction-motto">{{ d.motto }}</p>{% endif %}
           </article>
           {%- endfor %}
         </div>
