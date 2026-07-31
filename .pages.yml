@@ -81,12 +81,12 @@ content:
           - { name: label, label: Назва, type: string }
           - { name: href, label: Посилання, type: string }
       - name: contacts
-        label: Контактні email
+        label: Контакти
         type: object
         fields:
-          - { name: general, label: Загальний, type: string }
-          - { name: partners, label: Партнерство, type: string }
-          - { name: press, label: Для медіа, type: string }
+          - { name: general, label: Email, type: string }
+          - { name: phone, label: Телефон, type: string }
+          - { name: address, label: Адреса, type: string }
       - name: socials
         label: Соцмережі
         type: object
@@ -161,7 +161,7 @@ content:
             list: true
             fields:
               - { name: title, label: Заголовок, type: string }
-              - { name: text, label: Текст, type: text }
+              - { name: image, label: Фото, type: image }
       - name: process
         label: Як ми працюємо
         type: object
