@@ -35,6 +35,19 @@ eleventyComputed:
           </figure>
         </div>
       </section>
+      {%- if home.registration %}
+      <section class="section registration-section">
+        <p class="registration-heading">{{ home.registration.heading }}</p>
+        <dl class="registration-grid">
+          {%- for r in home.registration.items %}
+          <div>
+            <dt>{{ r.label }}</dt>
+            <dd>{{ r.value }}</dd>
+          </div>
+          {%- endfor %}
+        </dl>
+      </section>
+      {%- endif %}
       <section class="section partners-section">
         <div class="section-heading center"><p class="eyebrow">{{ home.partners.eyebrow }}</p></div>
         <div class="partner-marquee">
