@@ -797,13 +797,8 @@ main > article,
 .project-article-lead { font-size: 20px; font-weight: 500; color: var(--ink); }
 .project-more .section-heading { margin-bottom: clamp(28px, 3vw, 40px); }
 
-/* ---------- Напрями проєктів ----------
-   Той самий компонент, що й картки на головній, лише в чотири колонки. */
-.cards-grid--four { grid-template-columns: repeat(4, 1fr); }
-.cards-grid--four article:nth-child(4) {
-  background: radial-gradient(circle at 50% 0%, #DCE4B4 0%, #E9EFD4 30%, var(--surface) 60%, var(--surface) 100%);
-}
-/* ---------- Напрями допомоги на головній: назва + знімок ---------- */
+/* ---------- Напрями: назва + знімок ----------
+   Спільний компонент головної та сторінки «Проєкти». */
 .focus-photos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -874,11 +869,6 @@ main > article,
 @media (max-width: 520px) {
   .registration-grid { grid-template-columns: 1fr; }
 }
-
-/* гасло напряму з презентації — коротший акцентний рядок під описом */
-.direction-motto { font-weight: 600; color: var(--brand-deep); font-size: 14px; }
-/* адаптив не дублюємо — нижче у файлі .cards-grid уже переходить
-   на дві колонки, а потім на одну */
 
 /* ---------- 17. CTA BAND (фірмовий градієнт) ---------- */
 .cta-band { background: var(--paper); }
