@@ -111,6 +111,9 @@
           }, 2200);
         }
         if (reduce || !('IntersectionObserver' in window)) return;
+{%- if page.url == "/" or page.url == "/en/" %}
+        /* Анімація появи при скролі лишається тільки на головній —
+           на внутрішніх сторінках вона заважає читати. */
         var sel = '.section-heading,.intro-photos,.intro-story-top > p,' +
           '.map-card,.cards-grid article,.process-grid article,' +
           '.resource-card,.partner-marquee,.partner-detail-card,.news-mini-grid article,.news-grid article,' +
@@ -129,6 +132,7 @@
           });
         }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
         els.forEach(function (el) { io.observe(el); });
+{%- endif %}
       })();
     </script>
   </body>

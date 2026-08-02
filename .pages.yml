@@ -336,7 +336,6 @@ content:
             fields:
               - { name: title, label: Назва напряму, type: string }
               - { name: image, label: Фото, type: image }
-      - { name: projectsHeading, label: 'Заголовок над списком проєктів', type: string }
       - { name: detailsLabel, label: 'Текст кнопки на картці проєкту', type: string }
       - name: model
         label: Блок «Як розподіляється допомога»

@@ -22,7 +22,6 @@ eleventyComputed:
         </div>
       </section>
       <section class="section">
-        <div class="section-heading center"><h2>{{ proyekty.projectsHeading }}</h2></div>
         <div class="project-list">
           {%- set projectList = en.projects if locale == "en" else collections.projects %}
           {%- for p in projectList %}
