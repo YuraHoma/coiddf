@@ -58,9 +58,13 @@ eleventyComputed:
           {%- for c in home.focusAreas.items %}
           <article>
             <a href="{{ projectsUrl }}{% if c.key %}#{{ c.key }}{% endif %}">
-              <div class="focus-photo">{% if c.image %}<img src="{{ c.image }}" alt="{{ c.title }}" loading="lazy">{% endif %}</div>
-              <h3>{{ c.title }}</h3>
-              <span class="focus-cta">{{ home.focusAreas.linkLabel }} ↗</span>
+              <div class="focus-photo">
+                {% if c.image %}<img src="{{ c.image }}" alt="{{ c.title }}" loading="lazy">{% endif %}
+                <div class="focus-overlay">
+                  <h3>{{ c.title }}</h3>
+                  <span class="focus-cta">{{ home.focusAreas.linkLabel }} ↗</span>
+                </div>
+              </div>
             </a>
           </article>
           {%- endfor %}

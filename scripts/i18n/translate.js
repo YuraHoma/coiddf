@@ -92,12 +92,14 @@ for (const f of fs.readdirSync(NEWS_DIR).filter((f) => f.endsWith(".md"))) {
   if (body) ensureTranslated(body);
 }
 
-// --- projects markdown: title, excerpt (no individual pages, no body needed) ---
+// --- projects markdown: title, excerpt, body (у проєктів є власні сторінки) ---
 console.log("\nprojects/*.md:");
 for (const f of fs.readdirSync(PROJECTS_DIR).filter((f) => f.endsWith(".md"))) {
-  const { data } = matter(fs.readFileSync(path.join(PROJECTS_DIR, f), "utf8"));
+  const { data, content } = matter(fs.readFileSync(path.join(PROJECTS_DIR, f), "utf8"));
   if (data.title) ensureTranslated(data.title);
   if (data.excerpt) ensureTranslated(data.excerpt);
+  const body = content.trim();
+  if (body) ensureTranslated(body);
 }
 
 // --- hardcoded UI strings used directly in templates (not data-driven) ---
