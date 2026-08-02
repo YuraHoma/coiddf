@@ -22,20 +22,6 @@ eleventyComputed:
         </div>
       </section>
       <section class="section">
-        <div class="section-heading center">
-          <p class="eyebrow">{{ proyekty.directions.eyebrow }}</p>
-          <h2>{{ proyekty.directions.heading }}</h2>
-        </div>
-        <div class="focus-photos">
-          {%- for d in proyekty.directions.items %}
-          <article>
-            <h3>{{ d.title }}</h3>
-            <div class="focus-photo">{% if d.image %}<img src="{{ d.image }}" alt="{{ d.title }}" loading="lazy">{% endif %}</div>
-          </article>
-          {%- endfor %}
-        </div>
-      </section>
-      <section class="section">
         <div class="section-heading center"><h2>{{ proyekty.projectsHeading }}</h2></div>
         <div class="project-list">
           {%- set projectList = en.projects if locale == "en" else collections.projects %}

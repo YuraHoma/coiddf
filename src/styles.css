@@ -805,8 +805,9 @@ main > article,
   gap: clamp(18px, 2.5vw, 30px);
 }
 .focus-photos article { display: flex; flex-direction: column; gap: 14px; }
+/* Підпис іде під знімком. Вирівнювати його за висотою не потрібно —
+   знімки мають фіксовану пропорцію, тож верхній край завжди спільний. */
 .focus-photos h3 {
-  min-height: 3.2em;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.35;

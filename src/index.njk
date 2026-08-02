@@ -69,8 +69,8 @@ eleventyComputed:
         <div class="focus-photos">
           {%- for c in home.focusAreas.items %}
           <article>
-            <h3>{{ c.title }}</h3>
             <div class="focus-photo">{% if c.image %}<img src="{{ c.image }}" alt="{{ c.title }}" loading="lazy">{% endif %}</div>
+            <h3>{{ c.title }}</h3>
           </article>
           {%- endfor %}
         </div>
