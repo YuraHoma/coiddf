@@ -21,10 +21,15 @@ eleventyComputed:
           <p class="lead">{{ proyekty.hero.lead }}</p>
         </div>
       </section>
-      <section class="section">
+      {%- set projectList = en.projects if locale == "en" else collections.projects %}
+      {%- for d in proyekty.directions.items %}
+      {%- set group = [] %}
+      {%- for p in projectList %}{% if p.data.direction == d.key %}{% set group = (group.push(p), group) %}{% endif %}{% endfor %}
+      {%- if group.length %}
+      <section class="section" id="{{ d.key }}">
+        <div class="section-heading center"><h2>{{ d.title }}</h2></div>
         <div class="project-list">
-          {%- set projectList = en.projects if locale == "en" else collections.projects %}
-          {%- for p in projectList %}
+          {%- for p in group %}
           {%- set pUrl = p.data.url if locale == "en" else p.url %}
           <article>
             {% if p.data.image %}<div class="project-media"><img src="{{ p.data.image }}" alt="{{ p.data.title }}" loading="lazy"></div>{% else %}<div class="project-media news-img-placeholder"></div>{% endif %}
@@ -38,3 +43,5 @@ eleventyComputed:
           {%- endfor %}
         </div>
       </section>
+      {%- endif %}
+      {%- endfor %}

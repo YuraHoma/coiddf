@@ -3,6 +3,7 @@ title: "Радіаційний моніторинг для цивільного 
 date: 2025-09-28
 image: /assets/project-radiaciynyy-monitoryng-cyvilnyy-zahyst.jpg
 excerpt: "Персональні засоби радіаційного та дозиметричного контролю для підрозділів ДСНС у Львівській області."
+direction: energetyka
 ---
 
 ## Опис проєкту

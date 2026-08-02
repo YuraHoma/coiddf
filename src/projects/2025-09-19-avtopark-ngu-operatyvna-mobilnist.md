@@ -3,6 +3,7 @@ title: "Підсилення автопарку Національної гва�
 date: 2025-09-19
 image: /assets/project-avtopark-ngu-operatyvna-mobilnist.jpg
 excerpt: "П'ятнадцять позашляхових пікапів Mitsubishi L200 для Національної гвардії України з повним спорядженням."
+direction: viyskova
 ---
 
 ## Опис проєкту

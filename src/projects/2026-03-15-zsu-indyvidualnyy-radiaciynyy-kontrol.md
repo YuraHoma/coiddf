@@ -3,6 +3,7 @@ title: "Забезпечення особового складу Збройни�
 date: 2026-03-15
 image: /assets/project-zsu-indyvidualnyy-radiaciynyy-kontrol.jpg
 excerpt: "Персональні дозиметри Ludlum, детектори Kromek та прилади ідентифікації радіоізотопів Ortec для Збройних Сил України."
+direction: viyskova
 ---
 
 ## Опис проєкту

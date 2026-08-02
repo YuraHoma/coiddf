@@ -3,6 +3,7 @@ title: "Підсилення автопарку Збройних сил Укра
 date: 2025-08-08
 image: /assets/project-avtopark-zsu-operatyvna-mobilnist.jpg
 excerpt: "Десять позашляхових пікапів Mitsubishi L200 для Збройних Сил України з повним додатковим спорядженням."
+direction: viyskova
 ---
 
 ## Опис проєкту

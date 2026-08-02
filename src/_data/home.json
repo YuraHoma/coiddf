@@ -143,19 +143,23 @@
     "items": [
       {
         "title": "Гуманітарне реагування на кризові ситуації населення",
-        "image": "/assets/direction-gumanitarne-reaguvannya.jpg"
+        "image": "/assets/direction-gumanitarne-reaguvannya.jpg",
+        "key": "gumanitarne"
       },
       {
         "title": "Цифрова трансформація",
-        "image": "/assets/direction-cyfrova-transformaciya.jpg"
+        "image": "/assets/direction-cyfrova-transformaciya.jpg",
+        "key": "cyfrova"
       },
       {
         "title": "Енергетика, радіаційний захист та екологічна безпека",
-        "image": "/assets/direction-energetyka-radiaciynyy-zahyst.jpg"
+        "image": "/assets/direction-energetyka-radiaciynyy-zahyst.jpg",
+        "key": "energetyka"
       },
       {
         "title": "Підвищення військової готовності та національної безпеки",
-        "image": "/assets/direction-viyskova-gotovnist.jpg"
+        "image": "/assets/direction-viyskova-gotovnist.jpg",
+        "key": "viyskova"
       }
     ]
   },

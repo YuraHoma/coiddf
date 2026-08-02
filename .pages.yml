@@ -43,6 +43,16 @@ content:
       - { name: date, label: Дата, type: date, required: true }
       - { name: image, label: Фото проєкту, type: image, required: true }
       - { name: excerpt, label: Короткий опис (для картки та початку сторінки), type: text, required: true }
+      - name: direction
+        label: Напрям (визначає групу на сторінці «Проєкти»)
+        type: select
+        required: true
+        options:
+          values:
+            - { value: gumanitarne, label: Гуманітарне реагування на кризові ситуації населення }
+            - { value: cyfrova, label: Цифрова трансформація }
+            - { value: energetyka, label: 'Енергетика, радіаційний захист та екологічна безпека' }
+            - { value: viyskova, label: Підвищення військової готовності та національної безпеки }
       - { name: body, label: Повний текст проєкту (сторінка «Детальніше»), type: rich-text }
 
   # ---------------------------------------------------------------- Налаштування сайту

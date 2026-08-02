@@ -3,6 +3,7 @@ title: "Обладнання для радіаційного моніторин�
 date: 2025-09-18
 image: /assets/project-obladnannya-radiaciynyy-monitoryng-cz.jpg
 excerpt: "Персональні та ранцеві засоби радіаційного виявлення для Головного управління ДСНС України у Львівській області."
+direction: energetyka
 ---
 
 ## Опис проєкту

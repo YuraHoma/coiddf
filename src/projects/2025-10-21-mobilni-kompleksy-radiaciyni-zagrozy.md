@@ -3,6 +3,7 @@ title: "Мобільні комплекси раннього реагуванн�
 date: 2025-10-21
 image: /assets/project-mobilni-kompleksy-radiaciyni-zagrozy.jpg
 excerpt: "Два спеціальні фургони Volkswagen Crafter для Гідрометеорологічної служби України, повністю укомплектовані обладнанням радіаційного контролю."
+direction: energetyka
 ---
 
 ## Опис проєкту

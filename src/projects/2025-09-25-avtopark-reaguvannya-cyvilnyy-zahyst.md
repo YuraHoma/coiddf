@@ -3,6 +3,7 @@ title: "Автопарк реагування на надзвичайні сит
 date: 2025-09-25
 image: /assets/project-avtopark-reaguvannya-cyvilnyy-zahyst.jpg
 excerpt: "Вісім позашляхових пікапів Mitsubishi L200 для ДСНС України, чотири з них — з мобільними системами радіаційного виявлення."
+direction: energetyka
 ---
 
 ## Опис проєкту

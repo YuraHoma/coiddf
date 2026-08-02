@@ -91,7 +91,7 @@ module.exports = function () {
         date: data.date,
         image: data.image,
         contentHtml,
-        data: { title, excerpt, date: data.date, image: data.image, url },
+        data: { title, excerpt, date: data.date, image: data.image, url, direction: data.direction },
       };
     })
     .sort((a, b) => new Date(b.data.date) - new Date(a.data.date));

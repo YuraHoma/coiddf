@@ -815,7 +815,12 @@ main > article,
   grid-template-columns: repeat(4, 1fr);
   gap: clamp(18px, 2.5vw, 30px);
 }
-.focus-photos article { display: flex; flex-direction: column; gap: 14px; }
+.focus-photos article { display: flex; flex-direction: column; }
+/* картка веде на свою групу проєктів */
+.focus-photos a { display: flex; flex-direction: column; gap: 14px; }
+.focus-photos a:hover h3 { color: var(--brand-bright); }
+/* якір ураховує липкий хедер, щоб заголовок не ховався під ним */
+[id="gumanitarne"], [id="cyfrova"], [id="energetyka"], [id="viyskova"] { scroll-margin-top: 90px; }
 /* Підпис іде під знімком. Вирівнювати його за висотою не потрібно —
    знімки мають фіксовану пропорцію, тож верхній край завжди спільний. */
 .focus-photos h3 {

@@ -3,6 +3,7 @@ title: "Забезпечення особового складу Збройни�
 date: 2026-03-15
 image: /assets/project-zsu-zasoby-sposterezhennya.jpg
 excerpt: "Тепловізійні монокуляри FLIR Scout Pro із вбудованим літій-іонним акумулятором для Збройних Сил України."
+direction: viyskova
 ---
 
 ## Опис проєкту

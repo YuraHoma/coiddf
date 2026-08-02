@@ -3,6 +3,7 @@ title: "Оснащення Збройних сил України персона
 date: 2025-08-20
 image: /assets/project-zsu-personalni-dozymetry.jpg
 excerpt: "Триста персональних дозиметрів-детекторів радіації Polimaster PM1703GNA-II для Збройних Сил України."
+direction: viyskova
 ---
 
 ## Опис проєкту

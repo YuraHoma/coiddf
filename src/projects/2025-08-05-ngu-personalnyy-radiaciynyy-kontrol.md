@@ -3,6 +3,7 @@ title: "Оснащення Національної гвардії Україн�
 date: 2025-08-05
 image: /assets/project-ngu-personalnyy-radiaciynyy-kontrol.jpg
 excerpt: "Персональні дозиметри Kromek та прилади ідентифікації радіоізотопів Ortec для Національної гвардії України."
+direction: viyskova
 ---
 
 ## Опис проєкту

@@ -3,6 +3,7 @@ title: "Забезпечення особового складу Збройни�
 date: 2026-02-11
 image: /assets/project-zsu-zasoby-zahystu-nebezpechni-materialy.jpg
 excerpt: "Засоби індивідуального захисту: респіратори, захисні щитки, тактичні черевики та хімічно стійкі комбінезони."
+direction: viyskova
 ---
 
 ## Опис проєкту

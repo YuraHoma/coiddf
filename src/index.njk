@@ -54,10 +54,13 @@ eleventyComputed:
           <h2>{{ home.focusAreas.heading }}</h2>
         </div>
         <div class="focus-photos">
+          {%- set projectsUrl = "/en/proyekty/" if locale == "en" else "/proyekty/" %}
           {%- for c in home.focusAreas.items %}
           <article>
-            <div class="focus-photo">{% if c.image %}<img src="{{ c.image }}" alt="{{ c.title }}" loading="lazy">{% endif %}</div>
-            <h3>{{ c.title }}</h3>
+            <a href="{{ projectsUrl }}{% if c.key %}#{{ c.key }}{% endif %}">
+              <div class="focus-photo">{% if c.image %}<img src="{{ c.image }}" alt="{{ c.title }}" loading="lazy">{% endif %}</div>
+              <h3>{{ c.title }}</h3>
+            </a>
           </article>
           {%- endfor %}
         </div>
