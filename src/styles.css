@@ -816,13 +816,15 @@ main > article,
   gap: clamp(18px, 2.5vw, 30px);
 }
 .focus-photos article { display: flex; flex-direction: column; }
-/* картка веде на свою групу проєктів */
-.focus-photos a { display: flex; flex-direction: column; gap: 14px; }
-.focus-photos a:hover h3 { color: var(--brand-bright); }
-/* якір ураховує липкий хедер, щоб заголовок не ховався під ним */
+/* Уся картка — посилання на свою групу проєктів. */
+.focus-photos a {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 12px;
+}
+/* якір ураховує липкий хедер, щоб заголовок групи не ховався під ним */
 [id="gumanitarne"], [id="cyfrova"], [id="energetyka"], [id="viyskova"] { scroll-margin-top: 90px; }
-/* Підпис іде під знімком. Вирівнювати його за висотою не потрібно —
-   знімки мають фіксовану пропорцію, тож верхній край завжди спільний. */
 .focus-photos h3 {
   font-size: 16px;
   font-weight: 600;
@@ -830,13 +832,32 @@ main > article,
   text-align: center;
   color: var(--brand-deep);
 }
+.focus-cta {
+  margin-top: auto;
+  padding-top: 2px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brand);
+  transition: color var(--t);
+}
 .focus-photo {
-  aspect-ratio: 5 / 6;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   border-radius: var(--radius-media);
   background: var(--surface-2);
 }
-.focus-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.focus-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 480ms var(--ease);
+}
+/* ефект при наведенні: знімок трохи наближається, підпис яскравішає */
+.focus-photos a:hover .focus-photo img { transform: scale(1.06); }
+.focus-photos a:hover h3 { color: var(--brand-bright); }
+.focus-photos a:hover .focus-cta { color: var(--brand-deep); }
 @media (max-width: 900px) {
   .focus-photos { grid-template-columns: repeat(2, 1fr); }
   .focus-photos h3 { min-height: 0; }
