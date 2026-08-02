@@ -80,6 +80,13 @@ content:
         fields:
           - { name: label, label: Назва, type: string }
           - { name: href, label: Посилання, type: string }
+      - name: registration
+        label: Реєстраційні коди (стрічка над хедером)
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Назва коду, type: string }
+          - { name: value, label: Значення, type: string }
       - name: contacts
         label: Контакти
         type: object
@@ -115,18 +122,6 @@ content:
           - { name: secondaryUrl, label: Кнопка 2 — посилання, type: string }
           - { name: image, label: Фото, type: image }
           - { name: imageAlt, label: Опис фото (alt), type: string }
-      - name: registration
-        label: Реєстраційні дані організації
-        type: object
-        fields:
-          - { name: heading, label: Заголовок блоку, type: string }
-          - name: items
-            label: Коди
-            type: object
-            list: true
-            fields:
-              - { name: label, label: Назва коду, type: string }
-              - { name: value, label: Значення, type: string }
       - name: mission
         label: Блок «Чому ми працюємо»
         type: object

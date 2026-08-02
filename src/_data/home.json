@@ -3,34 +3,13 @@
   "description": "Головна сторінка благодійного фонду.",
   "hero": {
     "orgBanner": "Благодійна організація «Фонд розвитку міжнародної співпраці»",
-    "headline": "Рятуючи кожного українця,<br>ми рятуємо <span class=\"accent\">націю</span>",
-    "lead": "Об’єднуємо міжнародних партнерів і волонтерів, щоб допомагати прифронтовим громадам Запорізької області.",
+    "headline": "Бережемо життя —<br>створюємо <span class=\"accent\">майбутнє</span> разом",
+    "lead": "Впроваджуємо гуманітарні місії та матеріально-технічну допомогу Україні через міжнародне державне та приватне партнерство.",
     "primaryLabel": "Зв'язатися з нами",
     "secondaryLabel": "Наші проєкти",
     "secondaryUrl": "/proyekty/",
     "image": "/assets/community-aid.png",
     "imageAlt": "Волонтерка передає продуктовий набір літній жінці та дитині"
-  },
-  "registration": {
-    "heading": "Реєстраційні дані організації",
-    "items": [
-      {
-        "label": "D-U-N-S Number",
-        "value": "53-839-7077"
-      },
-      {
-        "label": "NCAGE code",
-        "value": "A5GUJ"
-      },
-      {
-        "label": "Participant Identification Code (PIC)",
-        "value": "864692048"
-      },
-      {
-        "label": "SAM.gov unique entity ID",
-        "value": "EQ98UV8F1W73"
-      }
-    ]
   },
   "mission": {
     "eyebrow": "Чому ми працюємо",

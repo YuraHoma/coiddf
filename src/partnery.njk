@@ -26,10 +26,13 @@ eleventyComputed:
         <div class="partners-grid">
           {%- for p in partners.items %}
           <article class="partner-detail-card">
-            <div class="partner-detail-mark">{{ logos.logo(p.key) }}</div>
+            <div class="partner-detail-mark">{{ logos.logo(p) }}</div>
             <h3>{{ p.name }}</h3>
-            <p>{{ p.description }}</p>
+            {% if p.description %}<p>{{ p.description }}</p>{% endif %}
           </article>
           {%- endfor %}
         </div>
+        {%- if partners.note %}
+        <p class="partners-note">{{ partners.note }}</p>
+        {%- endif %}
       </section>

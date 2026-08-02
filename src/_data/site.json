@@ -8,25 +8,70 @@
   "edrpou": "44806472",
   "contactUrl": "/zvyazatis-z-nami/",
   "nav": [
-    { "href": "/", "label": "Головна" },
-    { "href": "/pro-nas/", "label": "Про нас" },
-    { "href": "/nasha-komanda/", "label": "Команда" },
-    { "href": "/proyekty/", "label": "Проєкти" },
-    { "href": "/partnery/", "label": "Партнери" },
-    { "href": "/zvitnist/", "label": "Звітність" },
-    { "href": "/pravova-informaciya/", "label": "Правова інформація" }
+    {
+      "href": "/",
+      "label": "Головна"
+    },
+    {
+      "href": "/pro-nas/",
+      "label": "Про нас"
+    },
+    {
+      "href": "/nasha-komanda/",
+      "label": "Наша команда"
+    },
+    {
+      "href": "/proyekty/",
+      "label": "Проєкти"
+    },
+    {
+      "href": "/partnery/",
+      "label": "Наші партнери"
+    },
+    {
+      "href": "/zvitnist/",
+      "label": "Річні звіти"
+    },
+    {
+      "href": "/pravova-informaciya/",
+      "label": "Юридична інформація та політики"
+    }
   ],
   "footerNavCol1": [
-    { "href": "/pro-nas/", "label": "Про нас" },
-    { "href": "/nasha-komanda/", "label": "Наша команда" },
-    { "href": "/proyekty/", "label": "Проєкти" },
-    { "href": "/partnery/", "label": "Партнери" }
+    {
+      "href": "/pro-nas/",
+      "label": "Про нас"
+    },
+    {
+      "href": "/nasha-komanda/",
+      "label": "Наша команда"
+    },
+    {
+      "href": "/proyekty/",
+      "label": "Проєкти"
+    },
+    {
+      "href": "/partnery/",
+      "label": "Наші партнери"
+    }
   ],
   "footerNavCol2": [
-    { "href": "/zvitnist/", "label": "Звітність" },
-    { "href": "/pravova-informaciya/", "label": "Правова інформація" },
-    { "href": "/polityka/", "label": "Політика" },
-    { "href": "/novyny/", "label": "Новини" }
+    {
+      "href": "/zvitnist/",
+      "label": "Річні звіти"
+    },
+    {
+      "href": "/pravova-informaciya/",
+      "label": "Юридична інформація та політики"
+    },
+    {
+      "href": "/polityka/",
+      "label": "Політика"
+    },
+    {
+      "href": "/novyny/",
+      "label": "Новини"
+    }
   ],
   "contacts": {
     "general": "co.icdf.ukraine@gmail.com",
@@ -37,5 +82,23 @@
     "facebook": "https://example.com/facebook-test-link",
     "twitter": "https://example.com/twitter-test-link",
     "linkedin": "https://example.com/linkedin-test-link"
-  }
+  },
+  "registration": [
+    {
+      "label": "D-U-N-S Number",
+      "value": "53-839-7077"
+    },
+    {
+      "label": "NCAGE code",
+      "value": "A5GUJ"
+    },
+    {
+      "label": "Participant Identification Code (PIC)",
+      "value": "864692048"
+    },
+    {
+      "label": "SAM.gov unique entity ID",
+      "value": "EQ98UV8F1W73"
+    }
+  ]
 }

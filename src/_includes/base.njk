@@ -33,6 +33,15 @@
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
+{%- if site.registration %}
+    <div class="reg-strip">
+      <ul>
+        {%- for r in site.registration %}
+        <li><span>{{ r.label }}</span> <b>{{ r.value }}</b></li>
+        {%- endfor %}
+      </ul>
+    </div>
+{%- endif %}
 {% include "header.njk" %}
     <main>
 {{ content | safe }}
@@ -82,8 +91,8 @@
         var accent = d.querySelector('.hero-top h1 .accent');
         if (accent && !reduce) {
           var words = root.lang === 'en'
-            ? ['nation', 'families', 'communities', 'future']
-            : ['націю', 'родини', 'громади', 'майбутнє'];
+            ? ['future', 'security', 'resilience', 'development']
+            : ['майбутнє', 'безпеку', 'стійкість', 'розвиток'];
           var wi = Math.max(0, words.indexOf(accent.textContent.trim()));
           var show = 'opacity 280ms ease, transform 280ms ease';
           accent.style.display = 'inline-block';
