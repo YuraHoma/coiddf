@@ -813,7 +813,7 @@ main > article,
 .focus-photos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: clamp(18px, 2.5vw, 30px);
+  gap: clamp(8px, 1vw, 12px);
 }
 .focus-photos article { display: flex; }
 /* Уся картка — посилання на свою групу проєктів. */
@@ -840,16 +840,16 @@ main > article,
 .focus-overlay {
   position: absolute;
   inset: auto 0 0 0;
-  padding: 34px 16px 16px;
+  padding: 38px 16px 18px;
   background: linear-gradient(180deg,
-    rgba(12, 15, 9, 0) 0%,
-    rgba(12, 15, 9, 0.62) 40%,
-    rgba(12, 15, 9, 0.92) 78%,
-    rgba(12, 15, 9, 0.96) 100%);
+    rgba(26, 43, 14, 0) 0%,
+    rgba(26, 43, 14, 0.58) 20%,
+    rgba(26, 43, 14, 0.9) 46%,
+    rgba(26, 43, 14, 0.97) 100%);
   text-align: center;
 }
 .focus-overlay h3 {
-  font-size: 15.5px;
+  font-size: clamp(17px, 1.35vw, 19px);
   font-weight: 600;
   line-height: 1.3;
   color: #fff;
@@ -862,21 +862,21 @@ main > article,
   overflow: hidden;
   max-height: 0;
   opacity: 0;
-  font-size: 13.5px;
+  font-size: clamp(14px, 1.1vw, 15.5px);
   font-weight: 600;
   color: var(--brand-light);
   transition: max-height 320ms var(--ease), opacity 320ms var(--ease), margin-top 320ms var(--ease);
 }
 .focus-photos a:hover .focus-cta,
 .focus-photos a:focus-visible .focus-cta {
-  max-height: 40px;
+  max-height: 44px;
   opacity: 1;
   margin-top: 8px;
 }
 .focus-photos a:hover .focus-photo img { transform: scale(1.06); }
 /* На сенсорних екранах наведення немає — показуємо кнопку одразу. */
 @media (hover: none) {
-  .focus-cta { max-height: 40px; opacity: 1; margin-top: 8px; }
+  .focus-cta { max-height: 44px; opacity: 1; margin-top: 8px; }
 }
 @media (max-width: 900px) {
   .focus-photos { grid-template-columns: repeat(2, 1fr); }
