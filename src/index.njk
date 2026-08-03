@@ -20,7 +20,7 @@ eleventyComputed:
       <section class="home-hero">
         <div class="hero-top">
           <div class="hero-headline">
-            <p class="hero-org">{{ home.hero.orgBanner | safe }}</p>
+            {%- if home.hero.orgBanner %}<p class="hero-org">{{ home.hero.orgBanner | safe }}</p>{% endif %}
             <h1>{{ home.hero.headline | safe }}</h1>
             <p class="lead">{{ home.hero.lead }}</p>
             <div class="hero-actions">
