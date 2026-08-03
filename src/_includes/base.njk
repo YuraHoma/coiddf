@@ -94,7 +94,8 @@
             ? ['future', 'security', 'resilience', 'development']
             : ['майбутнє', 'безпеку', 'стійкість', 'розвиток'];
           var wi = Math.max(0, words.indexOf(accent.textContent.trim()));
-          var show = 'opacity 280ms ease, transform 280ms ease';
+          var soft = 'cubic-bezier(0.22, 0.61, 0.36, 1)';
+          var show = 'opacity 420ms ' + soft + ', transform 420ms ' + soft;
           accent.style.display = 'inline-block';
           accent.style.transition = show;
           var maxWidth = 0;
@@ -116,8 +117,8 @@
               accent.style.transition = show;
               accent.style.opacity = '1';
               accent.style.transform = 'translateY(0)';
-            }, 300);
-          }, 2200);
+            }, 440);
+          }, 2600);
         }
         if (reduce || !('IntersectionObserver' in window)) return;
 {%- if page.url == "/" or page.url == "/en/" %}
