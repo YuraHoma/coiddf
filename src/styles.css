@@ -153,14 +153,18 @@ main > article,
 /* верх і низ банера рівні — той самий 120px ритм, що й скрізь на сторінці */
 .home-hero, .page-hero, .about-hero { padding-top: var(--section-y); }
 
-.section-heading { max-width: 720px; margin-bottom: clamp(36px, 4vw, 56px); }
+/* 900px — щоб довгі заголовки секцій лягали у два рядки, а не в три.
+   Абзац під заголовком лишається вужчим заради довжини рядка. */
+.section-heading { max-width: 900px; margin-bottom: clamp(36px, 4vw, 56px); }
 .section-heading.center { margin-inline: auto; text-align: center; }
 .section-heading p:not(.eyebrow) {
   margin-top: 16px;
+  max-width: 720px;
   color: var(--faint);
   font-size: 1.125rem;
   line-height: 1.5;
 }
+.section-heading.center p:not(.eyebrow) { margin-inline: auto; }
 
 
 
