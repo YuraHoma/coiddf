@@ -132,14 +132,6 @@ content:
           - { name: secondaryUrl, label: Кнопка 2 — посилання, type: string }
           - { name: image, label: Фото, type: image }
           - { name: imageAlt, label: Опис фото (alt), type: string }
-      - name: mission
-        label: Блок «Чому ми працюємо»
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: string }
-          - { name: body, label: Текст, type: text }
-          - { name: photos, label: Фото, type: image, list: true }
       - name: geography
         label: Блок «Географія»
         type: object
@@ -160,6 +152,7 @@ content:
         fields:
           - { name: eyebrow, label: Мітка, type: string }
           - { name: heading, label: Заголовок, type: string }
+          - { name: linkLabel, label: 'Текст кнопки на картці (з’являється при наведенні)', type: string }
           - name: items
             label: Картки
             type: object
@@ -167,6 +160,15 @@ content:
             fields:
               - { name: title, label: Заголовок, type: string }
               - { name: image, label: Фото, type: image }
+              - name: key
+                label: Напрям (картка веде на цю групу на сторінці «Проєкти»)
+                type: select
+                options:
+                  values:
+                    - { value: gumanitarne, label: Гуманітарне реагування на кризові ситуації населення }
+                    - { value: cyfrova, label: Цифрова трансформація }
+                    - { value: energetyka, label: 'Енергетика, радіаційний захист та екологічна безпека' }
+                    - { value: viyskova, label: Підвищення військової готовності та національної безпеки }
       - name: process
         label: Як ми працюємо
         type: object
@@ -257,6 +259,7 @@ content:
           - { name: eyebrow, label: Мітка, type: string }
           - { name: heading, label: Заголовок, type: string }
           - { name: intro, label: Вступний текст, type: text }
+          - { name: listIntro, label: Текст перед переліком, type: text }
           - name: items
             label: Елементи спроможності
             type: object
@@ -329,31 +332,21 @@ content:
           - { name: heading, label: Заголовок, type: text }
           - { name: lead, label: Підзаголовок, type: text }
       - name: directions
-        label: Напрями проєктів
+        label: Напрями (заголовки груп проєктів на цій сторінці)
         type: object
         fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: string }
           - name: items
-            label: Напрями
+            label: Напрями — порядок тут задає порядок груп на сторінці
             type: object
             list: true
             fields:
-              - { name: title, label: Назва напряму, type: string }
-              - { name: image, label: Фото, type: image }
+              - name: key
+                label: Код напряму (має збігатися з полем «Напрям» у проєкті)
+                type: select
+                options:
+                  values: [gumanitarne, cyfrova, energetyka, viyskova]
+              - { name: title, label: Заголовок групи, type: string }
       - { name: detailsLabel, label: 'Текст кнопки на картці проєкту', type: string }
-      - name: model
-        label: Блок «Як розподіляється допомога»
-        type: object
-        fields:
-          - { name: heading, label: Заголовок, type: string }
-          - name: items
-            label: Пункти
-            type: object
-            list: true
-            fields:
-              - { name: title, label: Заголовок, type: string }
-              - { name: text, label: Текст, type: text }
 
   # ---------------------------------------------------------------- Партнери
   - name: partners
@@ -361,18 +354,23 @@ content:
     type: file
     path: src/_data/partners.json
     fields:
+      - name: hero
+        label: Банер сторінки
+        type: object
+        fields:
+          - { name: eyebrow, label: Мітка, type: string }
+          - { name: heading, label: Заголовок, type: text }
+          - { name: lead, label: Підзаголовок, type: text }
       - name: items
         label: Партнери
         type: object
         list: true
         fields:
-          - name: key
-            label: Лого
-            type: select
-            options:
-              values: [german, life100, acted, ufbf, samaritans]
           - { name: name, label: Назва, type: string }
-          - { name: description, label: Опис, type: text }
+          - { name: image, label: Логотип, type: image }
+          - { name: description, label: "Опис (необов'язково)", type: text }
+          - { name: key, label: 'Технічний код (латиницею, не показується на сайті)', type: string }
+      - { name: note, label: Примітка під логотипами, type: text }
 
   # ---------------------------------------------------------------- Сторінка «Зв'язатися з нами»
   - name: feedback

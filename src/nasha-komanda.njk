@@ -27,9 +27,11 @@ eleventyComputed:
           {%- if loop.index0 < 2 %}
           <article>
             <div class="team-photo">{% if m.photo %}<img src="{{ m.photo }}" alt="{{ m.name or m.role }}" loading="lazy">{% endif %}</div>
-            <span>{{ m.role }}</span>
-            {% if m.name %}<h3>{{ m.name }}</h3>{% endif %}
-            {% if m.bio %}<p>{{ m.bio }}</p>{% endif %}
+            <div class="team-lead-body">
+              <span>{{ m.role }}</span>
+              {% if m.name %}<h3>{{ m.name }}</h3>{% endif %}
+              {% if m.bio %}<p>{{ m.bio }}</p>{% endif %}
+            </div>
           </article>
           {%- endif %}
           {%- endfor %}
