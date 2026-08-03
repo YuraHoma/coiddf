@@ -331,21 +331,9 @@ content:
           - { name: eyebrow, label: Мітка, type: string }
           - { name: heading, label: Заголовок, type: text }
           - { name: lead, label: Підзаголовок, type: text }
-      - name: directions
-        label: Напрями (заголовки груп проєктів на цій сторінці)
-        type: object
-        fields:
-          - name: items
-            label: Напрями — порядок тут задає порядок груп на сторінці
-            type: object
-            list: true
-            fields:
-              - name: key
-                label: Код напряму (має збігатися з полем «Напрям» у проєкті)
-                type: select
-                options:
-                  values: [gumanitarne, cyfrova, energetyka, viyskova]
-              - { name: title, label: Заголовок групи, type: string }
+      # Групування проєктів за напрямами тимчасово вимкнено — проєкти
+      # виводяться одним списком. Дані напрямів лишаються в proyekty.json,
+      # тож секцію можна повернути сюди разом із групуванням.
       - { name: detailsLabel, label: 'Текст кнопки на картці проєкту', type: string }
 
   # ---------------------------------------------------------------- Партнери
