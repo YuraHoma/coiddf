@@ -9,10 +9,8 @@
         {%- endfor %}
       </nav>
       <div class="header-right">
+        {#- Кнопки «Зв'язатися з нами» в хедері немає: контакти окремим
+            пунктом меню, як у ТЗ. -#}
         <a class="lang-toggle" href="{{ altUrl }}" aria-label="Switch language / Змінити мову">{{ "UA" if locale == "en" else "EN" }}</a>
-        <a class="btn-support" href="{{ site.contactUrl }}">
-          {{ "Contact us" if locale == "en" else "Зв'язатися з нами" }}
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-        </a>
       </div>
     </header>

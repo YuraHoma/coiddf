@@ -22,6 +22,29 @@ eleventyComputed:
         </div>
       </section>
       <section class="section">
+        <div class="contact-cards">
+          <a class="contact-card" href="mailto:{{ site.contacts.general }}">
+            <span>Email</span>
+            <strong>{{ site.contacts.general }}</strong>
+          </a>
+          {%- if site.contacts.phone %}
+          <a class="contact-card" href="tel:{{ site.contacts.phone | replace(" ", "") }}">
+            <span>{{ "Phone" if locale == "en" else "Телефон" }}</span>
+            <strong>{{ site.contacts.phone }}</strong>
+          </a>
+          {%- endif %}
+          {%- if site.contacts.address %}
+          <a class="contact-card" href="https://maps.google.com/?q={{ site.contacts.address | urlencode }}" target="_blank" rel="noopener">
+            <span>{{ "Address" if locale == "en" else "Адреса" }}</span>
+            <strong>{{ site.contacts.address }}</strong>
+          </a>
+          {%- endif %}
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-heading center">
+          <h2>{{ "Feedback form" if locale == "en" else "Форма зворотного зв'язку" }}</h2>
+        </div>
         <form class="feedback-form" id="feedback-form" data-locale="{{ locale }}">
           <div class="form-row">
             <label for="fb-name">{{ "Name" if locale == "en" else "Ім'я" }}</label>

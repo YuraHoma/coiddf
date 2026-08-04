@@ -273,11 +273,11 @@ main > article,
 }
 
 .brand { display: flex; align-items: center; gap: 12px; }
+/* Лого — горизонтальний лок-ап (герб + назва), пропорція 2678×872. */
 .brand-mark {
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
+  display: block;
+  height: 40px;
+  aspect-ratio: 2678 / 872;
   flex: 0 0 auto;
   color: var(--brand);
 }
@@ -1384,6 +1384,43 @@ main > article,
 }
 .contact-list span:hover { border-color: var(--line-strong); }
 
+/* контактні картки на сторінці «Контакти та зворотній зв'язок» */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 24px 26px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  transition: background-color var(--t), border-color var(--t);
+}
+.contact-card:hover,
+.contact-card:focus-visible {
+  background: var(--surface-2);
+  border-color: var(--surface-2);
+}
+.contact-card span {
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.contact-card strong {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+@media (max-width: 900px) { .contact-cards { grid-template-columns: 1fr; } }
+
 /* форма зворотного зв'язку (/zvyazatis-z-nami/) */
 .feedback-form {
   display: flex;
@@ -1476,9 +1513,9 @@ main > article,
 }
 .footer-brand { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 22px; }
 .footer-brand-mark {
-  display: grid;
-  place-items: center;
-  width: 52px; height: 52px;
+  display: block;
+  height: 58px;
+  aspect-ratio: 2678 / 872;
   flex: 0 0 auto;
   color: var(--brand-light);
 }
@@ -1537,10 +1574,15 @@ main > article,
 /* ---------- 23. RESPONSIVE ---------- */
 /* Ущільнюємо меню раніше: назви пунктів за ТЗ довгі, і при звичайних
    відступах рядок не вміщається вже на 1280px. */
-@media (max-width: 1400px) {
+/* Вісім пунктів меню за ТЗ, і найдовший — «Контакти та зворотній
+   зв'язок». Тому рядок ущільнюється у два кроки, перш ніж піти в бургер. */
+@media (max-width: 1560px) {
   .brand small { display: none; }
-  .nav a { padding: 8px 8px; font-size: 14.5px; }
+  .nav a { padding: 8px 8px; font-size: 13.5px; }
   .nav { gap: 0; }
+}
+@media (max-width: 1340px) {
+  .nav a { padding: 8px 5px; font-size: 13px; }
 }
 
 /* Пункти меню за ТЗ довгі («Юридична інформація та політики»), тож

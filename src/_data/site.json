@@ -35,6 +35,10 @@
     {
       "href": "/pravova-informaciya/",
       "label": "Юридична інформація та політики"
+    },
+    {
+      "href": "/zvyazatis-z-nami/",
+      "label": "Контакти та зворотній зв'язок"
     }
   ],
   "footerNavCol1": [
@@ -71,6 +75,10 @@
     {
       "href": "/novyny/",
       "label": "Новини"
+    },
+    {
+      "href": "/zvyazatis-z-nami/",
+      "label": "Контакти та зворотній зв'язок"
     }
   ],
   "contacts": {

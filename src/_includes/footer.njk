@@ -2,11 +2,8 @@
       <div class="footer-top">
         <div class="footer-brand-nav">
           <a class="footer-brand" href="{{ '/en/' if locale == 'en' else '/' }}" aria-label="{{ site.orgShort }}">
+            {#- Назву організації несе саме лого, тож окремого підпису поруч немає. -#}
             <span class="footer-brand-mark">{% include "logo.njk" %}</span>
-            <span class="footer-brand-name">
-              <strong>{{ site.orgLine1 | upper }}</strong>
-              <strong>{{ site.orgLine2 | upper }}</strong>
-            </span>
           </a>
           <nav class="footer-nav-cols" aria-label="{{ 'Footer navigation' if locale == 'en' else 'Навігація футера' }}">
             <div class="footer-nav-col">
