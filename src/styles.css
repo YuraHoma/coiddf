@@ -686,7 +686,6 @@ main > article,
   gap: 16px;
   animation: marquee 32s linear infinite;
 }
-.partner-marquee:hover .partner-track { animation-play-state: paused; }
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
@@ -855,13 +854,32 @@ main > article,
   position: absolute;
   inset: auto 0 0 0;
   padding: 38px 18px 18px;
+  /* Стан спокою — легке нейтральне затемнення. */
   background: linear-gradient(180deg,
-    rgba(26, 43, 14, 0) 0%,
-    rgba(26, 43, 14, 0.58) 20%,
-    rgba(26, 43, 14, 0.9) 46%,
-    rgba(26, 43, 14, 0.97) 100%);
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.42) 22%,
+    rgba(0, 0, 0, 0.66) 50%,
+    rgba(0, 0, 0, 0.76) 100%);
   text-align: left;
 }
+/* Фірмовий зелений проявляється поверх чорного при наведенні —
+   градієнти самі не анімуються, тож це окремий шар з opacity. */
+.focus-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity var(--t);
+  background: linear-gradient(180deg,
+    rgba(26, 43, 14, 0) 0%,
+    rgba(26, 43, 14, 0.6) 20%,
+    rgba(26, 43, 14, 0.9) 46%,
+    rgba(26, 43, 14, 0.97) 100%);
+}
+.focus-photos a:hover .focus-overlay::before,
+.focus-photos a:focus-visible .focus-overlay::before { opacity: 1; }
+.focus-overlay h3,
+.focus-overlay .focus-cta { position: relative; z-index: 1; }
 .focus-overlay h3 {
   font-size: clamp(17px, 1.35vw, 19px);
   font-weight: 600;
