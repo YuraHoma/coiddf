@@ -1,7 +1,7 @@
 {
   "Благодійна організація «Фонд розвитку міжнародної співпраці»": "Charitable organization \"Fund for the Development of International Cooperation\"",
-  "Благодійна організація": "Charitable organization",
-  "«Фонд розвитку міжнародної співпраці»": "\"Fund for the Development of International Cooperation\"",
+  "Благодійна організація": "Charity Organization",
+  "«Фонд розвитку міжнародної співпраці»": "“International Cooperation Development Fund”",
   "Головна": "Home",
   "Про нас": "About us",
   "Команда": "Team",
@@ -449,5 +449,6 @@
   "Реєстраційні дані та політики організації готуються до публікації і з'являться на цій сторінці найближчим часом.": "Registration details and organization policies are being prepared for publication and will appear on this page in the near future.",
   "Звіти готуються до публікації і з'являться на цій сторінці найближчим часом.": "The reports are being prepared for publication and will appear on this page in the near future.",
   "Контакти та зворотній зв'язок": "Contacts and feedback",
-  "Напишіть нам напряму або скористайтеся формою — оберіть категорію звернення, і лист прийде команді фонду.": "Write to us directly or use the form - choose a category of appeal, and the letter will come to the fund team."
+  "Напишіть нам напряму або скористайтеся формою — оберіть категорію звернення, і лист прийде команді фонду.": "Write to us directly or use the form - choose a category of appeal, and the letter will come to the fund team.",
+  "Юридична інформація": "Legal information"
 }

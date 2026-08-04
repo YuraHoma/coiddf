@@ -1,6 +1,12 @@
     <header class="site-header">
       <a class="brand" href="{{ '/en/' if locale == 'en' else '/' }}" aria-label="{{ site.orgFull }}">
+        {#- Назва поруч з емблемою — текстом, а не в SVG: так вона
+            перекладається разом із рештою сайту. -#}
         <span class="brand-mark">{% include "logo.njk" %}</span>
+        <span>
+          <small>{{ site.orgLine1 | upper }}</small>
+          <strong>{{ site.orgLine2 | upper }}</strong>
+        </span>
       </a>
       <button class="nav-toggle" type="button" aria-label="{{ 'Menu' if locale == 'en' else 'Меню' }}" aria-expanded="false"><span></span></button>
       <nav class="nav" aria-label="{{ 'Main navigation' if locale == 'en' else 'Головна навігація' }}">

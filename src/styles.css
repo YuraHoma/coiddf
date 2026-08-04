@@ -273,27 +273,28 @@ main > article,
 }
 
 .brand { display: flex; align-items: center; gap: 12px; }
-/* Лого — горизонтальний лок-ап (герб + назва), пропорція 2678×872. */
+/* Емблема без назви — назва поруч набирається текстом, щоб перекладалась. */
 .brand-mark {
   display: block;
-  height: 40px;
-  aspect-ratio: 2678 / 872;
+  height: 42px;
+  aspect-ratio: 762 / 872;
   flex: 0 0 auto;
   color: var(--brand);
 }
 .brand-mark svg { width: 100%; height: 100%; display: block; }
-.brand > span { display: flex; flex-direction: column; line-height: 1.1; }
+.brand > span { display: flex; flex-direction: column; gap: 2px; line-height: 1.15; }
 .brand strong {
-  font-size: 14px;
+  max-width: 19ch;
+  font-size: 12.5px;
   font-weight: 700;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-  white-space: nowrap;
+  letter-spacing: 0.01em;
+  color: var(--brand-deep);
 }
 .brand small {
-  font-size: 10.5px;
-  font-weight: 500;
-  color: var(--muted);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--brand);
   white-space: nowrap;
 }
 
@@ -1514,8 +1515,8 @@ main > article,
 .footer-brand { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 22px; }
 .footer-brand-mark {
   display: block;
-  height: 58px;
-  aspect-ratio: 2678 / 872;
+  height: 54px;
+  aspect-ratio: 762 / 872;
   flex: 0 0 auto;
   color: var(--brand-light);
 }
@@ -1524,8 +1525,9 @@ main > article,
    тло і губиться. CSS-властивість fill перекриває атрибут у самому SVG,
    тому герб тут світлішає, а колір клієнта в шапці лишається як є. */
 .footer-brand-mark svg path { fill: var(--brand-light); }
-.footer-brand-name { display: flex; flex-direction: column; line-height: 1.2; }
-.footer-brand-name strong { font-size: 13px; font-weight: 600; color: #fff; }
+.footer-brand-name { display: flex; flex-direction: column; gap: 2px; line-height: 1.2; max-width: 22ch; }
+.footer-brand-name small { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; color: var(--brand-light); }
+.footer-brand-name strong { font-size: 13.5px; font-weight: 700; letter-spacing: 0.01em; color: #fff; }
 .footer-nav-cols { display: flex; gap: 48px; }
 .footer-nav-col { display: flex; flex-direction: column; gap: 12px; }
 .footer-nav-col a { font-size: 15px; color: var(--on-dark-muted); transition: color var(--t); }
@@ -1574,15 +1576,14 @@ main > article,
 /* ---------- 23. RESPONSIVE ---------- */
 /* Ущільнюємо меню раніше: назви пунктів за ТЗ довгі, і при звичайних
    відступах рядок не вміщається вже на 1280px. */
-/* Вісім пунктів меню за ТЗ, і найдовший — «Контакти та зворотній
-   зв'язок». Тому рядок ущільнюється у два кроки, перш ніж піти в бургер. */
+/* Вісім пунктів меню за ТЗ — рядок ущільнюється, перш ніж піти в бургер. */
 @media (max-width: 1560px) {
   .brand small { display: none; }
+}
+@media (max-width: 1400px) {
+  .brand > span { display: none; }
   .nav a { padding: 8px 8px; font-size: 13.5px; }
   .nav { gap: 0; }
-}
-@media (max-width: 1340px) {
-  .nav a { padding: 8px 5px; font-size: 13px; }
 }
 
 /* Пункти меню за ТЗ довгі («Юридична інформація та політики»), тож
