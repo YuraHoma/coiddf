@@ -69,10 +69,6 @@
       "label": "Юридична інформація"
     },
     {
-      "href": "/polityka/",
-      "label": "Політика"
-    },
-    {
       "href": "/novyny/",
       "label": "Новини"
     },
@@ -108,5 +104,11 @@
       "label": "SAM.gov unique entity ID",
       "value": "EQ98UV8F1W73"
     }
-  ]
+  ],
+  "cookie": {
+    "text": "Ми використовуємо файли cookie, щоб сайт працював коректно й запамʼятовував ваш вибір мови.",
+    "linkLabel": "Політика конфіденційності",
+    "linkUrl": "/polityka/",
+    "buttonLabel": "Зрозуміло"
+  }
 }

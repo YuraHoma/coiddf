@@ -47,10 +47,38 @@
 {{ content | safe }}
     </main>
 {% include "footer.njk" %}
+    {%- if site.cookie and site.cookie.text %}
+    {#- Смуга згоди на cookie. Ховається до рішення користувача через
+        hidden, щоб не блимала при завантаженні; вибір лишається в
+        localStorage, тож більше не показується. -#}
+    <div class="cookie-bar" id="cookie-bar" role="region" aria-label="{{ 'Cookie notice' if locale == 'en' else 'Повідомлення про cookie' }}" hidden>
+      <p>{{ site.cookie.text }} <a href="{{ site.cookie.linkUrl }}">{{ site.cookie.linkLabel }} ↗</a></p>
+      <button class="button button-accent" type="button" id="cookie-accept">{{ site.cookie.buttonLabel }}</button>
+    </div>
+    {%- endif %}
     <script>
       (function () {
         var d = document, root = d.documentElement;
         root.classList.add('js');
+
+        /* Згода на cookie: показуємо смугу лише тим, хто ще не відповів. */
+        var cookieBar = d.getElementById('cookie-bar');
+        if (cookieBar) {
+          var stored = null;
+          try { stored = localStorage.getItem('icdf-cookie-consent'); } catch (e) {}
+          if (!stored) {
+            cookieBar.hidden = false;
+            requestAnimationFrame(function () { cookieBar.classList.add('in'); });
+          }
+          var accept = d.getElementById('cookie-accept');
+          if (accept) {
+            accept.addEventListener('click', function () {
+              try { localStorage.setItem('icdf-cookie-consent', 'accepted'); } catch (e) {}
+              cookieBar.classList.remove('in');
+              setTimeout(function () { cookieBar.hidden = true; }, 450);
+            });
+          }
+        }
 
         var header = d.querySelector('.site-header');
         var toggle = d.querySelector('.nav-toggle');

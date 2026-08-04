@@ -21,8 +21,10 @@ eleventyComputed:
           <p class="lead">{{ feedback.hero.lead }}</p>
         </div>
       </section>
-      <section class="section">
-        <div class="contact-cards">
+      <section class="section contacts-layout">
+        <div class="contacts-col">
+          <h2>{{ "Contact us directly" if locale == "en" else "Напишіть нам напряму" }}</h2>
+          <div class="contact-cards">
           <a class="contact-card" href="mailto:{{ site.contacts.general }}">
             <span>Email</span>
             <strong>{{ site.contacts.general }}</strong>
@@ -39,12 +41,10 @@ eleventyComputed:
             <strong>{{ site.contacts.address }}</strong>
           </a>
           {%- endif %}
+          </div>
         </div>
-      </section>
-      <section class="section">
-        <div class="section-heading center">
+        <div class="form-col">
           <h2>{{ "Feedback form" if locale == "en" else "Форма зворотного зв'язку" }}</h2>
-        </div>
         <form class="feedback-form" id="feedback-form" data-locale="{{ locale }}">
           <div class="form-row">
             <label for="fb-name">{{ "Name" if locale == "en" else "Ім'я" }}</label>
@@ -69,6 +69,7 @@ eleventyComputed:
           <button class="button button-accent" type="submit">{{ "Send" if locale == "en" else "Надіслати" }}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></button>
           <p class="form-note">{{ ("After clicking “Send” your email client will open with a message pre-filled to " if locale == "en" else "Після натискання «Надіслати» відкриється ваш поштовий клієнт із заповненим листом на адресу ") }}{{ feedback.submitEmail }}.</p>
         </form>
+        </div>
       </section>
       <script>
         (function () {

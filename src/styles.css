@@ -274,7 +274,7 @@ main > article,
    align-self: stretch тягне знак рівно на висоту текстового блоку. */
 .brand-mark {
   display: block;
-  height: 58px;
+  height: 44px;
   aspect-ratio: 762 / 872;
   flex: 0 0 auto;
   color: var(--brand);
@@ -283,13 +283,13 @@ main > article,
 .brand > span { display: flex; flex-direction: column; gap: 2px; line-height: 1.15; }
 .brand strong {
   max-width: 19ch;
-  font-size: 12.5px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.01em;
   color: var(--brand-deep);
 }
 .brand small {
-  font-size: 9.5px;
+  font-size: 7.5px;
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--brand);
@@ -1382,11 +1382,23 @@ main > article,
 }
 .contact-list span:hover { border-color: var(--line-strong); }
 
-/* контактні картки на сторінці «Контакти та зворотній зв'язок» */
+/* Сторінка «Контакти та зворотній зв'язок» — дві колонки:
+   контакти ліворуч, форма праворуч. */
+.contacts-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(28px, 4vw, 64px);
+  align-items: start;
+}
+.contacts-layout h2 { font-size: clamp(22px, 2vw, 26px); margin-bottom: 20px; }
+@media (max-width: 900px) {
+  .contacts-layout { grid-template-columns: 1fr; }
+}
+
 .contact-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  grid-template-columns: 1fr;
+  gap: 14px;
 }
 .contact-card {
   display: flex;
@@ -1578,7 +1590,8 @@ main > article,
   .brand small { display: none; }
 }
 @media (max-width: 1400px) {
-  .brand > span { display: none; }
+  /* :not(.brand-mark) — сама емблема теж <span>, її ховати не можна. */
+  .brand > span:not(.brand-mark) { display: none; }
   .nav a { padding: 8px 8px; font-size: 13.5px; }
   .nav { gap: 0; }
 }
@@ -1665,4 +1678,35 @@ main > article,
   }
   .js [data-reveal] { opacity: 1; transform: none; }
   .site-header.header-hidden { transform: none; }
+}
+
+/* ---------- 24. COOKIE BAR ---------- */
+.cookie-bar {
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: min(760px, calc(100vw - 32px));
+  padding: 16px 18px;
+  background: #fff;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-card);
+  box-shadow: 0 18px 44px -14px rgba(0, 0, 0, 0.28);
+  transform: translate(-50%, calc(100% + 24px));
+  opacity: 0;
+  transition: transform var(--t), opacity var(--t);
+}
+/* display: flex вище за браузерне [hidden] { display: none }, тож
+   ховаємо явно — інакше смуга лишалася б на екрані після згоди. */
+.cookie-bar[hidden] { display: none; }
+.cookie-bar.in { transform: translate(-50%, 0); opacity: 1; }
+.cookie-bar p { font-size: 14px; line-height: 1.5; color: var(--muted); }
+.cookie-bar a { font-weight: 600; color: var(--brand-deep); text-decoration: underline; text-underline-offset: 2px; }
+.cookie-bar .button { flex: 0 0 auto; }
+@media (max-width: 620px) {
+  .cookie-bar { flex-direction: column; align-items: stretch; gap: 12px; text-align: left; }
+  .cookie-bar .button { width: 100%; }
 }
