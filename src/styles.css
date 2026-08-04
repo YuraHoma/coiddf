@@ -1398,23 +1398,21 @@ main > article,
 .contact-cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 14px;
+  gap: 0;
 }
+/* Без плашки: рядки контактів розділені тонкою лінією. */
 .contact-card {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding: 24px 26px;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-card);
-  transition: background-color var(--t), border-color var(--t);
+  gap: 4px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  transition: color var(--t);
 }
-.contact-card:hover,
-.contact-card:focus-visible {
-  background: var(--surface-2);
-  border-color: var(--surface-2);
-}
+.contact-card:first-child { padding-top: 0; }
+.contact-card:last-child { border-bottom: 0; }
+.contact-card:hover strong,
+.contact-card:focus-visible strong { color: var(--brand-deep); }
 .contact-card span {
   font-size: 12.5px;
   font-weight: 600;

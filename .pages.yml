@@ -1,5 +1,16 @@
 # Pages CMS configuration — https://pagescms.org
-# Єдина CMS проєкту. Редагування комітяться напряму в цей GitHub-репозиторій.
+#
+# Свідомо мінімальна конфігурація. Клієнту потрібно рівно шість речей:
+# додавати й видаляти проєкти, новини, людей у команді та звіти, а також
+# правити контактні й юридичні дані. Решта сайту (тексти сторінок, меню,
+# банери, партнери) редагується розробником — тримати їх у CMS означало б
+# завалити клієнта полями, у які він ніколи не зайде.
+#
+# Важливо: кожен файл нижче описаний ПОВНІСТЮ. Pages CMS зберігає лише ті
+# поля, що є в схемі, тож частковий опис файлу тихо стер би решту даних.
+# Саме тому контакти й реквізити винесені в окремі файли, а не лишилися
+# в site.json поруч із меню.
+
 media:
   input: src/assets
   output: /assets
@@ -27,7 +38,7 @@ content:
 
   # ---------------------------------------------------------------- Проєкти
   - name: projects
-    label: Проєкти (картки)
+    label: Проєкти
     type: collection
     path: src/projects
     filename: '{year}-{month}-{day}-{fields.title}.md'
@@ -44,7 +55,7 @@ content:
       - { name: image, label: Фото проєкту, type: image, required: true }
       - { name: excerpt, label: Короткий опис (для картки та початку сторінки), type: text, required: true }
       - name: direction
-        label: Напрям (визначає групу на сторінці «Проєкти»)
+        label: Напрям
         type: select
         required: true
         options:
@@ -55,249 +66,9 @@ content:
             - { value: viyskova, label: Підвищення військової готовності та національної безпеки }
       - { name: body, label: Повний текст проєкту (сторінка «Детальніше»), type: rich-text }
 
-  # ---------------------------------------------------------------- Налаштування сайту
-  - name: settings
-    label: Налаштування сайту (назва, меню, контакти)
-    type: file
-    path: src/_data/site.json
-    fields:
-      - { name: url, label: 'Адреса сайту (без / в кінці)', type: string }
-      - { name: orgShort, label: Логотип — короткий код, type: string }
-      - { name: orgFull, label: Повна назва, type: string }
-      - { name: orgLine1, label: Назва — рядок 1 (футер), type: string }
-      - { name: orgLine2, label: Назва — рядок 2 (футер), type: string }
-      - { name: orgEnglish, label: Назва англійською, type: string }
-      - { name: edrpou, label: 'Код ЄДРПОУ (якщо порожньо — у футері не показується)', type: string }
-      - { name: contactUrl, label: Посилання кнопки «Зв'язатися з нами», type: string }
-      - name: nav
-        label: Головне меню
-        type: object
-        list: true
-        fields:
-          - { name: label, label: Назва, type: string }
-          - { name: href, label: Посилання, type: string }
-      - name: footerNavCol1
-        label: Футер — колонка 1
-        type: object
-        list: true
-        fields:
-          - { name: label, label: Назва, type: string }
-          - { name: href, label: Посилання, type: string }
-      - name: footerNavCol2
-        label: Футер — колонка 2
-        type: object
-        list: true
-        fields:
-          - { name: label, label: Назва, type: string }
-          - { name: href, label: Посилання, type: string }
-      - name: registration
-        label: Реєстраційні коди (стрічка над хедером)
-        type: object
-        list: true
-        fields:
-          - { name: label, label: Назва коду, type: string }
-          - { name: value, label: Значення, type: string }
-      - name: contacts
-        label: Контакти
-        type: object
-        fields:
-          - { name: general, label: Email, type: string }
-          - { name: phone, label: Телефон, type: string }
-          - { name: address, label: Адреса, type: string }
-      - name: socials
-        label: Соцмережі
-        type: object
-        fields:
-          - { name: facebook, label: Facebook, type: string }
-          - { name: twitter, label: Twitter / X, type: string }
-          - { name: linkedin, label: LinkedIn, type: string }
-
-  # ---------------------------------------------------------------- Головна сторінка
-  - name: home
-    label: Головна сторінка
-    type: file
-    path: src/_data/home.json
-    fields:
-      - { name: title, label: SEO-заголовок вкладки, type: string }
-      - { name: description, label: SEO-опис, type: text }
-      - name: hero
-        label: Головний банер
-        type: object
-        fields:
-          - { name: orgBanner, label: 'Назва над заголовком (можна <br>)', type: text }
-          - { name: headline, label: 'Заголовок (можна <br> і <span class="accent">слово</span>)', type: text }
-          - { name: lead, label: Підзаголовок, type: text }
-          - { name: primaryLabel, label: Кнопка 1 — текст, type: string }
-          - { name: secondaryLabel, label: Кнопка 2 — текст, type: string }
-          - { name: secondaryUrl, label: Кнопка 2 — посилання, type: string }
-          - { name: image, label: Фото, type: image }
-          - { name: imageAlt, label: Опис фото (alt), type: string }
-      - name: geography
-        label: Блок «Географія»
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: string }
-          - name: markers
-            label: "Мітки на карті (координати у % від зображення карти)"
-            type: object
-            list: true
-            fields:
-              - { name: label, label: Назва (для довідки), type: string }
-              - { name: left, label: "Позиція зліва, %", type: number }
-              - { name: top, label: "Позиція зверху, %", type: number }
-      - name: focusAreas
-        label: Напрями допомоги
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: string }
-          - { name: linkLabel, label: 'Текст кнопки на картці (з’являється при наведенні)', type: string }
-          - name: items
-            label: Картки
-            type: object
-            list: true
-            fields:
-              - { name: title, label: Заголовок, type: string }
-              - { name: image, label: Фото, type: image }
-              - name: key
-                label: Напрям (картка веде на цю групу на сторінці «Проєкти»)
-                type: select
-                options:
-                  values:
-                    - { value: gumanitarne, label: Гуманітарне реагування на кризові ситуації населення }
-                    - { value: cyfrova, label: Цифрова трансформація }
-                    - { value: energetyka, label: 'Енергетика, радіаційний захист та екологічна безпека' }
-                    - { value: viyskova, label: Підвищення військової готовності та національної безпеки }
-      - name: process
-        label: Як ми працюємо
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: string }
-          - { name: ctaLabel, label: Кнопка — текст, type: string }
-          - { name: ctaUrl, label: Кнопка — посилання, type: string }
-          - name: steps
-            label: Кроки
-            type: object
-            list: true
-            fields:
-              - { name: title, label: Заголовок, type: string }
-              - { name: text, label: Текст, type: text }
-      - name: resources
-        label: Інфраструктура
-        type: object
-        fields:
-          - { name: heading, label: Заголовок, type: string }
-          - name: items
-            label: Картки
-            type: object
-            list: true
-            fields:
-              - name: icon
-                label: Іконка
-                type: select
-                options:
-                  values: [warehouse, package, freezer, van, truck, medical]
-              - { name: title, label: Назва, type: string }
-              - { name: strong, label: Виділене (велике), type: string }
-              - { name: sub, label: Підпис, type: string }
-      - name: partners
-        label: Блок «Партнери»
-        type: object
-        fields:
-          - { name: eyebrow, label: Текст мітки, type: string }
-      - name: cta
-        label: Заклик (внизу сторінки)
-        type: object
-        fields:
-          - { name: heading, label: Заголовок, type: string }
-          - { name: buttonLabel, label: Кнопка — текст, type: string }
-      - { name: newsHeading, label: Новини — заголовок, type: string }
-
-  # ---------------------------------------------------------------- Сторінка «Про нас»
-  - name: pronas
-    label: Сторінка «Про нас»
-    type: file
-    path: src/_data/pronas.json
-    fields:
-      - name: hero
-        label: Банер сторінки
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: text }
-          - { name: lead, label: Підзаголовок, type: text }
-          - { name: image, label: Фото, type: image }
-          - { name: imageAlt, label: Опис фото (alt), type: string }
-      - name: mission
-        label: Місія / Чому ми
-        type: object
-        list: true
-        fields:
-          - { name: title, label: Заголовок, type: string }
-          - { name: body, label: Текст, type: text }
-      - { name: storyHighlight, label: Врізка-твердження (велике речення в тексті), type: text }
-      - { name: story, label: Основний текст (абзаци), type: text, list: true }
-      - name: approach
-        label: Наш підхід
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: string }
-          - name: items
-            label: Картки підходу
-            type: object
-            list: true
-            fields:
-              - { name: title, label: Заголовок, type: string }
-              - { name: text, label: Текст, type: text }
-      - name: capacity
-        label: Інституційна спроможність
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: string }
-          - { name: intro, label: Вступний текст, type: text }
-          - { name: listIntro, label: Текст перед переліком, type: text }
-          - name: items
-            label: Елементи спроможності
-            type: object
-            list: true
-            fields:
-              - { name: title, label: Назва, type: string }
-              - { name: text, label: Підпис, type: text }
-          - { name: note, label: Підсумковий текст, type: text }
-      - name: principles
-        label: Принципи
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: string }
-          - name: items
-            label: Принципи
-            type: object
-            list: true
-            fields:
-              - { name: title, label: Назва, type: string }
-              - { name: text, label: Текст, type: text }
-      - name: awards
-        label: Нагороди
-        type: object
-        fields:
-          - { name: heading, label: Заголовок секції, type: string }
-          - name: items
-            label: Подяки / нагороди
-            type: object
-            list: true
-            fields:
-              - { name: title, label: Підпис, type: text }
-              - { name: image, label: Скан (українська версія), type: image }
-              - { name: imageEn, label: Скан (англійська версія), type: image }
-
-  # ---------------------------------------------------------------- Сторінка «Команда»
+  # ---------------------------------------------------------------- Команда
   - name: team
-    label: Сторінка «Команда»
+    label: Команда
     type: file
     path: src/_data/team.json
     fields:
@@ -309,112 +80,18 @@ content:
           - { name: heading, label: Заголовок, type: text }
           - { name: lead, label: Підзаголовок, type: text }
       - name: members
-        label: Учасники команди
+        label: Учасники команди (перші двоє — засновники, вони у верхньому ряду)
         type: object
         list: true
         fields:
           - { name: role, label: Роль, type: string }
-          - { name: name, label: "Ім'я", type: string }
-          - { name: photo, label: "Фото (необов'язково)", type: image }
+          - { name: name, label: "Ім'я (необов'язково)", type: string }
+          - { name: photo, label: Фото, type: image }
           - { name: bio, label: "Опис (необов'язково)", type: text }
 
-  # ---------------------------------------------------------------- Сторінка «Проєкти»
-  - name: proyekty
-    label: Сторінка «Проєкти»
-    type: file
-    path: src/_data/proyekty.json
-    fields:
-      - name: hero
-        label: Банер сторінки
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: text }
-          - { name: lead, label: Підзаголовок, type: text }
-      # Групування проєктів за напрямами тимчасово вимкнено — проєкти
-      # виводяться одним списком. Дані напрямів лишаються в proyekty.json,
-      # тож секцію можна повернути сюди разом із групуванням.
-      - { name: detailsLabel, label: 'Текст кнопки на картці проєкту', type: string }
-
-  # ---------------------------------------------------------------- Партнери
-  - name: partners
-    label: Партнери
-    type: file
-    path: src/_data/partners.json
-    fields:
-      - name: hero
-        label: Банер сторінки
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: text }
-          - { name: lead, label: Підзаголовок, type: text }
-      - name: items
-        label: Партнери
-        type: object
-        list: true
-        fields:
-          - { name: name, label: Назва, type: string }
-          - { name: image, label: Логотип, type: image }
-          - { name: description, label: "Опис (необов'язково)", type: text }
-          - { name: key, label: 'Технічний код (латиницею, не показується на сайті)', type: string }
-      - { name: note, label: Примітка під логотипами, type: text }
-
-  # ---------------------------------------------------------------- Сторінка «Зв'язатися з нами»
-  - name: feedback
-    label: Сторінка «Зв'язатися з нами»
-    type: file
-    path: src/_data/feedback.json
-    fields:
-      - name: hero
-        label: Банер сторінки
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: text }
-          - { name: lead, label: Підзаголовок, type: text }
-      - { name: categories, label: Категорії звернень, type: string, list: true }
-      - { name: submitEmail, label: Email для надсилання, type: string }
-
-  # ---------------------------------------------------------------- Сторінка «Політика»
-  - name: policy
-    label: Сторінка «Політика»
-    type: file
-    path: src/_data/policy.json
-    fields:
-      - name: hero
-        label: Банер сторінки
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: text }
-          - { name: lead, label: Підзаголовок, type: text }
-      - name: sections
-        label: Розділи
-        type: object
-        list: true
-        fields:
-          - { name: title, label: Заголовок, type: string }
-          - { name: body, label: Текст, type: text }
-      - { name: note, label: Примітка внизу сторінки, type: text }
-
-  # ---------------------------------------------------------------- Сторінка «Новини» (банер)
-  - name: novyny
-    label: Сторінка «Новини» (банер)
-    type: file
-    path: src/_data/novyny.json
-    fields:
-      - name: hero
-        label: Банер сторінки
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: text }
-          - { name: lead, label: Підзаголовок, type: text }
-
-  # ---------------------------------------------------------------- Сторінка «Звітність»
+  # ---------------------------------------------------------------- Звіти
   - name: reports
-    label: Сторінка «Звітність»
+    label: Річні звіти
     type: file
     path: src/_data/reports.json
     fields:
@@ -426,11 +103,28 @@ content:
           - { name: heading, label: Заголовок, type: text }
           - { name: lead, label: Підзаголовок, type: text }
       - { name: items, label: Документи звітності, type: string, list: true }
-      - { name: note, label: Примітка під списком, type: text }
+      - { name: note, label: 'Текст, поки список порожній', type: text }
 
-  # ---------------------------------------------------------------- Сторінка «Правова інформація»
+  # ---------------------------------------------------------------- Контакти
+  - name: contacts
+    label: Контактні дані
+    type: file
+    path: src/_data/contacts.json
+    fields:
+      - { name: general, label: Email, type: string }
+      - { name: phone, label: Телефон, type: string }
+      - { name: address, label: Адреса, type: string }
+      - name: socials
+        label: Соцмережі (порожнє поле — іконка не показується)
+        type: object
+        fields:
+          - { name: facebook, label: Facebook, type: string }
+          - { name: twitter, label: Twitter / X, type: string }
+          - { name: linkedin, label: LinkedIn, type: string }
+
+  # ---------------------------------------------------------------- Юридичні дані
   - name: legal
-    label: Сторінка «Правова інформація»
+    label: Юридичні дані
     type: file
     path: src/_data/legal.json
     fields:
@@ -441,6 +135,14 @@ content:
           - { name: eyebrow, label: Мітка, type: string }
           - { name: heading, label: Заголовок, type: text }
           - { name: lead, label: Підзаголовок, type: text }
+      - { name: edrpou, label: 'Код ЄДРПОУ (порожньо — у футері не показується)', type: string }
+      - name: registration
+        label: Реєстраційні коди (стрічка над меню)
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Назва коду, type: string }
+          - { name: value, label: Значення, type: string }
       - name: items
         label: Реєстраційні дані (рядок = підпис + значення)
         type: object

@@ -33,10 +33,10 @@
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-{%- if site.registration %}
+{%- if legal.registration %}
     <div class="reg-strip">
       <ul>
-        {%- for r in site.registration %}
+        {%- for r in legal.registration %}
         <li><span>{{ r.label }}</span> <b>{{ r.value }}</b></li>
         {%- endfor %}
       </ul>

@@ -24,37 +24,37 @@
         <div class="footer-contacts">
           <div class="footer-contact-row">
             <span>{{ "Contact" if locale == "en" else "Контакти" }}</span>
-            <a href="mailto:{{ site.contacts.general }}">{{ site.contacts.general }} ↗</a>
+            <a href="mailto:{{ contacts.general }}">{{ contacts.general }} ↗</a>
           </div>
-          {%- if site.contacts.phone %}
+          {%- if contacts.phone %}
           <div class="footer-contact-row">
             <span>{{ "Phone" if locale == "en" else "Телефон" }}</span>
-            <a href="tel:{{ site.contacts.phone | replace(" ", "") }}">{{ site.contacts.phone }} ↗</a>
+            <a href="tel:{{ contacts.phone | replace(" ", "") }}">{{ contacts.phone }} ↗</a>
           </div>
           {%- endif %}
-          {%- if site.contacts.address %}
+          {%- if contacts.address %}
           <div class="footer-contact-row">
             <span>{{ "Address" if locale == "en" else "Адреса" }}</span>
-            <a href="https://maps.google.com/?q={{ site.contacts.address | urlencode }}" target="_blank" rel="noopener">{{ site.contacts.address }} ↗</a>
+            <a href="https://maps.google.com/?q={{ contacts.address | urlencode }}" target="_blank" rel="noopener">{{ contacts.address }} ↗</a>
           </div>
           {%- endif %}
         </div>
         <div class="footer-cta-col">
-          {%- if site.socials.facebook or site.socials.twitter or site.socials.linkedin %}
+          {%- if contacts.socials.facebook or contacts.socials.twitter or contacts.socials.linkedin %}
           <div class="footer-social-label">{{ "Follow us" if locale == "en" else "Ми в соц. мережах" }}</div>
           <div class="footer-socials" aria-label="{{ 'Social media' if locale == 'en' else 'Соціальні мережі' }}">
-            {%- if site.socials.facebook %}
-            <a href="{{ site.socials.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">
+            {%- if contacts.socials.facebook %}
+            <a href="{{ contacts.socials.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
             {%- endif %}
-            {%- if site.socials.twitter %}
-            <a href="{{ site.socials.twitter }}" target="_blank" rel="noopener" aria-label="Twitter / X">
+            {%- if contacts.socials.twitter %}
+            <a href="{{ contacts.socials.twitter }}" target="_blank" rel="noopener" aria-label="Twitter / X">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
             {%- endif %}
-            {%- if site.socials.linkedin %}
-            <a href="{{ site.socials.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+            {%- if contacts.socials.linkedin %}
+            <a href="{{ contacts.socials.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55z"/></svg>
             </a>
             {%- endif %}
@@ -68,7 +68,7 @@
       <div class="footer-bottom">
         {#- Повна юридична назва мовою сторінки. Код ЄДРПОУ прибрано до
             підтвердження клієнтом; поле лишається в CMS. -#}
-        <span class="footer-legal">{{ site.orgFull }}{% if site.edrpou %} ({{ "EDRPOU code: " if locale == "en" else "Код ЄДРПОУ: " }}{{ site.edrpou }}){% endif %}</span>
+        <span class="footer-legal">{{ site.orgFull }}{% if legal.edrpou %} ({{ "EDRPOU code: " if locale == "en" else "Код ЄДРПОУ: " }}{{ legal.edrpou }}){% endif %}</span>
         <span>© {{ buildYear }}. {{ "All rights reserved." if locale == "en" else "Всі права захищені." }}</span>
       </div>
     </footer>

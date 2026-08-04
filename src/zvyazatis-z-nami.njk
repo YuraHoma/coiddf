@@ -6,13 +6,13 @@ pagination:
   alias: locale
   addAllPagesToCollections: true
 permalink: "{{ '/en/zvyazatis-z-nami/' if locale == 'en' else '/zvyazatis-z-nami/' }}"
-title: Зв'язатися з нами | Фонд розвитку міжнародної співпраці
-description: Форма зворотного зв'язку — запити, скарги та кар'єрні можливості.
-enTitle: Contact Us | International Cooperation Development Fund
-enDescription: Feedback form — inquiries, complaints and career opportunities.
+title: Контакти та зворотній зв'язок | Фонд розвитку міжнародної співпраці
+description: Пошта, телефон, адреса та форма зворотного зв'язку фонду.
+enTitle: Contacts | International Cooperation Development Fund
+enDescription: Email, phone, address and feedback form of the fund.
 eleventyComputed:
-  title: "{{ enTitle if locale == 'en' else title }}"
-  description: "{{ enDescription if locale == 'en' else description }}"
+  title: "{{ (enTitle if locale == 'en' else title) | safe }}"
+  description: "{{ (enDescription if locale == 'en' else description) | safe }}"
 ---
       <section class="page-hero">
         <div>
@@ -25,20 +25,20 @@ eleventyComputed:
         <div class="contacts-col">
           <h2>{{ "Contact us directly" if locale == "en" else "Напишіть нам напряму" }}</h2>
           <div class="contact-cards">
-          <a class="contact-card" href="mailto:{{ site.contacts.general }}">
+          <a class="contact-card" href="mailto:{{ contacts.general }}">
             <span>Email</span>
-            <strong>{{ site.contacts.general }}</strong>
+            <strong>{{ contacts.general }}</strong>
           </a>
-          {%- if site.contacts.phone %}
-          <a class="contact-card" href="tel:{{ site.contacts.phone | replace(" ", "") }}">
+          {%- if contacts.phone %}
+          <a class="contact-card" href="tel:{{ contacts.phone | replace(" ", "") }}">
             <span>{{ "Phone" if locale == "en" else "Телефон" }}</span>
-            <strong>{{ site.contacts.phone }}</strong>
+            <strong>{{ contacts.phone }}</strong>
           </a>
           {%- endif %}
-          {%- if site.contacts.address %}
-          <a class="contact-card" href="https://maps.google.com/?q={{ site.contacts.address | urlencode }}" target="_blank" rel="noopener">
+          {%- if contacts.address %}
+          <a class="contact-card" href="https://maps.google.com/?q={{ contacts.address | urlencode }}" target="_blank" rel="noopener">
             <span>{{ "Address" if locale == "en" else "Адреса" }}</span>
-            <strong>{{ site.contacts.address }}</strong>
+            <strong>{{ contacts.address }}</strong>
           </a>
           {%- endif %}
           </div>

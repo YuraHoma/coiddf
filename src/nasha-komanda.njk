@@ -11,8 +11,8 @@ description: Команда фонду — засновники, менедже�
 enTitle: Our Team | International Cooperation Development Fund
 enDescription: The foundation's team includes founders, managers, accounting, staff and volunteers.
 eleventyComputed:
-  title: "{{ enTitle if locale == 'en' else title }}"
-  description: "{{ enDescription if locale == 'en' else description }}"
+  title: "{{ (enTitle if locale == 'en' else title) | safe }}"
+  description: "{{ (enDescription if locale == 'en' else description) | safe }}"
 ---
       <section class="page-hero">
         <div>

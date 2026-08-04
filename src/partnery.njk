@@ -11,8 +11,8 @@ description: Українські та міжнародні партнери ф�
 enTitle: Partners | International Cooperation Development Fund
 enDescription: Ukrainian and international partners of the fund.
 eleventyComputed:
-  title: "{{ enTitle if locale == 'en' else title }}"
-  description: "{{ enDescription if locale == 'en' else description }}"
+  title: "{{ (enTitle if locale == 'en' else title) | safe }}"
+  description: "{{ (enDescription if locale == 'en' else description) | safe }}"
 ---
 {% import "partner-logos.njk" as logos %}
       <section class="page-hero">

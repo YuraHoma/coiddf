@@ -3,9 +3,8 @@
   "orgShort": "ICDF",
   "orgFull": "Благодійна організація «Фонд розвитку міжнародної співпраці»",
   "orgLine1": "Благодійна організація",
-  "orgLine2": "«Фонд розвитку міжнародної співпраці»",
+  "orgLine2": "Фонд розвитку міжнародної співпраці",
   "orgEnglish": "Charity Organization “International Cooperation Development Fund”",
-  "edrpou": "",
   "contactUrl": "/zvyazatis-z-nami/",
   "nav": [
     {
@@ -75,34 +74,6 @@
     {
       "href": "/zvyazatis-z-nami/",
       "label": "Контакти"
-    }
-  ],
-  "contacts": {
-    "general": "co.icdf.ukraine@gmail.com",
-    "phone": "+38 098 096 1396",
-    "address": "вул. Межова, 23 (Поділ), Київ, 04215, Україна"
-  },
-  "socials": {
-    "facebook": "https://example.com/facebook-test-link",
-    "twitter": "https://example.com/twitter-test-link",
-    "linkedin": "https://example.com/linkedin-test-link"
-  },
-  "registration": [
-    {
-      "label": "D-U-N-S Number",
-      "value": "53-839-7077"
-    },
-    {
-      "label": "NCAGE code",
-      "value": "A5GUJ"
-    },
-    {
-      "label": "Participant Identification Code (PIC)",
-      "value": "864692048"
-    },
-    {
-      "label": "SAM.gov unique entity ID",
-      "value": "EQ98UV8F1W73"
     }
   ],
   "cookie": {

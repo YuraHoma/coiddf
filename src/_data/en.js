@@ -37,6 +37,7 @@ module.exports = function () {
   const site = translateData("site");
   site.orgFull = readJson("site").orgEnglish; // офіційна англійська назва замість машинного перекладу
 
+  const contacts = translateData("contacts");
   const home = translateData("home");
   const pronas = translateData("pronas");
   const team = translateData("team", ["photo"]);
@@ -98,6 +99,7 @@ module.exports = function () {
 
   return {
     site,
+    contacts,
     home,
     pronas,
     team,
