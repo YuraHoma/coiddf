@@ -684,7 +684,7 @@ main > article,
   display: flex;
   width: max-content;
   gap: 16px;
-  animation: marquee 32s linear infinite;
+  animation: marquee 64s linear infinite;
 }
 @keyframes marquee {
   from { transform: translateX(0); }
