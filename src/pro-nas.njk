@@ -77,7 +77,6 @@ eleventyComputed:
             <a href="{{ a.imageEn if locale == 'en' else a.image }}" target="_blank" rel="noopener">
               <img src="{{ a.imageEn if locale == 'en' else a.image }}" alt="{{ a.title }}" loading="lazy">
             </a>
-            <figcaption>{{ a.title }}</figcaption>
           </figure>
           {%- endfor %}
         </div>
