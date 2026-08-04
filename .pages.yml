@@ -67,7 +67,7 @@ content:
       - { name: orgLine1, label: Назва — рядок 1 (футер), type: string }
       - { name: orgLine2, label: Назва — рядок 2 (футер), type: string }
       - { name: orgEnglish, label: Назва англійською, type: string }
-      - { name: edrpou, label: Код ЄДРПОУ, type: string }
+      - { name: edrpou, label: 'Код ЄДРПОУ (якщо порожньо — у футері не показується)', type: string }
       - { name: contactUrl, label: Посилання кнопки «Зв'язатися з нами», type: string }
       - name: nav
         label: Головне меню

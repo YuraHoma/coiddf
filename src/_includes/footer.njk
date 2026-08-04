@@ -66,7 +66,9 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span class="footer-legal">{{ "Charity Organization \"International Cooperation Development Fund\" (EDRPOU code: " if locale == "en" else "БО «Фонд розвитку міжнародної співпраці» (Код ЄДРПОУ: " }}{{ site.edrpou }})</span>
-        <span>© 2026 International Cooperation Development Fund. {{ "All rights reserved." if locale == "en" else "Всі права захищені." }}</span>
+        {#- Повна юридична назва мовою сторінки. Код ЄДРПОУ прибрано до
+            підтвердження клієнтом; поле лишається в CMS. -#}
+        <span class="footer-legal">{{ site.orgFull }}{% if site.edrpou %} ({{ "EDRPOU code: " if locale == "en" else "Код ЄДРПОУ: " }}{{ site.edrpou }}){% endif %}</span>
+        <span>© {{ buildYear }}. {{ "All rights reserved." if locale == "en" else "Всі права захищені." }}</span>
       </div>
     </footer>

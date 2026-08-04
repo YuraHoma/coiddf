@@ -41,6 +41,8 @@ module.exports = function (eleventyConfig) {
   // team.* тощо.
   eleventyConfig.addGlobalData("locales", ["uk", "en"]);
   eleventyConfig.addGlobalData("locale", "uk");
+  // Рік копірайту береться з дати збірки, щоб у січні його не правили руками.
+  eleventyConfig.addGlobalData("buildYear", () => new Date().getFullYear());
   const localizedKeys = [
     "site",
     "home",
