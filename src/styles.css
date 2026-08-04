@@ -207,10 +207,7 @@ main > article,
 }
 .button-accent:hover,
 .btn-support:hover,
-.footer-contact-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(90, 125, 61, 0.35);
-}
+.footer-contact-btn:hover { transform: scale(1.04); }
 
 /* первинна темна */
 .button-ghost {
@@ -218,7 +215,7 @@ main > article,
   color: #fff;
   border-color: var(--dark);
 }
-.button-ghost:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+.button-ghost:hover { transform: scale(1.04); }
 
 /* вторинна — біла з межею */
 .button-outline {
@@ -273,10 +270,11 @@ main > article,
 }
 
 .brand { display: flex; align-items: center; gap: 12px; }
-/* Емблема без назви — назва поруч набирається текстом, щоб перекладалась. */
+/* Емблема без назви — назва поруч набирається текстом, щоб перекладалась.
+   align-self: stretch тягне знак рівно на висоту текстового блоку. */
 .brand-mark {
   display: block;
-  height: 42px;
+  height: 58px;
   aspect-ratio: 762 / 872;
   flex: 0 0 auto;
   color: var(--brand);
@@ -970,13 +968,12 @@ main > article,
   border-radius: var(--radius-panel);
   background: linear-gradient(60deg, #ffffff 0%, rgba(188, 222, 139, 0.92) 30%, #E9F2D8 65%, rgba(127, 168, 79, 0.92) 100%);
 }
-.cta-band h2 { color: var(--ink); max-width: 20ch; }
+.cta-band h2 { color: var(--ink); max-width: 28ch; }
 .cta-band .button { align-self: center; }
 .cta-band .button-accent {
   background: var(--dark);
   color: #fff;
 }
-.cta-band .button-accent:hover { box-shadow: var(--shadow-lift); }
 
 /* ---------- 18. PAGE HEROES (внутрішні сторінки — світлий банер) ---------- */
 .page-hero,
@@ -1515,7 +1512,7 @@ main > article,
 .footer-brand { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 22px; }
 .footer-brand-mark {
   display: block;
-  height: 54px;
+  height: 62px;
   aspect-ratio: 762 / 872;
   flex: 0 0 auto;
   color: var(--brand-light);
@@ -1525,7 +1522,7 @@ main > article,
    тло і губиться. CSS-властивість fill перекриває атрибут у самому SVG,
    тому герб тут світлішає, а колір клієнта в шапці лишається як є. */
 .footer-brand-mark svg path { fill: var(--brand-light); }
-.footer-brand-name { display: flex; flex-direction: column; gap: 2px; line-height: 1.2; max-width: 22ch; }
+.footer-brand-name { display: flex; flex-direction: column; gap: 2px; line-height: 1.2; max-width: 19ch; }
 .footer-brand-name small { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; color: var(--brand-light); }
 .footer-brand-name strong { font-size: 13.5px; font-weight: 700; letter-spacing: 0.01em; color: #fff; }
 .footer-nav-cols { display: flex; gap: 48px; }
