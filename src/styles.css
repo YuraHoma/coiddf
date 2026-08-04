@@ -1174,11 +1174,18 @@ main > article,
 }
 .principles-grid p { color: var(--muted); font-size: 15px; }
 
+/* До п'яти нагород у ряд. Flex замість grid, щоб неповний ряд
+   (зараз їх чотири) стояв по центру, а не тулився ліворуч. */
 .awards-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
 }
+.awards-grid > * { flex: 0 1 calc(20% - 16px); }
+@media (max-width: 1100px) { .awards-grid > * { flex-basis: calc(33.333% - 14px); } }
+@media (max-width: 760px)  { .awards-grid > * { flex-basis: calc(50% - 10px); } }
+@media (max-width: 460px)  { .awards-grid > * { flex-basis: 100%; } }
 .award-card {
   margin: 0;
   border: 1px solid var(--line);
@@ -1573,7 +1580,6 @@ main > article,
   .news-mini-grid,
   .news-grid,
   .partners-grid,
-  .awards-grid,
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .principles-grid { grid-template-columns: 1fr; }
   .intro-photos { grid-template-columns: 1fr 1fr; grid-auto-rows: clamp(150px, 30vw, 220px); }
@@ -1591,7 +1597,6 @@ main > article,
   .news-mini-grid,
   .news-grid,
   .partners-grid,
-  .awards-grid,
   .process-grid { grid-template-columns: 1fr; }
   .cards-grid article { min-height: 240px; }
   .intro-photos { grid-template-columns: 1fr; }
