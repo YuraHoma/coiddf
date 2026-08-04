@@ -442,9 +442,10 @@ content:
           - { name: heading, label: Заголовок, type: text }
           - { name: lead, label: Підзаголовок, type: text }
       - name: items
-        label: Контактні рядки
+        label: Реєстраційні дані (рядок = підпис + значення)
         type: object
         list: true
         fields:
           - { name: label, label: Підпис, type: string }
           - { name: value, label: Значення, type: string }
+      - { name: note, label: 'Текст, поки список порожній', type: text }

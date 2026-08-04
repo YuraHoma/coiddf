@@ -22,9 +22,14 @@ eleventyComputed:
         </div>
       </section>
       <section class="section contacts-page">
+        {%- if legal.items.length %}
         <div class="contact-list">
           {%- for c in legal.items %}
           <span>{{ c.label }}: {{ c.value }}</span>
           {%- endfor %}
         </div>
+        {%- endif %}
+        {%- if legal.note %}
+        <p class="report-note">{{ legal.note }}</p>
+        {%- endif %}
       </section>
