@@ -7,37 +7,37 @@
   "members": [
     {
       "role": "Засновник фонду, керівник напряму міжнародних відносин та партнерства",
-      "name": "",
+      "name": "Георгій Спасібо",
       "photo": "/assets/team-founder-partnerships.jpg",
       "bio": "Багаторічний номінант і лауреат міжнародних нагород за професійні досягнення у сфері реалізації масштабних міжнародних проєктів, зокрема відзнаки «Top Performer» від Washington Group International, United Research Services, AECOM."
     },
     {
       "role": "Засновниця та директорка фонду",
-      "name": "",
+      "name": "Марина Шепель",
       "photo": "/assets/team-director.jpg",
       "bio": "Кандидатка юридичних наук (адміністративне право та процес; фінансове право; інформаційне право). Членкиня Асоціації правників України (комітет з міжнародного права, комітет з податкового та митного права)."
     },
     {
       "role": "Технічний керівник",
-      "name": "",
+      "name": "Євгеній Кулинко",
       "photo": "/assets/team-technical-lead.jpg",
       "bio": ""
     },
     {
       "role": "Бухгалтер",
-      "name": "",
+      "name": "Аліна Соколова",
       "photo": "/assets/team-accountant-2.jpg",
       "bio": ""
     },
     {
       "role": "Фахівчиня з договірної роботи",
-      "name": "",
+      "name": "Анна Кришмару",
       "photo": "/assets/team-contracts-specialist.jpg",
       "bio": ""
     },
     {
       "role": "Адміністраторка",
-      "name": "",
+      "name": "Євгенія Скакун",
       "photo": "/assets/team-administrator.jpg",
       "bio": ""
     },
@@ -49,13 +49,13 @@
     },
     {
       "role": "Перекладач",
-      "name": "",
+      "name": "Ігор Івахненко",
       "photo": "/assets/team-translator.jpg",
       "bio": ""
     },
     {
       "role": "Інспектор з вхідного контролю якості товарів",
-      "name": "",
+      "name": "Дмитро Хріпа",
       "photo": "/assets/team-qc-inspector-1.jpg",
       "bio": ""
     },
