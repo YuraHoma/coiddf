@@ -169,8 +169,7 @@ main > article,
 
 
 /* ---------- 5. BUTTONS ---------- */
-.button,
-.btn-support {
+.button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -193,12 +192,11 @@ main > article,
   transition: transform var(--t), box-shadow var(--t), background var(--t),
               color var(--t), border-color var(--t), filter var(--t);
 }
-.button svg, .btn-support svg { width: 16px; height: 16px; flex: 0 0 auto; }
-.button:active, .btn-support:active { transform: translateY(1px); }
+.button svg { width: 16px; height: 16px; flex: 0 0 auto; }
+.button:active { transform: translateY(1px); }
 
 /* первинна градієнтна — фірмовий зелений, темний текст */
 .button-accent,
-.btn-support,
 .footer-contact-btn {
   /* background-image, а не скорочене background: скорочення скидало б
      background-origin: border-box із базового правила. */
@@ -206,7 +204,6 @@ main > article,
   color: var(--ink);
 }
 .button-accent:hover,
-.btn-support:hover,
 .footer-contact-btn:hover { transform: scale(1.04); }
 
 /* первинна темна */
@@ -313,7 +310,6 @@ main > article,
 .header-right { display: flex; align-items: center; gap: 10px; }
 
 /* усі елементи хедера — висота 36px, radius 14px */
-.site-header .btn-support { height: 36px; padding: 0 16px; font-size: 14px; }
 
 /* перемикач мов (Google Translate) */
 .lang-toggle {
@@ -744,12 +740,6 @@ main > article,
 .partner-detail-card p { color: var(--muted); font-size: 15px; }
 
 /* ---------- 16. NEWS ---------- */
-.news-heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
-}
 .news-mini-grid,
 .news-grid {
   display: grid;
@@ -1280,28 +1270,7 @@ main > article,
 }
 
 .team-grid,
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
-  gap: 18px;
-}
-.bank-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
-  gap: 18px;
-}
 .team-grid article,
-.info-grid > *,
-.bank-grid > * {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-  padding: 26px;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-card);
-}
-.team-grid article { padding: 0 0 22px; overflow: hidden; }
 .team-photo {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -1324,17 +1293,7 @@ main > article,
 .team-grid > article > h3 { margin-top: 18px; }
 .team-grid > article > span { color: var(--brand-deep); font-size: 14px; font-weight: 600; line-height: 1.4; }
 .team-grid h3 { color: var(--ink); }
-.team-grid p, .info-grid p, .bank-grid p { color: var(--muted); font-size: 15px; }
 
-.bank-grid h3 { font-size: 17px; margin-bottom: 2px; }
-.bank-grid p { line-height: 1.45; }
-.bank-grid strong {
-  color: var(--ink);
-  font-variant-numeric: tabular-nums;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-.info-grid > *, .contact-list span { overflow-wrap: break-word; }
 
 .project-list,
 .contact-list {
@@ -1616,8 +1575,6 @@ main > article,
   .brand { margin-right: auto; }
 
   .header-right { order: 2; display: flex; flex-direction: row; align-items: center; gap: 8px; }
-  .site-header .btn-support { padding: 0 13px; font-size: 13.5px; }
-  .btn-support svg { display: none; }
 
   .nav {
     order: 4;
@@ -1670,8 +1627,6 @@ main > article,
   .intro-photos { grid-template-columns: 1fr; }
   .partner-logo-card { width: 160px; padding: 14px 16px; }
 
-  .news-heading { flex-direction: column; align-items: flex-start; }
-  .news-heading .button { width: 100%; }
   .footer-top { grid-template-columns: 1fr; gap: 34px; }
   .footer-cta-col { grid-column: auto; }
   .footer-nav-cols { gap: 40px; }
