@@ -3,11 +3,14 @@
   // https://icdf-preview.homchenkoyura.workers.dev
   "name": "icdf-preview",
   "compatibility_date": "2026-06-14",
+  // Воркер обробляє POST /api/contact, решту віддає статикою.
+  "main": "worker/index.js",
   "observability": {
     "enabled": true
   },
   "assets": {
     "directory": "_site",
+    "binding": "ASSETS",
     // serve our custom /404.html for missing paths
     "not_found_handling": "404-page"
   },

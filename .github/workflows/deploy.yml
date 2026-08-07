@@ -30,3 +30,9 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           wranglerVersion: "4"
+          # Ключ Resend кладеться в секрети воркера при кожному деплої,
+          # у репозиторії його немає.
+          secrets: |
+            RESEND_API_KEY
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}

@@ -81,33 +81,93 @@ eleventyComputed:
             <label for="fb-message">{{ "Message" if locale == "en" else "Повідомлення" }}</label>
             <textarea id="fb-message" name="message" rows="6" required></textarea>
           </div>
-          <button class="button button-accent" type="submit">{{ "Send" if locale == "en" else "Надіслати" }}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></button>
-          <p class="form-note">{{ ("After clicking “Send” your email client will open with a message pre-filled to " if locale == "en" else "Після натискання «Надіслати» відкриється ваш поштовий клієнт із заповненим листом на адресу ") }}{{ feedback.submitEmail }}.</p>
+          {#- Приховане поле-пастка для ботів: люди його не бачать і не заповнюють. -#}
+          <div class="form-honeypot" aria-hidden="true"><label for="fb-website">Website</label><input type="text" id="fb-website" name="website" tabindex="-1" autocomplete="off"></div>
+          <button class="button button-accent" type="submit" data-label="{{ "Send" if locale == "en" else "Надіслати" }}" data-sending="{{ "Sending…" if locale == "en" else "Надсилаємо…" }}">{{ "Send" if locale == "en" else "Надіслати" }}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></button>
+          <p class="form-error" id="form-error" hidden></p>
         </form>
         </div>
       </section>
+      {#- Вікно підтвердження. Показується лише після успішної відповіді
+          сервера, тож користувач не бачить «дякуємо» на невдалу спробу. -#}
+      <div class="modal-backdrop" id="form-success" hidden>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="form-success-title">
+          <span class="modal-mark" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </span>
+          <h2 id="form-success-title">{{ "Message sent" if locale == "en" else "Звернення надіслано" }}</h2>
+          <p>{{ "Thank you — we have received your message and will reply to the email you provided." if locale == "en" else "Дякуємо — ми отримали ваше звернення й відповімо на вказану пошту." }}</p>
+          <button class="button button-accent" type="button" id="form-success-close">{{ "Close" if locale == "en" else "Закрити" }}</button>
+        </div>
+      </div>
       <script>
         (function () {
           var form = document.getElementById("feedback-form");
           if (!form) return;
           var isEn = form.dataset.locale === "en";
+          var btn = form.querySelector('button[type="submit"]');
+          var errBox = document.getElementById("form-error");
+          var modal = document.getElementById("form-success");
+          var closeBtn = document.getElementById("form-success-close");
+          var lastFocus = null;
+
+          var MSG = isEn
+            ? { failed: "Could not send the message. Please try again or write to ", network: "No connection to the server. Please try again or write to " }
+            : { failed: "Не вдалося надіслати звернення. Спробуйте ще раз або напишіть на ", network: "Немає зв'язку із сервером. Спробуйте ще раз або напишіть на " };
+          var MAIL = "{{ contacts.general }}";
+
+          function showError(text) {
+            errBox.innerHTML = text + '<a href="mailto:' + MAIL + '">' + MAIL + '</a>.';
+            errBox.hidden = false;
+          }
+          function openModal() {
+            lastFocus = document.activeElement;
+            modal.hidden = false;
+            requestAnimationFrame(function () { modal.classList.add("in"); });
+            closeBtn.focus();
+          }
+          function closeModal() {
+            modal.classList.remove("in");
+            setTimeout(function () { modal.hidden = true; }, 300);
+            if (lastFocus) lastFocus.focus();
+          }
+          closeBtn.addEventListener("click", closeModal);
+          modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && !modal.hidden) closeModal();
+          });
+
           form.addEventListener("submit", function (e) {
             e.preventDefault();
             if (!form.reportValidity()) return;
+            errBox.hidden = true;
+
             var val = function (n) { return form[n] ? form[n].value.trim() : ""; };
-            var fullName = (val("firstname") + " " + val("lastname")).trim();
-            var category = val("category");
-            var subject = encodeURIComponent(
-              (category ? "[" + category + "] " : "") + (isEn ? "Enquiry from " : "Звернення від ") + fullName
-            );
-            var L = isEn
-              ? { name: "Name: ", phone: "Phone: ", reason: "Reason: " }
-              : { name: "Ім'я та прізвище: ", phone: "Телефон: ", reason: "Причина звернення: " };
-            var lines = [L.name + fullName, "Email: " + val("email")];
-            if (val("phone")) lines.push(L.phone + val("phone"));
-            if (category) lines.push(L.reason + category);
-            var body = encodeURIComponent(lines.join("\n") + "\n\n" + val("message"));
-            window.location.href = "mailto:{{ feedback.submitEmail }}?subject=" + subject + "&body=" + body;
+            var payload = {
+              firstname: val("firstname"), lastname: val("lastname"),
+              email: val("email"), phone: val("phone"),
+              category: val("category"), message: val("message"),
+              website: val("website")
+            };
+
+            btn.disabled = true;
+            btn.textContent = btn.dataset.sending;
+
+            fetch("/api/contact", {
+              method: "POST",
+              headers: { "content-type": "application/json" },
+              body: JSON.stringify(payload)
+            })
+              .then(function (r) { return r.json().then(function (d) { return { ok: r.ok, data: d }; }); })
+              .then(function (r) {
+                if (r.ok && r.data.ok) { form.reset(); openModal(); }
+                else showError(MSG.failed);
+              })
+              .catch(function () { showError(MSG.network); })
+              .finally(function () {
+                btn.disabled = false;
+                btn.textContent = btn.dataset.label;
+              });
           });
         })();
       </script>

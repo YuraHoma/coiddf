@@ -112,6 +112,7 @@ content:
     path: src/_data/contacts.json
     fields:
       - { name: general, label: Email, type: string }
+      - { name: formRecipient, label: 'Куди надсилати звернення з форми (порожньо — на Email вище)', type: string }
       - { name: phone, label: Телефон, type: string }
       - { name: address, label: Адреса, type: string }
       - name: socials
