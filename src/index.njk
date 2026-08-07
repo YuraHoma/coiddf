@@ -76,7 +76,7 @@ eleventyComputed:
           <h2>{{ home.geography.heading }}</h2>
         </div>
         <div class="map-card">
-          <img src="/assets/map-ukraine-oblasts.svg" alt="{{ "Map of Ukraine's oblasts; Zaporizhzhia oblast — the fund's home region — highlighted in color" if locale == 'en' else 'Карта областей України; Запорізька область — домашній регіон фонду — виділена кольором' }}" loading="lazy" eleventy:ignore>
+          <img src="/assets/map-ukraine-oblasts.svg" alt="{{ "Map of Ukraine's oblasts with the regions where the fund works marked" if locale == 'en' else 'Карта областей України з позначеними регіонами, де працює фонд' }}" loading="lazy" eleventy:ignore>
           {%- for m in home.geography.markers %}
           <span class="map-pin" style="left: {{ m.left }}%; top: {{ m.top }}%;" aria-label="{{ m.label }}"></span>
           {%- endfor %}
