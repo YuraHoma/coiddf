@@ -1547,6 +1547,16 @@ main > article,
   transition: background var(--t), color var(--t), transform var(--t);
 }
 .footer-socials a:hover { background: var(--brand-light); color: var(--ink); transform: translateY(-2px); }
+/* Заглушка — той самий кружечок, але приглушений і без реакції. */
+.footer-socials .is-placeholder {
+  display: grid;
+  place-items: center;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.35);
+  cursor: default;
+}
 .footer-contact-btn { margin-top: 4px; }
 
 .footer-bottom {

@@ -169,7 +169,7 @@
   "Файли документів проходять підготовку до публікації та з'являться на цій сторінці найближчим часом.": "The document files are being prepared for publication and will appear on this page in the near future.",
   "Форма зворотного зв'язку.": "Feedback form.",
   "Оберіть категорію звернення — запит, скарга або кар'єрна можливість — і надішліть повідомлення команді фонду.": "Choose a contact category - inquiry, complaint or career opportunity - and send a message to the foundation team.",
-  "Загальний запит": "General request",
+  "Загальний запит": "General enquiry",
   "Скарга": "Complaint",
   "Кар'єрні можливості": "Career opportunities",
   "Відновлення житла: проєкт від держави і благодійного фонду ICDF": "Housing restoration: a project from the state and ICDF charity fund",
@@ -476,5 +476,8 @@
   "Передаємо обладнання підрозділам по всій Україні": "We transfer equipment to divisions throughout Ukraine",
   "Сергій Фєдічкін": "Sergey Fedichkin",
   "Дмитро Хряпа": "Dmytro Hryapa",
-  "Костянтин Шишов": "Konstantin Shishov"
+  "Костянтин Шишов": "Konstantin Shishov",
+  "Співпраця та партнерство": "Cooperation and partnership",
+  "Питання щодо проєкту або поставки": "Project or delivery enquiry",
+  "Скарга або повідомлення про порушення": "Complaint or report of misconduct"
 }
