@@ -46,13 +46,36 @@ eleventyComputed:
         <div class="form-col">
           <h2>{{ "Feedback form" if locale == "en" else "Форма зворотного зв'язку" }}</h2>
         <form class="feedback-form" id="feedback-form" data-locale="{{ locale }}">
+          {#- Категорія звернення показується лише коли клієнт заповнив
+              список у CMS; поки він порожній — поля просто немає. -#}
+          {%- if feedback.categories and feedback.categories.length %}
           <div class="form-row">
-            <label for="fb-name">{{ "Name" if locale == "en" else "Ім'я" }}</label>
-            <input type="text" id="fb-name" name="name" required>
+            <label for="fb-category">{{ "Reason for your enquiry" if locale == "en" else "Причина звернення" }}</label>
+            <select id="fb-category" name="category" required>
+              <option value="" disabled selected>{{ "Select a reason" if locale == "en" else "Оберіть причину" }}</option>
+              {%- for c in feedback.categories %}
+              <option value="{{ c }}">{{ c }}</option>
+              {%- endfor %}
+            </select>
+          </div>
+          {%- endif %}
+          <div class="form-row">
+            <label for="fb-phone">{{ "Phone number" if locale == "en" else "Номер телефону" }}</label>
+            <input type="tel" id="fb-phone" name="phone" autocomplete="tel">
+          </div>
+          <div class="form-row-pair">
+            <div class="form-row">
+              <label for="fb-firstname">{{ "First name" if locale == "en" else "Ім'я" }}</label>
+              <input type="text" id="fb-firstname" name="firstname" autocomplete="given-name" required>
+            </div>
+            <div class="form-row">
+              <label for="fb-lastname">{{ "Last name" if locale == "en" else "Прізвище" }}</label>
+              <input type="text" id="fb-lastname" name="lastname" autocomplete="family-name" required>
+            </div>
           </div>
           <div class="form-row">
             <label for="fb-email">Email</label>
-            <input type="email" id="fb-email" name="email" required>
+            <input type="email" id="fb-email" name="email" autocomplete="email" required>
           </div>
           <div class="form-row">
             <label for="fb-message">{{ "Message" if locale == "en" else "Повідомлення" }}</label>
@@ -71,12 +94,19 @@ eleventyComputed:
           form.addEventListener("submit", function (e) {
             e.preventDefault();
             if (!form.reportValidity()) return;
-            var name = form.name.value.trim();
-            var email = form.email.value.trim();
-            var message = form.message.value.trim();
-            var subject = encodeURIComponent((isEn ? "Inquiry from " : "Звернення від ") + name);
-            var nameLabel = isEn ? "Name: " : "Ім'я: ";
-            var body = encodeURIComponent(nameLabel + name + "\nEmail: " + email + "\n\n" + message);
+            var val = function (n) { return form[n] ? form[n].value.trim() : ""; };
+            var fullName = (val("firstname") + " " + val("lastname")).trim();
+            var category = val("category");
+            var subject = encodeURIComponent(
+              (category ? "[" + category + "] " : "") + (isEn ? "Enquiry from " : "Звернення від ") + fullName
+            );
+            var L = isEn
+              ? { name: "Name: ", phone: "Phone: ", reason: "Reason: " }
+              : { name: "Ім'я та прізвище: ", phone: "Телефон: ", reason: "Причина звернення: " };
+            var lines = [L.name + fullName, "Email: " + val("email")];
+            if (val("phone")) lines.push(L.phone + val("phone"));
+            if (category) lines.push(L.reason + category);
+            var body = encodeURIComponent(lines.join("\n") + "\n\n" + val("message"));
             window.location.href = "mailto:{{ feedback.submitEmail }}?subject=" + subject + "&body=" + body;
           });
         })();

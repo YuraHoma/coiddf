@@ -1444,6 +1444,8 @@ main > article,
   border-color: var(--brand);
 }
 .form-row textarea { resize: vertical; }
+.form-row-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 560px) { .form-row-pair { grid-template-columns: 1fr; } }
 .feedback-form .button { align-self: flex-start; }
 .form-note { font-size: 13.5px; color: var(--muted); }
 

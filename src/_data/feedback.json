@@ -4,5 +4,6 @@
     "heading": "Контакти та зворотній зв'язок",
     "lead": "Напишіть нам напряму або скористайтеся формою — оберіть категорію звернення, і лист прийде команді фонду."
   },
-  "submitEmail": "co.icdf.ukraine@gmail.com"
+  "submitEmail": "co.icdf.ukraine@gmail.com",
+  "categories": []
 }
