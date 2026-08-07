@@ -21,7 +21,16 @@ module.exports = function (eleventyConfig) {
 
   // Static passthrough — styles, images, misc files copied as-is.
   eleventyConfig.addPassthroughCopy({ "src/styles.css": "styles.css" });
-  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  // Сирі оригінали з src/assets у прод не їдуть: у розмітці всі <img>
+  // замінені плагіном на webp-похідні з /assets/opt/, а соцкартки для
+  // og:image робить src/_data/social.js. Тому копіюємо поштучно тільки
+  // те, що справді запитують ззовні:
+  eleventyConfig.addPassthroughCopy("src/assets/*.svg"); //  фавікон + карта областей (SVG плагін не чіпає)
+  eleventyConfig.addPassthroughCopy("src/assets/favicon-*.png");
+  eleventyConfig.addPassthroughCopy("src/assets/apple-touch-icon.png"); //  логотип у JSON-LD
+  eleventyConfig.addPassthroughCopy("src/assets/og-image.jpg"); //  соцкартка за замовчуванням
+  eleventyConfig.addPassthroughCopy("src/assets/award-*.jpg"); //  скани нагород — відкривають за прямим посиланням з /pro-nas/
+  eleventyConfig.addPassthroughCopy("src/assets/fonts"); //  self-hosted шрифти
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
   eleventyConfig.addPassthroughCopy({ "src/_headers": "_headers" });
 

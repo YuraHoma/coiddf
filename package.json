@@ -7,7 +7,14 @@
     "build": "rm -rf _site && eleventy",
     "serve": "eleventy --serve --port 8745",
     "clean": "rm -rf _site",
-    "deploy": "npm run build && npx wrangler deploy"
+    "check": "node scripts/check-build.js",
+    "deploy": "npm run build && npm run check && npx wrangler deploy",
+    "i18n:check": "node scripts/i18n/check.js",
+    "i18n:translate": "node scripts/i18n/translate.js",
+    "i18n:export": "node scripts/i18n/export-csv.js",
+    "i18n:export:excel": "node scripts/i18n/export-csv.js --excel",
+    "i18n:import": "node scripts/i18n/import-csv.js",
+    "i18n:migrate": "node scripts/i18n/migrate-cache.js"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",

@@ -4,5 +4,10 @@ _site/
 .DS_Store
 *.bak*
 
+# Робочий файл перекладача — генерується з catalog.json на вимогу
+# (npm run i18n:export) і повертається через npm run i18n:import.
+# Джерело правди — catalog.json, він у git.
+scripts/i18n/translations.csv
+
 # local agent workspaces
 .claude/

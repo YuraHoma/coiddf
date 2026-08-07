@@ -1,5 +1,23 @@
 <!doctype html>
 {%- set altUrl = page.url.slice(3) if locale == "en" else "/en" + page.url %}
+{#- Тип сторінки визначаємо по URL без мовного префікса, щоб одна умова
+    покривала і /novyny/x/, і /en/novyny/x/. Порівняння з індексом
+    («/novyny/») відсікає список новин від самої статті. -#}
+{%- set urlPath = (page.url or "/") | replace("/en/", "/") %}
+{%- set isNewsPost = urlPath.indexOf("/novyny/") == 0 and urlPath != "/novyny/" %}
+{%- set isProjectPost = urlPath.indexOf("/proyekty/") == 0 and urlPath != "/proyekty/" %}
+{%- set isContactPage = urlPath == "/zvyazatis-z-nami/" %}
+{#- На англійських статтях дані лежать у pagination-аліасі (post/project),
+    на українських — у front matter самого md. -#}
+{%- set artSrc = post or project %}
+{%- set artTitle = artSrc.title if artSrc else title %}
+{%- set artDate = artSrc.date if artSrc else date %}
+{%- set artExcerpt = artSrc.excerpt if artSrc else excerpt %}
+{#- Одне джерело правди для соцкартки: og:image і image в JSON-LD ведуть на
+    той самий файл. Для обкладинок новин/проєктів це jpeg-похідна з
+    /assets/social/ (див. src/_data/social.js) — сирі оригінали в прод
+    не копіюються. -#}
+{%- set pageImageUrl = site.url + (social[image] or image or "/assets/og-image.jpg") %}
 <html lang="{{ locale }}">
   <head>
     <meta charset="utf-8">
@@ -19,18 +37,137 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <meta name="theme-color" content="#5A7D3D">
-    <meta property="og:type" content="{% if page.url and '/novyny/' in page.url and page.url != '/novyny/' %}article{% else %}website{% endif %}">
+    <meta property="og:type" content="{{ 'article' if isNewsPost or isProjectPost else 'website' }}">
     <meta property="og:site_name" content="{{ site.orgFull }}">
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ description or excerpt }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-    <meta property="og:image" content="{{ site.url }}{{ image or '/assets/og-image.jpg' }}">
+    <meta property="og:image" content="{{ pageImageUrl }}">
     <meta property="og:locale" content="{{ 'en_US' if locale == 'en' else 'uk_UA' }}">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Onest:wght@300..700&display=swap" rel="stylesheet">
+    {#- Шрифти self-hosted (@font-face у styles.css). Preload лише для тих
+        підмножин, які потрібні для першого екрана: latin — завжди (цифри,
+        «ICDF», латинські назви), cyrillic — тільки на українській версії,
+        інакше браузер сварився б на завантажений і не використаний файл.
+        crossorigin обовʼязковий навіть для свого домену: шрифти
+        завантажуються в CORS-режимі, без нього буде другий запит. -#}
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/onest-latin.woff2" as="font" type="font/woff2" crossorigin>
+    {%- if locale != "en" %}
+    <link rel="preload" href="/assets/fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/onest-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+    {%- endif %}
     <link rel="stylesheet" href="/styles.css">
+{%- if not noindex %}
+{#- Структуровані дані Schema.org. Один <script> з @graph замість кількох
+    блоків: вузли посилаються один на одного через @id, тож пошуковик бачить
+    їх як одну сутність, а не як чотири незалежні описи.
+    Кожне значення проходить через | dump — це JSON.stringify, тому лапки,
+    тире й переноси в заголовках новин екрануються самі. Порожні поля
+    (соцмережі, ЄДРПОУ) не виводимо взагалі: порожній рядок у розмітці
+    гірший за його відсутність. -#}
+{%- set socialLinks = [] %}
+{%- if contacts.socials %}{% for k, v in contacts.socials %}{% if v %}{% set _ = socialLinks.push(v) %}{% endif %}{% endfor %}{% endif %}
+{%- set identifiers = [] %}
+{%- if legal.registration %}{% for r in legal.registration %}{% if r.value %}{% set _ = identifiers.push({"@type": "PropertyValue", "name": r.label, "value": r.value}) %}{% endif %}{% endfor %}{% endif %}
+{#- Адреса в contacts.json — один рядок «вулиця, будинок, місто, індекс, країна».
+    Розбираємо його на поля PostalAddress; якщо формат колись зміниться і
+    частин стане не п'ять — віддаємо рядок цілком, аби не вигадувати дані. -#}
+{%- set addrParts = contacts.address.split(",") if contacts.address else [] %}
+{%- set postalAddress = null %}
+{%- if addrParts.length == 5 %}
+{%- set postalAddress = {"@type": "PostalAddress", "streetAddress": (addrParts[0] + "," + addrParts[1]) | trim, "addressLocality": addrParts[2] | trim, "postalCode": addrParts[3] | trim, "addressCountry": addrParts[4] | trim} %}
+{%- elif contacts.address %}
+{%- set postalAddress = {"@type": "PostalAddress", "streetAddress": contacts.address} %}
+{%- endif %}
+{%- set orgId = site.url + "/#organization" %}
+{%- set siteId = site.url + "/#website" %}
+{%- set pageId = site.url + page.url + "#webpage" %}
+{%- set jsonLd %}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "NGO",
+      "@id": {{ orgId | dump | safe }},
+      "name": {{ site.orgFull | dump | safe }},
+      "alternateName": {{ ([site.orgShort, site.orgEnglish] if site.orgEnglish and site.orgEnglish != site.orgFull else [site.orgShort]) | dump | safe }},
+      "url": {{ (site.url + "/") | dump | safe }},
+      "logo": {
+        "@type": "ImageObject",
+        "url": {{ (site.url + "/assets/apple-touch-icon.png") | dump | safe }},
+        "width": 180,
+        "height": 180
+      },
+      "image": {{ (site.url + "/assets/og-image.jpg") | dump | safe }}
+      {%- if contacts.general %},
+      "email": {{ contacts.general | dump | safe }}{% endif %}
+      {%- if contacts.phone %},
+      "telephone": {{ contacts.phone | dump | safe }},
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "telephone": {{ contacts.phone | dump | safe }}{% if contacts.general %},
+        "email": {{ contacts.general | dump | safe }}{% endif %},
+        "availableLanguage": ["uk", "en"]
+      }{% endif %}
+      {%- if postalAddress %},
+      "address": {{ postalAddress | dump | safe }}{% endif %}
+      {%- if socialLinks.length %},
+      "sameAs": {{ socialLinks | dump | safe }}{% endif %}
+      {%- if legal.edrpou %},
+      "taxID": {{ legal.edrpou | dump | safe }},
+      "vatID": {{ legal.edrpou | dump | safe }}{% endif %}
+      {%- if identifiers.length %},
+      "identifier": {{ identifiers | dump | safe }}{% endif %}
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ siteId | dump | safe }},
+      "url": {{ (site.url + "/") | dump | safe }},
+      "name": {{ site.orgFull | dump | safe }},
+      "inLanguage": {{ locale | dump | safe }},
+      "publisher": { "@id": {{ orgId | dump | safe }} }
+    },
+    {
+      "@type": {{ ("ContactPage" if isContactPage else "WebPage") | dump | safe }},
+      "@id": {{ pageId | dump | safe }},
+      "url": {{ (site.url + page.url) | dump | safe }},
+      "name": {{ title | dump | safe }},
+      "inLanguage": {{ locale | dump | safe }},
+      "isPartOf": { "@id": {{ siteId | dump | safe }} },
+      "about": { "@id": {{ orgId | dump | safe }} },
+      "primaryImageOfPage": {{ pageImageUrl | dump | safe }}
+      {%- if description or excerpt %},
+      "description": {{ (description or excerpt) | dump | safe }}{% endif %}
+      {%- if isContactPage %},
+      "mainEntity": { "@id": {{ orgId | dump | safe }} }{% endif %}
+    }
+    {%- if isNewsPost or isProjectPost %},
+    {
+      "@type": {{ ("NewsArticle" if isNewsPost else "Article") | dump | safe }},
+      "@id": {{ (site.url + page.url + "#article") | dump | safe }},
+      "headline": {{ artTitle | dump | safe }},
+      "url": {{ (site.url + page.url) | dump | safe }},
+      "inLanguage": {{ locale | dump | safe }},
+      "image": {{ pageImageUrl | dump | safe }},
+      "mainEntityOfPage": { "@id": {{ pageId | dump | safe }} },
+      "author": { "@id": {{ orgId | dump | safe }} },
+      "publisher": { "@id": {{ orgId | dump | safe }} }
+      {%- if artDate %},
+      "datePublished": {{ artDate | dump | safe }},
+      "dateModified": {{ artDate | dump | safe }}{% endif %}
+      {%- if artExcerpt %},
+      "description": {{ artExcerpt | dump | safe }}{% endif %}
+    }
+    {%- endif %}
+  ]
+}
+{%- endset %}
+{#- «</» усередині JSON рвало б <script> ще до кінця розмітки; \/ — легальний
+    JSON-escape, тож вміст лишається розбірним. -#}
+    <script type="application/ld+json">{{ jsonLd | replace("</", "<\\/") | safe }}</script>
+{%- endif %}
   </head>
   <body>
 {%- if legal.registration %}
