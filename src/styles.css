@@ -1269,8 +1269,21 @@ main > article,
   .team-grid--staff { grid-template-columns: 1fr; }
 }
 
-.team-grid,
-.team-grid article,
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: 18px;
+}
+.team-grid article {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 0 0 22px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
 .team-photo {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -1293,6 +1306,7 @@ main > article,
 .team-grid > article > h3 { margin-top: 18px; }
 .team-grid > article > span { color: var(--brand-deep); font-size: 14px; font-weight: 600; line-height: 1.4; }
 .team-grid h3 { color: var(--ink); }
+.team-grid p { color: var(--muted); font-size: 15px; }
 
 
 .project-list,
@@ -1340,6 +1354,7 @@ main > article,
 .project-list > * .project-body { flex: 1 1 auto; }
 .project-list > * .project-more-link { margin-top: auto; }
 .project-list > * .project-body p { margin-bottom: 8px; }
+.contact-list span { overflow-wrap: break-word; }
 .contact-list { max-width: 860px; }
 .contact-list span {
   display: block;
