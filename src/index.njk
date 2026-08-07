@@ -92,7 +92,9 @@ eleventyComputed:
             <article><span>{{ loop.index }}</span><h3>{{ s.title }}</h3><p>{{ s.text }}</p></article>
             {%- endfor %}
           </div>
-          <a class="wide-action" href="{{ home.process.ctaUrl }}">{{ home.process.ctaLabel }} <span>↗</span></a>
+          <div class="news-all-wrap">
+            <a class="button button-outline" href="{{ home.process.ctaUrl }}">{{ home.process.ctaLabel }} ↗</a>
+          </div>
         </div>
       </section>
       <section class="section news-preview">

@@ -682,8 +682,18 @@ main > article,
 }
 .process-grid h3 { color: #fff; font-size: 20px; font-weight: 600; }
 .process-grid p { color: var(--on-dark-muted); font-size: 15px; line-height: 1.45; }
-.process-panel .wide-action { color: var(--brand-light); border-bottom-color: rgba(169, 206, 119, 0.5); }
-.process-panel .wide-action:hover { color: #fff; }
+/* Кнопка під темною панеллю — той самий контур, що й «Усі новини»,
+   але вивернутий під темний фон: прозорий усередині, світла рамка. */
+.process-panel .button-outline {
+  background-color: transparent;
+  color: var(--on-dark);
+  border-color: rgba(255, 255, 255, 0.28);
+}
+.process-panel .button-outline:hover {
+  background-image: var(--grad-cta);
+  color: var(--ink);
+  border-color: transparent;
+}
 
 /* ---------- 14. RESOURCES (інфраструктура — світлий контейнер) ---------- */
 .report-list {
