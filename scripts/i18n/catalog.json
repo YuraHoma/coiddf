@@ -2059,6 +2059,30 @@
       "note": "",
       "updated": "2026-08-07"
     },
+    "projects/testova-postavka-dozymetriv-dlia-perevirky-cms.body": {
+      "source": "## Опис проєкту\n\nТестовий проєкт для перевірки ланцюга публікації. Після перевірки буде видалений.",
+      "sourceHash": "88a6781a1b56",
+      "target": "## Description of the project\n\nTest project for checking the publication chain. Will be deleted after verification.",
+      "status": "machine",
+      "note": "",
+      "updated": "2026-08-10"
+    },
+    "projects/testova-postavka-dozymetriv-dlia-perevirky-cms.excerpt": {
+      "source": "Наскрізна перевірка публікації проєкту через CMS — картка в групі напряму, окрема сторінка, англійська версія.",
+      "sourceHash": "6f28756a393a",
+      "target": "End-to-end verification of project publication through CMS — a card in a direct group, a separate page, English version.",
+      "status": "machine",
+      "note": "",
+      "updated": "2026-08-10"
+    },
+    "projects/testova-postavka-dozymetriv-dlia-perevirky-cms.title": {
+      "source": "Тестова поставка дозиметрів для перевірки CMS",
+      "sourceHash": "9cb15b10a814",
+      "target": "Test delivery of dosimeters for CMS verification",
+      "status": "machine",
+      "note": "",
+      "updated": "2026-08-10"
+    },
     "projects/zsu-indyvidualnyy-radiaciynyy-kontrol.body": {
       "source": "## Опис проєкту\n\nПостачання персональних дозиметрів для Збройних Сил України: дозиметри Ludlum Friskers 26-1 з лужними батареями, запасні лужні батареї АА, персональні детектори Kromek із перезаряджуваними літій-полімерними акумуляторами, прилади ідентифікації радіоізотопів Ortec RADEAGLET-R-2SG із запасними літій-іонними акумуляторами та транспортувальними кобурами.\n\n## Мета проєкту\n\nЗабезпечення особового складу Збройних сил України засобами індивідуального радіаційного контролю.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 18 (ЗСУ), Палета 73-74; Палета 81.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 400 073,72 дол. США**",
       "sourceHash": "5521ef6e1701",
