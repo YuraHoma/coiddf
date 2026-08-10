@@ -1723,6 +1723,30 @@
       "note": "",
       "updated": "2026-08-07"
     },
+    "news/peredaly-heneratory-hromadam-khersonshchyny.body": {
+      "source": "Це тестова новина для перевірки повного ланцюга публікації: кириличне ім'я файлу, нове фото, автоматичний переклад. Після перевірки її буде видалено.",
+      "sourceHash": "28483ca18eb9",
+      "target": "This is a test news to check the full publication chain: Cyrillic file name, new photo, automatic translation. After verification, it will be deleted.",
+      "status": "machine",
+      "note": "",
+      "updated": "2026-08-10"
+    },
+    "news/peredaly-heneratory-hromadam-khersonshchyny.excerpt": {
+      "source": "Наскрізна перевірка публікації новини через CMS — від збереження до появи на сайті обома мовами.",
+      "sourceHash": "042eddc6bb15",
+      "target": "End-to-end verification of news publication through CMS — from saving to appearing on the website in both languages.",
+      "status": "machine",
+      "note": "",
+      "updated": "2026-08-10"
+    },
+    "news/peredaly-heneratory-hromadam-khersonshchyny.title": {
+      "source": "Передали генератори громадам Херсонщини",
+      "sourceHash": "e0060aa5392b",
+      "target": "The generators were handed over to Kherson region communities",
+      "status": "machine",
+      "note": "",
+      "updated": "2026-08-10"
+    },
     "news/pryfrontovi-gromady.body": {
       "source": "Команда фонду спільно з партнерами передала генератори, павербанки та комплекти освітлення у прифронтові громади Пологівського району. Допомога спрямована насамперед родинам з дітьми, людям похилого віку та маломобільним мешканцям.\n\nЧерез постійні обстріли енергетичної інфраструктури люди тривалий час залишаються без світла й тепла. Передані комплекти дозволяють зберігати ліки, заряджати засоби зв’язку та освітлювати домівки у темну пору доби.\n\nРобота триває: фонд продовжує збирати й розподіляти необхідне обладнання разом з міжнародними партнерами.",
       "sourceHash": "f85b58675285",
