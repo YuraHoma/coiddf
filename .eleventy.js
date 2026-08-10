@@ -72,6 +72,10 @@ module.exports = function (eleventyConfig) {
   }
   eleventyConfig.addGlobalData("eleventyComputed", computed);
 
+  // Слаг з українського заголовка для permalink (див. scripts/slug.js).
+  const { ukSlug } = require("./scripts/slug.js");
+  eleventyConfig.addFilter("ukslug", ukSlug);
+
   // Format an ISO date as DD.MM.YYYY for display.
   // UTC methods: front-matter dates are parsed as UTC midnight, local getters
   // would shift the day on build machines west of UTC.

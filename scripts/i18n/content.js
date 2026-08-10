@@ -48,8 +48,12 @@ function mdFiles(dir) {
 
 // Слаг файлу = ключ статті. Не залежить від заголовка, тому переклад
 // переживає редагування тексту в CMS.
+const { ukSlug } = require("../slug.js");
+
+// Слаг має збігатися з permalink у 11tydata (фільтр ukslug) — інакше
+// англійська сторінка отримає іншу адресу, ніж українська.
 function slugOf(file) {
-  return file.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, "");
+  return ukSlug(file.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, ""));
 }
 
 // translate(source, key) -> англійський рядок.
