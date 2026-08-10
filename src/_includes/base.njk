@@ -70,13 +70,17 @@
 {%- if contacts.socials %}{% for k, v in contacts.socials %}{% if v %}{% set _ = socialLinks.push(v) %}{% endif %}{% endfor %}{% endif %}
 {%- set identifiers = [] %}
 {%- if legal.registration %}{% for r in legal.registration %}{% if r.value %}{% set _ = identifiers.push({"@type": "PropertyValue", "name": r.label, "value": r.value}) %}{% endif %}{% endfor %}{% endif %}
-{#- Адреса в contacts.json — один рядок «вулиця, будинок, місто, індекс, країна».
-    Розбираємо його на поля PostalAddress; якщо формат колись зміниться і
-    частин стане не п'ять — віддаємо рядок цілком, аби не вигадувати дані. -#}
+{#- Адреса в contacts.json — один рядок, що завершується «…, місто, індекс, країна».
+    Читаємо з кінця: країна, індекс, місто — три останні частини, решта
+    складається у streetAddress. Так формат витримує і «вул. Межова, 23,
+    (Подільський район), м. Київ, 04215, Україна», і коротший запис без
+    району. Якщо частин менше чотирьох — віддаємо рядок цілком, аби не
+    вигадувати дані. -#}
 {%- set addrParts = contacts.address.split(",") if contacts.address else [] %}
 {%- set postalAddress = null %}
-{%- if addrParts.length == 5 %}
-{%- set postalAddress = {"@type": "PostalAddress", "streetAddress": (addrParts[0] + "," + addrParts[1]) | trim, "addressLocality": addrParts[2] | trim, "postalCode": addrParts[3] | trim, "addressCountry": addrParts[4] | trim} %}
+{%- if addrParts.length >= 4 %}
+{%- set n = addrParts.length %}
+{%- set postalAddress = {"@type": "PostalAddress", "streetAddress": addrParts.slice(0, n - 3) | join(",") | trim, "addressLocality": addrParts[n - 3] | trim, "postalCode": addrParts[n - 2] | trim, "addressCountry": addrParts[n - 1] | trim} %}
 {%- elif contacts.address %}
 {%- set postalAddress = {"@type": "PostalAddress", "streetAddress": contacts.address} %}
 {%- endif %}

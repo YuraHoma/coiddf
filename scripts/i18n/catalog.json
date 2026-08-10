@@ -4,12 +4,12 @@
   "targetLang": "en",
   "entries": {
     "data/contacts.address": {
-      "source": "вул. Межова, 23 (Поділ), Київ, 04215, Україна",
-      "sourceHash": "5b160053885a",
-      "target": "St. Mezhova, 23 (Podil), Kyiv, 04215, Ukraine",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
+      "source": "вул. Межова, 23, (Подільський район), м. Київ, 04215, Україна",
+      "sourceHash": "8dc8c95fef81",
+      "target": "23, Mezhova Street (Podil district), Kyiv, 04215, Ukraine",
+      "status": "human",
+      "note": "Переклад надано клієнтом — як у реєстраційних документах",
+      "updated": "2026-08-10"
     },
     "data/feedback.categories[0]": {
       "source": "Загальний запит",
@@ -84,12 +84,12 @@
       "updated": "2026-08-07"
     },
     "data/home.cta.heading": {
-      "source": "Станьте партнером фонду в наданні гуманітарної допомоги",
-      "sourceHash": "0880c31b3a8f",
-      "target": "Become a partner of the foundation in providing humanitarian aid",
+      "source": "Долучайтеся до нас як партнер у реалізації гуманітарних та відбудовчих програм",
+      "sourceHash": "9b24adeda038",
+      "target": "Join us as a partner in the implementation of humanitarian and reconstruction programs",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/home.description": {
       "source": "Головна сторінка благодійного фонду.",
@@ -108,12 +108,12 @@
       "updated": "2026-08-07"
     },
     "data/home.focusAreas.heading": {
-      "source": "Координуємо підтримку там, де людям потрібна швидка і конкретна допомога",
-      "sourceHash": "affb2c3e5fa7",
-      "target": "We coordinate support where people need quick and specific help",
+      "source": "Координуємо підтримку там, де потрібні швидкі й конкретні рішення",
+      "sourceHash": "95313fdb26a6",
+      "target": "We coordinate support where quick and concrete solutions are needed",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/home.focusAreas.items[0].title": {
       "source": "Гуманітарне реагування на кризові ситуації населення",
@@ -164,12 +164,12 @@
       "updated": "2026-08-07"
     },
     "data/home.geography.heading": {
-      "source": "Передаємо обладнання підрозділам по всій Україні",
-      "sourceHash": "c7f4c779132f",
-      "target": "We transfer equipment to divisions throughout Ukraine",
+      "source": "Доставляємо допомогу туди, де вона потрібна, — в кожен регіон України",
+      "sourceHash": "1b0d0f78bcba",
+      "target": "We deliver aid to where it is needed — to every region of Ukraine",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/home.geography.markers[0].label": {
       "source": "Черкаська область",
@@ -388,12 +388,12 @@
       "updated": "2026-08-07"
     },
     "data/home.partners.eyebrow": {
-      "source": "Працюємо разом з українськими та міжнародними партнерами",
-      "sourceHash": "03832a2ea165",
-      "target": "We work together with Ukrainian and international partners",
+      "source": "Діємо спільно з партнерами в Україні та світі — заради майбутнього",
+      "sourceHash": "116f5a98f5a8",
+      "target": "We act together with partners in Ukraine and the world — for the sake of the future",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/home.process.ctaLabel": {
       "source": "Наші проєкти",
@@ -412,68 +412,68 @@
       "updated": "2026-08-07"
     },
     "data/home.process.heading": {
-      "source": "Від урядової програми до переданого обладнання",
-      "sourceHash": "5f8d88f59d75",
-      "target": "From a government program to donated equipment",
+      "source": "Від партнерської угоди до допомоги на місці",
+      "sourceHash": "944120a32c99",
+      "target": "From partnership agreement to on-site assistance",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/home.process.steps[0].text": {
-      "source": "Фонд діє в межах урядової програми між Україною та США у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM.",
-      "sourceHash": "f82d408c33ca",
-      "target": "The fund operates within the government program between Ukraine and the USA in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation.",
+      "source": "Фонд співпрацює з державними, міжнародними та приватними інституціями, реалізуючи спільні програми — від ідеї до впровадженого рішення.",
+      "sourceHash": "805db836b908",
+      "target": "The Foundation cooperates with state, international and private institutions, implementing joint programs — from an idea to an implemented solution.",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/home.process.steps[0].title": {
-      "source": "Урядова програма",
-      "sourceHash": "1bd6d875efc3",
-      "target": "Government program",
+      "source": "Партнерство та програми",
+      "sourceHash": "32d02cbc6f68",
+      "target": "Partnerships and programs",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/home.process.steps[1].text": {
-      "source": "Забезпечуємо відповідність процедур законодавству України та політикам міжнародних партнерів на кожному етапі ланцюга постачання.",
-      "sourceHash": "3bfd4e5100a6",
-      "target": "We ensure compliance of procedures with the legislation of Ukraine and policies of international partners at each stage of the supply chain.",
+      "source": "Забезпечуємо відповідність законодавству України та політикам міжнародних партнерів на кожному етапі — від постачання ресурсів до провадження проєктів.",
+      "sourceHash": "3d0ac2a9ee1e",
+      "target": "We ensure compliance with the legislation of Ukraine and the policies of international partners at every stage — from the supply of resources to the implementation of projects.",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/home.process.steps[1].title": {
-      "source": "Юридичний супровід",
-      "sourceHash": "645be51a773a",
-      "target": "Legal support",
+      "source": "Операційний та юридичний супровід",
+      "sourceHash": "c5783259ce3f",
+      "target": "Operational and legal support",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/home.process.steps[2].text": {
-      "source": "Інспектори фонду перевіряють обладнання на вході: комплектність, відповідність специфікації та придатність до експлуатації.",
-      "sourceHash": "12029d34c4b4",
-      "target": "Fund inspectors check the equipment at the entrance: completeness, compliance with the specification and suitability for operation.",
+      "source": "Перевіряємо відповідність міжнародним стандартам гуманітарних місій, контролюємо логістику й поставки та проводимо інспекцію якості товарів і виконання програм.",
+      "sourceHash": "3510fb089801",
+      "target": "We check compliance with international standards of humanitarian missions, control logistics and deliveries, and inspect the quality of goods and the implementation of programs.",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/home.process.steps[2].title": {
-      "source": "Приймання та контроль якості",
-      "sourceHash": "47521480c0f1",
-      "target": "Acceptance and quality control",
+      "source": "Контроль якості та стандартів",
+      "sourceHash": "e90599cf5470",
+      "target": "Quality and standards control",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/home.process.steps[3].text": {
-      "source": "Передаємо обладнання підрозділам-отримувачам і ведемо звітність донору за стандартами США.",
-      "sourceHash": "1b8a82859c23",
-      "target": "We transfer equipment to recipient units and report to the donor according to US standards.",
+      "source": "Передаємо результати — обладнання, ресурси та реалізовані проєкти — отримувачам і ведемо повний облік та звітність перед міжнародними партнерами.",
+      "sourceHash": "dd6185dc4439",
+      "target": "We transfer the results—equipment, resources, and implemented projects—to the recipients and keep full accounting and reporting to international partners.",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/home.process.steps[3].title": {
       "source": "Передача та звітність",
@@ -1052,12 +1052,12 @@
       "updated": "2026-08-07"
     },
     "data/pronas.hero.heading": {
-      "source": "Уповноважена організація з супроводження гуманітарної допомоги Україні",
-      "sourceHash": "4f2cf83888bf",
-      "target": "Authorized organization for the support of humanitarian aid to Ukraine",
+      "source": "Надійний міжнародний партнер із супроводу гуманітарної та матеріально-технічної допомоги Україні",
+      "sourceHash": "7b405ec8bc24",
+      "target": "A reliable international partner in supporting humanitarian and logistical aid to Ukraine",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/pronas.hero.imageAlt": {
       "source": "Україна на карті світу в оточенні прапорів країн-партнерів",
@@ -1068,12 +1068,12 @@
       "updated": "2026-08-07"
     },
     "data/pronas.hero.lead": {
-      "source": "Фонд поєднує функції юридичного супроводу та безпосереднього виконавця — і гарантує результат навіть у кризових умовах воєнного стану.",
-      "sourceHash": "6d04befc9dd7",
-      "target": "The fund combines the functions of legal support and direct executor — and guarantees results even in crisis conditions of martial law.",
+      "source": "Фонд поєднує функції операційного, юридичного супроводу та безпосереднього виконавця — і забезпечує результат навіть у кризових умовах",
+      "sourceHash": "b60ff5d51b2f",
+      "target": "The fund combines the functions of operational, legal support and direct executor — and ensures results even in crisis conditions",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/pronas.mission[0].body": {
       "source": "Впровадження та реалізація гуманітарних місій і матеріально-технічної допомоги Україні через міжнародне державне та приватне партнерство.",
@@ -1196,12 +1196,12 @@
       "updated": "2026-08-07"
     },
     "data/pronas.story[0]": {
-      "source": "У 2025 році Благодійна організація «Фонд розвитку міжнародної співпраці» розпочала діяльність як уповноважена організація в Україні із супроводження та передачі гуманітарної допомоги в рамках урядової програми між Україною та США та у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM.",
-      "sourceHash": "251946588f89",
-      "target": "In 2025, the Charitable Organization \"International Cooperation Development Fund\" started operating as an authorized organization in Ukraine to support and transfer humanitarian aid within the framework of the government program between Ukraine and the USA and in a strategic partnership with the executor of US government projects — WGI GLOBAL INC./AMENTUM corporation.",
+      "source": "У 2025 році Благодійна організація «Фонд розвитку міжнародної співпраці» розпочала свою діяльність як неприбуткова організація, що у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM здійснює супроводження та передачі гуманітарної допомоги в рамках урядової програми між Україною та США.",
+      "sourceHash": "3e267d080975",
+      "target": "In 2025, the Charitable Organization \"International Cooperation Development Fund\" began its activities as a non-profit organization that, in strategic partnership with the executor of US government projects — the corporation WGI GLOBAL INC./AMENTUM, provides support and transfers of humanitarian aid within the framework of the government program between Ukraine and the USA.",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/pronas.story[1]": {
       "source": "Фонд поєднує функції юридичного супроводу та безпосереднього виконавця: від забезпечення відповідності до реалізації поставлених завдань на кожному етапі ланцюга постачання. Саме це дозволяє нам гарантувати результат навіть у кризових умовах воєнного стану.",
@@ -1500,12 +1500,12 @@
       "updated": "2026-08-07"
     },
     "data/team.hero.heading": {
-      "source": "Команда, яка щодня забезпечує роботу фонду.",
-      "sourceHash": "d0273ce0c581",
-      "target": "The team that ensures the daily operation of the fund.",
+      "source": "Єдина команда — від засновників до волонтерів — заради швидкої й прозорої допомоги",
+      "sourceHash": "3ebbea5b6f65",
+      "target": "A single team — from founders to volunteers — for quick and transparent help",
       "status": "machine",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-10"
     },
     "data/team.hero.lead": {
       "source": "Засновники, менеджери, бухгалтерія, склад, обробка звернень і волонтери працюють разом, щоб допомога доходила до людей швидко та прозоро.",
@@ -1596,12 +1596,12 @@
       "updated": "2026-08-07"
     },
     "data/team.members[4].name": {
-      "source": "Анна Кришмару",
-      "sourceHash": "07cb0038c133",
-      "target": "Anna Kryshmaru",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
+      "source": "Ганна Кришмару",
+      "sourceHash": "5e36d1d2ba69",
+      "target": "Hanna Kryshmaru",
+      "status": "human",
+      "note": "Транслітерація прізвища",
+      "updated": "2026-08-10"
     },
     "data/team.members[4].role": {
       "source": "Фахівчиня з договірної роботи",
@@ -1628,12 +1628,12 @@
       "updated": "2026-08-07"
     },
     "data/team.members[6].name": {
-      "source": "Сергій Фєдічкін",
-      "sourceHash": "b3b59d86189a",
-      "target": "Sergey Fedichkin",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
+      "source": "Сергій Федєчкін",
+      "sourceHash": "f7a132847b5e",
+      "target": "Serhii Fediechkin",
+      "status": "human",
+      "note": "Транслітерація прізвища",
+      "updated": "2026-08-10"
     },
     "data/team.members[6].role": {
       "source": "Фахівець з управління логістикою",
