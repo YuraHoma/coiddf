@@ -1723,30 +1723,6 @@
       "note": "",
       "updated": "2026-08-07"
     },
-    "news/peredaly-heneratory-hromadam-khersonshchyny.body": {
-      "source": "Це тестова новина для перевірки повного ланцюга публікації: кириличне ім'я файлу, нове фото, автоматичний переклад. Після перевірки її буде видалено.",
-      "sourceHash": "28483ca18eb9",
-      "target": "This is a test news to check the full publication chain: Cyrillic file name, new photo, automatic translation. After verification, it will be deleted.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-10"
-    },
-    "news/peredaly-heneratory-hromadam-khersonshchyny.excerpt": {
-      "source": "Наскрізна перевірка публікації новини через CMS — від збереження до появи на сайті обома мовами.",
-      "sourceHash": "042eddc6bb15",
-      "target": "End-to-end verification of news publication through CMS — from saving to appearing on the website in both languages.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-10"
-    },
-    "news/peredaly-heneratory-hromadam-khersonshchyny.title": {
-      "source": "Передали генератори громадам Херсонщини",
-      "sourceHash": "e0060aa5392b",
-      "target": "The generators were handed over to Kherson region communities",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-10"
-    },
     "news/pryfrontovi-gromady.body": {
       "source": "Команда фонду спільно з партнерами передала генератори, павербанки та комплекти освітлення у прифронтові громади Пологівського району. Допомога спрямована насамперед родинам з дітьми, людям похилого віку та маломобільним мешканцям.\n\nЧерез постійні обстріли енергетичної інфраструктури люди тривалий час залишаються без світла й тепла. Передані комплекти дозволяють зберігати ліки, заряджати засоби зв’язку та освітлювати домівки у темну пору доби.\n\nРобота триває: фонд продовжує збирати й розподіляти необхідне обладнання разом з міжнародними партнерами.",
       "sourceHash": "f85b58675285",
@@ -2058,30 +2034,6 @@
       "status": "machine",
       "note": "",
       "updated": "2026-08-07"
-    },
-    "projects/testova-postavka-dozymetriv-dlia-perevirky-cms.body": {
-      "source": "## Опис проєкту\n\nТестовий проєкт для перевірки ланцюга публікації. Після перевірки буде видалений.",
-      "sourceHash": "88a6781a1b56",
-      "target": "## Description of the project\n\nTest project for checking the publication chain. Will be deleted after verification.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-10"
-    },
-    "projects/testova-postavka-dozymetriv-dlia-perevirky-cms.excerpt": {
-      "source": "Наскрізна перевірка публікації проєкту через CMS — картка в групі напряму, окрема сторінка, англійська версія.",
-      "sourceHash": "6f28756a393a",
-      "target": "End-to-end verification of project publication through CMS — a card in a direct group, a separate page, English version.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-10"
-    },
-    "projects/testova-postavka-dozymetriv-dlia-perevirky-cms.title": {
-      "source": "Тестова поставка дозиметрів для перевірки CMS",
-      "sourceHash": "9cb15b10a814",
-      "target": "Test delivery of dosimeters for CMS verification",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-10"
     },
     "projects/zsu-indyvidualnyy-radiaciynyy-kontrol.body": {
       "source": "## Опис проєкту\n\nПостачання персональних дозиметрів для Збройних Сил України: дозиметри Ludlum Friskers 26-1 з лужними батареями, запасні лужні батареї АА, персональні детектори Kromek із перезаряджуваними літій-полімерними акумуляторами, прилади ідентифікації радіоізотопів Ortec RADEAGLET-R-2SG із запасними літій-іонними акумуляторами та транспортувальними кобурами.\n\n## Мета проєкту\n\nЗабезпечення особового складу Збройних сил України засобами індивідуального радіаційного контролю.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 18 (ЗСУ), Палета 73-74; Палета 81.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 400 073,72 дол. США**",

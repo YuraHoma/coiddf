@@ -102,6 +102,19 @@ for (const { key, source } of units) {
   }
 }
 
+// Прибирання сиріт: машинні записи видаленого контенту не потрібні —
+// якщо матеріал повернеться, машина перекладе заново (або підхопить
+// перенесенням за хешем джерела). Вивірені людиною записи лишаємо:
+// це робота перекладача, її не викидаємо ніколи.
+const liveKeys = new Set(units.map((u) => u.key));
+let pruned = 0;
+for (const [key, entry] of Object.entries(catalog.entries)) {
+  if (!liveKeys.has(key) && entry.status !== catalogLib.HUMAN) {
+    delete catalog.entries[key];
+    pruned++;
+  }
+}
+
 if (!dryRun) catalogLib.save(catalog);
 
 console.log(`\n\nНових перекладів:        ${added}`);
@@ -109,6 +122,7 @@ console.log(`Оновлено (машинних):     ${refreshed}`);
 console.log(`Перенесено з інших ключів: ${moved}`);
 console.log(`Пропущено вичитаних:     ${skippedHuman}`);
 console.log(`Помилок:                 ${failed}`);
+if (pruned) console.log(`Прибрано сиріт:          ${pruned}`);
 console.log(`Усього в каталозі:       ${Object.keys(catalog.entries).length}`);
 
 if (staleHuman.length) {
