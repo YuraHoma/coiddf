@@ -207,8 +207,23 @@
         if (cookieBar) {
           var stored = null;
           try { stored = localStorage.getItem('icdf-cookie-consent'); } catch (e) {}
+          /* Смуга висить fixed над контентом, тож поки вона видима —
+             резервуємо під неї місце внизу сторінки. Інакше вона накриває
+             нижній ряд кнопок і футер, і тап по них не доходить до цілі. */
+          var reserve = function () {
+            if (cookieBar.hidden) return;
+            var h = cookieBar.offsetHeight + 32;
+            d.body.style.paddingBottom = h + 'px';
+            root.style.scrollPaddingBottom = h + 'px';
+          };
+          var release = function () {
+            d.body.style.paddingBottom = '';
+            root.style.scrollPaddingBottom = '';
+          };
           if (!stored) {
             cookieBar.hidden = false;
+            reserve();
+            window.addEventListener('resize', reserve, { passive: true });
             requestAnimationFrame(function () { cookieBar.classList.add('in'); });
           }
           var accept = d.getElementById('cookie-accept');
@@ -216,6 +231,7 @@
             accept.addEventListener('click', function () {
               try { localStorage.setItem('icdf-cookie-consent', 'accepted'); } catch (e) {}
               cookieBar.classList.remove('in');
+              release();
               setTimeout(function () { cookieBar.hidden = true; }, 450);
             });
           }
@@ -225,15 +241,26 @@
         var toggle = d.querySelector('.nav-toggle');
 
         if (header && toggle) {
+          var closeNav = function (focusToggle) {
+            if (!header.classList.contains('nav-open')) return;
+            header.classList.remove('nav-open');
+            toggle.setAttribute('aria-expanded', 'false');
+            if (focusToggle) toggle.focus();
+          };
           toggle.addEventListener('click', function () {
             var open = header.classList.toggle('nav-open');
             toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
           });
           header.querySelectorAll('.nav a').forEach(function (a) {
-            a.addEventListener('click', function () {
-              header.classList.remove('nav-open');
-              toggle.setAttribute('aria-expanded', 'false');
-            });
+            a.addEventListener('click', function () { closeNav(false); });
+          });
+          /* Меню має закриватися звичними способами, а не лише повторним
+             влучанням у бургер. */
+          d.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' || e.key === 'Esc') closeNav(true);
+          });
+          d.addEventListener('click', function (e) {
+            if (!header.contains(e.target)) closeNav(false);
           });
         }
 

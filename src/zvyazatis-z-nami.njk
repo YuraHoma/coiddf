@@ -83,8 +83,10 @@ eleventyComputed:
           </div>
           {#- Приховане поле-пастка для ботів: люди його не бачать і не заповнюють. -#}
           <div class="form-honeypot" aria-hidden="true"><label for="fb-website">Website</label><input type="text" id="fb-website" name="website" tabindex="-1" autocomplete="off"></div>
-          <button class="button button-accent" type="submit" data-label="{{ "Send" if locale == "en" else "Надіслати" }}" data-sending="{{ "Sending…" if locale == "en" else "Надсилаємо…" }}">{{ "Send" if locale == "en" else "Надіслати" }}<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></button>
-          <p class="form-error" id="form-error" hidden></p>
+          {#- Підпис окремим <span>: скрипт міняє текст лише в ньому, тож
+              стрілка лишається на місці після надсилання. -#}
+          <button class="button button-accent" type="submit" data-label="{{ "Send" if locale == "en" else "Надіслати" }}" data-sending="{{ "Sending…" if locale == "en" else "Надсилаємо…" }}"><span class="btn-label">{{ "Send" if locale == "en" else "Надіслати" }}</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></button>
+          <p class="form-error" id="form-error" role="alert" tabindex="-1" hidden></p>
         </form>
         </div>
       </section>
@@ -119,22 +121,35 @@ eleventyComputed:
           function showError(text) {
             errBox.innerHTML = text + '<a href="mailto:' + MAIL + '">' + MAIL + '</a>.';
             errBox.hidden = false;
+            /* role="alert" оголошує текст, фокус дає змогу одразу дійти
+               до посилання на пошту з клавіатури. */
+            errBox.focus();
           }
           function openModal() {
-            lastFocus = document.activeElement;
             modal.hidden = false;
+            document.body.style.overflow = "hidden";
             requestAnimationFrame(function () { modal.classList.add("in"); });
             closeBtn.focus();
           }
           function closeModal() {
             modal.classList.remove("in");
+            document.body.style.overflow = "";
             setTimeout(function () { modal.hidden = true; }, 300);
-            if (lastFocus) lastFocus.focus();
+            /* Повертаємо фокус туди, звідки прийшли: кнопка на момент
+               відкриття вимкнена, тож точку повернення запамʼятали до неї. */
+            if (lastFocus && document.contains(lastFocus)) lastFocus.focus();
           }
           closeBtn.addEventListener("click", closeModal);
           modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
           document.addEventListener("keydown", function (e) {
-            if (e.key === "Escape" && !modal.hidden) closeModal();
+            if (modal.hidden) return;
+            if (e.key === "Escape") { closeModal(); return; }
+            /* Утримання фокуса: у вікні лише одна кнопка, тож Tab має
+               лишатися на ній, а не йти на сховану за бекдропом сторінку. */
+            if (e.key === "Tab") {
+              e.preventDefault();
+              closeBtn.focus();
+            }
           });
 
           form.addEventListener("submit", function (e) {
@@ -150,8 +165,9 @@ eleventyComputed:
               website: val("website")
             };
 
+            lastFocus = btn;
             btn.disabled = true;
-            btn.textContent = btn.dataset.sending;
+            btn.querySelector(".btn-label").textContent = btn.dataset.sending;
 
             fetch("/api/contact", {
               method: "POST",
@@ -166,7 +182,7 @@ eleventyComputed:
               .catch(function () { showError(MSG.network); })
               .finally(function () {
                 btn.disabled = false;
-                btn.textContent = btn.dataset.label;
+                btn.querySelector(".btn-label").textContent = btn.dataset.label;
               });
           });
         })();

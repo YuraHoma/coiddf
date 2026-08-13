@@ -10,8 +10,15 @@
       </a>
       <button class="nav-toggle" type="button" aria-label="{{ 'Menu' if locale == 'en' else 'Меню' }}" aria-expanded="false"><span></span></button>
       <nav class="nav" aria-label="{{ 'Main navigation' if locale == 'en' else 'Головна навігація' }}">
+        {#- Активний пункт визначається за префіксом розділу, а не точною
+            рівністю: інакше сторінки-деталі (/proyekty/<слаг>/, статті
+            новин) не підсвічують нічого і відвідувач губить позицію.
+            Для головної («/» та «/en/») лишається точний збіг — її
+            префікс містить усі решта адрес. -#}
         {%- for item in site.nav %}
-        <a href="{{ item.href }}"{% if page.url == item.href %} class="active"{% endif %}>{{ item.label }}</a>
+        {%- set isHome = item.href == "/" or item.href == "/en/" %}
+        {%- set isActive = (page.url == item.href) if isHome else page.url.startsWith(item.href) %}
+        <a href="{{ item.href }}"{% if isActive %} class="active" aria-current="page"{% endif %}>{{ item.label }}</a>
         {%- endfor %}
       </nav>
       <div class="header-right">
