@@ -1,5 +1,8 @@
 <!doctype html>
-{%- set altUrl = page.url.slice(3) if locale == "en" else "/en" + page.url %}
+{#- 404 існує в одному примірнику і вже двомовна, тож пари /en/404.html
+    у неї немає — перемикач веде на англійську головну, інакше це було б
+    єдине бите посилання на сайті. -#}
+{%- set altUrl = "/en/" if page.url == "/404.html" else (page.url.slice(3) if locale == "en" else "/en" + page.url) %}
 {#- Тип сторінки визначаємо по URL без мовного префікса, щоб одна умова
     покривала і /novyny/x/, і /en/novyny/x/. Порівняння з індексом
     («/novyny/») відсікає список новин від самої статті. -#}
@@ -80,7 +83,9 @@
 {%- set postalAddress = null %}
 {%- if addrParts.length >= 4 %}
 {%- set n = addrParts.length %}
-{%- set postalAddress = {"@type": "PostalAddress", "streetAddress": addrParts.slice(0, n - 3) | join(",") | trim, "addressLocality": addrParts[n - 3] | trim, "postalCode": addrParts[n - 2] | trim, "addressCountry": addrParts[n - 1] | trim} %}
+{#- addressCountry за schema.org — код ISO 3166-1, а не назва країни:
+    у полі CMS вона написана словом і різною мовою в кожній локалі. -#}
+{%- set postalAddress = {"@type": "PostalAddress", "streetAddress": addrParts.slice(0, n - 3) | join(",") | trim, "addressLocality": addrParts[n - 3] | trim, "postalCode": addrParts[n - 2] | trim, "addressCountry": "UA"} %}
 {%- elif contacts.address %}
 {%- set postalAddress = {"@type": "PostalAddress", "streetAddress": contacts.address} %}
 {%- endif %}
@@ -174,6 +179,9 @@
 {%- endif %}
   </head>
   <body>
+    {#- Перша зупинка Tab: до основного вмісту інакше треба пройти
+        десяток посилань шапки на кожній сторінці. Видиме лише у фокусі. -#}
+    <a class="skip-link" href="#main">{{ "Skip to content" if locale == "en" else "Перейти до вмісту" }}</a>
 {%- if legal.registration %}
     <div class="reg-strip">
       <ul>
@@ -184,7 +192,7 @@
     </div>
 {%- endif %}
 {% include "header.njk" %}
-    <main>
+    <main id="main" tabindex="-1">
 {{ content | safe }}
     </main>
 {% include "footer.njk" %}

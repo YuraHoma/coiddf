@@ -23,6 +23,10 @@ eleventyComputed:
         </div>
       </section>
       <section class="section">
+        {#- Заголовок розділу: у макеті він зайвий (сторінка й так
+            називається «Новини»), але без нього картки лізуть з h1
+            одразу в h3 і структура сторінки рветься. -#}
+        <h2 class="sr-only">{{ "All news" if locale == "en" else "Усі новини" }}</h2>
         <div class="news-grid">
           {%- set newsList = en.newsPosts if locale == "en" else collections.news %}
           {%- for post in newsList %}

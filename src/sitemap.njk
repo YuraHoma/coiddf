@@ -4,10 +4,15 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{#- Англійські статті й проєкти генеруються з одного шаблону, тож p.date
+    у них — дата самого шаблону, однакова для всіх. Справжню дату
+    матеріалу беремо з аліаса пагінації. -#}
 {%- for p in collections.all %}{% if p.url and p.url != '/404.html' %}
+{%- set material = p.data.post or p.data.project %}
+{%- set lastmod = material.date if material and material.date else p.date %}
   <url>
     <loc>{{ site.url }}{{ p.url }}</loc>
-    <lastmod>{{ p.date.toISOString().slice(0, 10) }}</lastmod>
+    <lastmod>{{ lastmod | date10 }}</lastmod>
   </url>
 {%- endif %}{% endfor %}
 </urlset>

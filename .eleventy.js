@@ -82,6 +82,13 @@ module.exports = function (eleventyConfig) {
   const { ukSlug } = require("./scripts/slug.js");
   eleventyConfig.addFilter("ukslug", ukSlug);
 
+  // YYYY-MM-DD для sitemap. Дата приходить або обʼєктом Date (сторінки
+  // Eleventy), або рядком з en.js — обробляємо обидва випадки.
+  eleventyConfig.addFilter("date10", (value) => {
+    const d = value instanceof Date ? value : new Date(value);
+    return isNaN(d) ? new Date().toISOString().slice(0, 10) : d.toISOString().slice(0, 10);
+  });
+
   // Format an ISO date as DD.MM.YYYY for display.
   // UTC methods: front-matter dates are parsed as UTC midnight, local getters
   // would shift the day on build machines west of UTC.
