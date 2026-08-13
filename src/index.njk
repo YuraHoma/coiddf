@@ -39,10 +39,10 @@ eleventyComputed:
         <div class="partner-marquee">
           <div class="partner-track">
             {%- for p in partners.items %}
-            <div class="partner-logo-card">{{ logos.logo(p) }}</div>
+            <div class="partner-logo-card">{{ logos.logo(p, true) }}</div>
             {%- endfor %}
             {%- for p in partners.items %}
-            <div class="partner-logo-card">{{ logos.logo(p) }}</div>
+            <div class="partner-logo-card">{{ logos.logo(p, true) }}</div>
             {%- endfor %}
           </div>
         </div>
@@ -75,7 +75,7 @@ eleventyComputed:
           <h2>{{ home.geography.heading }}</h2>
         </div>
         <div class="map-card">
-          <img src="/assets/map-ukraine-oblasts.svg" alt="{{ "Map of Ukraine's oblasts with the regions where the fund works marked" if locale == 'en' else 'Карта областей України з позначеними регіонами, де працює фонд' }}" loading="lazy" eleventy:ignore>
+          <img src="/assets/map-ukraine-oblasts.svg" width="700" height="480" alt="{{ "Map of Ukraine's oblasts with the regions where the fund works marked" if locale == 'en' else 'Карта областей України з позначеними регіонами, де працює фонд' }}" loading="lazy" eleventy:ignore>
           {%- for m in home.geography.markers %}
           <span class="map-pin" style="left: {{ m.left }}%; top: {{ m.top }}%;" aria-label="{{ m.label }}"></span>
           {%- endfor %}

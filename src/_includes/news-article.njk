@@ -16,7 +16,7 @@ layout: base.njk
         </div>
       </section>
       <article class="section news-article">
-        {% if pImage %}<img class="news-article-cover" src="{{ pImage }}" alt="{{ pTitle }}">{% endif %}
+        {% if pImage %}<img class="news-article-cover" src="{{ pImage }}" alt="{{ pTitle }}" loading="eager" fetchpriority="high" sizes="(min-width: 901px) 1200px, 100vw">{% endif %}
         <div class="news-article-body">
           {% if pExcerpt %}<p class="news-article-lead">{{ pExcerpt }}</p>{% endif %}
           {{ pContent | safe }}
