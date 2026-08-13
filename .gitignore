@@ -9,5 +9,8 @@ _site/
 # Джерело правди — catalog.json, він у git.
 scripts/i18n/translations.csv
 
+# Локальні секрети для `wrangler dev` — у git їм не місце.
+.dev.vars
+
 # local agent workspaces
 .claude/

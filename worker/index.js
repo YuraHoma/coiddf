@@ -9,8 +9,13 @@
 // він порожній, то загальну пошту фонду.
 
 import contacts from "../src/_data/contacts.json";
+import feedback from "../src/_data/feedback.json";
+import site from "../src/_data/site.json";
 
 const RECIPIENT = contacts.formRecipient || contacts.general;
+// Причина звернення приходить із форми, але покластися на це не можна:
+// у Subject листа має потрапити лише те, що є в списку CMS.
+const CATEGORIES = new Set(feedback.categories || []);
 // Домен фонду ще не підтверджений у Resend, тож відправник — їхній
 // службовий. Після підключення icdf.org сюди піде адреса на домені.
 const SENDER = "ICDF site <onboarding@resend.dev>";
@@ -25,7 +30,27 @@ function json(data, status = 200) {
 }
 
 function clean(value, limit) {
-  return typeof value === "string" ? value.trim().slice(0, limit) : "";
+  if (typeof value !== "string") return "";
+  // Керівні символи ріжемо завжди: \r\n у полі, яке потрапляє в
+  // заголовок листа, — це шлях до підміни заголовків.
+  return value.replace(/[\u0000-\u001f\u007f]+/g, " ").trim().slice(0, limit);
+}
+
+// Проста заслінка від залпу з однієї адреси. Лічильник живе в памʼяті
+// ізолята, тож це не заміна повноцінному rate limiting на рівні
+// Cloudflare, а дешевий захист від найпростішого залиття форми.
+const HITS = new Map();
+const WINDOW_MS = 10 * 60 * 1000;
+const LIMIT = 5;
+
+function tooMany(ip) {
+  if (!ip) return false;
+  const now = Date.now();
+  const hits = (HITS.get(ip) || []).filter((t) => now - t < WINDOW_MS);
+  hits.push(now);
+  HITS.set(ip, hits);
+  if (HITS.size > 5000) HITS.clear();
+  return hits.length > LIMIT;
 }
 
 function escapeHtml(s) {
@@ -37,6 +62,22 @@ function escapeHtml(s) {
 async function handleContact(request, env) {
   if (request.method !== "POST") return json({ error: "method_not_allowed" }, 405);
   if (!env.RESEND_API_KEY) return json({ error: "not_configured" }, 500);
+  // Порожня адреса отримувача — це помилка налаштування, а не збій
+  // Resend: інакше форма мовчки віддавала б 502 після кожного звернення.
+  if (!RECIPIENT) {
+    console.error("contact: не задано ні formRecipient, ні general");
+    return json({ error: "not_configured" }, 500);
+  }
+
+  // Форму викликає лише сам сайт. Запит з чужої сторінки відхиляємо:
+  // це не заважає жодному звичайному відвідувачу.
+  const origin = request.headers.get("origin");
+  if (origin) {
+    let host = "";
+    try { host = new URL(origin).host; } catch {}
+    if (host !== new URL(request.url).host && host !== new URL(site.url).host)
+      return json({ error: "forbidden" }, 403);
+  }
 
   let body;
   try {
@@ -44,6 +85,10 @@ async function handleContact(request, env) {
   } catch {
     return json({ error: "bad_request" }, 400);
   }
+  // request.json() успішно розбирає "null" і голі числа — далі за кодом
+  // це впало б на зверненні до поля й дало відвідувачу 500 замість
+  // зрозумілої відповіді.
+  if (!body || typeof body !== "object") return json({ error: "bad_request" }, 400);
 
   // Приховане поле: боти його заповнюють, люди — ні. Відповідаємо
   // успіхом, щоб спамер не підбирав обхід.
@@ -53,11 +98,17 @@ async function handleContact(request, env) {
   const lastname = clean(body.lastname, MAX.name);
   const email = clean(body.email, MAX.email);
   const phone = clean(body.phone, MAX.phone);
-  const category = clean(body.category, MAX.category);
+  const raw = clean(body.category, MAX.category);
+  const category = CATEGORIES.has(raw) ? raw : "";
   const message = clean(body.message, MAX.message);
 
   if (!firstname || !lastname || !email || !message) return json({ error: "missing_fields" }, 400);
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return json({ error: "bad_email" }, 400);
+
+  // Лічильник ведемо тільки на листах, що справді пішли б: інакше
+  // відвідувач, який двічі схибив у полі, впирався б у заслінку.
+  if (tooMany(request.headers.get("cf-connecting-ip")))
+    return json({ error: "too_many_requests" }, 429);
 
   const fullName = `${firstname} ${lastname}`;
   const rows = [
@@ -104,7 +155,14 @@ async function handleContact(request, env) {
 export default {
   async fetch(request, env) {
     const { pathname } = new URL(request.url);
-    if (pathname === "/api/contact") return handleContact(request, env);
-    return env.ASSETS.fetch(request);
+    if (pathname !== "/api/contact") return env.ASSETS.fetch(request);
+    // Що б не сталося всередині, відвідувач має отримати JSON, який
+    // форма вміє прочитати, а не голу сторінку помилки Cloudflare.
+    try {
+      return await handleContact(request, env);
+    } catch (e) {
+      console.error("contact", e && e.stack ? e.stack : e);
+      return json({ error: "server_error" }, 500);
+    }
   },
 };

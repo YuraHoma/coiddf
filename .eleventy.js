@@ -19,6 +19,12 @@ module.exports = function (eleventyConfig) {
     },
   });
 
+  // Тіло новин і проєктів пише редактор через CMS, тож сирий HTML з
+  // markdown у сторінку не пускаємо: інакше вставлений у текст <script>
+  // виконався б нарівні з нашим власним. Жоден матеріал розмітки не
+  // потребує — перевірено по всіх src/news/*.md і src/projects/*.md.
+  eleventyConfig.amendLibrary("md", (md) => md.set({ html: false }));
+
   // Static passthrough — styles, images, misc files copied as-is.
   eleventyConfig.addPassthroughCopy({ "src/styles.css": "styles.css" });
   // Сирі оригінали з src/assets у прод не їдуть: у розмітці всі <img>
