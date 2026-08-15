@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
 {#- Англійські статті й проєкти генеруються з одного шаблону, тож p.date
     у них — дата самого шаблону, однакова для всіх. Справжню дату
     матеріалу беремо з аліаса пагінації. -#}
-{%- for p in collections.all %}{% if p.url and p.url != '/404.html' %}
+{%- for p in collections.all %}{% if p.url and p.url != '/404.html' and not p.data.noindex %}
 {%- set material = p.data.post or p.data.project %}
 {%- set lastmod = material.date if material and material.date else p.date %}
   <url>

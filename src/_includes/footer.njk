@@ -15,8 +15,15 @@
               {%- endfor %}
             </div>
             <div class="footer-nav-col">
+              {#- Посилання на новини показуємо лише тоді, коли новини є:
+                  порожній розділ на сайті гірший за його відсутність.
+                  Щойно в CMS зʼявиться перша новина — посилання повернеться
+                  само, руками нічого вмикати не треба. -#}
+              {%- set hasNews = (en.newsPosts if locale == "en" else collections.news) | length %}
               {%- for item in site.footerNavCol2 %}
+              {%- if "/novyny/" not in item.href or hasNews %}
               <a href="{{ item.href }}">{{ item.label }}</a>
+              {%- endif %}
               {%- endfor %}
             </div>
           </nav>

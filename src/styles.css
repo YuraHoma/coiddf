@@ -1849,7 +1849,10 @@ main > article,
 }
 
 @media (max-width: 600px) {
-  :root { --section-y: clamp(32px, 9vw, 48px); --radius-panel: 24px; }
+  /* Нижня межа 44px, а не 32px: відступ під заголовком секції — 36px,
+     і при 32-35px відстань МІЖ секціями ставала меншою за відстань
+     ВСЕРЕДИНІ секції. Око читало це як зліплені блоки. */
+  :root { --section-y: clamp(44px, 9vw, 48px); --radius-panel: 24px; }
 
   .brand strong { font-size: 13px; }
   .cards-grid,

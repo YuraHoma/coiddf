@@ -104,13 +104,17 @@ eleventyComputed:
           </div>
         </div>
       </section>
+      {#- Блок новин зʼявляється сам, щойно в CMS додадуть перший матеріал.
+          Поки новин немає — секції на сторінці немає взагалі: порожня
+          сітка з заголовком «Новини» виглядала б як недороблений сайт. -#}
+      {%- set newsList = en.newsPosts if locale == "en" else collections.news -%}
+      {%- if newsList | length %}
       <section class="section news-preview">
         <div class="section-heading center">
           <p class="eyebrow">{{ "News" if locale == "en" else "Новини" }}</p>
           <h2>{{ home.newsHeading }}</h2>
         </div>
         <div class="news-mini-grid">
-          {%- set newsList = en.newsPosts if locale == "en" else collections.news -%}
           {%- for post in newsList %}{% if loop.index <= 3 %}
 {{ news.newsCard(post, false, locale) }}
           {%- endif %}{% endfor %}
@@ -119,6 +123,7 @@ eleventyComputed:
           <a class="button button-outline news-all-btn" href="{{ '/en/novyny/' if locale == 'en' else '/novyny/' }}">{{ "All news ↗" if locale == "en" else "Усі новини ↗" }}</a>
         </div>
       </section>
+      {%- endif %}
       <section class="cta-band">
         <div>
           <h2>{{ home.cta.heading }}</h2>

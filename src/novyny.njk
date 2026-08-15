@@ -13,6 +13,10 @@ enDescription: Latest fund news and updates.
 eleventyComputed:
   title: "{{ (enTitle if locale == 'en' else title) | safe }}"
   description: "{{ (enDescription if locale == 'en' else description) | safe }}"
+  # Поки жодної новини немає, сторінка існує (щоб адреса не змінилась,
+  # коли клієнт додасть перший матеріал), але з розділу її не видно і
+  # пошуковикам вона не пропонується. Зʼявиться новина — зникне noindex.
+  noindex: "{{ true if not (en.newsPosts if locale == 'en' else collections.news) | length }}"
 ---
 {% import "news-card.njk" as news %}
       <section class="page-hero">
