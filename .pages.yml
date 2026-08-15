@@ -10,6 +10,12 @@
 # поля, що є в схемі, тож частковий опис файлу тихо стер би решту даних.
 # Саме тому контакти й реквізити винесені в окремі файли, а не лишилися
 # в site.json поруч із меню.
+#
+# Поля впорядковані так, як їх заповнюють: спершу те, без чого блок на
+# сайті виглядатиме порожнім (позначене зірочкою як обовʼязкове), потім
+# необовʼязкові доповнення. Підказки під полями описують вимоги до
+# матеріалу — саме недотримання цих вимог дає «діряві» блоки: картка без
+# фото, вертикальне фото в горизонтальному місці, опис на пів сторінки.
 
 media:
   input: src/assets
@@ -30,11 +36,30 @@ content:
         sort: date
         order: desc
     fields:
-      - { name: title, label: Заголовок, type: string, required: true }
-      - { name: date, label: Дата, type: date, required: true }
-      - { name: image, label: Головне фото, type: image }
-      - { name: excerpt, label: Короткий опис (для списку та початку статті), type: text, required: true }
-      - { name: body, label: Повний текст статті, type: rich-text }
+      - name: title
+        label: Заголовок
+        type: string
+        required: true
+        description: 'До 60 символів. Довший заголовок пошуковик обріже в результатах пошуку.'
+      - name: date
+        label: Дата
+        type: date
+        required: true
+        description: 'Визначає порядок: найновіше зверху, і воно ж потрапляє на головну.'
+      - name: image
+        label: Головне фото
+        type: image
+        required: true
+        description: 'Горизонтальне, від 1600 px по ширині. Без фото картка новини лишається сірим прямокутником, а при поширенні в соцмережах підтягнеться загальна картинка замість вашої.'
+      - name: excerpt
+        label: Короткий опис
+        type: text
+        required: true
+        description: '2–3 речення, 120–200 символів. Показується в картці новини, на початку статті і в результатах пошуку.'
+      - name: body
+        label: Повний текст статті
+        type: rich-text
+        description: 'Необовʼязково. Якщо порожній — читач побачить лише короткий опис.'
 
   # ---------------------------------------------------------------- Проєкти
   - name: projects
@@ -50,21 +75,41 @@ content:
         sort: date
         order: desc
     fields:
-      - { name: title, label: Назва проєкту, type: string, required: true }
-      - { name: date, label: Дата, type: date, required: true }
-      - { name: image, label: Фото проєкту, type: image, required: true }
-      - { name: excerpt, label: Короткий опис (для картки та початку сторінки), type: text, required: true }
+      - name: title
+        label: Назва проєкту
+        type: string
+        required: true
+        description: 'До 60 символів. Повну офіційну назву краще розкрити в тексті проєкту, а сюди дати коротку.'
+      - name: date
+        label: Дата
+        type: date
+        required: true
+        description: 'Визначає порядок проєктів у розділі: найновіші зверху.'
       - name: direction
         label: Напрям
         type: select
         required: true
+        description: 'Проєкт стане в цей розділ сторінки «Проєкти». Щойно в напрямі зʼявляється перший проєкт, картка цього напряму на головній починає вести просто в його розділ.'
         options:
           values:
             - { value: gumanitarne, label: Гуманітарне реагування на кризові ситуації населення }
             - { value: cyfrova, label: Цифрова трансформація }
             - { value: energetyka, label: 'Енергетика, радіаційний захист та екологічна безпека' }
             - { value: viyskova, label: Підвищення військової готовності та національної безпеки }
-      - { name: body, label: Повний текст проєкту (сторінка «Детальніше»), type: rich-text }
+      - name: image
+        label: Фото проєкту
+        type: image
+        required: true
+        description: 'Горизонтальне, від 1600 px по ширині. Вертикальне фото лишає порожні поля з боків картки — до половини її площі.'
+      - name: excerpt
+        label: Короткий опис
+        type: text
+        required: true
+        description: '2–3 речення, 120–200 символів. Показується в картці проєкту, на початку його сторінки і при поширенні посилання.'
+      - name: body
+        label: Повний текст проєкту
+        type: rich-text
+        description: 'Необовʼязково. Сторінка «Детальніше» відкриється в будь-якому разі, але без тексту на ній буде лише фото й короткий опис.'
 
   # ---------------------------------------------------------------- Команда
   - name: team
@@ -76,18 +121,27 @@ content:
         label: Банер сторінки
         type: object
         fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: text }
+          - { name: eyebrow, label: Мітка, type: string, description: 'Коротке слово над заголовком, до 25 символів.' }
+          - { name: heading, label: Заголовок, type: text, required: true }
           - { name: lead, label: Підзаголовок, type: text }
       - name: members
-        label: Учасники команди (перші двоє — засновники, вони у верхньому ряду)
+        label: Учасники команди
         type: object
         list: true
+        description: 'Перші двоє — засновники, вони стоять окремим верхнім рядом із великими фото. Решта йде сіткою по четверо; щоб ряди були рівні, тримайте їхню кількість кратною чотирьом.'
         fields:
-          - { name: role, label: Роль, type: string }
-          - { name: name, label: "Ім'я (необов'язково)", type: string }
-          - { name: photo, label: Фото, type: image }
-          - { name: bio, label: "Опис (необов'язково)", type: text }
+          - name: role
+            label: Роль
+            type: string
+            required: true
+            description: 'Показується завжди, навіть коли імені немає.'
+          - name: photo
+            label: Фото
+            type: image
+            required: true
+            description: 'Портрет, від 800 px по ширині, обличчя ближче до верху — картка кадрує знизу. Без фото в сітці лишається порожня рамка.'
+          - { name: name, label: "Ім'я", type: string, description: "Необовʼязково — якщо порожнє, показується лише роль." }
+          - { name: bio, label: Опис, type: text, description: 'Необовʼязково. Показується лише у двох засновників у верхньому ряду; у решти команди опис на сторінку не виводиться.' }
 
   # ---------------------------------------------------------------- Звіти
   - name: reports
@@ -99,11 +153,18 @@ content:
         label: Банер сторінки
         type: object
         fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: text }
+          - { name: eyebrow, label: Мітка, type: string, description: 'Коротке слово над заголовком, до 25 символів.' }
+          - { name: heading, label: Заголовок, type: text, required: true }
           - { name: lead, label: Підзаголовок, type: text }
-      - { name: items, label: Документи звітності, type: string, list: true }
-      - { name: note, label: 'Текст, поки список порожній', type: text }
+      - name: items
+        label: Документи звітності
+        type: string
+        list: true
+        description: 'Поки список порожній — на сторінці показується текст нижче замість пустого місця.'
+      - name: note
+        label: 'Текст, поки список порожній'
+        type: text
+        description: 'Показується тільки тоді, коли жодного документа ще немає. Не лишайте порожнім, поки немає звітів.'
 
   # ---------------------------------------------------------------- Контакти
   - name: contacts
@@ -111,17 +172,33 @@ content:
     type: file
     path: src/_data/contacts.json
     fields:
-      - { name: general, label: Email, type: string }
-      - { name: formRecipient, label: 'Куди надсилати звернення з форми (порожньо — на Email вище)', type: string }
-      - { name: phone, label: Телефон, type: string }
-      - { name: address, label: Адреса, type: string }
+      - name: general
+        label: Email
+        type: string
+        required: true
+        description: 'Публічна пошта фонду: показується в контактах, у футері та у структурованих даних для пошуковиків.'
+      - name: phone
+        label: Телефон
+        type: string
+        required: true
+        description: 'У форматі +38 0XX XXX XXXX.'
+      - name: address
+        label: Адреса
+        type: string
+        required: true
+        description: 'Одним рядком, що закінчується містом, індексом і країною через кому — саме в такому порядку, бо з нього збирається адреса для пошуковиків. Приклад: вул. Межова, 23, м. Київ, 04215, Україна'
+      - name: formRecipient
+        label: 'Куди надсилати звернення з форми'
+        type: string
+        description: 'Необовʼязково. Порожнє поле — листи йдуть на Email вище. Заповнюйте, лише коли звернення мають приходити на іншу пошту.'
       - name: socials
-        label: Соцмережі (порожнє поле — іконка не показується)
+        label: Соцмережі
         type: object
+        description: 'Порожнє поле — іконка просто не показується, дірки в футері не буде.'
         fields:
-          - { name: facebook, label: Facebook, type: string }
-          - { name: twitter, label: Twitter / X, type: string }
-          - { name: linkedin, label: LinkedIn, type: string }
+          - { name: facebook, label: Facebook, type: string, description: 'Повне посилання, разом із https://' }
+          - { name: twitter, label: Twitter / X, type: string, description: 'Повне посилання, разом із https://' }
+          - { name: linkedin, label: LinkedIn, type: string, description: 'Повне посилання, разом із https://' }
 
   # ---------------------------------------------------------------- Юридичні дані
   - name: legal
@@ -133,22 +210,30 @@ content:
         label: Банер сторінки
         type: object
         fields:
-          - { name: eyebrow, label: Мітка, type: string }
-          - { name: heading, label: Заголовок, type: text }
+          - { name: eyebrow, label: Мітка, type: string, description: 'Коротке слово над заголовком, до 25 символів.' }
+          - { name: heading, label: Заголовок, type: text, required: true }
           - { name: lead, label: Підзаголовок, type: text }
-      - { name: edrpou, label: 'Код ЄДРПОУ (порожньо — у футері не показується)', type: string }
       - name: registration
         label: Реєстраційні коди (стрічка над меню)
         type: object
         list: true
+        description: 'Показуються тонкою стрічкою над меню на кожній сторінці. Тримайте тут два-три найважливіші коди — довший перелік стрічку переповнить.'
         fields:
-          - { name: label, label: Назва коду, type: string }
-          - { name: value, label: Значення, type: string }
+          - { name: label, label: Назва коду, type: string, required: true }
+          - { name: value, label: Значення, type: string, required: true }
       - name: items
-        label: Реєстраційні дані (рядок = підпис + значення)
+        label: Реєстраційні дані (таблиця на сторінці)
         type: object
         list: true
+        description: 'Повний перелік для сторінки юридичної інформації.'
         fields:
-          - { name: label, label: Підпис, type: string }
-          - { name: value, label: Значення, type: string }
-      - { name: note, label: 'Текст, поки список порожній', type: text }
+          - { name: label, label: Підпис, type: string, required: true }
+          - { name: value, label: Значення, type: string, required: true }
+      - name: edrpou
+        label: Код ЄДРПОУ
+        type: string
+        description: 'Необовʼязково. Порожнє поле — код не показується у футері й не потрапляє у структуровані дані.'
+      - name: note
+        label: 'Текст, поки список порожній'
+        type: text
+        description: 'Показується тільки тоді, коли реєстраційних даних ще немає.'

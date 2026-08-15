@@ -54,9 +54,16 @@ eleventyComputed:
         </div>
         <div class="focus-photos">
           {%- set projectsUrl = "/en/proyekty/" if locale == "en" else "/proyekty/" %}
+          {#- Якір ставимо лише на ті напрями, де вже є проєкти: сторінка
+              проєктів рендерить групу тільки за наявності матеріалів, тож
+              посилання на порожню категорію вело б у нікуди. Поки проєктів
+              немає — картка веде на розділ цілком. -#}
+          {%- set projectList = en.projects if locale == "en" else collections.projects %}
+          {%- set filledKeys = [] %}
+          {%- for p in projectList %}{% if p.data.direction and filledKeys.indexOf(p.data.direction) == -1 %}{% set _ = filledKeys.push(p.data.direction) %}{% endif %}{% endfor %}
           {%- for c in home.focusAreas.items %}
           <article>
-            <a href="{{ projectsUrl }}{% if c.key %}#{{ c.key }}{% endif %}">
+            <a href="{{ projectsUrl }}{% if c.key and filledKeys.indexOf(c.key) != -1 %}#{{ c.key }}{% endif %}">
               <div class="focus-photo">
                 {% if c.image %}<img src="{{ c.image }}" alt="{{ c.title }}" loading="lazy">{% endif %}
                 <div class="focus-overlay">
