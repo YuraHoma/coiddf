@@ -14,7 +14,9 @@
     "i18n:export": "node scripts/i18n/export-csv.js",
     "i18n:export:excel": "node scripts/i18n/export-csv.js --excel",
     "i18n:import": "node scripts/i18n/import-csv.js",
-    "i18n:migrate": "node scripts/i18n/migrate-cache.js"
+    "i18n:migrate": "node scripts/i18n/migrate-cache.js",
+    "i18n:export:xlsx": "npm run i18n:export && python3 scripts/i18n/xlsx-export.py ICDF-pereklad.xlsx",
+    "i18n:import:xlsx": "python3 scripts/i18n/xlsx-import.py ICDF-pereklad.xlsx && npm run i18n:import"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
