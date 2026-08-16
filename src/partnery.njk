@@ -7,9 +7,9 @@ pagination:
   addAllPagesToCollections: true
 permalink: "{{ '/en/partnery/' if locale == 'en' else '/partnery/' }}"
 title: Партнери | Фонд розвитку міжнародної співпраці
-description: Українські та міжнародні партнери фонду.
+description: "Міністерства, державні служби та міжнародні організації, разом з якими Фонд розвитку міжнародної співпраці реалізує проєкти в Україні."
 enTitle: Partners | International Cooperation Development Fund
-enDescription: Ukrainian and international partners of the fund.
+enDescription: "Ministries, state agencies and international organisations the International Cooperation Development Fund runs its projects with in Ukraine."
 eleventyComputed:
   title: "{{ (enTitle if locale == 'en' else title) | safe }}"
   description: "{{ (enDescription if locale == 'en' else description) | safe }}"

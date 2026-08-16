@@ -79,6 +79,12 @@ function buildContent(translate) {
         const slug = slugOf(f);
         const key = `${kind}/${slug}`;
         const title = data.title ? translate(data.title, `${key}.title`) : data.title;
+        // Коротка назва для вкладки браузера й видачі пошуку: офіційні назви
+        // проєктів сягають 126 символів і починаються однаково, тож просте
+        // обрізання давало трьом сторінкам однаковий заголовок.
+        const shortTitle = data.shortTitle
+          ? translate(data.shortTitle, `${key}.shortTitle`)
+          : "";
         const excerpt = data.excerpt ? translate(data.excerpt, `${key}.excerpt`) : data.excerpt;
         const body = content.trim();
         const contentHtml = body ? md.render(translate(body, `${key}.body`)) : "";
@@ -87,12 +93,14 @@ function buildContent(translate) {
           url,
           slug,
           title,
+          shortTitle,
           excerpt,
           date: data.date,
           image: data.image,
           contentHtml,
           data: {
             title,
+            shortTitle,
             excerpt,
             date: data.date,
             image: data.image,

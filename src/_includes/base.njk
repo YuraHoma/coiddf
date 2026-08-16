@@ -25,7 +25,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {#- Офіційні назви проєктів сягають 126 символів — як заголовок сторінки
+        вони нечитабельні: пошуковик показує перші 60-65 і обрізає решту на
+        півслові. Тому для вкладки й видачі беремо початок назви до межі
+        слова плюс коротке імʼя фонду; повна назва лишається в h1 на самій
+        сторінці і в og:title, де місця більше. Статичні сторінки мають
+        рукописні заголовки в межах норми — їх не чіпаємо. -#}
+    {%- set artShort = artSrc.shortTitle if artSrc else shortTitle %}
+    {%- if isNewsPost or isProjectPost %}
+    <title>{{ (artShort or (artTitle | truncate(52, false, "…"))) }} | ICDF</title>
+    {%- else %}
     <title>{{ title }}</title>
+    {%- endif %}
     <meta name="description" content="{{ description or excerpt }}">
     {%- if noindex %}
     <meta name="robots" content="noindex">

@@ -7,9 +7,9 @@ pagination:
   addAllPagesToCollections: true
 permalink: "{{ '/en/' if locale == 'en' else '/' }}"
 title: Фонд розвитку міжнародної співпраці | Гуманітарна допомога
-description: Головна сторінка благодійного фонду.
+description: "Благодійний фонд ICDF: гуманітарне реагування на кризи, радіаційний захист, підвищення військової готовності та цифрова трансформація в Україні."
 enTitle: International Cooperation Development Fund | Humanitarian Aid
-enDescription: The main page of the charity fund.
+enDescription: "ICDF charitable foundation: humanitarian crisis response, radiation protection, military readiness and digital transformation projects across Ukraine."
 eleventyComputed:
   title: "{{ (enTitle if locale == 'en' else title) | safe }}"
   description: "{{ (enDescription if locale == 'en' else description) | safe }}"
