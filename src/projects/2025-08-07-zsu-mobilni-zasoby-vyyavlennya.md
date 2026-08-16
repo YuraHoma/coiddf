@@ -1,9 +1,7 @@
 ---
 title: "Оснащення Збройних сил України мобільними засобами радіаційного виявлення та супутньою обчислювальною технікою"
-shortTitle: "Мобільні засоби радіаційного виявлення для ЗСУ"
 date: 2025-08-07
 image: /assets/project-zsu-mobilni-zasoby-vyyavlennya.jpg
-excerpt: "Ранцеві радіаційні детектори RSI RSN-350-2N та захищені планшети Panasonic ToughPad для Збройних Сил України."
 direction: viyskova
 ---
 

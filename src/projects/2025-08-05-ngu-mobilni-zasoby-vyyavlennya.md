@@ -1,9 +1,7 @@
 ---
 title: "Оснащення підрозділів Національної гвардії України мобільними засобами радіаційного виявлення"
-shortTitle: "Мобільні засоби радіаційного виявлення для НГУ"
 date: 2025-08-05
 image: /assets/project-ngu-mobilni-zasoby-vyyavlennya.jpg
-excerpt: "Ранцеві радіаційні детектори RSI RSN-350-2N та захищені планшети Panasonic ToughPad для Національної гвардії України."
 direction: viyskova
 ---
 

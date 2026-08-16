@@ -1699,22 +1699,6 @@
       "note": "",
       "updated": "2026-08-07"
     },
-    "projects/avtopark-ngu-operatyvna-mobilnist.excerpt": {
-      "source": "П'ятнадцять позашляхових пікапів Mitsubishi L200 для Національної гвардії України з повним спорядженням.",
-      "sourceHash": "07565907e0eb",
-      "target": "Fifteen off-road Mitsubishi L200 pickups for the National Guard of Ukraine with full equipment.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/avtopark-ngu-operatyvna-mobilnist.shortTitle": {
-      "source": "Автопарк для оперативної мобільності НГУ",
-      "sourceHash": "82159deaa9cb",
-      "target": "Vehicle fleet for operational mobility of NSU",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
-    },
     "projects/avtopark-ngu-operatyvna-mobilnist.title": {
       "source": "Підсилення автопарку Національної гвардії України для підвищення оперативної мобільності підрозділів",
       "sourceHash": "a8306a93a340",
@@ -1730,22 +1714,6 @@
       "status": "machine",
       "note": "",
       "updated": "2026-08-07"
-    },
-    "projects/avtopark-reaguvannya-cyvilnyy-zahyst.excerpt": {
-      "source": "Вісім позашляхових пікапів Mitsubishi L200 для ДСНС України, чотири з них — з мобільними системами радіаційного виявлення.",
-      "sourceHash": "a8a732fc956a",
-      "target": "Eight off-road Mitsubishi L200 pickups for the State Emergency Service of Ukraine, four of them with mobile radiation detection systems.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/avtopark-reaguvannya-cyvilnyy-zahyst.shortTitle": {
-      "source": "Автопарк реагування на надзвичайні ситуації",
-      "sourceHash": "db45793b8019",
-      "target": "Emergency response fleet",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
     },
     "projects/avtopark-reaguvannya-cyvilnyy-zahyst.title": {
       "source": "Автопарк реагування на надзвичайні ситуації підрозділами цивільного захисту",
@@ -1763,22 +1731,6 @@
       "note": "",
       "updated": "2026-08-07"
     },
-    "projects/avtopark-zsu-operatyvna-mobilnist.excerpt": {
-      "source": "Десять позашляхових пікапів Mitsubishi L200 для Збройних Сил України з повним додатковим спорядженням.",
-      "sourceHash": "2ca78f2c4271",
-      "target": "Ten Mitsubishi L200 off-road pickups for the Armed Forces of Ukraine with full additional equipment.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/avtopark-zsu-operatyvna-mobilnist.shortTitle": {
-      "source": "Автопарк для оперативної мобільності ЗСУ",
-      "sourceHash": "bea8ebbb64d8",
-      "target": "Vehicle fleet for operational mobility of the Armed Forces",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
-    },
     "projects/avtopark-zsu-operatyvna-mobilnist.title": {
       "source": "Підсилення автопарку Збройних сил України для підвищення оперативної мобільності підрозділів",
       "sourceHash": "343d5a452606",
@@ -1794,22 +1746,6 @@
       "status": "machine",
       "note": "",
       "updated": "2026-08-07"
-    },
-    "projects/mobilni-kompleksy-radiaciyni-zagrozy.excerpt": {
-      "source": "Два спеціальні фургони Volkswagen Crafter для Гідрометеорологічної служби України, повністю укомплектовані обладнанням радіаційного контролю.",
-      "sourceHash": "828fd2e4129c",
-      "target": "Two special Volkswagen Crafter vans for the Hydrometeorological Service of Ukraine, fully equipped with radiation control equipment.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/mobilni-kompleksy-radiaciyni-zagrozy.shortTitle": {
-      "source": "Мобільні комплекси реагування на радіаційні загрози",
-      "sourceHash": "ccc60281dc78",
-      "target": "Mobile response complexes for radiation threats",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
     },
     "projects/mobilni-kompleksy-radiaciyni-zagrozy.title": {
       "source": "Мобільні комплекси раннього реагування на радіаційні загрози",
@@ -1827,22 +1763,6 @@
       "note": "",
       "updated": "2026-08-07"
     },
-    "projects/mobilnyy-monitoryng-radiaciynoyi-bezpeky.excerpt": {
-      "source": "Прилади виявлення та ідентифікації радіоізотопів для Гідрометеорологічної служби України в межах програми DICCE II.",
-      "sourceHash": "e772feab7abc",
-      "target": "Devices for the detection and identification of radioisotopes for the Hydrometeorological Service of Ukraine within the framework of the DICCE II program.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/mobilnyy-monitoryng-radiaciynoyi-bezpeky.shortTitle": {
-      "source": "Мобільний моніторинг радіаційної безпеки",
-      "sourceHash": "7bfca3a8df88",
-      "target": "Mobile radiation safety monitoring",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
-    },
     "projects/mobilnyy-monitoryng-radiaciynoyi-bezpeky.title": {
       "source": "Мобільний моніторинг радіаційної безпеки довкілля",
       "sourceHash": "c7b6e721b70e",
@@ -1858,22 +1778,6 @@
       "status": "machine",
       "note": "",
       "updated": "2026-08-07"
-    },
-    "projects/ngu-kompleksne-osnashchennya.excerpt": {
-      "source": "Широкий комплекс спорядження для Національної гвардії: від радіаційних детекторів до тепловізійних монокулярів і захищених ноутбуків.",
-      "sourceHash": "8de0afda5d65",
-      "target": "A wide range of equipment for the National Guard: from radiation detectors to thermal imaging monoculars and protected laptops.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/ngu-kompleksne-osnashchennya.shortTitle": {
-      "source": "Комплексне оснащення підрозділів НГУ",
-      "sourceHash": "af3b60be0054",
-      "target": "Complex equipment of NSU subdivisions",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
     },
     "projects/ngu-kompleksne-osnashchennya.title": {
       "source": "Комплексне матеріально-технічне та радіаційно-моніторингове оснащення підрозділів Національної гвардії України",
@@ -1891,22 +1795,6 @@
       "note": "",
       "updated": "2026-08-07"
     },
-    "projects/ngu-mobilni-zasoby-vyyavlennya.excerpt": {
-      "source": "Ранцеві радіаційні детектори RSI RSN-350-2N та захищені планшети Panasonic ToughPad для Національної гвардії України.",
-      "sourceHash": "1a913f7e09d1",
-      "target": "Backpack radiation detectors RSI RSN-350-2N and protected tablets Panasonic ToughPad for the National Guard of Ukraine.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/ngu-mobilni-zasoby-vyyavlennya.shortTitle": {
-      "source": "Мобільні засоби радіаційного виявлення для НГУ",
-      "sourceHash": "3d067f956c71",
-      "target": "Mobile means of radiation detection for NGU",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
-    },
     "projects/ngu-mobilni-zasoby-vyyavlennya.title": {
       "source": "Оснащення підрозділів Національної гвардії України мобільними засобами радіаційного виявлення",
       "sourceHash": "cb6b1a3cf1d7",
@@ -1922,22 +1810,6 @@
       "status": "machine",
       "note": "",
       "updated": "2026-08-07"
-    },
-    "projects/ngu-personalnyy-radiaciynyy-kontrol.excerpt": {
-      "source": "Персональні дозиметри Kromek та прилади ідентифікації радіоізотопів Ortec для Національної гвардії України.",
-      "sourceHash": "52a02258e6a0",
-      "target": "Kromek personal dosimeters and Ortec radioisotope identification devices for the National Guard of Ukraine.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/ngu-personalnyy-radiaciynyy-kontrol.shortTitle": {
-      "source": "Персональний радіаційний контроль для НГУ",
-      "sourceHash": "42cc5afb61e4",
-      "target": "Personal radiation control for NSU",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
     },
     "projects/ngu-personalnyy-radiaciynyy-kontrol.title": {
       "source": "Оснащення Національної гвардії України засобами персонального радіаційного контролю та ідентифікації ізотопів",
@@ -1955,22 +1827,6 @@
       "note": "",
       "updated": "2026-08-07"
     },
-    "projects/obladnannya-radiaciynyy-monitoryng-cz.excerpt": {
-      "source": "Персональні та ранцеві засоби радіаційного виявлення для Головного управління ДСНС України у Львівській області.",
-      "sourceHash": "1f2fc11b7e42",
-      "target": "Personal and knapsack means of radiation detection for the Main Directorate of the State Emergency Service of Ukraine in the Lviv region.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/obladnannya-radiaciynyy-monitoryng-cz.shortTitle": {
-      "source": "Обладнання радіаційного моніторингу для ДСНС",
-      "sourceHash": "f29077637ca9",
-      "target": "Radiation monitoring equipment for emergency services",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
-    },
     "projects/obladnannya-radiaciynyy-monitoryng-cz.title": {
       "source": "Обладнання для радіаційного моніторингу цивільного захисту",
       "sourceHash": "e158ded4b2d7",
@@ -1986,22 +1842,6 @@
       "status": "machine",
       "note": "",
       "updated": "2026-08-07"
-    },
-    "projects/radiaciynyy-monitoryng-cyvilnyy-zahyst.excerpt": {
-      "source": "Персональні засоби радіаційного та дозиметричного контролю для підрозділів ДСНС у Львівській області.",
-      "sourceHash": "a585debc4fae",
-      "target": "Personal means of radiation and dosimetric control for units of the State Emergency Service in the Lviv region.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/radiaciynyy-monitoryng-cyvilnyy-zahyst.shortTitle": {
-      "source": "Радіаційний моніторинг для цивільного захисту",
-      "sourceHash": "659864d722f6",
-      "target": "Radiation monitoring for civil protection",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
     },
     "projects/radiaciynyy-monitoryng-cyvilnyy-zahyst.title": {
       "source": "Радіаційний моніторинг для цивільного захисту",
@@ -2019,22 +1859,6 @@
       "note": "",
       "updated": "2026-08-07"
     },
-    "projects/zsu-indyvidualnyy-radiaciynyy-kontrol.excerpt": {
-      "source": "Персональні дозиметри Ludlum, детектори Kromek та прилади ідентифікації радіоізотопів Ortec для Збройних Сил України.",
-      "sourceHash": "61e83b6d2d75",
-      "target": "Ludlum personal dosimeters, Kromek detectors and Ortec radioisotope identification devices for the Armed Forces of Ukraine.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/zsu-indyvidualnyy-radiaciynyy-kontrol.shortTitle": {
-      "source": "Індивідуальний радіаційний контроль для ЗСУ",
-      "sourceHash": "3fc8608cf049",
-      "target": "Individual radiation control for the Armed Forces",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
-    },
     "projects/zsu-indyvidualnyy-radiaciynyy-kontrol.title": {
       "source": "Забезпечення особового складу Збройних сил України засобами індивідуального радіаційного контролю",
       "sourceHash": "b2aa4dec9e8b",
@@ -2050,22 +1874,6 @@
       "status": "machine",
       "note": "",
       "updated": "2026-08-07"
-    },
-    "projects/zsu-mobilni-ta-personalni-zasoby.excerpt": {
-      "source": "Комплексні засоби радіаційного моніторингу: ранцеві детектори, планшети, дозиметри та фріскери для Збройних Сил України.",
-      "sourceHash": "71b9f7b367c6",
-      "target": "Comprehensive means of radiation monitoring: knapsack detectors, tablets, dosimeters and friskers for the Armed Forces of Ukraine.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/zsu-mobilni-ta-personalni-zasoby.shortTitle": {
-      "source": "Мобільні та персональні засоби виявлення для ЗСУ",
-      "sourceHash": "c77826c67c9e",
-      "target": "Mobile and personal means of detection for the Armed Forces",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
     },
     "projects/zsu-mobilni-ta-personalni-zasoby.title": {
       "source": "Оснащення особового складу Збройних сил України як мобільними, так і персональними засобами радіаційного виявлення",
@@ -2083,22 +1891,6 @@
       "note": "",
       "updated": "2026-08-07"
     },
-    "projects/zsu-mobilni-zasoby-vyyavlennya.excerpt": {
-      "source": "Ранцеві радіаційні детектори RSI RSN-350-2N та захищені планшети Panasonic ToughPad для Збройних Сил України.",
-      "sourceHash": "b3284ae55e7a",
-      "target": "Backpack radiation detectors RSI RSN-350-2N and protected Panasonic ToughPad tablets for the Armed Forces of Ukraine.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/zsu-mobilni-zasoby-vyyavlennya.shortTitle": {
-      "source": "Мобільні засоби радіаційного виявлення для ЗСУ",
-      "sourceHash": "300d3888f3e6",
-      "target": "Mobile means of radiation detection for the Armed Forces",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
-    },
     "projects/zsu-mobilni-zasoby-vyyavlennya.title": {
       "source": "Оснащення Збройних сил України мобільними засобами радіаційного виявлення та супутньою обчислювальною технікою",
       "sourceHash": "dc116d0ec2da",
@@ -2114,22 +1906,6 @@
       "status": "machine",
       "note": "",
       "updated": "2026-08-07"
-    },
-    "projects/zsu-personalni-dozymetry.excerpt": {
-      "source": "Триста персональних дозиметрів-детекторів радіації Polimaster PM1703GNA-II для Збройних Сил України.",
-      "sourceHash": "e56046cbba48",
-      "target": "Three hundred Polimaster PM1703GNA-II personal radiation dosimeters for the Armed Forces of Ukraine.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/zsu-personalni-dozymetry.shortTitle": {
-      "source": "Персональні дозиметри для ЗСУ",
-      "sourceHash": "8bef909d39ff",
-      "target": "Personal dosimeters for the Armed Forces",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
     },
     "projects/zsu-personalni-dozymetry.title": {
       "source": "Оснащення Збройних сил України персональними дозиметрами радіаційного контролю",
@@ -2147,22 +1923,6 @@
       "note": "",
       "updated": "2026-08-07"
     },
-    "projects/zsu-zasoby-sposterezhennya.excerpt": {
-      "source": "Тепловізійні монокуляри FLIR Scout Pro із вбудованим літій-іонним акумулятором для Збройних Сил України.",
-      "sourceHash": "90d2bdfb9d84",
-      "target": "FLIR Scout Pro thermal imaging monoculars with a built-in lithium-ion battery for the Armed Forces of Ukraine.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/zsu-zasoby-sposterezhennya.shortTitle": {
-      "source": "Засоби спостереження та розвідки для ЗСУ",
-      "sourceHash": "096a5697b8a5",
-      "target": "Means of surveillance and intelligence for the Armed Forces",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
-    },
     "projects/zsu-zasoby-sposterezhennya.title": {
       "source": "Забезпечення особового складу Збройних сил України засобами спостереження та розвідки в умовах обмеженої видимості",
       "sourceHash": "c80078ce362c",
@@ -2178,22 +1938,6 @@
       "status": "machine",
       "note": "",
       "updated": "2026-08-07"
-    },
-    "projects/zsu-zasoby-zahystu-nebezpechni-materialy.excerpt": {
-      "source": "Засоби індивідуального захисту: респіратори, захисні щитки, тактичні черевики та хімічно стійкі комбінезони.",
-      "sourceHash": "5516e7cef208",
-      "target": "Personal protective equipment: respirators, protective shields, tactical boots and chemically resistant coveralls.",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-07"
-    },
-    "projects/zsu-zasoby-zahystu-nebezpechni-materialy.shortTitle": {
-      "source": "Засоби захисту для роботи з небезпечними матеріалами",
-      "sourceHash": "4257cb0d7c24",
-      "target": "Protective equipment for working with hazardous materials",
-      "status": "machine",
-      "note": "",
-      "updated": "2026-08-16"
     },
     "projects/zsu-zasoby-zahystu-nebezpechni-materialy.title": {
       "source": "Забезпечення особового складу Збройних сил України засобами захисту для роботи з небезпечними матеріалами та в польових умовах",

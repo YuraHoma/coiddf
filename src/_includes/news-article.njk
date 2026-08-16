@@ -22,6 +22,11 @@ layout: base.njk
           {{ pContent | safe }}
         </div>
       </article>
+      {#- Блок «Інші новини» має сенс лише коли є чим заповнити ряд:
+          при одній-двох новинах він показував порожню сітку з самою
+          кнопкою. Показуємо, коли крім поточної є щонайменше три. -#}
+      {%- set otherCount = (en.newsPosts if isEn else collections.news) | length %}
+      {%- if otherCount >= 4 %}
       <section class="section news-more">
         <div class="section-heading">
           <p class="eyebrow">{{ "News" if isEn else "Новини" }}</p>
@@ -41,3 +46,4 @@ layout: base.njk
           <a class="button button-outline" href="{{ '/en/novyny/' if isEn else '/novyny/' }}">{{ "All news ↗" if isEn else "Усі новини ↗" }}</a>
         </div>
       </section>
+      {%- endif %}

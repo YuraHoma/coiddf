@@ -924,7 +924,9 @@ main > article,
   border-radius: var(--radius-media);
   margin-bottom: clamp(24px, 3vw, 36px);
 }
-.news-article-body { max-width: 720px; }
+/* Колонка тексту вужча за обкладинку, тож без центрування праворуч
+   лишалася порожнеча на пів екрана. */
+.news-article-body { max-width: 720px; margin-inline: auto; }
 .news-article-body p { margin-bottom: 18px; color: var(--text); font-size: 17px; line-height: 1.7; }
 .news-article-lead { font-size: 20px; font-weight: 500; color: var(--ink); }
 
@@ -941,7 +943,7 @@ main > article,
   border-radius: var(--radius-media);
   margin-bottom: clamp(24px, 3vw, 36px);
 }
-.project-article-body { max-width: 720px; }
+.project-article-body { max-width: 720px; margin-inline: auto; }
 .project-article-body p { margin-bottom: 18px; color: var(--text); font-size: 17px; line-height: 1.7; }
 .project-article-body h2 { font-size: 24px; margin: 28px 0 12px; color: var(--ink); }
 .project-article-body h3 { font-size: 19px; margin: 22px 0 10px; color: var(--ink); }
@@ -1459,7 +1461,10 @@ main > article,
   display: grid;
   gap: 14px;
 }
-.project-list { grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); }
+/* auto-fill, а не auto-fit: auto-fit схлопує порожні колонки, тож
+   єдиний проєкт у напрямі розтягувався на всю ширину сітки й
+   виглядав інакше за решту. Тепер картка тримає свою колонку. */
+.project-list { grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); }
 .project-list > * {
   display: flex;
   flex-direction: column;

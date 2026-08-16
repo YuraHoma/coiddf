@@ -10,6 +10,7 @@
 const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
+const { autoExcerpt } = require("../text.js");
 const MarkdownIt = require("markdown-it");
 const { walk } = require("./lib");
 
@@ -79,28 +80,24 @@ function buildContent(translate) {
         const slug = slugOf(f);
         const key = `${kind}/${slug}`;
         const title = data.title ? translate(data.title, `${key}.title`) : data.title;
-        // Коротка назва для вкладки браузера й видачі пошуку: офіційні назви
-        // проєктів сягають 126 символів і починаються однаково, тож просте
-        // обрізання давало трьом сторінкам однаковий заголовок.
-        const shortTitle = data.shortTitle
-          ? translate(data.shortTitle, `${key}.shortTitle`)
-          : "";
-        const excerpt = data.excerpt ? translate(data.excerpt, `${key}.excerpt`) : data.excerpt;
         const body = content.trim();
-        const contentHtml = body ? md.render(translate(body, `${key}.body`)) : "";
+        const enBody = body ? translate(body, `${key}.body`) : "";
+        const contentHtml = enBody ? md.render(enBody) : "";
+        // Короткий опис окремо не перекладається: він і українською
+        // береться з початку тексту, тож англійський рахуємо з уже
+        // перекладеного тіла. Одним полем менше і в CMS, і перекладачу.
+        const excerpt = autoExcerpt(enBody);
         const url = `${urlPrefix}${slug}/`;
         return {
           url,
           slug,
           title,
-          shortTitle,
           excerpt,
           date: data.date,
           image: data.image,
           contentHtml,
           data: {
             title,
-            shortTitle,
             excerpt,
             date: data.date,
             image: data.image,

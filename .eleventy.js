@@ -82,6 +82,10 @@ module.exports = function (eleventyConfig) {
   const { ukSlug } = require("./scripts/slug.js");
   eleventyConfig.addFilter("ukslug", ukSlug);
 
+  // Заголовок для вкладки браузера й видачі пошуку (див. scripts/text.js).
+  const { seoTitle } = require("./scripts/text.js");
+  eleventyConfig.addFilter("seotitle", seoTitle);
+
   // YYYY-MM-DD для sitemap. Дата приходить або обʼєктом Date (сторінки
   // Eleventy), або рядком з en.js — обробляємо обидва випадки.
   eleventyConfig.addFilter("date10", (value) => {

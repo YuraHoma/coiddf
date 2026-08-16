@@ -1,9 +1,7 @@
 ---
 title: "Забезпечення особового складу Збройних сил України засобами індивідуального радіаційного контролю"
-shortTitle: "Індивідуальний радіаційний контроль для ЗСУ"
 date: 2026-03-15
 image: /assets/project-zsu-indyvidualnyy-radiaciynyy-kontrol.jpg
-excerpt: "Персональні дозиметри Ludlum, детектори Kromek та прилади ідентифікації радіоізотопів Ortec для Збройних Сил України."
 direction: viyskova
 ---
 

@@ -1,9 +1,7 @@
 ---
 title: "Мобільний моніторинг радіаційної безпеки довкілля"
-shortTitle: "Мобільний моніторинг радіаційної безпеки"
 date: 2025-09-25
 image: /assets/project-mobilnyy-monitoryng-radiaciynoyi-bezpeky.jpg
-excerpt: "Прилади виявлення та ідентифікації радіоізотопів для Гідрометеорологічної служби України в межах програми DICCE II."
 direction: energetyka
 ---
 
