@@ -23,9 +23,9 @@
       "source": "Співпраця та партнерство",
       "sourceHash": "bf01823c7eea",
       "target": "Cooperation and partnership",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/feedback.categories[2]": {
       "source": "Питання щодо проєкту або поставки",
@@ -39,33 +39,33 @@
       "source": "Кар'єрні можливості",
       "sourceHash": "5fe9f8bb4425",
       "target": "Career opportunities",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/feedback.categories[4]": {
       "source": "Скарга або повідомлення про порушення",
       "sourceHash": "a4b62d85288e",
       "target": "Complaint or report of misconduct",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/feedback.hero.eyebrow": {
       "source": "Контакти",
       "sourceHash": "18a85f67cf6a",
       "target": "Contacts",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/feedback.hero.heading": {
       "source": "Контакти та зворотній зв'язок",
       "sourceHash": "dcd9a1af7ece",
       "target": "Contacts and feedback",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/feedback.hero.lead": {
       "source": "Напишіть нам напряму або скористайтеся формою — оберіть категорію звернення, і лист прийде команді фонду.",
@@ -79,25 +79,25 @@
       "source": "Зв'язатися з нами",
       "sourceHash": "7a2811f83bd6",
       "target": "Contact us",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.cta.heading": {
       "source": "Долучайтеся до нас як партнер у реалізації гуманітарних та відбудовчих програм",
       "sourceHash": "9b24adeda038",
       "target": "Join us as a partner in the implementation of humanitarian and reconstruction programs",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/home.description": {
       "source": "Головна сторінка благодійного фонду.",
       "sourceHash": "36545ffde723",
       "target": "The main page of the charity fund.",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.focusAreas.eyebrow": {
       "source": "Напрями допомоги",
@@ -119,33 +119,33 @@
       "source": "Гуманітарне реагування на кризові ситуації населення",
       "sourceHash": "d04c7a75d50f",
       "target": "Humanitarian response to crisis situations of the population",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.focusAreas.items[1].title": {
       "source": "Цифрова трансформація",
       "sourceHash": "e24b8e92920f",
       "target": "Digital transformation",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.focusAreas.items[2].title": {
       "source": "Енергетика, радіаційний захист та екологічна безпека",
       "sourceHash": "d9c707c31561",
       "target": "Energy, radiation protection and environmental safety",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.focusAreas.items[3].title": {
       "source": "Підвищення військової готовності та національної безпеки",
       "sourceHash": "2f51c6576551",
       "target": "Increasing military readiness and national security",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.focusAreas.linkLabel": {
       "source": "Переглянути проєкти",
@@ -167,185 +167,185 @@
       "source": "Доставляємо допомогу туди, де вона потрібна, — в кожен регіон України",
       "sourceHash": "1b0d0f78bcba",
       "target": "We deliver aid to where it is needed — to every region of Ukraine",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[0].label": {
       "source": "Черкаська область",
       "sourceHash": "eac295eeb015",
       "target": "Cherkasy region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[10].label": {
       "source": "Львівська область",
       "sourceHash": "46398216f1d3",
       "target": "Lviv region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[11].label": {
       "source": "Миколаївська область",
       "sourceHash": "8b2d6ec6e149",
       "target": "Mykolayiv region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[12].label": {
       "source": "Одеська область",
       "sourceHash": "297895765a29",
       "target": "Odesa region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[13].label": {
       "source": "Полтавська область",
       "sourceHash": "b2632950f115",
       "target": "Poltava region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[14].label": {
       "source": "Рівненська область",
       "sourceHash": "282f2003868e",
       "target": "Rivne region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[15].label": {
       "source": "Сумська область",
       "sourceHash": "47aceefcacc9",
       "target": "Sumy region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[16].label": {
       "source": "Тернопільська область",
       "sourceHash": "e6cd3aa806de",
       "target": "Ternopil region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[17].label": {
       "source": "Вінницька область",
       "sourceHash": "a0d25918275b",
       "target": "Vinnytsia region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[18].label": {
       "source": "Волинська область",
       "sourceHash": "1398d6b4331d",
       "target": "Volyn region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[19].label": {
       "source": "Закарпатська область",
       "sourceHash": "c122303208e7",
       "target": "Transcarpathian region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[1].label": {
       "source": "Чернігівська область",
       "sourceHash": "97d2aeeb82a6",
       "target": "Chernihiv region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[20].label": {
       "source": "Житомирська область",
       "sourceHash": "58de20b40473",
       "target": "Zhytomyr region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[2].label": {
       "source": "Чернівецька область",
       "sourceHash": "950d98ed6512",
       "target": "Chernivtsi region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[3].label": {
       "source": "Дніпропетровська область",
       "sourceHash": "be53e5d323ec",
       "target": "Dnipropetrovsk region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[4].label": {
       "source": "Івано-Франківська область",
       "sourceHash": "28a5333b1e04",
       "target": "Ivano-Frankivsk region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[5].label": {
       "source": "Харківська область",
       "sourceHash": "efd20c69d725",
       "target": "Kharkiv region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[6].label": {
       "source": "Херсонська область",
       "sourceHash": "4936ec980f81",
       "target": "Kherson region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[7].label": {
       "source": "Хмельницька область",
       "sourceHash": "e7b891fcdf83",
       "target": "Khmelnytskyi region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[8].label": {
       "source": "Кіровоградська область",
       "sourceHash": "6e4e3cb2ad9b",
       "target": "Kirovohrad region",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.markers[9].label": {
       "source": "Київ",
       "sourceHash": "4ec43ff9c420",
       "target": "Kyiv",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.hero.headline": {
       "source": "Благодійна організація<br>«Фонд розвитку міжнародної співпраці»",
       "sourceHash": "b788a379347d",
       "target": "Charity Organization<br>“International Cooperation Development Fund”",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.hero.imageAlt": {
       "source": "Волонтерка передає продуктовий набір літній жінці та дитині",
@@ -367,17 +367,17 @@
       "source": "Зв'язатися з нами",
       "sourceHash": "7a2811f83bd6",
       "target": "Contact us",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.hero.secondaryLabel": {
       "source": "Наші проєкти",
       "sourceHash": "35c6f1eba6b2",
       "target": "Our projects",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.newsHeading": {
       "source": "Останні оновлення фонду",
@@ -391,17 +391,17 @@
       "source": "Діємо спільно з партнерами в Україні та світі — заради майбутнього",
       "sourceHash": "116f5a98f5a8",
       "target": "We act together with partners in Ukraine and the world — for the sake of the future",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/home.process.ctaLabel": {
       "source": "Наші проєкти",
       "sourceHash": "35c6f1eba6b2",
       "target": "Our projects",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.process.eyebrow": {
       "source": "Як ми працюємо",
@@ -415,9 +415,9 @@
       "source": "Від партнерської угоди до допомоги на місці",
       "sourceHash": "944120a32c99",
       "target": "From partnership agreement to on-site assistance",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/home.process.steps[0].text": {
       "source": "Фонд співпрацює з державними, міжнародними та приватними інституціями, реалізуючи спільні програми — від ідеї до впровадженого рішення.",
@@ -431,25 +431,25 @@
       "source": "Партнерство та програми",
       "sourceHash": "32d02cbc6f68",
       "target": "Partnerships and programs",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/home.process.steps[1].text": {
       "source": "Забезпечуємо відповідність законодавству України та політикам міжнародних партнерів на кожному етапі — від постачання ресурсів до провадження проєктів.",
       "sourceHash": "3d0ac2a9ee1e",
       "target": "We ensure compliance with the legislation of Ukraine and the policies of international partners at every stage — from the supply of resources to the implementation of projects.",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/home.process.steps[1].title": {
       "source": "Операційний та юридичний супровід",
       "sourceHash": "c5783259ce3f",
       "target": "Operational and legal support",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/home.process.steps[2].text": {
       "source": "Перевіряємо відповідність міжнародним стандартам гуманітарних місій, контролюємо логістику й поставки та проводимо інспекцію якості товарів і виконання програм.",
@@ -471,41 +471,41 @@
       "source": "Передаємо результати — обладнання, ресурси та реалізовані проєкти — отримувачам і ведемо повний облік та звітність перед міжнародними партнерами.",
       "sourceHash": "dd6185dc4439",
       "target": "We transfer the results—equipment, resources, and implemented projects—to the recipients and keep full accounting and reporting to international partners.",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/home.process.steps[3].title": {
       "source": "Передача та звітність",
       "sourceHash": "88b0a322b870",
       "target": "Transfer and reporting",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.title": {
       "source": "Фонд розвитку міжнародної співпраці | Гуманітарна допомога",
       "sourceHash": "7e1dfd97a172",
       "target": "International Cooperation Development Fund Humanitarian aid",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/legal.hero.eyebrow": {
       "source": "Правова інформація",
       "sourceHash": "6df316c2895e",
       "target": "Legal information",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/legal.hero.heading": {
       "source": "Реєстраційні дані та реквізити організації.",
       "sourceHash": "92e8a8f749f1",
       "target": "Registration data and details of the organization.",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/legal.hero.lead": {
       "source": "Офіційна юридична інформація благодійної організації для партнерів, донорів та контролюючих органів.",
@@ -527,41 +527,41 @@
       "source": "Новини",
       "sourceHash": "807eb4d2438b",
       "target": "News",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/novyny.hero.heading": {
       "source": "Останні новини та оновлення фонду",
       "sourceHash": "1aaaedb8f3b9",
       "target": "Latest fund news and updates",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/novyny.hero.lead": {
       "source": "Реагування, видача допомоги та історії громад, яким ми допомагаємо.",
       "sourceHash": "b7ad69cc4758",
       "target": "Response, delivery and stories of the communities we help.",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/partners.hero.eyebrow": {
       "source": "Партнери",
       "sourceHash": "f61eb11e6af3",
       "target": "Partners",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/partners.hero.heading": {
       "source": "Працюємо разом з українськими та міжнародними партнерами.",
       "sourceHash": "bb0b39d2eb53",
       "target": "We work together with Ukrainian and international partners.",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/partners.hero.lead": {
       "source": "Фонд співпрацює виключно з міжнародними партнерами через бюджетні програми гуманітарної допомоги — без приватних зборів коштів.",
@@ -575,57 +575,57 @@
       "source": "Міністерство соціальної політики, сім'ї та єдності України",
       "sourceHash": "59685d5336f2",
       "target": "Ministry of Social Policy, Family and Unity of Ukraine",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/partners.items[11].name": {
       "source": "Державна прикордонна служба України",
       "sourceHash": "c56d5b07af13",
       "target": "State Border Service of Ukraine",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/partners.items[12].name": {
       "source": "Служба безпеки України",
       "sourceHash": "0f775deb6e0b",
       "target": "Security Service of Ukraine",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/partners.items[1].name": {
       "source": "Міністерство з відновлення, інфраструктури та транспорту України",
       "sourceHash": "a03cab76c37d",
       "target": "Ministry of Reconstruction, Infrastructure and Transport of Ukraine",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/partners.items[2].name": {
       "source": "Міністерство енергетики України",
       "sourceHash": "73dae3c448f9",
       "target": "Ministry of Energy of Ukraine",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/partners.items[3].name": {
       "source": "Міністерство економіки та довкілля України",
       "sourceHash": "06fae0c50ae4",
       "target": "Ministry of Economy and Environment of Ukraine",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/partners.items[4].name": {
       "source": "Асоціація прифронтових міст та громад",
       "sourceHash": "c0d2f774c801",
       "target": "Association of Frontline Cities and Communities",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/partners.items[5].name": {
       "source": "Український гідрометеорологічний центр",
@@ -639,33 +639,33 @@
       "source": "Державна служба України з надзвичайних ситуацій",
       "sourceHash": "300ec3c2b17a",
       "target": "State Service of Ukraine for Emergency Situations",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/partners.items[7].name": {
       "source": "Міністерство оборони України",
       "sourceHash": "e211c005b682",
       "target": "Ministry of Defense of Ukraine",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/partners.items[8].name": {
       "source": "Міністерство внутрішніх справ України",
       "sourceHash": "0b3436907c8c",
       "target": "Ministry of Internal Affairs of Ukraine",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/policy.hero.eyebrow": {
       "source": "Політика",
       "sourceHash": "c87ca3011872",
       "target": "Policy",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/policy.hero.heading": {
       "source": "Політика конфіденційності та обробки звернень.",
@@ -703,9 +703,9 @@
       "source": "Які дані ми збираємо",
       "sourceHash": "ff6ce6344f54",
       "target": "What data we collect",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/policy.sections[1].body": {
       "source": "Отримані дані використовуються виключно для розгляду звернення, надання відповіді та, за потреби, для внутрішньої звітності перед партнерами й донорами фонду щодо роботи з надходженнями скарг і запитів.",
@@ -719,41 +719,41 @@
       "source": "Для чого ми використовуємо дані",
       "sourceHash": "1db7e1cc8017",
       "target": "What we use the data for",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/policy.sections[2].body": {
       "source": "Дані не передаються третім особам, окрім випадків, коли це прямо потрібно для обробки звернення (наприклад, партнерській організації, відповідальній за конкретний напрям) або вимагається законодавством України.",
       "sourceHash": "41d46d6b1d7d",
       "target": "The data is not transferred to third parties, except when it is directly required to process the request (for example, to a partner organization responsible for a specific direction) or is required by the legislation of Ukraine.",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/policy.sections[2].title": {
       "source": "Кому передаються дані",
       "sourceHash": "4ff45b69f334",
       "target": "To whom the data is transferred",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/policy.sections[3].body": {
       "source": "Звернення та пов'язані з ними персональні дані зберігаються протягом строку, необхідного для розгляду звернення та ведення звітності, після чого видаляються або знеособлюються.",
       "sourceHash": "dc55327b8d0e",
       "target": "Appeals and personal data related to them are stored for the period necessary for consideration of the appeal and reporting, after which they are deleted or depersonalized.",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/policy.sections[3].title": {
       "source": "Термін зберігання",
       "sourceHash": "7e9821a11d22",
       "target": "Storage period",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/policy.sections[4].body": {
       "source": "Особа, яка звернулася до фонду, має право запитати інформацію про свої дані, вимагати їх виправлення або видалення, звернувшись на контактну електронну адресу фонду.",
@@ -767,33 +767,33 @@
       "source": "Права особи",
       "sourceHash": "37212258a1f8",
       "target": "Personal rights",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.approach.eyebrow": {
       "source": "Наш підхід",
       "sourceHash": "316debf4045a",
       "target": "Our approach",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.approach.heading": {
       "source": "Як ми працюємо з партнерами",
       "sourceHash": "cac228b87352",
       "target": "How we work with partners",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.approach.items[0].text": {
       "source": "Беремо на себе повну реалізацію проєктних завдань і рішень — від юридичного супроводу ланцюгів постачання до дотримання встановлених строків. Працюємо відповідно до етичних стандартів і політик міжнародних партнерів, забезпечуючи прозору фінансову звітність та систему раннього виявлення ризиків.",
       "sourceHash": "efd3d2927ec8",
       "target": "We undertake the full implementation of project tasks and solutions — from legal support of supply chains to compliance with established deadlines. We work in accordance with the ethical standards and policies of international partners, providing transparent financial reporting and a system for early detection of risks.",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.approach.items[0].title": {
       "source": "Виконуємо, а не лише координуємо",
@@ -807,9 +807,9 @@
       "source": "Поєднуємо правові процедури та механізми України з процесами й політиками міжнародних партнерів, створюючи єдине операційне поле для ефективної співпраці.",
       "sourceHash": "952299168913",
       "target": "We combine the legal procedures and mechanisms of Ukraine with the processes and policies of international partners, creating a single operational field for effective cooperation.",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.approach.items[1].title": {
       "source": "Інтегруємо системи",
@@ -823,9 +823,9 @@
       "source": "Забезпечуємо узгоджувальні процедури та постійну комунікацію з державними органами України, донорами, бенефіціарами та іншими стейкхолдерами.",
       "sourceHash": "aa28449e2647",
       "target": "We provide coordination procedures and constant communication with state bodies of Ukraine, donors, beneficiaries and other stakeholders.",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.approach.items[2].title": {
       "source": "Будуємо діалог",
@@ -839,9 +839,9 @@
       "source": "Наші нагороди",
       "sourceHash": "8c63e453e85e",
       "target": "Our awards",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.awards.items[0].title": {
       "source": "Подяка від Збройних сил України (Міністерство оборони України, військова частина A0807) — за передачу 10 пікапів Mitsubishi L200, обладнання радіаційного контролю та тепловізійних монокулярів.",
@@ -879,17 +879,17 @@
       "source": "Інституційна спроможність",
       "sourceHash": "56d739df8134",
       "target": "Institutional capacity",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.heading": {
       "source": "Стійкість організації, яка дозволяє працювати в умовах змін",
       "sourceHash": "c2712c00559d",
       "target": "Stability of the organization, which allows working in conditions of change",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.intro": {
       "source": "Благодійна організація «Фонд розвитку міжнародної співпраці» послідовно зміцнює власну інституційну стійкість, щоб ефективно виконувати свою місію в умовах швидких змін, кризових ситуацій та зростаючих потреб людей і інституцій, яким ми допомагаємо.",
@@ -903,25 +903,25 @@
       "source": "що забезпечують прозорість і передбачуваність роботи;",
       "sourceHash": "b2d1ed37c0e2",
       "target": "which ensure transparency and predictability of work;",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[0].title": {
       "source": "Управлінські та операційні процеси,",
       "sourceHash": "a2e9a6616197",
       "target": "Management and operational processes,",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[1].text": {
       "source": "яке дозволяє нам діяти проактивно, а не реактивно;",
       "sourceHash": "e579a3376bb8",
       "target": "which allows us to act proactively rather than reactively;",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[1].title": {
       "source": "Стратегічне планування,",
@@ -935,25 +935,25 @@
       "source": "що підсилюють ефективність і масштабованість програм;",
       "sourceHash": "ddcf784926d5",
       "target": "that enhance the effectiveness and scalability of programs;",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[2].title": {
       "source": "Цифрові інструменти та технологічні рішення,",
       "sourceHash": "7653b78e687c",
       "target": "Digital tools and technological solutions,",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[3].text": {
       "source": "які забезпечують глибоке розуміння потреб та впливу наших інтервенцій;",
       "sourceHash": "64781e74485e",
       "target": "that provide a deep understanding of the needs and impact of our interventions;",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[3].title": {
       "source": "Аналітичні системи,",
@@ -967,57 +967,57 @@
       "source": "спрямовані на диверсифікацію ресурсів і довгострокову сталість;",
       "sourceHash": "539477ccb3aa",
       "target": "aimed at diversification of resources and long-term sustainability;",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[4].title": {
       "source": "Фандрейзингові підходи,",
       "sourceHash": "37b8de951672",
       "target": "Fundraising approaches,",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[5].text": {
       "source": "побудовану на прозорості, відповідальності та ефективному управлінні;",
       "sourceHash": "ec622f9db29e",
       "target": "built on transparency, responsibility and effective management;",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[5].title": {
       "source": "Фінансову стійкість,",
       "sourceHash": "43820e7653f5",
       "target": "Financial stability,",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[6].text": {
       "source": "що формують культуру взаємодії, довіри та спільної відповідальності;",
       "sourceHash": "16fa846513cc",
       "target": "that form a culture of interaction, trust and joint responsibility;",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[6].title": {
       "source": "Внутрішні комунікації,",
       "sourceHash": "2d171d1ddb89",
       "target": "Internal communications,",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[7].text": {
       "source": "інвестуючи у професійне зростання, добробут і лідерські компетенції.",
       "sourceHash": "d78daa6db951",
       "target": "investing in professional growth, well-being and leadership competencies.",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[7].title": {
       "source": "Розвиток команди,",
@@ -1031,9 +1031,9 @@
       "source": "Ми системно розвиваємо ключові елементи організаційної спроможності:",
       "sourceHash": "04a6bc35d061",
       "target": "We systematically develop key elements of organizational capacity:",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.note": {
       "source": "Завдяки цьому ми залишаємося гнучкими, адаптивними та здатними стабільно підвищувати якість, масштаб і сталість нашої роботи — незалежно від зовнішніх викликів.",
@@ -1047,9 +1047,9 @@
       "source": "Про нас",
       "sourceHash": "53b09cdc64cc",
       "target": "About us",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.hero.heading": {
       "source": "Надійний міжнародний партнер із супроводу гуманітарної та матеріально-технічної допомоги Україні",
@@ -1063,9 +1063,9 @@
       "source": "Україна на карті світу в оточенні прапорів країн-партнерів",
       "sourceHash": "0584a5c83dd0",
       "target": "Ukraine on the world map surrounded by the flags of partner countries",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.hero.lead": {
       "source": "Фонд поєднує функції операційного, юридичного супроводу та безпосереднього виконавця — і забезпечує результат навіть у кризових умовах",
@@ -1087,9 +1087,9 @@
       "source": "Наша стратегія",
       "sourceHash": "0faf64ec54f4",
       "target": "Our strategy",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.mission[1].body": {
       "source": "Об'єднати світовий потенціал — силу, економіку, технології та інновації — задля створення стійкої моделі миру, безпеки та розвитку України.",
@@ -1103,25 +1103,25 @@
       "source": "Наша місія",
       "sourceHash": "f0dce56c2f54",
       "target": "Our mission",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.principles.eyebrow": {
       "source": "Принципи",
       "sourceHash": "06d31c02aba7",
       "target": "Principles",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.principles.heading": {
       "source": "Основоположні принципи діяльності організації",
       "sourceHash": "db588e56c2ab",
       "target": "Basic principles of the organization",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.principles.items[0].text": {
       "source": "Організація проявляє повагу до честі та гідності людини, до людської особистості. Мета гуманітарної діяльності: захистити життя та здоров'я людини та забезпечити її право на повагу.",
@@ -1135,9 +1135,9 @@
       "source": "Гуманність",
       "sourceHash": "3bda326fc05f",
       "target": "Humanity",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.principles.items[1].text": {
       "source": "Організація не може приймати будь-яку сторону у збройних конфліктах і вступати в суперечки політичного, расового, релігійного або ідеологічного характеру.",
@@ -1151,9 +1151,9 @@
       "source": "Нейтральність",
       "sourceHash": "c46f9742622b",
       "target": "Neutrality",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.principles.items[2].text": {
       "source": "Організація не робить будь-якого розрізнення за расовою, релігійною, класовою ознакою або політичними переконаннями. Ми лише намагаємося полегшувати страждання людей і в першу чергу тих, хто найбільше цього потребує.",
@@ -1167,9 +1167,9 @@
       "source": "Неупередженість",
       "sourceHash": "a881b8f7dbac",
       "target": "Impartiality",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.principles.items[3].text": {
       "source": "Цілі організації є незалежними від політичних, економічних, військових або інших цілей осіб та організацій, пов'язаних з територією, де здійснюється гуманітарна діяльність.",
@@ -1183,17 +1183,17 @@
       "source": "Незалежність",
       "sourceHash": "206a8e2eb2a9",
       "target": "Independence",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.storyHighlight": {
       "source": "Ми не лише супроводжуємо процеси — ми виконуємо проєкти.",
       "sourceHash": "b10ba24882a4",
       "target": "We not only support processes - we implement projects.",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.story[0]": {
       "source": "У 2025 році Благодійна організація «Фонд розвитку міжнародної співпраці» розпочала свою діяльність як неприбуткова організація, що у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM здійснює супроводження та передачі гуманітарної допомоги в рамках урядової програми між Україною та США.",
@@ -1215,65 +1215,65 @@
       "source": "Ми поєднуємо експертизу виконавця з надійністю партнера, забезпечуючи стабільність, прозорість і відповідність міжнародним стандартам — і створюючи ефективну модель співпраці між Україною та світом.",
       "sourceHash": "3a90a9097ad4",
       "target": "We combine the expertise of the executor with the reliability of the partner, ensuring stability, transparency and compliance with international standards — and creating an effective model of cooperation between Ukraine and the world.",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/proyekty.detailsLabel": {
       "source": "Детальніше",
       "sourceHash": "86af19a125a4",
       "target": "More details",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/proyekty.directions.items[0].title": {
       "source": "Гуманітарне реагування на кризові ситуації населення",
       "sourceHash": "d04c7a75d50f",
       "target": "Humanitarian response to crisis situations of the population",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/proyekty.directions.items[1].title": {
       "source": "Цифрова трансформація",
       "sourceHash": "e24b8e92920f",
       "target": "Digital transformation",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/proyekty.directions.items[2].title": {
       "source": "Енергетика, радіаційний захист та екологічна безпека",
       "sourceHash": "d9c707c31561",
       "target": "Energy, radiation protection and environmental safety",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/proyekty.directions.items[3].title": {
       "source": "Підвищення військової готовності та національної безпеки",
       "sourceHash": "2f51c6576551",
       "target": "Increasing military readiness and national security",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/proyekty.hero.eyebrow": {
       "source": "Проєкти",
       "sourceHash": "3fc35de5509d",
       "target": "Projects",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/proyekty.hero.heading": {
       "source": "Наші проєкти",
       "sourceHash": "35c6f1eba6b2",
       "target": "Our projects",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/proyekty.hero.lead": {
       "source": "Фонд працює за чотирма напрямами: гуманітарне реагування на кризові ситуації населення; цифрова трансформація; енергетика, радіаційний захист та екологічна безпека; підвищення військової готовності та національної безпеки.",
@@ -1287,9 +1287,9 @@
       "source": "Звітність",
       "sourceHash": "484ef1ba8908",
       "target": "Reporting",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/reports.hero.heading": {
       "source": "Відкритість і підзвітність є частиною довіри.",
@@ -1319,17 +1319,17 @@
       "source": "Зрозуміло",
       "sourceHash": "10971c82698e",
       "target": "Got it",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.cookie.linkLabel": {
       "source": "Політика конфіденційності",
       "sourceHash": "dfeaaa3c7d5f",
       "target": "Privacy Policy",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.cookie.text": {
       "source": "Ми використовуємо файли cookie, щоб сайт працював коректно й запамʼятовував ваш вибір мови.",
@@ -1343,129 +1343,129 @@
       "source": "Про нас",
       "sourceHash": "53b09cdc64cc",
       "target": "About us",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.footerNavCol1[1].label": {
       "source": "Наша команда",
       "sourceHash": "a9ef903f87b6",
       "target": "Our team",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.footerNavCol1[2].label": {
       "source": "Проєкти",
       "sourceHash": "3fc35de5509d",
       "target": "Projects",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.footerNavCol1[3].label": {
       "source": "Наші партнери",
       "sourceHash": "800a820b5b86",
       "target": "Our partners",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.footerNavCol2[0].label": {
       "source": "Річні звіти",
       "sourceHash": "b39a5a918889",
       "target": "Annual reports",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.footerNavCol2[1].label": {
       "source": "Юридична інформація та політики",
       "sourceHash": "d1571361b1d0",
       "target": "Legal information and policies",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.footerNavCol2[2].label": {
       "source": "Новини",
       "sourceHash": "807eb4d2438b",
       "target": "News",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.footerNavCol2[3].label": {
       "source": "Контакти",
       "sourceHash": "18a85f67cf6a",
       "target": "Contacts",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.nav[0].label": {
       "source": "Головна",
       "sourceHash": "df5c53bd0a07",
       "target": "Home",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.nav[1].label": {
       "source": "Про нас",
       "sourceHash": "53b09cdc64cc",
       "target": "About us",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.nav[2].label": {
       "source": "Наша команда",
       "sourceHash": "a9ef903f87b6",
       "target": "Our team",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.nav[3].label": {
       "source": "Проєкти",
       "sourceHash": "3fc35de5509d",
       "target": "Projects",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.nav[4].label": {
       "source": "Наші партнери",
       "sourceHash": "800a820b5b86",
       "target": "Our partners",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.nav[5].label": {
       "source": "Річні звіти",
       "sourceHash": "b39a5a918889",
       "target": "Annual reports",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.nav[6].label": {
       "source": "Юридична інформація та політики",
       "sourceHash": "d1571361b1d0",
       "target": "Legal information and policies",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.nav[7].label": {
       "source": "Контакти",
       "sourceHash": "18a85f67cf6a",
       "target": "Contacts",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.orgFull": {
       "source": "Благодійна організація «Фонд розвитку міжнародної співпраці»",
@@ -1479,25 +1479,25 @@
       "source": "Благодійна організація",
       "sourceHash": "a142a26131ac",
       "target": "Charity Organization",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.orgLine2": {
       "source": "Фонд розвитку міжнародної співпраці",
       "sourceHash": "caff9c75ce85",
       "target": "International Cooperation Development Fund",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.hero.eyebrow": {
       "source": "Наша команда",
       "sourceHash": "a9ef903f87b6",
       "target": "Our team",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.hero.heading": {
       "source": "Єдина команда — від засновників до волонтерів — заради швидкої й прозорої допомоги",
@@ -1519,17 +1519,17 @@
       "source": "Багаторічний номінант і лауреат міжнародних нагород за професійні досягнення у сфері реалізації масштабних міжнародних проєктів, зокрема відзнаки «Top Performer» від Washington Group International, United Research Services, AECOM.",
       "sourceHash": "3d648ecc85e0",
       "target": "Long-term nominee and laureate of international awards for professional achievements in the field of implementation of large-scale international projects, including \"Top Performer\" awards from Washington Group International, United Research Services, AECOM.",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[0].name": {
       "source": "Георгій Спасібо",
       "sourceHash": "02675cd5ae0d",
       "target": "Heorhii Spasibo",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[0].role": {
       "source": "Засновник фонду, керівник напряму міжнародних відносин та партнерства",
@@ -1543,17 +1543,17 @@
       "source": "Кандидатка юридичних наук (адміністративне право та процес; фінансове право; інформаційне право). Членкиня Асоціації правників України (комітет з міжнародного права, комітет з податкового та митного права).",
       "sourceHash": "8adc3c730cad",
       "target": "Candidate of legal sciences (administrative law and process; financial law; information law). Member of the Association of Lawyers of Ukraine (committee on international law, committee on tax and customs law).",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[1].name": {
       "source": "Марина Шепель",
       "sourceHash": "9094dd5fe40b",
       "target": "Maryna Shepel",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[1].role": {
       "source": "Засновниця та директорка фонду",
@@ -1567,33 +1567,33 @@
       "source": "Євгеній Кулинко",
       "sourceHash": "39e2e3ca93ef",
       "target": "Yevhenii Kulynko",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[2].role": {
       "source": "Технічний керівник",
       "sourceHash": "efc6ce462145",
       "target": "Technical manager",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[3].name": {
       "source": "Аліна Соколова",
       "sourceHash": "c1ca7fae6828",
       "target": "Alina Sokolova",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[3].role": {
       "source": "Бухгалтер",
       "sourceHash": "1880fffb1269",
       "target": "Accountant",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[4].name": {
       "source": "Ганна Кришмару",
@@ -1615,17 +1615,17 @@
       "source": "Євгенія Скакун",
       "sourceHash": "31a65701c898",
       "target": "Yevheniia Skakun",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[5].role": {
       "source": "Адміністраторка",
       "sourceHash": "f55cad19a7ca",
       "target": "Administrator",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[6].name": {
       "source": "Сергій Федєчкін",
@@ -1647,25 +1647,25 @@
       "source": "Ігор Івахненко",
       "sourceHash": "aba6f97fd031",
       "target": "Ihor Ivakhnenko",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[7].role": {
       "source": "Перекладач",
       "sourceHash": "39f63f4edfed",
       "target": "Translator",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[8].name": {
       "source": "Дмитро Хряпа",
       "sourceHash": "b966ebb9c3a1",
       "target": "Dmytro Hryapa",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[8].role": {
       "source": "Інспектор з вхідного контролю якості товарів",
@@ -1679,9 +1679,9 @@
       "source": "Костянтин Шишов",
       "sourceHash": "335127f5e798",
       "target": "Konstantin Shishov",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[9].role": {
       "source": "Інспектор з вхідного контролю якості товарів",
@@ -1751,9 +1751,9 @@
       "source": "Мобільні комплекси раннього реагування на радіаційні загрози",
       "sourceHash": "a48cbb7dbabb",
       "target": "Mobile complexes of early response to radiation threats",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/mobilnyy-monitoryng-radiaciynoyi-bezpeky.body": {
       "source": "## Опис проєкту\n\nПостачання обладнання радіаційного моніторингу для Гідрометеорологічної служби України (програма DICCE II) — прилади для виявлення та ідентифікації радіоізотопів (детектори Ortec-Ametek Detective X, Ortec RADEAGLET-R-2SG) з комплектуючими (зарядні пристрої, акумулятори, кобури для перенесення).\n\n## Мета проєкту\n\nПосилення спроможності Українського гідрометеорологічного центру та гідрометеорологічних організацій ДСНС України з радіаційного контролю та ідентифікації ізотопів.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 20 (ГМЦ), Палета 25.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 350 790,24 дол. США**",
@@ -1847,9 +1847,9 @@
       "source": "Радіаційний моніторинг для цивільного захисту",
       "sourceHash": "659864d722f6",
       "target": "Radiation monitoring for civil protection",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/zsu-indyvidualnyy-radiaciynyy-kontrol.body": {
       "source": "## Опис проєкту\n\nПостачання персональних дозиметрів для Збройних Сил України: дозиметри Ludlum Friskers 26-1 з лужними батареями, запасні лужні батареї АА, персональні детектори Kromek із перезаряджуваними літій-полімерними акумуляторами, прилади ідентифікації радіоізотопів Ortec RADEAGLET-R-2SG із запасними літій-іонними акумуляторами та транспортувальними кобурами.\n\n## Мета проєкту\n\nЗабезпечення особового складу Збройних сил України засобами індивідуального радіаційного контролю.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 18 (ЗСУ), Палета 73-74; Палета 81.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 400 073,72 дол. США**",
@@ -1911,9 +1911,9 @@
       "source": "Оснащення Збройних сил України персональними дозиметрами радіаційного контролю",
       "sourceHash": "b5a13e2c30fe",
       "target": "Equipping the Armed Forces of Ukraine with personal radiation control dosimeters",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/zsu-zasoby-sposterezhennya.body": {
       "source": "## Опис проєкту\n\nПостачання тепловізійних монокулярів FLIR Scout Pro із вбудованим літій-іонним акумулятором для Збройних Сил України.\n\n## Мета проєкту\n\nЗабезпечення особового складу Збройних сил України засобами спостереження та розвідки в умовах обмеженої видимості.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 18 (ЗСУ), Палета 79, Палета 83.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 53 014,50 дол. США**",
@@ -1943,9 +1943,9 @@
       "source": "Забезпечення особового складу Збройних сил України засобами захисту для роботи з небезпечними матеріалами та в польових умовах",
       "sourceHash": "07eb0257d12a",
       "target": "Providing the personnel of the Armed Forces of Ukraine with protective equipment for working with hazardous materials and in field conditions",
-      "status": "machine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     }
   }
 }
