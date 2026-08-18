@@ -14,10 +14,10 @@
     "data/feedback.categories[0]": {
       "source": "Загальний запит",
       "sourceHash": "c2f79852adf2",
-      "target": "General enquiry",
-      "status": "machine",
+      "target": "General Inquiry",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/feedback.categories[1]": {
       "source": "Співпраця та партнерство",
@@ -30,10 +30,10 @@
     "data/feedback.categories[2]": {
       "source": "Питання щодо проєкту або поставки",
       "sourceHash": "d3a5cb4c50d7",
-      "target": "Project or delivery enquiry",
-      "status": "machine",
+      "target": "Project or shipment inquiry",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/feedback.categories[3]": {
       "source": "Кар'єрні можливості",
@@ -70,10 +70,10 @@
     "data/feedback.hero.lead": {
       "source": "Напишіть нам напряму або скористайтеся формою — оберіть категорію звернення, і лист прийде команді фонду.",
       "sourceHash": "77254a2287ab",
-      "target": "Write to us directly or use the form - choose a category of appeal, and the letter will come to the fund team.",
-      "status": "machine",
+      "target": "Contact us directly or use the form—select the category of your inquiry, and your message will be sent to the Fund's team.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.cta.buttonLabel": {
       "source": "Зв'язатися з нами",
@@ -102,18 +102,18 @@
     "data/home.focusAreas.eyebrow": {
       "source": "Напрями допомоги",
       "sourceHash": "4b59ba64302f",
-      "target": "Directions for help",
-      "status": "machine",
+      "target": "Areas of Assistance",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.focusAreas.heading": {
       "source": "Координуємо підтримку там, де потрібні швидкі й конкретні рішення",
       "sourceHash": "95313fdb26a6",
-      "target": "We coordinate support where quick and concrete solutions are needed",
-      "status": "machine",
+      "target": "We coordinate support where prompt and effective solutions are needed",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/home.focusAreas.items[0].title": {
       "source": "Гуманітарне реагування на кризові ситуації населення",
@@ -150,18 +150,18 @@
     "data/home.focusAreas.linkLabel": {
       "source": "Переглянути проєкти",
       "sourceHash": "395f25c45b39",
-      "target": "View projects",
-      "status": "machine",
+      "target": "Browse projects",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.eyebrow": {
       "source": "Географія роботи",
       "sourceHash": "8727ccc2eaf8",
-      "target": "Geography of work",
-      "status": "machine",
+      "target": "Work Location",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.geography.heading": {
       "source": "Доставляємо допомогу туди, де вона потрібна, — в кожен регіон України",
@@ -350,18 +350,18 @@
     "data/home.hero.imageAlt": {
       "source": "Волонтерка передає продуктовий набір літній жінці та дитині",
       "sourceHash": "6b3ee215556a",
-      "target": "A volunteer hands over a grocery set to an elderly woman and a child",
-      "status": "machine",
+      "target": "A volunteer hands a food package to an elderly woman and a child",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.hero.lead": {
       "source": "Бережемо життя — створюємо майбутнє разом!",
       "sourceHash": "e868da67f2e1",
-      "target": "We save lives — we build the future together!",
-      "status": "machine",
+      "target": "Saving lives—building the future together!",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.hero.primaryLabel": {
       "source": "Зв'язатися з нами",
@@ -382,10 +382,10 @@
     "data/home.newsHeading": {
       "source": "Останні оновлення фонду",
       "sourceHash": "17f9e67c6235",
-      "target": "Latest fund updates",
-      "status": "machine",
+      "target": "Latest Fund updates",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.partners.eyebrow": {
       "source": "Діємо спільно з партнерами в Україні та світі — заради майбутнього",
@@ -406,10 +406,10 @@
     "data/home.process.eyebrow": {
       "source": "Як ми працюємо",
       "sourceHash": "44a4231c1b80",
-      "target": "How we work",
-      "status": "machine",
+      "target": "The way we work",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/home.process.heading": {
       "source": "Від партнерської угоди до допомоги на місці",
@@ -422,10 +422,10 @@
     "data/home.process.steps[0].text": {
       "source": "Фонд співпрацює з державними, міжнародними та приватними інституціями, реалізуючи спільні програми — від ідеї до впровадженого рішення.",
       "sourceHash": "805db836b908",
-      "target": "The Foundation cooperates with state, international and private institutions, implementing joint programs — from an idea to an implemented solution.",
-      "status": "machine",
+      "target": "The Fund cooperates with government, international, and private institutions to implement joint programs—from concept to implementation.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/home.process.steps[0].title": {
       "source": "Партнерство та програми",
@@ -454,18 +454,18 @@
     "data/home.process.steps[2].text": {
       "source": "Перевіряємо відповідність міжнародним стандартам гуманітарних місій, контролюємо логістику й поставки та проводимо інспекцію якості товарів і виконання програм.",
       "sourceHash": "3510fb089801",
-      "target": "We check compliance with international standards of humanitarian missions, control logistics and deliveries, and inspect the quality of goods and the implementation of programs.",
-      "status": "machine",
+      "target": "Verify compliance with international standards for humanitarian missions, oversee logistics and deliveries, and inspect the quality of goods and the implementation of programs.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/home.process.steps[2].title": {
       "source": "Контроль якості та стандартів",
       "sourceHash": "e90599cf5470",
-      "target": "Quality and standards control",
-      "status": "machine",
+      "target": "Quality Control and Standards",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/home.process.steps[3].text": {
       "source": "Передаємо результати — обладнання, ресурси та реалізовані проєкти — отримувачам і ведемо повний облік та звітність перед міжнародними партнерами.",
@@ -510,18 +510,18 @@
     "data/legal.hero.lead": {
       "source": "Офіційна юридична інформація благодійної організації для партнерів, донорів та контролюючих органів.",
       "sourceHash": "cc11e78acea0",
-      "target": "The charity's official legal information for partners, donors and regulatory bodies.",
-      "status": "machine",
+      "target": "Legal information of the Charity for partners, donors, and regulatory authorities.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/legal.note": {
       "source": "Реєстраційні дані та політики організації готуються до публікації і з'являться на цій сторінці найближчим часом.",
       "sourceHash": "385bc66a3109",
-      "target": "Registration details and organization policies are being prepared for publication and will appear on this page in the near future.",
-      "status": "machine",
+      "target": "Registration information and policies are in process for release and will be posted on this page shortly.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/novyny.hero.eyebrow": {
       "source": "Новини",
@@ -566,10 +566,10 @@
     "data/partners.hero.lead": {
       "source": "Фонд співпрацює виключно з міжнародними партнерами через бюджетні програми гуманітарної допомоги — без приватних зборів коштів.",
       "sourceHash": "df877fbe8f48",
-      "target": "The Foundation cooperates exclusively with international partners through humanitarian aid budget programs — without private fundraising.",
-      "status": "machine",
+      "target": "The Fund cooperates exclusively with international partners through humanitarian aid budget programs — without private fundraising.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/partners.items[0].name": {
       "source": "Міністерство соціальної політики, сім'ї та єдності України",
@@ -630,10 +630,10 @@
     "data/partners.items[5].name": {
       "source": "Український гідрометеорологічний центр",
       "sourceHash": "57336373bf1b",
-      "target": "Ukrainian hydrometeorological center",
-      "status": "machine",
+      "target": "Ukrainian Hydrometeorological center",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/partners.items[6].name": {
       "source": "Державна служба України з надзвичайних ситуацій",
@@ -670,34 +670,34 @@
     "data/policy.hero.heading": {
       "source": "Політика конфіденційності та обробки звернень.",
       "sourceHash": "e7bf3dc20a78",
-      "target": "Privacy Policy and Handling Requests.",
-      "status": "machine",
+      "target": "Privacy Policy and Requests Processing.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/policy.hero.lead": {
       "source": "Як фонд обробляє дані, отримані через форму зворотного зв'язку та інші канали комунікації.",
       "sourceHash": "a3f3475ae667",
-      "target": "How the fund processes data received through the feedback form and other communication channels.",
-      "status": "machine",
+      "target": "The way the Fund processes data received via the feedback form and other communication channels.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/policy.note": {
       "source": "Документ підготовлено як проєкт і потребує затвердження керівництвом фонду перед публічним запуском сайту.",
       "sourceHash": "b5033742ed2e",
-      "target": "The document is prepared as a project and needs to be approved by the foundation's management before the public launch of the site.",
-      "status": "machine",
+      "target": "The document is prepared as a project and needs to be approved by the Fund's management before the public launch of the site.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/policy.sections[0].body": {
       "source": "Через форму зворотного зв'язку фонд отримує ім'я, електронну адресу, категорію звернення (запит, скарга, кар'єрна можливість) і текст повідомлення. Ми не збираємо дані автоматично та не використовуємо аналітичні системи стеження за відвідувачами сайту.",
       "sourceHash": "16212823c5c7",
-      "target": "Through the feedback form, the fund receives the name, e-mail address, category of appeal (request, complaint, career opportunity) and the text of the message. We do not collect data automatically and do not use analytical systems to track site visitors.",
-      "status": "machine",
+      "target": "Using the feedback form, the Fund receives your name, email address, the type of inquiry (question, complaint, career opportunity), and the text of your message. The Fund collects data manually and uses no analytical systems to track website visitors.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/policy.sections[0].title": {
       "source": "Які дані ми збираємо",
@@ -710,10 +710,10 @@
     "data/policy.sections[1].body": {
       "source": "Отримані дані використовуються виключно для розгляду звернення, надання відповіді та, за потреби, для внутрішньої звітності перед партнерами й донорами фонду щодо роботи з надходженнями скарг і запитів.",
       "sourceHash": "4172520e1f23",
-      "target": "The received data is used exclusively for considering the appeal, providing an answer and, if necessary, for internal reporting to the fund's partners and donors regarding the handling of complaints and inquiries.",
-      "status": "machine",
+      "target": "The data collected is used solely to review the inquiry, provide a response, and, if necessary, for internal reporting to the Fund's partners and donors regarding the handling of complaints and inquiries.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/policy.sections[1].title": {
       "source": "Для чого ми використовуємо дані",
@@ -758,10 +758,10 @@
     "data/policy.sections[4].body": {
       "source": "Особа, яка звернулася до фонду, має право запитати інформацію про свої дані, вимагати їх виправлення або видалення, звернувшись на контактну електронну адресу фонду.",
       "sourceHash": "c2a6e655f9f8",
-      "target": "The person who applied to the fund has the right to request information about his data, to request their correction or deletion, by contacting the contact email address of the fund.",
-      "status": "machine",
+      "target": "The person who applied to the Fund has the right to request information about his data, to request their correction or deletion, by contacting the email address of the Fund.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/policy.sections[4].title": {
       "source": "Права особи",
@@ -798,10 +798,10 @@
     "data/pronas.approach.items[0].title": {
       "source": "Виконуємо, а не лише координуємо",
       "sourceHash": "8e116d96d66f",
-      "target": "We execute, not just coordinate",
-      "status": "machine",
+      "target": "Implementing, not only coordinating",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.approach.items[1].text": {
       "source": "Поєднуємо правові процедури та механізми України з процесами й політиками міжнародних партнерів, створюючи єдине операційне поле для ефективної співпраці.",
@@ -814,10 +814,10 @@
     "data/pronas.approach.items[1].title": {
       "source": "Інтегруємо системи",
       "sourceHash": "7bebc4500c24",
-      "target": "We integrate systems",
-      "status": "machine",
+      "target": "Integrate systems",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.approach.items[2].text": {
       "source": "Забезпечуємо узгоджувальні процедури та постійну комунікацію з державними органами України, донорами, бенефіціарами та іншими стейкхолдерами.",
@@ -830,10 +830,10 @@
     "data/pronas.approach.items[2].title": {
       "source": "Будуємо діалог",
       "sourceHash": "8fb34c48c1db",
-      "target": "We are building a dialogue",
-      "status": "machine",
+      "target": "Build a dialogue",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.awards.heading": {
       "source": "Наші нагороди",
@@ -846,34 +846,34 @@
     "data/pronas.awards.items[0].title": {
       "source": "Подяка від Збройних сил України (Міністерство оборони України, військова частина A0807) — за передачу 10 пікапів Mitsubishi L200, обладнання радіаційного контролю та тепловізійних монокулярів.",
       "sourceHash": "1f0d1342f0ac",
-      "target": "Thanks from the Armed Forces of Ukraine (Ministry of Defense of Ukraine, military unit A0807) for the transfer of 10 Mitsubishi L200 pickups, radiation control equipment and thermal imaging monoculars.",
-      "status": "machine",
+      "target": "Acknowledgement from the Armed Forces of Ukraine (Ministry of Defense of Ukraine, military unit A0807) for the transfer of 10 Mitsubishi L200 pickups, radiation control equipment and thermal imaging monoculars.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.awards.items[1].title": {
       "source": "Подяка від Національної гвардії України (військова частина 3078) — за передачу 15 пікапів Mitsubishi L200, обладнання радіаційного контролю та тепловізійних монокулярів.",
       "sourceHash": "21fa52f14093",
-      "target": "Thanks from the National Guard of Ukraine (military unit 3078) for the transfer of 15 Mitsubishi L200 pickups, radiation control equipment and thermal imaging monoculars.",
-      "status": "machine",
+      "target": "Acknowledgement from the National Guard of Ukraine (military unit 3078) for the transfer of 15 Mitsubishi L200 pickups, radiation control equipment and thermal imaging monoculars.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.awards.items[2].title": {
       "source": "Подяка від Українського гідрометеорологічного центру (Державна служба України з надзвичайних ситуацій) — за передачу автомобілів Volkswagen Crafter з системами радіаційного контролю та погодних станцій Magellan MX600.",
       "sourceHash": "38c6ff1c44d0",
-      "target": "Thanks from the Ukrainian Hydrometeorological Center (State Emergency Service of Ukraine) for the transfer of Volkswagen Crafter cars with radiation control systems and Magellan MX600 weather stations.",
-      "status": "machine",
+      "target": "Acknowledgement from the Ukrainian Hydrometeorological Center (State Emergency Service of Ukraine) for the transfer of Volkswagen Crafter vehicles with radiation control systems and Magellan MX600 weather stations.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.awards.items[3].title": {
       "source": "Грамота Головного управління ДСНС України у Львівській області — за сприяння органам і підрозділам цивільного захисту та вагомий внесок у зміцнення матеріально-технічної бази пожежно-рятувальних підрозділів, зокрема за передачу восьми пікапів Mitsubishi L200 та високоточного обладнання радіаційного контролю.",
       "sourceHash": "5b3f03d40fd6",
-      "target": "Certificate of the Head Office of the State Emergency Service of Ukraine in the Lviv region — for assistance to civil defense bodies and units and a significant contribution to strengthening the material and technical base of fire and rescue units, in particular for the transfer of eight Mitsubishi L200 pickup trucks and high-precision radiation control equipment.",
-      "status": "machine",
+      "target": "Letter of Acknowledgement of the Head Office of the State Emergency Service of Ukraine in the Lviv region — for assistance to civil defense bodies and units and a significant contribution to strengthening the material and technical base of fire and rescue units, in particular for the transfer of eight Mitsubishi L200 pickup trucks and high-precision radiation control equipment.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.eyebrow": {
       "source": "Інституційна спроможність",
@@ -894,10 +894,10 @@
     "data/pronas.capacity.intro": {
       "source": "Благодійна організація «Фонд розвитку міжнародної співпраці» послідовно зміцнює власну інституційну стійкість, щоб ефективно виконувати свою місію в умовах швидких змін, кризових ситуацій та зростаючих потреб людей і інституцій, яким ми допомагаємо.",
       "sourceHash": "04d34f333973",
-      "target": "The charity \"Fund for the Development of International Cooperation\" consistently strengthens its own institutional stability in order to effectively fulfill its mission in the conditions of rapid changes, crisis situations and the growing needs of the people and institutions we help.",
-      "status": "machine",
+      "target": "Charity organization “International Cooperation Development Fund” is consistently strengthening its institutional resilience in order to effectively perform its mission amid rapid changes, crisis situations, and the growing needs of the people and institutions we assist.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[0].text": {
       "source": "що забезпечують прозорість і передбачуваність роботи;",
@@ -926,10 +926,10 @@
     "data/pronas.capacity.items[1].title": {
       "source": "Стратегічне планування,",
       "sourceHash": "abcaa22d7d0f",
-      "target": "strategic planning,",
-      "status": "machine",
+      "target": "Strategic planning,",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[2].text": {
       "source": "що підсилюють ефективність і масштабованість програм;",
@@ -958,10 +958,10 @@
     "data/pronas.capacity.items[3].title": {
       "source": "Аналітичні системи,",
       "sourceHash": "c61c890a68cb",
-      "target": "analytical systems,",
-      "status": "machine",
+      "target": "Analytical systems,",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.items[4].text": {
       "source": "спрямовані на диверсифікацію ресурсів і довгострокову сталість;",
@@ -1022,10 +1022,10 @@
     "data/pronas.capacity.items[7].title": {
       "source": "Розвиток команди,",
       "sourceHash": "cac87cc83d49",
-      "target": "team development,",
-      "status": "machine",
+      "target": "Team development,",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.capacity.listIntro": {
       "source": "Ми системно розвиваємо ключові елементи організаційної спроможності:",
@@ -1038,10 +1038,10 @@
     "data/pronas.capacity.note": {
       "source": "Завдяки цьому ми залишаємося гнучкими, адаптивними та здатними стабільно підвищувати якість, масштаб і сталість нашої роботи — незалежно від зовнішніх викликів.",
       "sourceHash": "3c501b69c4da",
-      "target": "Thanks to this, we remain flexible, adaptable and able to steadily increase the quality, scale and sustainability of our work - regardless of external challenges.",
-      "status": "machine",
+      "target": "This allows us to remain flexible, adaptable, and capable of consistently improving the quality, scale, and sustainability of our work—regardless of external challenges.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.hero.eyebrow": {
       "source": "Про нас",
@@ -1054,10 +1054,10 @@
     "data/pronas.hero.heading": {
       "source": "Надійний міжнародний партнер із супроводу гуманітарної та матеріально-технічної допомоги Україні",
       "sourceHash": "7b405ec8bc24",
-      "target": "A reliable international partner in supporting humanitarian and logistical aid to Ukraine",
-      "status": "machine",
+      "target": "A reliable international partner in providing humanitarian and logistics support to Ukraine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/pronas.hero.imageAlt": {
       "source": "Україна на карті світу в оточенні прапорів країн-партнерів",
@@ -1070,18 +1070,18 @@
     "data/pronas.hero.lead": {
       "source": "Фонд поєднує функції операційного, юридичного супроводу та безпосереднього виконавця — і забезпечує результат навіть у кризових умовах",
       "sourceHash": "b60ff5d51b2f",
-      "target": "The fund combines the functions of operational, legal support and direct executor — and ensures results even in crisis conditions",
-      "status": "machine",
+      "target": "The Fund combines the functions of operational, legal support and direct executor — and ensures results even in crisis conditions",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/pronas.mission[0].body": {
       "source": "Впровадження та реалізація гуманітарних місій і матеріально-технічної допомоги Україні через міжнародне державне та приватне партнерство.",
       "sourceHash": "c799e973a700",
-      "target": "Implementation and implementation of humanitarian missions and material and technical assistance to Ukraine through international public and private partnership.",
-      "status": "machine",
+      "target": "Implementation and execution of humanitarian missions and the provision of logistical and material assistance to Ukraine through international public-private partnerships.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.mission[0].title": {
       "source": "Наша стратегія",
@@ -1094,10 +1094,10 @@
     "data/pronas.mission[1].body": {
       "source": "Об'єднати світовий потенціал — силу, економіку, технології та інновації — задля створення стійкої моделі миру, безпеки та розвитку України.",
       "sourceHash": "5978ac727241",
-      "target": "To unite world potential — power, economy, technology and innovation — for the sake of creating a sustainable model of peace, security and development of Ukraine.",
-      "status": "machine",
+      "target": "Unite global potential—strength, economy, technology, and innovation—to create a sustainable model of peace, security, and development for Ukraine.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.mission[1].title": {
       "source": "Наша місія",
@@ -1126,10 +1126,10 @@
     "data/pronas.principles.items[0].text": {
       "source": "Організація проявляє повагу до честі та гідності людини, до людської особистості. Мета гуманітарної діяльності: захистити життя та здоров'я людини та забезпечити її право на повагу.",
       "sourceHash": "e624e9715323",
-      "target": "The organization shows respect for the honor and dignity of a person, for the human personality. The goal of humanitarian activity: to protect human life and health and ensure his right to respect.",
-      "status": "machine",
+      "target": "The Fund shows respect for the honor and dignity of a person, for the human personality. The goal of humanitarian activity: to protect human life and health, and ensure his right to respect.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.principles.items[0].title": {
       "source": "Гуманність",
@@ -1142,10 +1142,10 @@
     "data/pronas.principles.items[1].text": {
       "source": "Організація не може приймати будь-яку сторону у збройних конфліктах і вступати в суперечки політичного, расового, релігійного або ідеологічного характеру.",
       "sourceHash": "11c2a11e8438",
-      "target": "The organization cannot take any side in armed conflicts and enter into disputes of a political, racial, religious or ideological nature.",
-      "status": "machine",
+      "target": "The Fund shall not take sides in armed conflicts or become involved in disputes of a political, racial, religious, or ideological nature.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.principles.items[1].title": {
       "source": "Нейтральність",
@@ -1158,10 +1158,10 @@
     "data/pronas.principles.items[2].text": {
       "source": "Організація не робить будь-якого розрізнення за расовою, релігійною, класовою ознакою або політичними переконаннями. Ми лише намагаємося полегшувати страждання людей і в першу чергу тих, хто найбільше цього потребує.",
       "sourceHash": "e0230c184f55",
-      "target": "The organization does not discriminate on the basis of race, religion, class or political opinion. We are only trying to alleviate the suffering of people and first of all those who need it the most.",
-      "status": "machine",
+      "target": "The Fund has no discrimination based on race, religion, social class, or political beliefs. We simply strive to alleviate people’s suffering, especially that of those who need it most.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.principles.items[2].title": {
       "source": "Неупередженість",
@@ -1174,10 +1174,10 @@
     "data/pronas.principles.items[3].text": {
       "source": "Цілі організації є незалежними від політичних, економічних, військових або інших цілей осіб та організацій, пов'язаних з територією, де здійснюється гуманітарна діяльність.",
       "sourceHash": "4f9245f63d26",
-      "target": "The goals of the organization are independent of the political, economic, military or other goals of individuals and organizations associated with the territory where humanitarian activities are carried out.",
-      "status": "machine",
+      "target": "Fund's goals are independent of the political, economic, military or other aims of individuals and organizations associated with the territory where humanitarian activities are carried out.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.principles.items[3].title": {
       "source": "Незалежність",
@@ -1198,18 +1198,18 @@
     "data/pronas.story[0]": {
       "source": "У 2025 році Благодійна організація «Фонд розвитку міжнародної співпраці» розпочала свою діяльність як неприбуткова організація, що у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM здійснює супроводження та передачі гуманітарної допомоги в рамках урядової програми між Україною та США.",
       "sourceHash": "3e267d080975",
-      "target": "In 2025, the Charitable Organization \"International Cooperation Development Fund\" began its activities as a non-profit organization that, in strategic partnership with the executor of US government projects — the corporation WGI GLOBAL INC./AMENTUM, provides support and transfers of humanitarian aid within the framework of the government program between Ukraine and the USA.",
-      "status": "machine",
+      "target": "In 2025, Charity Organization “International Cooperation Development Fund” launched its operations as a nonprofit organization that, in a strategic partnership with WGI GLOBAL INC./AMENTUM—a contractor for U.S. government projects—provides support and facilitates the delivery of humanitarian aid as part of a government program between Ukraine and the United States.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/pronas.story[1]": {
       "source": "Фонд поєднує функції юридичного супроводу та безпосереднього виконавця: від забезпечення відповідності до реалізації поставлених завдань на кожному етапі ланцюга постачання. Саме це дозволяє нам гарантувати результат навіть у кризових умовах воєнного стану.",
       "sourceHash": "ab205203e322",
-      "target": "The fund combines the functions of legal support and direct executor: from ensuring compliance to implementing tasks at each stage of the supply chain. This is what allows us to guarantee the result even in crisis conditions of martial law.",
-      "status": "machine",
+      "target": "The Fund combines the functions of a legal advisor and a direct service provider: from ensuring compliance to implementing the assigned tasks at every stage of the supply chain. This is precisely what allows us to guarantee results even under the crisis conditions of martial law.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/pronas.story[2]": {
       "source": "Ми поєднуємо експертизу виконавця з надійністю партнера, забезпечуючи стабільність, прозорість і відповідність міжнародним стандартам — і створюючи ефективну модель співпраці між Україною та світом.",
@@ -1278,10 +1278,10 @@
     "data/proyekty.hero.lead": {
       "source": "Фонд працює за чотирма напрямами: гуманітарне реагування на кризові ситуації населення; цифрова трансформація; енергетика, радіаційний захист та екологічна безпека; підвищення військової готовності та національної безпеки.",
       "sourceHash": "670fbdd6951d",
-      "target": "The fund works in four directions: humanitarian response to crisis situations of the population; digital transformation; energy, radiation protection and environmental safety; increasing military readiness and national security.",
-      "status": "machine",
+      "target": "The Fund works in four directions: humanitarian response to crisis situations of the population; digital transformation; energy, radiation protection and environmental safety; increasing military readiness and national security.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/reports.hero.eyebrow": {
       "source": "Звітність",
@@ -1294,26 +1294,26 @@
     "data/reports.hero.heading": {
       "source": "Відкритість і підзвітність є частиною довіри.",
       "sourceHash": "f574b24564c9",
-      "target": "Openness and accountability are part of trust.",
-      "status": "machine",
+      "target": "Transparency and accountability are part of trust.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/reports.hero.lead": {
       "source": "Фонд публікує статистичні дані, аналітичні звіти, фінансову звітність і звіти неприбуткової організації.",
       "sourceHash": "4318ef5e9536",
-      "target": "The Foundation publishes statistical data, analytical reports, financial statements and reports of non-profit organizations.",
-      "status": "machine",
+      "target": "The Fund publishes statistical data, analytical reports, financial statements and reports of non-profit organizations.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/reports.note": {
       "source": "Звіти готуються до публікації і з'являться на цій сторінці найближчим часом.",
       "sourceHash": "a1c9be7cdeb5",
-      "target": "The reports are being prepared for publication and will appear on this page in the near future.",
-      "status": "machine",
+      "target": "The reports are being prepared for release and will be posted on this page shortly.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.cookie.buttonLabel": {
       "source": "Зрозуміло",
@@ -1334,10 +1334,10 @@
     "data/site.cookie.text": {
       "source": "Ми використовуємо файли cookie, щоб сайт працював коректно й запамʼятовував ваш вибір мови.",
       "sourceHash": "f53a0ecc4033",
-      "target": "We use cookies so that the site works correctly and remembers your choice of language.",
-      "status": "machine",
+      "target": "We use cookies to ensure that the website works properly and to remember your language preference.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.footerNavCol1[0].label": {
       "source": "Про нас",
@@ -1470,10 +1470,10 @@
     "data/site.orgFull": {
       "source": "Благодійна організація «Фонд розвитку міжнародної співпраці»",
       "sourceHash": "a3ccfcf6ea60",
-      "target": "Charitable organization \"Fund for the Development of International Cooperation\"",
-      "status": "machine",
+      "target": "Charity organization \"International Cooperation Development Fund\"",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/site.orgLine1": {
       "source": "Благодійна організація",
@@ -1502,18 +1502,18 @@
     "data/team.hero.heading": {
       "source": "Єдина команда — від засновників до волонтерів — заради швидкої й прозорої допомоги",
       "sourceHash": "3ebbea5b6f65",
-      "target": "A single team — from founders to volunteers — for quick and transparent help",
-      "status": "machine",
+      "target": "One team—from the founders to the volunteers—working to provide fast and transparent assistance",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-10"
+      "updated": "2026-08-18"
     },
     "data/team.hero.lead": {
       "source": "Засновники, менеджери, бухгалтерія, склад, обробка звернень і волонтери працюють разом, щоб допомога доходила до людей швидко та прозоро.",
       "sourceHash": "20778a2d7466",
-      "target": "Founders, managers, accounting, warehouse, case processing and volunteers work together to ensure that help reaches people quickly and transparently.",
-      "status": "machine",
+      "target": "The founders, managers, accounting staff, warehouse staff, customer service team, and volunteers work together to ensure that aid reaches people quickly and transparently.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[0].bio": {
       "source": "Багаторічний номінант і лауреат міжнародних нагород за професійні досягнення у сфері реалізації масштабних міжнародних проєктів, зокрема відзнаки «Top Performer» від Washington Group International, United Research Services, AECOM.",
@@ -1534,10 +1534,10 @@
     "data/team.members[0].role": {
       "source": "Засновник фонду, керівник напряму міжнародних відносин та партнерства",
       "sourceHash": "e6312d0c2dce",
-      "target": "Founder of the fund, head of international relations and partnership",
-      "status": "machine",
+      "target": "Founder of the Fund, head of international relations and partnership",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[1].bio": {
       "source": "Кандидатка юридичних наук (адміністративне право та процес; фінансове право; інформаційне право). Членкиня Асоціації правників України (комітет з міжнародного права, комітет з податкового та митного права).",
@@ -1558,10 +1558,10 @@
     "data/team.members[1].role": {
       "source": "Засновниця та директорка фонду",
       "sourceHash": "eccb621bea20",
-      "target": "Founder and director of the fund",
-      "status": "machine",
+      "target": "Founder and director of the Fund",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[2].name": {
       "source": "Євгеній Кулинко",
@@ -1606,10 +1606,10 @@
     "data/team.members[4].role": {
       "source": "Фахівчиня з договірної роботи",
       "sourceHash": "48028a85c2d5",
-      "target": "Specialist in contractual work",
-      "status": "machine",
+      "target": "Subcontract Administrator",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[5].name": {
       "source": "Євгенія Скакун",
@@ -1638,10 +1638,10 @@
     "data/team.members[6].role": {
       "source": "Фахівець з управління логістикою",
       "sourceHash": "a0fb99e099ec",
-      "target": "Specialist in logistics management",
-      "status": "machine",
+      "target": "Logistics Coordinator",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[7].name": {
       "source": "Ігор Івахненко",
@@ -1670,10 +1670,10 @@
     "data/team.members[8].role": {
       "source": "Інспектор з вхідного контролю якості товарів",
       "sourceHash": "f5b234b3e2ed",
-      "target": "Inspector of incoming goods quality control",
-      "status": "machine",
+      "target": "Equipment incoming quality control specialist",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "data/team.members[9].name": {
       "source": "Костянтин Шишов",
@@ -1686,66 +1686,66 @@
     "data/team.members[9].role": {
       "source": "Інспектор з вхідного контролю якості товарів",
       "sourceHash": "f5b234b3e2ed",
-      "target": "Inspector of incoming goods quality control",
-      "status": "machine",
+      "target": "Equipment incoming quality control specialist",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/avtopark-ngu-operatyvna-mobilnist.body": {
       "source": "## Опис проєкту\n\nПостачання п'ятнадцяти позашляхових пікапів Mitsubishi L200 (автоматична коробка передач) для Національної гвардії України, повністю укомплектованих кунгами Mitsubishi GST II Hardtop, даховими рейлінгами, захисним покриттям вантажного відсіку, розетками 12В/220В, інверторами та комплектом запасних частин (шини, масляні, повітряні, салонні та паливні фільтри).\n\n## Мета проєкту\n\nЗабезпечення підрозділу Нацгвардії транспортом підвищеної прохідності для виконання бойових та логістичних завдань.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 15 та 16 (НГУ), автомобілі (15 од.).\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 710 400,00 дол. США**",
       "sourceHash": "33a3e37287ed",
-      "target": "## Description of the project\n\nSupply of fifteen off-road Mitsubishi L200 pickups (automatic transmission) for the National Guard of Ukraine, fully equipped with Mitsubishi GST II Hardtop kungs, roof rails, cargo compartment cover, 12V/220V sockets, inverters and a set of spare parts (tires, oil, air, cabin and fuel filters).\n\n## The purpose of the project\n\nProvision of the National Guard unit with high-terrain vehicles for combat and logistical tasks.\n\n## Group, programme, pallet\n\nGroup 32, Project 15 and 16 (NSU), cars (15 units).\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $710,400.00. USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of fifteen off-road Mitsubishi L200 pickups (automatic transmission) for the National Guard of Ukraine, fully equipped with Mitsubishi GST II Hardtop, roof rails, Hardtop cargo beds, 12V/220V sockets, inverters and a set of spare parts (tires, oil, air, cabin and fuel filters).\n\n## The purpose of the project\n\nProvision of the National Guard unit with high-terrain vehicles for combat and logistical tasks.\n\n## Group, Program, Pallet\n\nGroup 32, Project 15 and 16 (NGU), vehicles (15 units).\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $710,400.00. USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/avtopark-ngu-operatyvna-mobilnist.title": {
       "source": "Підсилення автопарку Національної гвардії України для підвищення оперативної мобільності підрозділів",
       "sourceHash": "a8306a93a340",
-      "target": "Strengthening the fleet of the National Guard of Ukraine to increase operational mobility of units",
-      "status": "machine",
+      "target": "Strengthening the Ukrainian National Guard's vehicle fleet to enhance the operational mobility of its units",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/avtopark-reaguvannya-cyvilnyy-zahyst.body": {
       "source": "## Опис проєкту\n\nПостачання восьми позашляхових пікапів Mitsubishi L200 для підрозділів ДСНС України, чотири з яких додатково укомплектовано мобільними системами радіаційного виявлення RSI (детектори випромінювання, кристалічні детектори, портативні комп'ютери з док-станціями, футляри для транспортування).\n\n## Мета проєкту\n\nФормування мобільних груп радіаційного моніторингу та реагування на надзвичайні ситуації, пов'язані з радіаційною небезпекою.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 13 (ДСНС), автомобілі (8 од.).\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 1 334 048,00 дол. США**",
       "sourceHash": "2c8afce80e99",
-      "target": "## Description of the project\n\nSupply of eight off-road Mitsubishi L200 pickups for units of the State Emergency Service of Ukraine, four of which are additionally equipped with mobile RSI radiation detection systems (radiation detectors, crystal detectors, portable computers with docking stations, cases for transportation).\n\n## The purpose of the project\n\nFormation of mobile groups for radiation monitoring and response to emergency situations related to radiation danger.\n\n## Group, programme, pallet\n\nGroup 32, Project 13 (DSNS), cars (8 units).\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: 1,334,048.00 dollars. USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of eight off-road Mitsubishi L200 pickups for units of the State Emergency Service of Ukraine, four of which are additionally equipped with mobile RSI radiation detection systems (radiation detectors, crystal detectors, portable computers with docking stations, cases for transportation).\n\n## The purpose of the project\n\nFormation of mobile radiation monitoring and emergency response teams to address radiation-related emergencies.\n\n## Group, Program, Pallet\n\nGroup 32, Project 13 (SESU), vehicles (8 units).\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: 1,334,048.00 dollars. USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/avtopark-reaguvannya-cyvilnyy-zahyst.title": {
       "source": "Автопарк реагування на надзвичайні ситуації підрозділами цивільного захисту",
       "sourceHash": "0662f754554a",
-      "target": "Fleet of emergency response vehicles by civil defense units",
-      "status": "machine",
+      "target": "Emergency Response Vehicle Fleet of Civil Protection Units",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/avtopark-zsu-operatyvna-mobilnist.body": {
       "source": "## Опис проєкту\n\nПостачання десяти позашляхових пікапів Mitsubishi L200 (4 з автоматичною коробкою передач, 6 з механічною) для Збройних Сил України, повністю укомплектованих додатковим спорядженням: кунги Mitsubishi GST II (10 од.), дахові рейлінги, захисне покриття вантажного відсіку, розетки 12В/220В у салоні та кузові, інвертори 12В-220В, а також комплект запасних частин (всесезонні шини, масляні, повітряні, салонні та паливні фільтри).\n\n## Мета проєкту\n\nЗабезпечення підрозділу ЗСУ транспортом підвищеної прохідності для виконання бойових та логістичних завдань.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 18 (ЗСУ), автомобілі (10 од.).\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 459 800,00 дол. США**",
       "sourceHash": "8547eca687f6",
-      "target": "## Description of the project\n\nSupply of ten Mitsubishi L200 off-road pickups (4 with automatic transmission, 6 with manual transmission) for the Armed Forces of Ukraine, fully equipped with additional equipment: Mitsubishi GST II kungs (10 units), roof rails, protective covering of the cargo compartment, 12V/220V sockets in the interior and body, 12V-220V inverters, as well as a set spare parts (all-season tires, oil, air, interior and fuel filters).\n\n## The purpose of the project\n\nProvision of a unit of the Armed Forces with vehicles of increased cross-country ability to perform combat and logistical tasks.\n\n## Group, programme, pallet\n\nGroup 32, Project 18 (ZSU), cars (10 units).\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $459,800.00. USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of ten Mitsubishi L200 off-road pickups (4 with automatic transmission, 6 with manual transmission) for the Armed Forces of Ukraine, fully equipped with additional equipment: Mitsubishi GST II kungs (10 units), roof rails, Hardtop cargo beds, 12V/220V sockets in the interior and body, 12V-220V inverters, as well as a set spare parts (all-season tires, oil, air, interior and fuel filters).\n\n## The purpose of the project\n\nProviding a unit of the Armed Forces of Ukraine with high-mobility vehicles to perform combat and logistical tasks.\n\n## Group, Program, Pallet\n\nGroup 32, Project 18 (AFU), vehicles (10 units).\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $459,800.00. USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/avtopark-zsu-operatyvna-mobilnist.title": {
       "source": "Підсилення автопарку Збройних сил України для підвищення оперативної мобільності підрозділів",
       "sourceHash": "343d5a452606",
-      "target": "Strengthening the fleet of the Armed Forces of Ukraine to increase operational mobility of units",
-      "status": "machine",
+      "target": "Strengthening the Ukrainian Armed Forces' vehicle fleet to enhance the operational mobility of its units",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/mobilni-kompleksy-radiaciyni-zagrozy.body": {
       "source": "## Опис проєкту\n\nПостачання спеціалізованого обладнання для Гідрометеорологічної служби України в рамках програми DICCE II — закупівля та поставка двох спеціальних фургонів Volkswagen Crafter, повністю укомплектованих супутнім обладнанням (радіаційний і дозиметричний контроль, метеостанції, засоби радіозв'язку, лабораторне обладнання для відбору та підготовки проб, IT-техніка, засоби індивідуального захисту та витратні матеріали).\n\n## Мета проєкту\n\nПосилення спроможності Українського гідрометеорологічного центру та гідрометеорологічних організацій ДСНС України здійснювати моніторинг, зокрема радіаційної обстановки.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 20 (ГМЦ) — «Спеціальні фургони Volkswagen Crafter (2 од.)».\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 389 552,00 дол. США**",
       "sourceHash": "5a55e6c07dcb",
-      "target": "## Description of the project\n\nSupply of specialized equipment for the Hydrometeorological Service of Ukraine within the framework of the DICCE II program — purchase and supply of two special Volkswagen Crafter vans, fully equipped with related equipment (radiation and dosimetry control, weather stations, radio communication equipment, laboratory equipment for sample selection and preparation, IT equipment, personal protective equipment and consumables).\n\n## The purpose of the project\n\nStrengthening the capacity of the Ukrainian Hydrometeorological Center and hydrometeorological organizations of the State Emergency Service of Ukraine to monitor, in particular, the radiation situation.\n\n## Group, programme, pallet\n\nGroup 32, Project 20 (HMC) — \"Volkswagen Crafter special vans (2 units).\"\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $389,552.00. USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of specialized equipment for the Hydrometeorological Service of Ukraine within the framework of the DICCE II program — purchase and supply of two special Volkswagen Crafter vans, fully equipped with related equipment (radiation and dosimetry control, weather stations, radio communication equipment, laboratory equipment for sample selection and preparation, IT equipment, personal protective equipment and consumables).\n\n## The purpose of the project\n\nStrengthening the capacity of the Ukrainian Hydrometeorological Center and hydrometeorological organizations of the State Emergency Service of Ukraine to monitor, in particular, the radiation situation.\n\n## Group, Program, Pallet\n\nGroup 32, Project 20 (HMC) — \"Volkswagen Crafter special vans (2 units).\"\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $389,552.00. USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/mobilni-kompleksy-radiaciyni-zagrozy.title": {
       "source": "Мобільні комплекси раннього реагування на радіаційні загрози",
@@ -1758,90 +1758,90 @@
     "projects/mobilnyy-monitoryng-radiaciynoyi-bezpeky.body": {
       "source": "## Опис проєкту\n\nПостачання обладнання радіаційного моніторингу для Гідрометеорологічної служби України (програма DICCE II) — прилади для виявлення та ідентифікації радіоізотопів (детектори Ortec-Ametek Detective X, Ortec RADEAGLET-R-2SG) з комплектуючими (зарядні пристрої, акумулятори, кобури для перенесення).\n\n## Мета проєкту\n\nПосилення спроможності Українського гідрометеорологічного центру та гідрометеорологічних організацій ДСНС України з радіаційного контролю та ідентифікації ізотопів.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 20 (ГМЦ), Палета 25.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 350 790,24 дол. США**",
       "sourceHash": "2797b8cf6d7c",
-      "target": "## Description of the project\n\nSupply of radiation monitoring equipment for the Hydrometeorological Service of Ukraine (DICCE II program) — devices for detection and identification of radioisotopes (detectors Ortec-Ametek Detective X, Ortec RADEAGLET-R-2SG) with accessories (chargers, batteries, carrying cases).\n\n## The purpose of the project\n\nStrengthening the capacity of the Ukrainian hydrometeorological center and hydrometeorological organizations of the State Emergency Service of Ukraine in radiation control and isotope identification.\n\n## Group, programme, pallet\n\nGroup 32, Project 20 (HMC), Pallet 25.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $350,790.24. USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of radiation monitoring equipment for the Hydrometeorological Service of Ukraine (DICCE II program) — devices for detection and identification of radioisotopes (detectors Ortec-Ametek Detective X, Ortec RADEAGLET-R-2SG) with accessories (chargers, batteries, carrying cases).\n\n## The purpose of the project\n\nStrengthening the capacity of the Ukrainian hydrometeorological center and hydrometeorological organizations of the State Emergency Service of Ukraine in radiation control and isotope identification.\n\n## Group, Program, Pallet\n\nGroup 32, Project 20 (HMC), Pallet 25.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $350,790.24. USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/mobilnyy-monitoryng-radiaciynoyi-bezpeky.title": {
       "source": "Мобільний моніторинг радіаційної безпеки довкілля",
       "sourceHash": "c7b6e721b70e",
-      "target": "Mobile monitoring of environmental radiation safety",
-      "status": "machine",
+      "target": "Mobile Monitoring of Environmental Radiation Safety",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/ngu-kompleksne-osnashchennya.body": {
       "source": "## Опис проєкту\n\nПостачання широкого комплексу спорядження для Національної гвардії України: ранцеві радіаційні детектори RSI RSN-350-2N із запасними батареями; шиномонтажні шипи Magnum Spike, ліхтарі EagleTac, пейджери-радіостанції Sensotec TA600, тепловізійні монокуляри Flir Scion з аксесуарами, штативні освітлювальні комплекти CT-30, персональні дозиметри Polimaster PM1703GNA-II, прилади ідентифікації ізотопів Ortec RADEAGLET-R-2SG, детектори-фріскери Ludlum 26-1 та захищені ноутбуки Panasonic ToughBook FZ-G2.\n\n## Мета проєкту\n\nКомплексне матеріально-технічне та радіаційно-моніторингове оснащення підрозділів Національної гвардії України.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 13 та 15 (НГУ), Палета 1, 2, 3, 4, 5, 14.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 890 278,46 дол. США**",
       "sourceHash": "d75c00671a70",
-      "target": "## Description of the project\n\nSupply of a wide range of equipment for the National Guard of Ukraine: knapsack radiation detectors RSI RSN-350-2N with spare batteries; Magnum Spike tire spikes, EagleTac lights, Sensotec TA600 radio pagers, Flir Scion thermal monoculars with accessories, CT-30 tripod lighting kits, Polimaster PM1703GNA-II personal dosimeters, Ortec RADEAGLET-R-2SG isotope identification devices, Ludlum 26-1 frisker detectors, and Panasonic ToughBook secured notebooks FZ-G2.\n\n## The purpose of the project\n\nComplex logistical and radiation monitoring equipment of units of the National Guard of Ukraine.\n\n## Group, programme, pallet\n\nGroup 32, Project 13 and 15 (NSU), Pallet 1, 2, 3, 4, 5, 14.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: 890,278.46 dollars. USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of a wide range of equipment for the National Guard of Ukraine: RSI RSN-350-2N backpack radiation detectors with spare batteries; Magnum Spike tire spikes, EagleTac flashlights, Sensotec TA600 pager-radios, FLIR Scion thermal imaging monoculars with accessories, CT-30 tripod lighting kits, Polimaster PM1703GNA-II personal dosimeters, Ortec RADEAGLET-R-2SG isotope identification devices, Ludlum 26-1 walk-through detectors, and Panasonic ToughBook FZ-G2 rugged laptops.\n\n## The purpose of the project\n\nComprehensive logistical and radiation monitoring equipment for units of the National Guard of Ukraine\n\n## Group, Program, Pallet\n\nGroup 32, Project 13 and 15 (NGU), Pallet 1, 2, 3, 4, 5, 14.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: 890,278.46 dollars. USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/ngu-kompleksne-osnashchennya.title": {
       "source": "Комплексне матеріально-технічне та радіаційно-моніторингове оснащення підрозділів Національної гвардії України",
       "sourceHash": "028e022d47e6",
-      "target": "Complex logistical and radiation monitoring equipment of units of the National Guard of Ukraine",
-      "status": "machine",
+      "target": "Comprehensive logistical and radiation monitoring equipment for units of the National Guard of Ukraine",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/ngu-mobilni-zasoby-vyyavlennya.body": {
       "source": "## Опис проєкту\n\nПостачання ранцевих радіаційних детекторів RSI RSN-350-2N із запасними літій-залізо-фосфатними батареями та захищених планшетів Panasonic ToughPad FZ G2 з акумуляторами для Національної гвардії України.\n\n## Мета проєкту\n\nОснащення підрозділів Національної гвардії України мобільними засобами радіаційного виявлення.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 16 (НГУ), Палета 48.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 274 175,00 дол. США**",
       "sourceHash": "6b5b2e0e3167",
-      "target": "## Description of the project\n\nSupply of RSI RSN-350-2N knapsack radiation detectors with spare lithium-iron-phosphate batteries and Panasonic ToughPad FZ G2 protected tablets with batteries for the National Guard of Ukraine.\n\n## The purpose of the project\n\nEquipping units of the National Guard of Ukraine with mobile means of radiation detection.\n\n## Group, programme, pallet\n\nGroup 32, Project 16 (NSU), Pallet 48.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $274,175.00. USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of RSI RSN-350-2N backpack radiation detectors with spare lithium-iron-phosphate batteries and Panasonic ToughPad FZ G2 protected tablets with batteries for the National Guard of Ukraine.\n\n## The purpose of the project\n\nEquipping units of the National Guard of Ukraine with mobile radiation detection devices.\n\n## Group, Program, Pallet\n\nGroup 32, Project 16 (NSU), Pallet 48.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $274,175.00. USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/ngu-mobilni-zasoby-vyyavlennya.title": {
       "source": "Оснащення підрозділів Національної гвардії України мобільними засобами радіаційного виявлення",
       "sourceHash": "cb6b1a3cf1d7",
-      "target": "Equipping units of the National Guard of Ukraine with mobile means of radiation detection",
-      "status": "machine",
+      "target": "Equipping Units of the Ukrainian National Guard with Mobile Radiation Detection Devices",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/ngu-personalnyy-radiaciynyy-kontrol.body": {
       "source": "## Опис проєкту\n\nПостачання персональних приладів радіаційного контролю для Національної гвардії України: персональні дозиметри-детектори Kromek з єврозарядним пристроєм та літій-полімерною батареєю, прилади ідентифікації радіоізотопів Ortec RADEAGLET-R-2SG з акумуляторними блоками та транспортувальними кобурами.\n\n## Мета проєкту\n\nОснащення особового складу індивідуальними засобами виявлення та ідентифікації радіаційної небезпеки.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 15 та 16 (НГУ), Палета 31.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 556 934,40 дол. США**",
       "sourceHash": "d888414981d0",
-      "target": "## Description of the project\n\nSupply of personal radiation control devices for the National Guard of Ukraine: Kromek personal dosimeters-detectors with Euro charger and lithium-polymer battery, Ortec RADEAGLET-R-2SG radioisotope identification devices with battery packs and transport holsters.\n\n## The purpose of the project\n\nEquipping personnel with individual means of detecting and identifying radiation hazards.\n\n## Group, programme, pallet\n\nGroup 32, Project 15 and 16 (NSU), Pallet 31.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $556,934.40. USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of personal radiation control devices for the National Guard of Ukraine: Kromek personal dosimeters-detectors with Euro charger and lithium-polymer battery, Ortec RADEAGLET-R-2SG radioisotope identification devices with battery packs and transport holsters.\n\n## The purpose of the project\n\nEquipping personnel with personal devices for detecting and identifying radiation hazards.\n\n## Group, Program, Pallet\n\nGroup 32, Project 15 and 16 (NGU), Pallet 31.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $556,934.40. USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/ngu-personalnyy-radiaciynyy-kontrol.title": {
       "source": "Оснащення Національної гвардії України засобами персонального радіаційного контролю та ідентифікації ізотопів",
       "sourceHash": "b8b2854b0ce2",
-      "target": "Equipping the National Guard of Ukraine with means of personal radiation control and isotope identification",
-      "status": "machine",
+      "target": "Equipping the National Guard of Ukraine with Personal Radiation Monitoring and Isotope Identification Devices",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/obladnannya-radiaciynyy-monitoryng-cz.body": {
       "source": "## Опис проєкту\n\nПостачання персональних та ранцевих засобів радіаційного виявлення для Головного управління ДСНС України у Львівській області: радіаційні детектори ранцевого типу RSN-350-2N (з запасними батареями), планшети Panasonic ToughPad FZ G2, персональні дозиметри Kromek, прилади ідентифікації радіоізотопів Ortec RADEAGLET-R-2SG (з акумуляторами та транспортувальними футлярами).\n\n## Мета проєкту\n\nОснащення особового складу підрозділів ДСНС засобами індивідуального радіаційного моніторингу.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 13 (ДСНС), Палета 27 та 32.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 701 327,54 дол. США**",
       "sourceHash": "1b25bd321da1",
-      "target": "## Description of the project\n\nSupply of personal and knapsack means of radiation detection for the Main Directorate of the State Emergency Service of Ukraine in the Lviv region: knapsack type radiation detectors RSN-350-2N (with spare batteries), Panasonic ToughPad FZ G2 tablets, Kromek personal dosimeters, Ortec RADEAGLET-R-2SG radioisotope identification devices (with batteries and transport cases).\n\n## The purpose of the project\n\nEquipping the personnel of the units of the State Emergency Service with means of individual radiation monitoring.\n\n## Group, programme, pallet\n\nGroup 32, Project 13 (DSNS), Pallet 27 and 32.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: 701,327.54 dollars. USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of personal and backpack-type radiation detection devices to the Main Directorate of the State Emergency Service of Ukraine in Lviv Region: RSN-350-2N backpack-type radiation detectors (with spare batteries), Panasonic ToughPad FZ G2 tablets, Kromek personal dosimeters, and Ortec RADEAGLET-R-2SG radioisotope identification devices (with rechargeable batteries and carrying cases).\n\n## The purpose of the project\n\nEquipping Personnel of State Emergency Service Units with Personal Radiation Monitoring Devices\n\n## Group, Program, Pallet\n\nGroup 32, Project 13 (SESU), Pallet 27 and 32.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: 701,327.54 dollars. USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/obladnannya-radiaciynyy-monitoryng-cz.title": {
       "source": "Обладнання для радіаційного моніторингу цивільного захисту",
       "sourceHash": "e158ded4b2d7",
-      "target": "Equipment for radiation monitoring of civil protection",
-      "status": "machine",
+      "target": "Civil Defense Radiation Monitoring Equipment",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/radiaciynyy-monitoryng-cyvilnyy-zahyst.body": {
       "source": "## Опис проєкту\n\nПостачання персональних засобів радіаційного та дозиметричного контролю для Головного управління ДСНС України у Львівській області — прилад Frisker Ludlum 26-1 для перевірки контамінації (з акумуляторними батареями), ранцеві детектори RSI RSN-350-2N із запасними батареями, планшети Panasonic ToughPad FZ G2, прилади ідентифікації ізотопів Ortec RADEAGLET-R-2SG та персональні дозиметри Polimaster PM1703 GNA-II.\n\n## Мета проєкту\n\nОснащення особового складу підрозділів ДСНС засобами індивідуального радіаційного моніторингу.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 13 (ДСНС), Палета 8.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 555 602,27 дол. США**",
       "sourceHash": "4bd44e36a459",
-      "target": "## Description of the project\n\nSupply of personal means of radiation and dosimetric control for the Main Directorate of the State Emergency Service of Ukraine in the Lviv region — a Frisker Ludlum 26-1 contamination check device (with rechargeable batteries), RSI RSN-350-2N knapsack detectors with spare batteries, Panasonic ToughPad FZ G2 tablets, Ortec RADEAGLET-R-2SG isotope identification devices and Polimaster PM1703 GNA-II personal dosimeters.\n\n## The purpose of the project\n\nEquipping the personnel of the units of the State Emergency Service with means of individual radiation monitoring.\n\n## Group, programme, pallet\n\nGroup 32, Project 13 (DSNS), Pallet 8.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $555,602.27. USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of personal radiation and dosimetry monitoring equipment to the Main Directorate of the State Emergency Service of Ukraine in Lviv Region — a Ludlum 26-1 Frisker contamination detector (with rechargeable batteries), RSI RSN-350-2N backpack detectors with spare batteries, Panasonic ToughPad FZ G2 tablets, Ortec RADEAGLET-R-2SG isotope identification devices, and Polimaster PM1703 GNA-II personal dosimeters.\n\n## The purpose of the project\n\nEquipping personnel of the State Emergency Service units with personal radiation monitoring equipment.\n\n## Group, Program, Pallet\n\nGroup 32, Project 13 (SESU), Pallet 8.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $555,602.27. USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/radiaciynyy-monitoryng-cyvilnyy-zahyst.title": {
       "source": "Радіаційний моніторинг для цивільного захисту",
@@ -1854,58 +1854,58 @@
     "projects/zsu-indyvidualnyy-radiaciynyy-kontrol.body": {
       "source": "## Опис проєкту\n\nПостачання персональних дозиметрів для Збройних Сил України: дозиметри Ludlum Friskers 26-1 з лужними батареями, запасні лужні батареї АА, персональні детектори Kromek із перезаряджуваними літій-полімерними акумуляторами, прилади ідентифікації радіоізотопів Ortec RADEAGLET-R-2SG із запасними літій-іонними акумуляторами та транспортувальними кобурами.\n\n## Мета проєкту\n\nЗабезпечення особового складу Збройних сил України засобами індивідуального радіаційного контролю.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 18 (ЗСУ), Палета 73-74; Палета 81.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 400 073,72 дол. США**",
       "sourceHash": "5521ef6e1701",
-      "target": "## Description of the project\n\nSupply of personal dosimeters for the Armed Forces of Ukraine: Ludlum Friskers 26-1 dosimeters with alkaline batteries, spare AA alkaline batteries, Kromek personal detectors with rechargeable lithium-polymer batteries, Ortec RADEAGLET-R-2SG radioisotope identification devices with spare lithium-ion batteries and transport holsters.\n\n## The purpose of the project\n\nProviding the personnel of the Armed Forces of Ukraine with means of individual radiation control.\n\n## Group, programme, pallet\n\nGroup 32, Project 18 (ZSU), Pallet 73-74; Palette 81.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $400,073.72. USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of personal dosimeters for the Armed Forces of Ukraine: Ludlum Friskers 26-1 dosimeters with alkaline batteries, spare AA alkaline batteries, Kromek personal detectors with rechargeable lithium-polymer batteries, Ortec RADEAGLET-R-2SG radioisotope identification devices with spare lithium-ion batteries and transport holsters.\n\n## The purpose of the project\n\nProviding Personnel of the Armed Forces of Ukraine with Personal Radiation Monitoring Devices\n\n## Group, Program, Pallet\n\nGroup 32, Project 18 (AFU), Pallet 73-74; Palette 81.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $400,073.72. USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/zsu-indyvidualnyy-radiaciynyy-kontrol.title": {
       "source": "Забезпечення особового складу Збройних сил України засобами індивідуального радіаційного контролю",
       "sourceHash": "b2aa4dec9e8b",
-      "target": "Providing the personnel of the Armed Forces of Ukraine with means of individual radiation control",
-      "status": "machine",
+      "target": "Providing Personnel of the Armed Forces of Ukraine with Personal Radiation Monitoring Devices",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/zsu-mobilni-ta-personalni-zasoby.body": {
       "source": "## Опис проєкту\n\nПостачання комплексних засобів радіаційного моніторингу для Збройних Сил України: ранцеві детектори RSI RSN-350-2N із запасними батареями, планшети Panasonic ToughPad FZ G2, прилад ідентифікації радіоізотопів Ortec RADEAGLET-R-2SG з акумулятором, персональні дозиметри Polimaster PM1703GNA-II та детектори-фріскери Ludlum 26-1 для контролю поверхневого забруднення.\n\n## Мета проєкту\n\nОснащення особового складу як мобільними, так і персональними засобами радіаційного виявлення.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 13 (ЗСУ), Палета 12.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 245 493,61 дол. США**",
       "sourceHash": "2e563309109a",
-      "target": "## Description of the project\n\nSupply of complex radiation monitoring equipment for the Armed Forces of Ukraine: RSI RSN-350-2N knapsack detectors with spare batteries, Panasonic ToughPad FZ G2 tablets, Ortec RADEAGLET-R-2SG radioisotope identification device with battery, Polimaster PM1703GNA-II personal dosimeters and Ludlum 26-1 frisker detectors for monitoring surface contamination.\n\n## The purpose of the project\n\nEquipping personnel with both mobile and personal means of radiation detection.\n\n## Group, programme, pallet\n\nGroup 32, Project 13 (ZSU), Pallet 12.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $245,493.61. USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of complex radiation monitoring equipment for the Armed Forces of Ukraine: RSI RSN-350-2N knapsack detectors with spare batteries, Panasonic ToughPad FZ G2 tablets, Ortec RADEAGLET-R-2SG radioisotope identification device with battery, Polimaster PM1703GNA-II personal dosimeters and Ludlum 26-1 frisker detectors for monitoring surface contamination.\n\n## The purpose of the project\n\nEquipping personnel with both mobile and personal means of radiation detection.\n\n## Group, Program, Pallet\n\nGroup 32, Project 13 (ZSU), Pallet 12.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $245,493.61. USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/zsu-mobilni-ta-personalni-zasoby.title": {
       "source": "Оснащення особового складу Збройних сил України як мобільними, так і персональними засобами радіаційного виявлення",
       "sourceHash": "000085dbdfe5",
-      "target": "Equipping the personnel of the Armed Forces of Ukraine with both mobile and personal means of radiation detection",
-      "status": "machine",
+      "target": "Equipping the personnel of the Armed Forces of Ukraine with both mobile and personal radiation detection devices",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/zsu-mobilni-zasoby-vyyavlennya.body": {
       "source": "## Опис проєкту\n\nПостачання ранцевих радіаційних детекторів RSI Backpack RSN-350-2N із запасними літій-залізо-фосфатними батареями та захищених планшетів Panasonic ToughPad FZ G2 з акумуляторами для Збройних Сил України.\n\n## Мета проєкту\n\nОснащення особового складу мобільними засобами радіаційного виявлення та супутньою обчислювальною технікою для обробки даних моніторингу.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 18 (ЗСУ), Палета 29 та 30.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 932 195,00 дол. США**",
       "sourceHash": "df9b50491e30",
-      "target": "## Description of the project\n\nSupply of rucksack radiation detectors RSI Backpack RSN-350-2N with spare lithium-iron-phosphate batteries and protected tablets Panasonic ToughPad FZ G2 with batteries for the Armed Forces of Ukraine.\n\n## The purpose of the project\n\nEquipping personnel with mobile means of radiation detection and related computing equipment for processing monitoring data.\n\n## Group, programme, pallet\n\nGroup 32, Project 18 (ZSU), Pallet 29 and 30.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $932,195.00. USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of backpack radiation detectors RSI Backpack RSN-350-2N with spare lithium-iron-phosphate batteries and protected tablets Panasonic ToughPad FZ G2 with batteries for the Armed Forces of Ukraine.\n\n## The purpose of the project\n\nEquipping personnel with portable radiation detection devices and related computing equipment for processing monitoring data.\n\n## Group, Program, Pallet\n\nGroup 32, Project 18 (AFU), Pallet 29 and 30.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $932,195.00. USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/zsu-mobilni-zasoby-vyyavlennya.title": {
       "source": "Оснащення Збройних сил України мобільними засобами радіаційного виявлення та супутньою обчислювальною технікою",
       "sourceHash": "dc116d0ec2da",
-      "target": "Equipping the Armed Forces of Ukraine with mobile means of radiation detection and related computing equipment",
-      "status": "machine",
+      "target": "Equipping the Armed Forces of Ukraine with mobile radiation detection systems and related computing equipment",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/zsu-personalni-dozymetry.body": {
       "source": "## Опис проєкту\n\nПостачання персональних дозиметрів-детекторів радіації Polimaster PM1703GNA-II (300 од.) з кобурами для носіння та комплектом акумуляторів і запасних батарей для Збройних Сил України.\n\n## Мета проєкту\n\nОснащення особового складу індивідуальними засобами виявлення радіаційної небезпеки.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 18 (ЗСУ), Полімастер/С-Дефенс.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 1 024 110,00 дол. США**",
       "sourceHash": "c114f8db5181",
-      "target": "## Description of the project\n\nSupply of Polimaster PM1703GNA-II personal radiation detector dosimeters (300 units) with holsters for carrying and a set of batteries and spare batteries for the Armed Forces of Ukraine.\n\n## The purpose of the project\n\nEquipping personnel with individual means of detecting radiation hazards.\n\n## Group, programme, pallet\n\nGroup 32, Project 18 (ZSU), Polimaster/S-Defense.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total project cost: $1,024,110.00 USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of Polimaster PM1703GNA-II personal radiation dosimeters and detectors (300 units), complete with carrying holsters and a set of rechargeable and spare batteries, for the Armed Forces of Ukraine.\n## The purpose of the project\n\nEquipping personnel with individual means of detecting radiation hazards.\n\n## Group, Program, Pallet\n\nGroup 32, Project 18 (AFU), Polimaster/S-Defense.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total project cost: $1,024,110.00 USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/zsu-personalni-dozymetry.title": {
       "source": "Оснащення Збройних сил України персональними дозиметрами радіаційного контролю",
@@ -1918,26 +1918,26 @@
     "projects/zsu-zasoby-sposterezhennya.body": {
       "source": "## Опис проєкту\n\nПостачання тепловізійних монокулярів FLIR Scout Pro із вбудованим літій-іонним акумулятором для Збройних Сил України.\n\n## Мета проєкту\n\nЗабезпечення особового складу Збройних сил України засобами спостереження та розвідки в умовах обмеженої видимості.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 18 (ЗСУ), Палета 79, Палета 83.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 53 014,50 дол. США**",
       "sourceHash": "3362b093fdda",
-      "target": "## Description of the project\n\nSupply of FLIR Scout Pro thermal imaging monoculars with a built-in lithium-ion battery for the Armed Forces of Ukraine.\n\n## The purpose of the project\n\nProviding personnel of the Armed Forces of Ukraine with means of surveillance and intelligence in conditions of limited visibility.\n\n## Group, programme, pallet\n\nGroup 32, Project 18 (ZSU), Pallet 79, Pallet 83.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $53,014.50. USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of FLIR Scout Pro thermal imaging monoculars with a built-in lithium-ion battery for the Armed Forces of Ukraine.\n\n## The purpose of the project\n\nProviding personnel of the Armed Forces of Ukraine with surveillance and reconnaissance capabilities in conditions of limited visibility.\n\n## Group, Program, Pallet\n\nGroup 32, Project 18 (AFU), Pallet 79, Pallet 83.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $53,014.50. USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/zsu-zasoby-sposterezhennya.title": {
       "source": "Забезпечення особового складу Збройних сил України засобами спостереження та розвідки в умовах обмеженої видимості",
       "sourceHash": "c80078ce362c",
-      "target": "Providing personnel of the Armed Forces of Ukraine with means of surveillance and intelligence in conditions of limited visibility",
-      "status": "machine",
+      "target": "Providing personnel of the Armed Forces of Ukraine with surveillance and reconnaissance capabilities in conditions of limited visibility.",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/zsu-zasoby-zahystu-nebezpechni-materialy.body": {
       "source": "## Опис проєкту\n\nПостачання засобів індивідуального захисту для Збройних Сил України: захисні щитки для обличчя з адаптером на каску, напівмаски-респіратори JSP Safety з фільтрами, чохли для взуття Kimberly Clark, тактичні черевики BOSS Boots, нітрилові рукавички Showa Atlas та Nitrilo, хімічно стійкі комбінезони KLEENGUARD A80.\n\n## Мета проєкту\n\nЗабезпечення особового складу Збройних сил України засобами захисту для роботи з небезпечними матеріалами та в польових умовах.\n\n## Група, програма, палета\n\nГрупа 32, Проєкт 18 (ЗСУ), Палета 60-72; Палета 78.\n\n## Партнерство та звітність\n\nПередача здійснена у стратегічному партнерстві з виконавцем урядових проєктів США — корпорацією WGI GLOBAL INC./AMENTUM (Уповноважений розпорядник, США), звітність донору ведеться за стандартами США.\n\n**Загальна вартість проєкту: 49 933,70 дол. США**",
       "sourceHash": "e5c6d518970e",
-      "target": "## Description of the project\n\nSupply of personal protective equipment for the Armed Forces of Ukraine: face shields with helmet adapter, JSP Safety half-mask respirators with filters, Kimberly Clark shoe covers, BOSS Boots tactical boots, Showa Atlas and Nitrilo nitrile gloves, KLEENGUARD A80 chemical-resistant coveralls.\n\n## The purpose of the project\n\nProviding the personnel of the Armed Forces of Ukraine with protective equipment for working with hazardous materials and in field conditions.\n\n## Group, programme, pallet\n\nGroup 32, Project 18 (ZSU), Pallet 60-72; Palette 78.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $49,933.70. USA**",
-      "status": "machine",
+      "target": "## Description of the project\n\nSupply of personal protective equipment for the Armed Forces of Ukraine: face shields with helmet adapter, JSP Safety half-mask respirators with filters, Kimberly Clark shoe covers, BOSS Boots tactical boots, Showa Atlas and Nitrilo nitrile gloves, KLEENGUARD A80 chemical-resistant coveralls.\n\n## The purpose of the project\n\nProviding the personnel of the Armed Forces of Ukraine with protective equipment for working with hazardous materials and in field conditions.\n\n## Group, Program, Pallet\n\nGroup 32, Project 18 (AFU), Pallet 60-72; Palette 78.\n\n## Partnership and reporting\n\nThe transfer was carried out in a strategic partnership with the executor of US government projects — the WGI GLOBAL INC./AMENTUM corporation (Authorized administrator, USA), reporting to the donor is conducted according to US standards.\n\n**Total cost of the project: $49,933.70. USA**",
+      "status": "human",
       "note": "",
-      "updated": "2026-08-07"
+      "updated": "2026-08-18"
     },
     "projects/zsu-zasoby-zahystu-nebezpechni-materialy.title": {
       "source": "Забезпечення особового складу Збройних сил України засобами захисту для роботи з небезпечними матеріалами та в польових умовах",
