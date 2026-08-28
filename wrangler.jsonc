@@ -1,6 +1,7 @@
 {
-  // Основний воркер сайту — адреса, яку має клієнт:
-  // https://icdf-preview.homchenkoyura.workers.dev
+  // Основний воркер сайту. Адреса сайту — https://coicdf.org (див.
+  // "routes" нижче); стара https://icdf-preview.homchenkoyura.workers.dev
+  // лишається робочою і перенаправляє на неї.
   "name": "icdf-preview",
   "compatibility_date": "2026-06-14",
   // Воркер обробляє POST /api/contact, решту віддає статикою.

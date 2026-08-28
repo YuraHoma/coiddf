@@ -17,7 +17,8 @@ const RECIPIENT = contacts.formRecipient || contacts.general;
 // у Subject листа має потрапити лише те, що є в списку CMS.
 const CATEGORIES = new Set(feedback.categories || []);
 // Домен фонду ще не підтверджений у Resend, тож відправник — їхній
-// службовий. Після підключення icdf.org сюди піде адреса на домені.
+// службовий. Коли coicdf.org підтвердять у Resend, сюди піде адреса
+// на власному домені (напр. site@coicdf.org).
 const SENDER = "ICDF site <onboarding@resend.dev>";
 
 const MAX = { name: 120, email: 200, phone: 60, category: 120, message: 5000 };
