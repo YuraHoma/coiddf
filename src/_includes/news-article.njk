@@ -6,7 +6,6 @@ layout: base.njk
 {%- set pTitle = post.title if isEn else title -%}
 {%- set pDate = post.date if isEn else date -%}
 {%- set pImage = post.image if isEn else image -%}
-{%- set pExcerpt = post.excerpt if isEn else excerpt -%}
 {%- set pContent = post.contentHtml if isEn else content -%}
       <section class="page-hero">
         <div>
@@ -18,7 +17,6 @@ layout: base.njk
       <article class="section news-article">
         {% if pImage %}<img class="news-article-cover" src="{{ pImage }}" alt="{{ pTitle }}" loading="eager" fetchpriority="high" sizes="(min-width: 901px) 1200px, 100vw">{% endif %}
         <div class="news-article-body">
-          {% if pExcerpt %}<p class="news-article-lead">{{ pExcerpt }}</p>{% endif %}
           {{ pContent | safe }}
         </div>
       </article>

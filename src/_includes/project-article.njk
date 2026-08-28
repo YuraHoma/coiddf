@@ -5,7 +5,6 @@ layout: base.njk
 {%- set pTitle = project.title if isEn else title -%}
 {%- set pDate = project.date if isEn else date -%}
 {%- set pImage = project.image if isEn else image -%}
-{%- set pExcerpt = project.excerpt if isEn else excerpt -%}
 {%- set pContent = project.contentHtml if isEn else content -%}
       <section class="page-hero">
         <div>
@@ -17,7 +16,6 @@ layout: base.njk
       <article class="section project-article">
         {% if pImage %}<img class="project-article-cover" src="{{ pImage }}" alt="{{ pTitle }}" loading="eager" fetchpriority="high" sizes="(min-width: 901px) 1200px, 100vw">{% endif %}
         <div class="project-article-body">
-          {% if pExcerpt %}<p class="project-article-lead">{{ pExcerpt }}</p>{% endif %}
           {{ pContent | safe }}
         </div>
       </article>

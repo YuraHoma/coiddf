@@ -928,7 +928,6 @@ main > article,
    лишалася порожнеча на пів екрана. */
 .news-article-body { max-width: 720px; margin-inline: auto; }
 .news-article-body p { margin-bottom: 18px; color: var(--text); font-size: 17px; line-height: 1.7; }
-.news-article-lead { font-size: 20px; font-weight: 500; color: var(--ink); }
 
 .news-more .section-heading { margin-bottom: clamp(28px, 3vw, 40px); }
 
@@ -950,7 +949,6 @@ main > article,
 .project-article-body ul,
 .project-article-body ol { margin: 0 0 18px 22px; color: var(--text); font-size: 17px; line-height: 1.7; }
 .project-article-body li { margin-bottom: 8px; }
-.project-article-lead { font-size: 20px; font-weight: 500; color: var(--ink); }
 .project-more .section-heading { margin-bottom: clamp(28px, 3vw, 40px); }
 
 /* ---------- Напрями: назва + знімок ----------
