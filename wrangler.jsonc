@@ -5,6 +5,14 @@
   "compatibility_date": "2026-06-14",
   // Воркер обробляє POST /api/contact, решту віддає статикою.
   "main": "worker/index.js",
+  // Власний домен фонду. Wrangler сам створює потрібні DNS-записи в зоні
+  // coicdf.org і випускає сертифікат — руками в панелі нічого не додаємо,
+  // тож і при передачі проєкту клієнту домен описаний тут, у репозиторії.
+  // «www» лишається робочим і веде на головну адресу (див. worker/index.js).
+  "routes": [
+    { "pattern": "coicdf.org", "custom_domain": true },
+    { "pattern": "www.coicdf.org", "custom_domain": true }
+  ],
   "observability": {
     "enabled": true
   },
