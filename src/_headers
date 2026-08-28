@@ -1,10 +1,18 @@
 # Security headers — served by Cloudflare (Workers static assets / Pages).
+#
+# УВАГА про вбудовування (frame-ancestors / X-Frame-Options): Cloudflare не
+# ЗАМІНЮЄ значення в частковому правилі, а ДОДАЄ другий заголовок. Два
+# заголовки браузер зводить до найсуворішого, тож окреме послаблення для
+# PDF не працювало — переглядач документів на сторінці правової інформації
+# лишався заблокованим. Тому дозвіл на вбудовування задано одразу тут:
+# 'self' забороняє чужим сайтам вставляти нас у рамку так само, як 'none',
+# і при цьому лишає нам можливість показувати власні PDF на власній сторінці.
 /*
-  X-Frame-Options: DENY
+  X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'
 
 # Похідні зображення безпечно кешувати назавжди: імʼя файлу генерує
 # eleventy-img з хешу вмісту, тож інший вміст — інша адреса.
@@ -18,10 +26,7 @@
 /assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Документи показуються прямо на сторінці правової інформації у вбудованому
-# переглядачі. Загальне правило забороняє вбудовування будь-кому, зокрема й
-# нам самим, тож для PDF дозволяємо його рівно для власного домену.
+# Документи оновлюють рідко, але не «ніколи»: імена в них людські, без
+# хеша, тож кешуємо на годину — заміна файлу дійде до людей того ж дня.
 /assets/*.pdf
-  X-Frame-Options: SAMEORIGIN
-  Content-Security-Policy: frame-ancestors 'self'
   Cache-Control: public, max-age=3600
