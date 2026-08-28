@@ -515,6 +515,14 @@
       "note": "",
       "updated": "2026-08-18"
     },
+    "data/legal.intro": {
+      "source": "Благодійна організація «Фонд розвитку міжнародної співпраці» працює в Україні за напрямами гуманітарного реагування, радіаційного захисту, підвищення військової готовності та цифрової трансформації.",
+      "sourceHash": "8097ed5a251a",
+      "target": "The charitable organisation “International Cooperation Development Fund” works in Ukraine in humanitarian crisis response, radiation protection, military readiness and digital transformation.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-28"
+    },
     "data/legal.note": {
       "source": "Реєстраційні дані та політики організації готуються до публікації і з'являться на цій сторінці найближчим часом.",
       "sourceHash": "385bc66a3109",
@@ -522,6 +530,38 @@
       "status": "human",
       "note": "",
       "updated": "2026-08-18"
+    },
+    "data/legal.policiesHeading": {
+      "source": "Політики організації",
+      "sourceHash": "41d0efc8b7d2",
+      "target": "Organisation policies",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-28"
+    },
+    "data/legal.policiesLead": {
+      "source": "Наведені політики є невідʼємною частиною діяльності фонду та відповідають міжнародним гуманітарним принципам.",
+      "sourceHash": "e1d1ed418acd",
+      "target": "These policies are an integral part of the Fund's work and follow international humanitarian principles.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-28"
+    },
+    "data/legal.policiesNote": {
+      "source": "Політики організації готуються до публікації і зʼявляться на цій сторінці найближчим часом.",
+      "sourceHash": "656d8a96a301",
+      "target": "The organisation's policies are being prepared and will appear on this page shortly.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-28"
+    },
+    "data/legal.regHeading": {
+      "source": "Реєстраційна інформація",
+      "sourceHash": "745c688e4dbe",
+      "target": "Registration information",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-28"
     },
     "data/novyny.hero.eyebrow": {
       "source": "Новини",
@@ -1307,10 +1347,26 @@
       "note": "",
       "updated": "2026-08-18"
     },
+    "data/reports.items[0].tag": {
+      "source": "Річні звіти",
+      "sourceHash": "b39a5a918889",
+      "target": "Annual reports",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-28"
+    },
     "data/reports.items[0].title": {
       "source": "Звіт про використання доходів (прибутків) неприбуткової організації за 2025 рік",
       "sourceHash": "7549d11b7889",
       "target": "Report on the use of income (profits) of a non-profit organisation for 2025",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-28"
+    },
+    "data/reports.items[1].tag": {
+      "source": "Фінансова звітність",
+      "sourceHash": "9d93e7ceb131",
+      "target": "Financial statements",
       "status": "human",
       "note": "",
       "updated": "2026-08-28"

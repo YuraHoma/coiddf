@@ -7,10 +7,16 @@
   "items": [
     {
       "title": "Звіт про використання доходів (прибутків) неприбуткової організації за 2025 рік",
+      "tag": "Річні звіти",
+      "date": "2025-12-31",
+      "image": "/assets/report-zvit-vykorystannya-2025.jpg",
       "file": "/assets/zvit-vykorystannya-dohodiv-2025.pdf"
     },
     {
       "title": "Фінансова звітність мікропідприємства за 2025 рік",
+      "tag": "Фінансова звітність",
+      "date": "2025-12-31",
+      "image": "/assets/report-finansova-zvitnist-2025.jpg",
       "file": "/assets/finansova-zvitnist-2025.pdf"
     }
   ],

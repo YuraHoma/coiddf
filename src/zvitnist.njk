@@ -23,26 +23,28 @@ eleventyComputed:
       </section>
       <section class="section">
         {%- if reports.items.length %}
-        {#- Документи відкриваються прямо в браузері, у новій вкладці:
-            партнер має прочитати звіт, а не завантажувати файл і шукати
-            його потім у теці. -#}
-        <ul class="report-list">
+        {#- Картка звіту: обкладинка, позначка розділу, назва й дата.
+            Обкладинка — перша сторінка самого документа, тож партнер бачить,
+            що саме відкриє, ще до кліку. Уся картка — одне посилання, яке
+            відкриває PDF у новій вкладці. -#}
+        <ul class="report-grid">
           {%- for r in reports.items %}
           <li>
             <a href="{{ r.file }}" target="_blank" rel="noopener">
-              <span class="report-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              </span>
-              <span class="report-title">{{ r.title }}</span>
-              <span class="report-open">{{ "Open" if locale == "en" else "Відкрити" }} ↗</span>
+              <div class="report-cover">
+                {%- if r.image %}
+                <img src="{{ r.image }}" alt="{{ r.title }}" loading="lazy" sizes="(min-width: 901px) 33vw, 100vw">
+                {%- endif %}
+              </div>
+              {%- if r.tag %}<span class="report-tag">{{ r.tag }}</span>{% endif %}
+              <h2>{{ r.title }}</h2>
+              {%- if r.date %}<time datetime="{{ r.date }}">{{ r.date | uadate }}</time>{% endif %}
             </a>
           </li>
           {%- endfor %}
         </ul>
         {%- endif %}
-        {#- Примітка — заміна порожньому списку, а не доповнення до нього:
-            поки документів немає, вона пояснює чому; коли зʼявились —
-            зайва. -#}
+        {#- Примітка — заміна порожньому списку, а не доповнення до нього. -#}
         {%- if not reports.items.length and reports.note %}
         <p class="report-note">{{ reports.note }}</p>
         {%- endif %}
