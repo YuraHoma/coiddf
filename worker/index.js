@@ -156,22 +156,44 @@ async function handleContact(request, env) {
 // беруться canonical, hreflang і sitemap. Тож перемикання на власний
 // домен — це зміна одного поля, а не полювання по коду.
 const CANONICAL_HOST = new URL(site.url).host;
+const CANONICAL_IS_TEMP = CANONICAL_HOST.endsWith(".workers.dev");
+
+/**
+ * Чи треба вести цей запит на головний домен.
+ *
+ * Перенаправляємо ЛИШЕ з відомих другорядних адрес — з «www» і зі старої
+ * тимчасової адреси на workers.dev, — а не з усього, що не збігається з
+ * головним хостом. Різниця критична в мить підключення домену: спершу
+ * домен привʼязують до воркера, і лише потім міняється site.json. Якби
+ * правило звучало «все, що не головний хост», новий домен у цьому
+ * проміжку відсилав би відвідувача назад на заблоковану адресу.
+ */
+export function redirectTarget(url) {
+  const host = url.hostname;
+  if (host === "localhost" || host === "127.0.0.1") return null;
+  if (host === CANONICAL_HOST) return null;
+  const isWww = host === `www.${CANONICAL_HOST}`;
+  // Стару адресу лишаємо робочою, поки вона сама є головною.
+  const isOldTemp = host.endsWith(".workers.dev") && !CANONICAL_IS_TEMP;
+  if (!isWww && !isOldTemp) return null;
+  const target = new URL(url);
+  target.host = CANONICAL_HOST;
+  target.protocol = "https:";
+  target.port = "";
+  return target.toString();
+}
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const { pathname } = url;
 
-    // Будь-який інший хост (www, стара тимчасова адреса на workers.dev)
-    // веде на головний. Це важливо не лише для пошуковиків: посилання
-    // на workers.dev уже розійшлися листами, а корпоративні фільтри
-    // блокують цей спільний домен цілком.
-    const isLocal = url.hostname === "localhost" || url.hostname === "127.0.0.1";
-    if (!isLocal && url.host !== CANONICAL_HOST && request.method === "GET") {
-      url.host = CANONICAL_HOST;
-      url.protocol = "https:";
-      url.port = "";
-      return Response.redirect(url.toString(), 301);
+    // Посилання на workers.dev уже розійшлися листами, а корпоративні
+    // фільтри блокують цей спільний домен цілком — тож старі адреси
+    // мають вести на новий домен, а не вмирати.
+    if (request.method === "GET") {
+      const target = redirectTarget(url);
+      if (target) return Response.redirect(target, 301);
     }
 
     if (pathname !== "/api/contact") return env.ASSETS.fetch(request);
