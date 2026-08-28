@@ -235,7 +235,40 @@ content:
       - name: edrpou
         label: Код ЄДРПОУ
         type: string
-        description: 'Необовʼязково. Порожнє поле — код не показується у футері й не потрапляє у структуровані дані.'
+        description: 'Показується у блоці реєстраційної інформації, у футері та у структурованих даних для пошуковиків.'
+      - name: intro
+        label: Вступний текст
+        type: text
+        description: 'Абзац під реєстраційними даними: чим займається організація.'
+      - name: policiesHeading
+        label: Заголовок розділу політик
+        type: string
+      - name: policiesLead
+        label: Текст перед переліком політик
+        type: text
+      - name: policies
+        label: Політики організації
+        type: object
+        list: true
+        description: 'Кожна політика — картка, яка розкривається: усередині опис, кнопка «Відкрити» і сам документ для читання прямо на сторінці.'
+        fields:
+          - name: title
+            label: Назва політики
+            type: string
+            required: true
+          - name: description
+            label: Опис
+            type: text
+            description: 'Необовʼязково. Кілька речень про те, навіщо ця політика — показуються під заголовком, коли картку розкрито.'
+          - name: file
+            label: Документ
+            type: file
+            required: true
+            description: 'PDF. Показується прямо на сторінці й відкривається окремо кнопкою.'
+      - name: policiesNote
+        label: 'Текст, поки політик немає'
+        type: text
+        description: 'Показується замість переліку, поки жодної політики не додано.'
       - name: note
         label: 'Текст, поки список порожній'
         type: text

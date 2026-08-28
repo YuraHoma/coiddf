@@ -17,3 +17,11 @@
 # інакше в тих, хто вже був на сайті, лишиться стара версія на рік.
 /assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Документи показуються прямо на сторінці правової інформації у вбудованому
+# переглядачі. Загальне правило забороняє вбудовування будь-кому, зокрема й
+# нам самим, тож для PDF дозволяємо його рівно для власного домену.
+/assets/*.pdf
+  X-Frame-Options: SAMEORIGIN
+  Content-Security-Policy: frame-ancestors 'self'
+  Cache-Control: public, max-age=3600

@@ -7,9 +7,9 @@ pagination:
   addAllPagesToCollections: true
 permalink: "{{ '/en/pravova-informaciya/' if locale == 'en' else '/pravova-informaciya/' }}"
 title: Правова інформація | Фонд розвитку міжнародної співпраці
-description: Реєстраційні дані та реквізити благодійного фонду.
+description: Реєстраційні дані, реквізити та політики благодійного фонду.
 enTitle: Legal Information | International Cooperation Development Fund
-enDescription: Registration data and details of the charity fund.
+enDescription: Registration data, details and policies of the charity fund.
 eleventyComputed:
   title: "{{ (enTitle if locale == 'en' else title) | safe }}"
   description: "{{ (enDescription if locale == 'en' else description) | safe }}"
@@ -21,15 +21,75 @@ eleventyComputed:
           <p class="lead">{{ legal.hero.lead }}</p>
         </div>
       </section>
-      <section class="section contacts-page">
+      <section class="section legal-page">
+        {#- Реєстраційна інформація зібрана з тих самих даних, що й решта
+            сайту: назва з site.json, адреса з контактів, коди з legal.json.
+            Дублювати їх окремо тут означало б, що колись вони розійдуться. -#}
+        <div class="legal-reg">
+          <h2>{{ legal.regHeading }}</h2>
+          <p class="legal-reg-name">{{ site.orgFull }}</p>
+          {%- if legal.edrpou %}
+          <p>{{ "Registration code" if locale == "en" else "ЄДРПОУ" }}: <b>{{ legal.edrpou }}</b></p>
+          {%- endif %}
+          {%- if contacts.address %}
+          <p>{{ contacts.address }}</p>
+          {%- endif %}
+          {%- if legal.registration.length %}
+          <ul class="legal-codes">
+            {%- for r in legal.registration %}
+            <li><span>{{ r.label }}</span><b>{{ r.value }}</b></li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
+        </div>
+
+        {%- if legal.intro %}
+        <p class="legal-intro">{{ legal.intro }}</p>
+        {%- endif %}
+
+        <h2 class="legal-policies-heading">{{ legal.policiesHeading }}</h2>
+        {%- if legal.policiesLead %}
+        <p class="legal-intro">{{ legal.policiesLead }}</p>
+        {%- endif %}
+
+        {%- if legal.policies.length %}
+        {#- <details> замість власного скрипта: розкривається з клавіатури,
+            працює без JS і читається програмами екранного доступу як є.
+            Документ показуємо прямо на сторінці, щоб партнер міг прочитати
+            його не завантажуючи, і поруч лишаємо посилання на файл. -#}
+        <ul class="policy-list">
+          {%- for p in legal.policies %}
+          <li>
+            <details class="policy">
+              <summary>
+                <span class="policy-title">{{ p.title }}</span>
+                <span class="policy-toggle" aria-hidden="true">{{ "Read" if locale == "en" else "Дізнатись більше" }}</span>
+              </summary>
+              <div class="policy-body">
+                {%- if p.description %}
+                <p>{{ p.description }}</p>
+                {%- endif %}
+                {%- if p.file %}
+                <div class="policy-doc">
+                  <span>{{ p.title }}</span>
+                  <a class="button button-accent" href="{{ p.file }}" target="_blank" rel="noopener">{{ "Open" if locale == "en" else "Відкрити" }} ↗</a>
+                </div>
+                <iframe class="policy-viewer" src="{{ p.file }}#view=FitH" title="{{ p.title }}" loading="lazy"></iframe>
+                {%- endif %}
+              </div>
+            </details>
+          </li>
+          {%- endfor %}
+        </ul>
+        {%- elif legal.policiesNote %}
+        <p class="report-note">{{ legal.policiesNote }}</p>
+        {%- endif %}
+
         {%- if legal.items.length %}
         <div class="contact-list">
           {%- for c in legal.items %}
           <span>{{ c.label }}: {{ c.value }}</span>
           {%- endfor %}
         </div>
-        {%- endif %}
-        {%- if legal.note %}
-        <p class="report-note">{{ legal.note }}</p>
         {%- endif %}
       </section>

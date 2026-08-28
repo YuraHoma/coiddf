@@ -30,7 +30,8 @@ const DATASETS = [
   { name: "partners", skipKeys: ["key"] },
   { name: "novyny", skipKeys: [] },
   { name: "proyekty", skipKeys: [] },
-  { name: "legal", skipKeys: [] },
+  // file — шлях до документа політики, не текст.
+  { name: "legal", skipKeys: ["file"] },
   { name: "policy", skipKeys: [] },
   // file — шлях до PDF, а не текст: перекладати його не можна.
   { name: "reports", skipKeys: ["file"] },

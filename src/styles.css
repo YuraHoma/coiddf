@@ -765,6 +765,91 @@ main > article,
   letter-spacing: -0.01em;
 }
 
+/* ---------- Правова інформація: реквізити й політики ---------- */
+.legal-page { display: flex; flex-direction: column; gap: clamp(24px, 3vw, 36px); }
+.legal-reg {
+  padding: clamp(24px, 3vw, 36px);
+  background: var(--surface-2);
+  border-radius: var(--radius-card);
+}
+.legal-reg h2 { font-size: clamp(24px, 2.2vw, 30px); margin-bottom: 16px; }
+.legal-reg p { margin-bottom: 10px; color: var(--text); line-height: 1.6; }
+.legal-reg-name { font-weight: 600; color: var(--ink); }
+.legal-codes { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 8px; }
+.legal-codes li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  font-size: 15px;
+}
+.legal-codes span { color: var(--muted); }
+.legal-codes b { color: var(--ink); }
+.legal-intro { max-width: 62ch; color: var(--text); line-height: 1.7; }
+.legal-policies-heading { font-size: clamp(24px, 2.2vw, 30px); }
+
+.policy-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+.policy {
+  background: var(--brand-pale);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
+.policy summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  padding: 20px 22px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 16px;
+  color: var(--ink);
+}
+.policy summary::-webkit-details-marker { display: none; }
+.policy-title { flex: 1 1 260px; font-weight: 500; }
+/* Підпис поводиться як кнопка, але лишається частиною summary: інакше
+   кнопка всередині клікабельного заголовка дає вкладену інтерактивність. */
+.policy-toggle {
+  flex: 0 0 auto;
+  padding: 10px 18px;
+  border-radius: var(--radius-btn);
+  background: var(--brand-deep);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color var(--t);
+}
+.policy summary:hover .policy-toggle { background: var(--brand); }
+.policy[open] .policy-toggle { background: var(--brand); }
+.policy-body { padding: 0 22px 22px; display: grid; gap: 16px; }
+.policy-body p { color: var(--text); line-height: 1.7; max-width: 62ch; }
+.policy-doc {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  padding: 16px 18px;
+  background: #fff;
+  border-radius: var(--radius-btn);
+  font-weight: 600;
+  color: var(--ink);
+}
+.policy-viewer {
+  width: 100%;
+  height: min(70vh, 760px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-btn);
+  background: #fff;
+}
+@media (max-width: 600px) {
+  /* На телефоні вбудований переглядач PDF майже нечитабельний —
+     лишаємо кнопку «Відкрити», вона віддає документ на весь екран. */
+  .policy-viewer { display: none; }
+}
+
 /* документи звітності — картка-посилання, що відкриває PDF */
 .report-list { list-style: none; padding: 0; margin: 0; }
 .report-list > li { display: flex; }
