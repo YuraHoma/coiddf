@@ -12,7 +12,11 @@
     "directory": "_site",
     "binding": "ASSETS",
     // serve our custom /404.html for missing paths
-    "not_found_handling": "404-page"
+    "not_found_handling": "404-page",
+    // Воркер має бачити КОЖЕН запит, а не лише ті, під які немає файлу:
+    // інакше перенаправлення з www і зі старої тимчасової адреси на
+    // головний домен не спрацьовує — статика віддається раніше.
+    "run_worker_first": true
   },
   "compatibility_flags": [
     "nodejs_compat"

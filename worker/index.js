@@ -152,9 +152,28 @@ async function handleContact(request, env) {
   return json({ ok: true });
 }
 
+// Головний хост сайту береться з site.json — того самого місця, звідки
+// беруться canonical, hreflang і sitemap. Тож перемикання на власний
+// домен — це зміна одного поля, а не полювання по коду.
+const CANONICAL_HOST = new URL(site.url).host;
+
 export default {
   async fetch(request, env) {
-    const { pathname } = new URL(request.url);
+    const url = new URL(request.url);
+    const { pathname } = url;
+
+    // Будь-який інший хост (www, стара тимчасова адреса на workers.dev)
+    // веде на головний. Це важливо не лише для пошуковиків: посилання
+    // на workers.dev уже розійшлися листами, а корпоративні фільтри
+    // блокують цей спільний домен цілком.
+    const isLocal = url.hostname === "localhost" || url.hostname === "127.0.0.1";
+    if (!isLocal && url.host !== CANONICAL_HOST && request.method === "GET") {
+      url.host = CANONICAL_HOST;
+      url.protocol = "https:";
+      url.port = "";
+      return Response.redirect(url.toString(), 301);
+    }
+
     if (pathname !== "/api/contact") return env.ASSETS.fetch(request);
     // Що б не сталося всередині, відвідувач має отримати JSON, який
     // форма вміє прочитати, а не голу сторінку помилки Cloudflare.
