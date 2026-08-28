@@ -4,12 +4,12 @@
   "targetLang": "en",
   "entries": {
     "data/contacts.address": {
-      "source": "вул. Межова, 23, (Подільський район), м. Київ, 04215, Україна",
-      "sourceHash": "8dc8c95fef81",
-      "target": "23, Mezhova Street (Podil district), Kyiv, 04215, Ukraine",
+      "source": "вул. Межова, 23, (Подільський район), м. Київ, 04123, Україна",
+      "sourceHash": "696619c6f414",
+      "target": "23, Mezhova Street (Podil district), Kyiv, 04123, Ukraine",
       "status": "human",
       "note": "Переклад надано клієнтом — як у реєстраційних документах",
-      "updated": "2026-08-10"
+      "updated": "2026-08-28"
     },
     "data/feedback.categories[0]": {
       "source": "Загальний запит",
@@ -1306,6 +1306,22 @@
       "status": "human",
       "note": "",
       "updated": "2026-08-18"
+    },
+    "data/reports.items[0].title": {
+      "source": "Звіт про використання доходів (прибутків) неприбуткової організації за 2025 рік",
+      "sourceHash": "7549d11b7889",
+      "target": "Report on the use of income (profits) of a non-profit organisation for 2025",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-28"
+    },
+    "data/reports.items[1].title": {
+      "source": "Фінансова звітність мікропідприємства за 2025 рік",
+      "sourceHash": "f969f78294d3",
+      "target": "Micro-enterprise financial statements for 2025",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-28"
     },
     "data/reports.note": {
       "source": "Звіти готуються до публікації і з'являться на цій сторінці найближчим часом.",

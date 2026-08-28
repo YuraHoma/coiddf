@@ -36,6 +36,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/apple-touch-icon.png"); //  логотип у JSON-LD
   eleventyConfig.addPassthroughCopy("src/assets/og-image.jpg"); //  соцкартка за замовчуванням
   eleventyConfig.addPassthroughCopy("src/assets/award-*.jpg"); //  скани нагород — відкривають за прямим посиланням з /pro-nas/
+  eleventyConfig.addPassthroughCopy("src/assets/*.pdf"); //  звіти — відкривають за прямим посиланням з /zvitnist/
   eleventyConfig.addPassthroughCopy("src/assets/fonts"); //  self-hosted шрифти
   eleventyConfig.addPassthroughCopy({ "src/_headers": "_headers" });
 

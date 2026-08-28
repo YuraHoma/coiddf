@@ -43,6 +43,22 @@ function translateOnce(text) {
   return parsed[0].map((seg) => seg[0]).join("");
 }
 
+// Безкоштовний перекладач іноді відповідає 429 — просто тому, що з цієї
+// мережі сьогодні вже багато перекладали. Пробуємо ще двічі з паузою,
+// перш ніж вважати рядок невдалим.
+function translateWithRetry(text) {
+  let last;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      return translateOnce(text);
+    } catch (e) {
+      last = e;
+      if (attempt < 3) sleep(attempt * 2000);
+    }
+  }
+  throw last;
+}
+
 let added = 0;
 let refreshed = 0;
 let moved = 0;
@@ -87,7 +103,7 @@ for (const { key, source } of units) {
   }
 
   try {
-    const target = translateOnce(source);
+    const target = translateWithRetry(source);
     catalog.entries[key] = catalogLib.makeEntry({
       source,
       target,
@@ -135,4 +151,16 @@ if (staleHuman.length) {
 }
 
 if (dryRun) console.log("\n(--dry-run: каталог не змінювався)");
-if (failed > 0) process.exitCode = 1;
+
+// Невдалий переклад НЕ валить збірку. Раніше валив — і тоді тимчасовий
+// збій зовнішнього сервісу означав, що новина, яку клієнт щойно зберіг
+// у CMS, не зʼявиться на сайті взагалі. Сайт натомість збереться, а в
+// англійській версії цей фрагмент тимчасово покаже український текст;
+// наступний запуск перекладе його автоматично.
+if (failed > 0) {
+  console.log(
+    `\nУВАГА: ${failed} рядків не перекладено — сервіс перекладу не відповів.\n` +
+      "Збірку не спиняємо: у цих місцях англійська версія тимчасово покаже\n" +
+      "український текст. Наступний деплой спробує ще раз."
+  );
+}
