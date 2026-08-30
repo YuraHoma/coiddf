@@ -1784,6 +1784,32 @@ main > article,
   border-radius: var(--radius-btn);
   transition: border-color var(--t);
 }
+/* Стрілка списку. Нативну прибираємо свідомо: браузер малює її впритул
+   до рамки й ігнорує наш padding — поле випадало з ритму форми, де в усіх
+   інших полях текст починається за 16px від краю. Малюємо свою тим самим
+   приглушеним кольором і на тому ж відступі. Фон data: дозволений CSP
+   (img-src 'self' data:), зовнішній файл не потрібен. */
+.form-row select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2355604A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 16px 16px;
+  /* Місце під стрілку: інакше довгий пункт заповзає просто під неї. */
+  padding-right: 44px;
+  /* На вузьких екранах найдовша причина звернення не вміщається. Без
+     цього браузер ріже її просто посеред літери; так само обрізає, але
+     ставить трикрапку — видно, що текст продовжується. */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* Firefox лишає пункти списку з власним темним тлом, коли поле у фокусі —
+   без цього обраний пункт читається білим по синьому. */
+.form-row select option { color: var(--text); background: #fff; }
+
 /* Індикатор фокуса лишається таким самим, як на решті сайту (3px),
    інакше поля форми — єдине місце, де клавіатурник його майже не бачить. */
 .form-row input:focus-visible,
