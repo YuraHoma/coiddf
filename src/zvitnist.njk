@@ -24,16 +24,16 @@ eleventyComputed:
       <section class="section">
         {%- if reports.items.length %}
         {#- Картка звіту: обкладинка, позначка розділу, назва, дата й окрема
-            кнопка завантаження. Уся верхня частина — одне посилання, яке
-            відкриває PDF у новій вкладці (почитати), кнопка нижче зберігає
-            файл на пристрій (забрати з собою). Кнопка стоїть СУСІДОМ до
+            кнопка завантаження. Уся верхня частина — посилання на сторінку
+            документа, де його можна почитати не виходячи з сайту, а кнопка
+            нижче одразу зберігає файл на пристрій. Кнопка стоїть СУСІДОМ до
             посилання, а не всередині: посилання в посиланні браузер
             розбирає непередбачувано, і клавіатурна навігація ламається. -#}
         <ul class="report-grid">
           {%- for r in reports.items %}
           {%- set year = r | coveryear %}
           <li class="report-card">
-            <a class="report-open" href="{{ r.file }}" target="_blank" rel="noopener">
+            <a class="report-open" href="{{ loop.index0 | reporturl(locale) }}">
               {%- if r.image %}
               <div class="report-cover">
                 <img src="{{ r.image }}" alt="{{ r.title }}" loading="lazy" sizes="(min-width: 901px) 33vw, 100vw">

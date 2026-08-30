@@ -47,6 +47,15 @@ module.exports = async function () {
     }
   }
 
+  // Обкладинки звітів лежать не в markdown, а в reports.json — але в
+  // кожного звіту тепер є власна сторінка, і при поширенні її посилання
+  // має показуватися обкладинка документа, а не загальна картинка сайту.
+  const reportsFile = "src/_data/reports.json";
+  if (fs.existsSync(reportsFile)) {
+    const reports = JSON.parse(fs.readFileSync(reportsFile, "utf8"));
+    for (const item of reports.items || []) if (item.image) originals.add(item.image);
+  }
+
   const outDir = "_site/assets/social";
   fs.mkdirSync(outDir, { recursive: true });
 

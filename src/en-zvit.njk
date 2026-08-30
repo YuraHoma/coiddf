@@ -1,0 +1,14 @@
+---
+layout: report-page.njk
+pagination:
+  data: en.reports.items
+  size: 1
+  alias: doc
+  addAllPagesToCollections: true
+permalink: "/en/zvity/{{ pagination.pageNumber | reportslug }}/"
+locale: en
+eleventyComputed:
+  title: "{{ doc.title | seotitle }} | ICDF"
+  description: "{{ doc.title }}"
+  image: "{{ doc.image }}"
+---

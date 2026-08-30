@@ -93,16 +93,19 @@ module.exports = function (eleventyConfig) {
     return isNaN(d) ? new Date().toISOString().slice(0, 10) : d.toISOString().slice(0, 10);
   });
 
-  // Рік для обкладинки-заглушки звіту. Дата — головне джерело; якщо її
-  // не заповнили, пробуємо витягти рік із назви («…за 2025 рік»), бо
-  // саме так партнер називає документ. Порожньо — заглушка просто
-  // лишиться без року, а не з написом «NaN».
-  eleventyConfig.addFilter("coveryear", (item) => {
-    const d = item && item.date ? new Date(item.date) : null;
-    if (d && !isNaN(d)) return String(d.getUTCFullYear());
-    const m = String((item && item.title) || "").match(/\b(?:19|20)\d{2}\b/);
-    return m ? m[0] : "";
-  });
+  // Рік для обкладинки-заглушки звіту (див. scripts/reports.js).
+  const { reportYear, reportSlugs } = require("./scripts/reports.js");
+  eleventyConfig.addFilter("coveryear", reportYear);
+
+  // Слаг сторінки документа за його місцем у переліку. Порядок в
+  // українському й англійському reports.items однаковий (англійську
+  // версію збирає scripts/i18n з того самого джерела), тож індекс —
+  // надійніша прив'язка, ніж перекладена назва.
+  const reportSlugList = reportSlugs(require("./src/_data/reports.json").items);
+  eleventyConfig.addFilter("reportslug", (index) => reportSlugList[index] || "");
+  eleventyConfig.addFilter("reporturl", (index, loc) =>
+    `${loc === "en" ? "/en" : ""}/zvity/${reportSlugList[index] || ""}/`
+  );
 
   // Format an ISO date as DD.MM.YYYY for display.
   // UTC methods: front-matter dates are parsed as UTC midnight, local getters
