@@ -851,10 +851,16 @@ main > article,
 }
 
 /* ---------- сторінка одного документа звітності ---------- */
+/* Бокові відступи <article> задає загальне правило main > article —
+   тут лише вертикальні. Ширину колонки обмежує вкладений .doc-inner:
+   max-width на самій <article> віднімався б від тих бокових відступів,
+   і що ширший екран, то вужчою ставала б колонка. */
 .doc-page {
+  padding-block: clamp(28px, 4vw, 48px) var(--section-y);
+}
+.doc-inner {
   max-width: 900px;
   margin-inline: auto;
-  padding-block: clamp(28px, 4vw, 48px);
 }
 /* flex, а не inline-flex: мітка розділу нижче — inline-block, і поруч
    із рядковим посиланням вони злипалися в один рядок. */

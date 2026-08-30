@@ -8,24 +8,29 @@ layout: base.njk
           його знаходив пошук — голий PDF-файл не має ні заголовка, ні
           опису, ні мовної версії. -#}
       <article class="doc-page">
-        <a class="doc-back" href="{{ '/en/zvitnist/' if locale == 'en' else '/zvitnist/' }}">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg>
-          {{ reports.hero.eyebrow or ("Reporting" if locale == "en" else "Звітність") }}
-        </a>
-        {%- if doc.tag %}<p class="eyebrow">{{ doc.tag }}</p>{% endif %}
-        <h1>{{ doc.title }}</h1>
-        {%- if doc.date %}
-        <time class="doc-date" datetime="{{ doc.date }}">{{ doc.date | uadate }}</time>
-        {%- endif %}
-
-        <div class="doc-bar">
-          <span class="doc-bar-name">{{ doc.title }}</span>
-          {#- «download» віддає файл на збереження, не відкриваючи його ще
-              раз поверх переглядача, який уже стоїть нижче. -#}
-          <a class="button button-accent" href="{{ doc.file }}" download>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/></svg>
-            {{ "Download" if locale == "en" else "Завантажити" }}
+        {#- Внутрішня обгортка потрібна: сама <article> уже отримує бокові
+            відступи контейнера від main > article, і max-width на ній
+            віднімався б від тих відступів — що ширший екран, то вужча
+            колонка (на 1512px лишалося 588px, на 1920 — менше двохсот). -#}
+        <div class="doc-inner">
+          <a class="doc-back" href="{{ '/en/zvitnist/' if locale == 'en' else '/zvitnist/' }}">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg>
+            {{ reports.hero.eyebrow or ("Reporting" if locale == "en" else "Звітність") }}
           </a>
+          {%- if doc.tag %}<p class="eyebrow">{{ doc.tag }}</p>{% endif %}
+          <h1>{{ doc.title }}</h1>
+          {%- if doc.date %}
+          <time class="doc-date" datetime="{{ doc.date }}">{{ doc.date | uadate }}</time>
+          {%- endif %}
+
+          <div class="doc-bar">
+            <span class="doc-bar-name">{{ doc.title }}</span>
+            {#- «download» віддає файл на збереження, не відкриваючи його ще
+                раз поверх переглядача, який уже стоїть нижче. -#}
+            <a class="button button-accent" href="{{ doc.file }}" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/></svg>
+              {{ "Download" if locale == "en" else "Завантажити" }}
+            </a>
         </div>
 
         {#- Переглядач ховається на телефоні (див. styles.css): там він або
@@ -36,4 +41,5 @@ layout: base.njk
           {{ "Your browser cannot display the document on this screen." if locale == "en" else "Ваш браузер не показує документ на цьому екрані." }}
           <a href="{{ doc.file }}" target="_blank" rel="noopener">{{ "Open the document" if locale == "en" else "Відкрити документ" }} ↗</a>
         </p>
+        </div>
       </article>
