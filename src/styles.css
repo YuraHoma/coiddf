@@ -860,11 +860,23 @@ main > article,
   grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: clamp(20px, 2.4vw, 32px);
 }
-.report-grid a {
+/* Картка — колонка: посилання-обкладинка зверху, кнопка завантаження
+   притиснута донизу (margin-top: auto нижче), щоб у ряду з різними за
+   довжиною назвами кнопки стояли на одній лінії. */
+.report-card {
   display: flex;
   flex-direction: column;
   gap: 12px;
   height: 100%;
+}
+.report-open {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.report-download {
+  margin-top: auto;
+  align-self: flex-start;
 }
 .report-cover {
   overflow: hidden;
@@ -881,8 +893,8 @@ main > article,
   object-fit: cover;
   object-position: top center;
 }
-.report-grid a:hover .report-cover,
-.report-grid a:focus-visible .report-cover {
+.report-open:hover .report-cover,
+.report-open:focus-visible .report-cover {
   border-color: var(--brand);
   transform: translateY(-2px);
 }
@@ -902,8 +914,70 @@ main > article,
   color: var(--ink);
   transition: color var(--t);
 }
-.report-grid a:hover h2 { color: var(--brand-deep); }
+.report-open:hover h2 { color: var(--brand-deep); }
 .report-grid time { font-size: 14px; color: var(--muted); }
+
+/* Обкладинка-заглушка. Показується, коли обкладинки в CMS немає: інакше
+   на її місці лишався б порожній сірий прямокутник на пів картки.
+   Це не зображення, а верстка — рік і назва підставляються з тих самих
+   полів картки, тож заглушка не застаріває, важить нуль байтів і не
+   вимагає від клієнта графічного редактора. Шаблон один на всі звіти:
+   ряд заглушок читається як серія, а не як набір різних картинок. */
+.report-cover-blank {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: clamp(18px, 2.2vw, 26px);
+  border-color: transparent;
+  color: var(--on-dark);
+  /* Світлова пляма згори-зліва поверх фірмового градієнта — щоб площина
+     не читалася як суцільна заливка. */
+  background:
+    radial-gradient(120% 90% at 12% 0%, rgba(255, 255, 255, 0.22), transparent 60%),
+    linear-gradient(155deg, var(--brand-deep), var(--brand) 52%, var(--brand-bright));
+}
+/* Відступ саме тут, а не «margin-top: auto» на роках: рік є не завжди
+   (документ без дати й без року в назві), і тоді притискати донизу було
+   б нічого — назва злітала б угору, а нижні дві третини лишалися голими. */
+.rc-org {
+  margin-bottom: auto;
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.78);
+}
+/* Угорі лишається назва фонду, унизу — блок «рік → назва → PDF»,
+   як на палітурці друкованого звіту. */
+.rc-year {
+  font-family: var(--font-head);
+  font-size: clamp(46px, 6.4vw, 64px);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+/* Назви звітів офіційні й довгі — обрізаємо трьома рядками, повна назва
+   стоїть під обкладинкою заголовком картки. */
+.rc-title {
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.82);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.rc-mark {
+  align-self: flex-start;
+  margin-top: 4px;
+  padding: 3px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
 
 .report-note {
   margin-top: 18px;
