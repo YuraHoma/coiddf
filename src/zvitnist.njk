@@ -23,12 +23,11 @@ eleventyComputed:
       </section>
       <section class="section">
         {%- if reports.items.length %}
-        {#- Картка звіту: обкладинка, позначка розділу, назва, дата й окрема
-            кнопка завантаження. Уся верхня частина — посилання на сторінку
-            документа, де його можна почитати не виходячи з сайту, а кнопка
-            нижче одразу зберігає файл на пристрій. Кнопка стоїть СУСІДОМ до
-            посилання, а не всередині: посилання в посиланні браузер
-            розбирає непередбачувано, і клавіатурна навігація ламається. -#}
+        {#- Картка звіту: обкладинка, позначка розділу, назва й дата. Уся
+            картка — одне посилання на сторінку документа, де його можна
+            почитати не виходячи з сайту й забрати кнопкою «Завантажити».
+            Кнопки в самій картці немає навмисно: вона дублювала б головну
+            дію сторінки й змагалася з нею за увагу просто в переліку. -#}
         <ul class="report-grid">
           {%- for r in reports.items %}
           {%- set year = r | coveryear %}
@@ -45,19 +44,19 @@ eleventyComputed:
                   графічного редактора. Для читача з екранним читачем блок
                   прихований — усе, що в ньому написано, є поруч текстом. -#}
               <div class="report-cover report-cover-blank" aria-hidden="true">
-                <span class="rc-org">{{ site.orgShort }}</span>
-                {%- if year %}<span class="rc-year">{{ year }}</span>{% endif %}
-                <span class="rc-title">{{ r.title }}</span>
-                <span class="rc-mark">PDF</span>
+                <span class="rc-head">
+                  <span class="rc-org">{{ site.orgShort }}</span>
+                  <span class="rc-mark">PDF</span>
+                </span>
+                <span class="rc-body">
+                  {%- if year %}<span class="rc-year">{{ year }}</span>{% endif %}
+                  <span class="rc-title">{{ r.title }}</span>
+                </span>
               </div>
               {%- endif %}
               {%- if r.tag %}<span class="report-tag">{{ r.tag }}</span>{% endif %}
               <h2>{{ r.title }}</h2>
               {%- if r.date %}<time datetime="{{ r.date }}">{{ r.date | uadate }}</time>{% endif %}
-            </a>
-            <a class="button button-outline report-download" href="{{ r.file }}" download>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/></svg>
-              {{ "Download report" if locale == "en" else "Завантажити звіт" }}
             </a>
           </li>
           {%- endfor %}

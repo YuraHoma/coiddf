@@ -862,25 +862,9 @@ main > article,
   max-width: 900px;
   margin-inline: auto;
 }
-/* flex, а не inline-flex: мітка розділу нижче — inline-block, і поруч
-   із рядковим посиланням вони злипалися в один рядок. */
-.doc-back {
-  display: flex;
-  width: fit-content;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 18px;
-  font-size: 14.5px;
-  font-weight: 600;
-  color: var(--muted);
-  transition: color var(--t);
-}
-.doc-back svg { width: 16px; height: 16px; }
-.doc-back:hover { color: var(--brand-deep); }
 .doc-page h1 {
   font-size: clamp(26px, 3.2vw, 38px);
   line-height: 1.2;
-  margin-top: 8px;
 }
 .doc-date {
   display: block;
@@ -950,9 +934,8 @@ main > article,
   grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
   gap: clamp(20px, 2.4vw, 32px);
 }
-/* Картка — колонка: посилання-обкладинка зверху, кнопка завантаження
-   притиснута донизу (margin-top: auto нижче), щоб у ряду з різними за
-   довжиною назвами кнопки стояли на одній лінії. */
+/* Картка — колонка на всю висоту ряду, щоб сусідні картки з різними за
+   довжиною назвами лишалися однакового зросту. */
 .report-card {
   display: flex;
   flex-direction: column;
@@ -964,16 +947,12 @@ main > article,
   flex-direction: column;
   gap: 12px;
 }
-.report-download {
-  margin-top: auto;
-  align-self: flex-start;
-}
 .report-cover {
   overflow: hidden;
   border-radius: var(--radius-media);
   background: var(--surface-2);
   border: 1px solid var(--line);
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 16 / 9;
   transition: border-color var(--t), transform var(--t);
 }
 .report-cover img {
@@ -1016,51 +995,62 @@ main > article,
 .report-cover-blank {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: clamp(18px, 2.2vw, 26px);
+  gap: 8px;
+  padding: clamp(14px, 1.8vw, 20px);
   border-color: transparent;
   color: var(--on-dark);
   /* Світлова пляма згори-зліва поверх фірмового градієнта — щоб площина
      не читалася як суцільна заливка. */
   background:
-    radial-gradient(120% 90% at 12% 0%, rgba(255, 255, 255, 0.22), transparent 60%),
-    linear-gradient(155deg, var(--brand-deep), var(--brand) 52%, var(--brand-bright));
+    radial-gradient(120% 120% at 10% 0%, rgba(255, 255, 255, 0.22), transparent 60%),
+    linear-gradient(115deg, var(--brand-deep), var(--brand) 52%, var(--brand-bright));
 }
-/* Відступ саме тут, а не «margin-top: auto» на роках: рік є не завжди
-   (документ без дати й без року в назві), і тоді притискати донизу було
-   б нічого — назва злітала б угору, а нижні дві третини лишалися голими. */
+/* У горизонтальному форматі висоти мало, тож блок ділиться на два рядки:
+   службовий угорі (хто і що це) і змістовий унизу (рік і назва). */
+.rc-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.rc-body {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  /* Притискає пару «рік + назва» до низу незалежно від того, чи рік є:
+     у документа без дати й без року в назві його не буде взагалі. */
+  margin-top: auto;
+  min-width: 0;
+}
 .rc-org {
-  margin-bottom: auto;
   font-family: var(--font-head);
-  font-size: 13px;
+  font-size: 12.5px;
   font-weight: 700;
   letter-spacing: 0.16em;
   color: rgba(255, 255, 255, 0.78);
 }
-/* Угорі лишається назва фонду, унизу — блок «рік → назва → PDF»,
-   як на палітурці друкованого звіту. */
 .rc-year {
+  flex: 0 0 auto;
   font-family: var(--font-head);
-  font-size: clamp(46px, 6.4vw, 64px);
+  font-size: clamp(30px, 3.4vw, 42px);
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.02em;
 }
-/* Назви звітів офіційні й довгі — обрізаємо трьома рядками, повна назва
+/* Назви звітів офіційні й довгі — обрізаємо двома рядками, повна назва
    стоїть під обкладинкою заголовком картки. */
 .rc-title {
-  font-size: 14px;
-  line-height: 1.4;
+  font-size: 13.5px;
+  line-height: 1.35;
   color: rgba(255, 255, 255, 0.82);
   display: -webkit-box;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 .rc-mark {
-  align-self: flex-start;
-  margin-top: 4px;
+  flex: 0 0 auto;
   padding: 3px 10px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 999px;
