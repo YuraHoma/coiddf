@@ -37,7 +37,7 @@ eleventyComputed:
           <article>
             {% if p.data.image %}<div class="project-media"><img src="{{ p.data.image }}" alt="{{ p.data.title }}" loading="lazy"></div>{% else %}<div class="project-media news-img-placeholder"></div>{% endif %}
             <div class="project-body">
-              <span>{{ p.data.date | uadate }}</span>
+              <span>{{ p.date | uadate }}</span>
               <h3>{{ p.data.title }}</h3>
               <p>{{ p.data.excerpt }}</p>
               <a class="button button-outline project-more-link" href="{{ pUrl }}">{{ proyekty.detailsLabel }} ↗</a>

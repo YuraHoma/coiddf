@@ -14,7 +14,9 @@
     на українських — у front matter самого md. -#}
 {%- set artSrc = post or project %}
 {%- set artTitle = artSrc.title if artSrc else title %}
-{%- set artDate = artSrc.date if artSrc else date %}
+{#- page.date — запасне джерело: у матеріалів, збережених із CMS,
+    дати у front matter немає, вона живе в імені файлу. -#}
+{%- set artDate = artSrc.date if artSrc else (date or page.date) %}
 {%- set artExcerpt = artSrc.excerpt if artSrc else excerpt %}
 {#- Одне джерело правди для соцкартки: og:image і image в JSON-LD ведуть на
     той самий файл. Для обкладинок новин/проєктів це jpeg-похідна з

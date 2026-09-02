@@ -40,12 +40,20 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/fonts"); //  self-hosted шрифти
   eleventyConfig.addPassthroughCopy({ "src/_headers": "_headers" });
 
-  // Newest news first
+  // Найновіше зверху.
+  //
+  // Сортуємо по item.date, а НЕ по item.data.date. Різниця істотна:
+  // data.date є лише тоді, коли дату написали у front matter, а item.date
+  // Eleventy заповнює завжди — з front matter, а якщо його немає, з дати
+  // в імені файлу. Поля дати в CMS більше немає, тож у збережених звідти
+  // матеріалів front matter порожній, і сортування по data.date давало
+  // Invalid Date — матеріал провалювався в кінець розділу.
+  const byDateDesc = (a, b) => new Date(b.date) - new Date(a.date);
   eleventyConfig.addCollection("news", (api) =>
-    api.getFilteredByGlob("src/news/*.md").sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
+    api.getFilteredByGlob("src/news/*.md").sort(byDateDesc)
   );
   eleventyConfig.addCollection("projects", (api) =>
-    api.getFilteredByGlob("src/projects/*.md").sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
+    api.getFilteredByGlob("src/projects/*.md").sort(byDateDesc)
   );
 
   // i18n: кожна сторінка з pagination.data = "locales" рендериться двічі —
