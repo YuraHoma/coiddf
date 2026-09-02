@@ -1,5 +1,5 @@
 ---
-title: Автопарк реагування на надзвичайні ситуації підрозділами цивільного захист
+title: Автопарк реагування на надзвичайні ситуації підрозділами цивільного захисту
 direction: energetyka
 image: /assets/project-avtopark-reaguvannya-cyvilnyy-zahyst.jpg
 ---
