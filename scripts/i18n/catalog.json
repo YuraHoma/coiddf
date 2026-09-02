@@ -704,112 +704,400 @@
       "sourceHash": "c87ca3011872",
       "target": "Policy",
       "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
     },
     "data/policy.hero.heading": {
-      "source": "Політика конфіденційності та обробки звернень.",
-      "sourceHash": "e7bf3dc20a78",
-      "target": "Privacy Policy and Requests Processing.",
+      "source": "Політика конфіденційності та обробки звернень",
+      "sourceHash": "a0ae7500c9dd",
+      "target": "Speak-Up and Privacy Policy",
       "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
     },
     "data/policy.hero.lead": {
-      "source": "Як фонд обробляє дані, отримані через форму зворотного зв'язку та інші канали комунікації.",
-      "sourceHash": "a3f3475ae667",
-      "target": "The way the Fund processes data received via the feedback form and other communication channels.",
+      "source": "Документ описує, як фонд приймає повідомлення про порушення і як обробляє персональні дані, отримані через сайт, сторінки в соціальних мережах та інші канали комунікації.",
+      "sourceHash": "bcf31cd5a9f0",
+      "target": "This document explains how the Fund receives reports of violations and how it processes personal data obtained through the website, the Fund's social media pages, and other communication channels.",
       "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
     },
-    "data/policy.note": {
-      "source": "Документ підготовлено як проєкт і потребує затвердження керівництвом фонду перед публічним запуском сайту.",
-      "sourceHash": "b5033742ed2e",
-      "target": "The document is prepared as a project and needs to be approved by the Fund's management before the public launch of the site.",
+    "data/policy.meta": {
+      "source": "Затверджено наказом директора БО «ФРМС» від 1 липня 2026 року. Останнє оновлення: 1 липня 2026 року.",
+      "sourceHash": "faaf491af94f",
+      "target": "Approved by Resolution of the Director of CO «ICDF» of July 1, 2026. Last updated: July 1, 2026.",
       "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
     },
-    "data/policy.sections[0].body": {
-      "source": "Через форму зворотного зв'язку фонд отримує ім'я, електронну адресу, категорію звернення (запит, скарга, кар'єрна можливість) і текст повідомлення. Ми не збираємо дані автоматично та не використовуємо аналітичні системи стеження за відвідувачами сайту.",
-      "sourceHash": "16212823c5c7",
-      "target": "Using the feedback form, the Fund receives your name, email address, the type of inquiry (question, complaint, career opportunity), and the text of your message. The Fund collects data manually and uses no analytical systems to track website visitors.",
+    "data/policy.parts[0].sections[0].body": {
+      "source": "Фонд прагне формувати культуру відкритості та створювати атмосферу, в якій працівники, волонтери, партнери й бенефіціари почуваються комфортно, повідомляючи про занепокоєння щодо недотримання вимог. Якщо ви знаєте або підозрюєте порушення політики, статуту чи законодавства України, будь ласка, повідомте про це.",
+      "sourceHash": "c7ca3c697137",
+      "target": "The Fund seeks to build a culture of openness and create an environment in which staff, volunteers, partners, and beneficiaries feel comfortable raising concerns about non-compliance. If you know or suspect a violation of the Fund's policies, charter, or the legislation of Ukraine, please speak up.",
       "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
     },
-    "data/policy.sections[0].title": {
-      "source": "Які дані ми збираємо",
-      "sourceHash": "ff6ce6344f54",
-      "target": "What data we collect",
+    "data/policy.parts[0].sections[0].title": {
+      "source": "Культура відкритості (Говори голосніше)",
+      "sourceHash": "a0ce8a5e569f",
+      "target": "Openness Culture (Speak Up)",
       "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
     },
-    "data/policy.sections[1].body": {
-      "source": "Отримані дані використовуються виключно для розгляду звернення, надання відповіді та, за потреби, для внутрішньої звітності перед партнерами й донорами фонду щодо роботи з надходженнями скарг і запитів.",
-      "sourceHash": "4172520e1f23",
-      "target": "The data collected is used solely to review the inquiry, provide a response, and, if necessary, for internal reporting to the Fund's partners and donors regarding the handling of complaints and inquiries.",
+    "data/policy.parts[0].sections[1].body": {
+      "source": "У Фонді ми поділяємо відданість чинити правильно щодня, у кожній взаємодії та в кожному проєкті, який ми реалізуємо. Усі працівники та волонтери Фонду несуть відповідальність за дотримання Кодексу поведінки Фонду та повідомлення про можливі порушення.",
+      "sourceHash": "9689af7290ed",
+      "target": "At the Fund, we share a commitment to doing the right thing every day, in every interaction and every project we implement. All Fund staff and volunteers are responsible for complying with the Fund's Code of Conduct and for reporting possible violations.",
       "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
     },
-    "data/policy.sections[1].title": {
-      "source": "Для чого ми використовуємо дані",
-      "sourceHash": "1db7e1cc8017",
-      "target": "What we use the data for",
+    "data/policy.parts[0].sections[1].title": {
+      "source": "Роби правильну справу",
+      "sourceHash": "7786452d1724",
+      "target": "Do the Right Thing",
       "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
     },
-    "data/policy.sections[2].body": {
-      "source": "Дані не передаються третім особам, окрім випадків, коли це прямо потрібно для обробки звернення (наприклад, партнерській організації, відповідальній за конкретний напрям) або вимагається законодавством України.",
-      "sourceHash": "41d46d6b1d7d",
-      "target": "The data is not transferred to third parties, except when it is directly required to process the request (for example, to a partner organization responsible for a specific direction) or is required by the legislation of Ukraine.",
+    "data/policy.parts[0].sections[2].body": {
+      "source": "Повідомлення про занепокоєння можна надіслати на контактну електронну адресу Фонду co.icdf.ukraine@gmail.com або за публічними каналами зв’язку через зворотну форму вебсайту Фонду, засоби комунікації соціальних мереж Facebook, Twitter, LinkedIn та додатки Viber, WhatsApp, Messenger. Звернення розглядає керівництво Фонду оперативно, ретельно та відповідно до чинного законодавства. За бажанням особа може повідомити про занепокоєння анонімно. Розслідування зберігаються конфіденційними у максимально можливій мірі, відповідно до закону та належних практик. За потреби Фонд може повідомити про певні випадки відповідним державним органам.",
+      "sourceHash": "bcc61cb28f54",
+      "target": "Concerns can be reported to the Fund's contact email co.icdf.ukraine@gmail.com or through public communication channels via the feedback form on the Foundation's website, social media communication tools Facebook, Twitter, LinkedIn and Viber, WhatsApp, Messenger applications. Reports are reviewed by the Fund's management promptly, thoroughly, and in accordance with applicable law. A person may choose to report a concern anonymously. Investigations are kept confidential to the extent possible, in line with the law and good practice. Where necessary, the Fund may report certain matters to the relevant authorities.",
       "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
     },
-    "data/policy.sections[2].title": {
-      "source": "Кому передаються дані",
-      "sourceHash": "4ff45b69f334",
-      "target": "To whom the data is transferred",
+    "data/policy.parts[0].sections[2].title": {
+      "source": "Канал повідомлення про порушення",
+      "sourceHash": "16c15d367403",
+      "target": "Reporting Channel",
       "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
     },
-    "data/policy.sections[3].body": {
-      "source": "Звернення та пов'язані з ними персональні дані зберігаються протягом строку, необхідного для розгляду звернення та ведення звітності, після чого видаляються або знеособлюються.",
-      "sourceHash": "dc55327b8d0e",
-      "target": "Appeals and personal data related to them are stored for the period necessary for consideration of the appeal and reporting, after which they are deleted or depersonalized.",
+    "data/policy.parts[0].sections[3].body": {
+      "source": "Фонд не допускає жодних переслідувань щодо особи, яка добросовісно повідомила про занепокоєння. Будь-які спроби помсти розглядаються як окреме порушення Кодексу поведінки Фонду.",
+      "sourceHash": "5cbcfc749ab5",
+      "target": "The Fund does not tolerate retaliation against any person who reports a concern in good faith. Any attempt at retaliation is treated as a separate violation of the Fund's Code of Conduct.",
       "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
     },
-    "data/policy.sections[3].title": {
+    "data/policy.parts[0].sections[3].title": {
+      "source": "Заборона переслідувань",
+      "sourceHash": "4a7b5e521b66",
+      "target": "Non-Retaliation",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[0].title": {
+      "source": "Частина I. Політика повідомлення про порушення",
+      "sourceHash": "af616586418f",
+      "target": "Part I. Speak-Up Policy",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[0].body": {
+      "source": "Фонд усвідомлює важливість захисту конфіденційності вашої інформації. Ця Політика конфіденційності регулює збір персональних даних, отриманих через вебсайт, сторінки Фонду в соціальних мережах та інші канали комунікації Фонду (разом — «Ресурси»). Будь ласка, уважно прочитайте цю Політику: вона пояснює, які персональні дані ми обробляємо, як ми їх використовуємо, з ким ділимося та які права ви маєте.",
+      "sourceHash": "5a5fc9c896a3",
+      "target": "Fund recognizes the importance of protecting the privacy of your information. This Privacy Policy governs the collection of personal data received through the Fund's website, social media pages, and other communication channels (together, the “Resources”). Please read this Policy carefully: it explains what personal data we process, how we use it, who we share it with, and what rights you have.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[0].title": {
+      "source": "Заява про конфіденційність",
+      "sourceHash": "b46de90c8086",
+      "target": "Privacy Statement",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[10].body": {
+      "source": "Ресурси Фонду можуть містити посилання на вебсайти третіх сторін. Фонд не відповідає за практики збору даних, безпеку чи вміст таких сторонніх сайтів і рекомендує ознайомитися з їхніми політиками конфіденційності.",
+      "sourceHash": "3b149d22cc8c",
+      "target": "The Fund's Resources may contain links to third-party websites. The Fund is not responsible for the data collection practices, security, or content of such third-party sites and recommends reviewing their privacy policies.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[10].title": {
+      "source": "Посилання на інші вебсайти",
+      "sourceHash": "8d51375e29d9",
+      "target": "Links to Other Websites",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[11].body": {
+      "source": "Якщо сайт Фонду використовує файли cookie, ми можемо застосовувати необхідні файли cookie (для роботи сайту), функціональні файли cookie (для запам'ятовування ваших налаштувань) і статистичні файли cookie, зокрема Google Analytics (для агрегованого аналізу відвідуваності). Ми також можемо вбудовувати відео (наприклад, з YouTube), яке завантажує сторонній контент лише після натискання на попередній перегляд. Керувати файлами cookie можна через налаштування вашого браузера.",
+      "sourceHash": "8b3871b59eee",
+      "target": "Where the Fund's website uses cookies, we may use essential cookies (for the site to function), functional cookies (to remember your preferences), and statistical cookies, including Google Analytics (for aggregated traffic analysis). We may also embed videos (for example, from YouTube), which load third-party content only after you click to play. Cookies can be managed through your browser settings.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[11].title": {
+      "source": "Файли cookie та подібні технології",
+      "sourceHash": "ceaef3e52ef6",
+      "target": "Cookies and Similar Technologies",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[12].body": {
+      "source": "Фонд вживає організаційних і технічних заходів для захисту персональних даних від несанкціонованого доступу, втрати чи розголошення, включно з обмеженим доступом лише для працівників і волонтерів, яким це необхідно для виконання обов'язків. Попри вжиті заходи, жоден спосіб передачі даних через інтернет не є абсолютно безпечним.",
+      "sourceHash": "9ed050cedd9e",
+      "target": "The Fund takes organizational and technical measures to protect personal data against unauthorized access, loss, or disclosure, including limiting access to staff and volunteers who need it to perform their duties. Despite these measures, no method of transmission over the internet is completely secure.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[12].title": {
+      "source": "Захист інформації",
+      "sourceHash": "feb5ce4d897b",
+      "target": "Data Protection",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[13].body": {
+      "source": "Відповідно до законодавства України та, за застосовності, GDPR, ви маєте право: на доступ до своїх персональних даних; на виправлення неточних даних; на видалення даних («право бути забутим»); на обмеження обробки; на портативність даних; на відкликання згоди в будь-який час; на заперечення проти обробки, здійсненої на підставі законного інтересу; а також на подання скарги до органів, що забезпечують захист персональних даних.",
+      "sourceHash": "d20c4cbd6fd5",
+      "target": "Under the legislation of Ukraine and, where applicable, the GDPR, you have the right to: access your personal data; correct inaccurate data; request erasure (“the right to be forgotten”); restrict processing; data portability; withdraw consent at any time; object to processing carried out on the basis of legitimate interest; as well as to file a complaint with the authorities ensuring the protection of personal data.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[13].title": {
+      "source": "Ваші права щодо персональних даних",
+      "sourceHash": "553db76192b4",
+      "target": "Your Rights Regarding Personal Data",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[14].body": {
+      "source": "Щоб скористатися своїми правами, звертайтеся на контактну електронну адресу Фонду co.icdf.ukraine@gmail.com. Запит має містити достатньо інформації, щоб ми могли підтвердити вашу особу, та чіткий опис бажаної дії. Ми відповідаємо на запити протягом розумного строку відповідно до законодавства.",
+      "sourceHash": "813ae60cf827",
+      "target": "To exercise your rights, please contact the Fund at co.icdf.ukraine@gmail.com. Your request should include enough information for us to verify your identity and a clear description of the action requested. We respond to requests within a reasonable time in accordance with applicable law.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[14].title": {
+      "source": "Реалізація ваших прав",
+      "sourceHash": "7fbec048111b",
+      "target": "Exercising Your Rights",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[15].body": {
+      "source": "Ресурси Фонду призначені для дорослих осіб, партнерських організацій та громадськості. Фонд свідомо не збирає персональні дані осіб віком до 18 років без згоди батьків або законних представників, окрім випадків, коли це прямо необхідно для реалізації гуманітарних чи освітніх програм Фонду за участю неповнолітніх, і здійснюється з дотриманням додаткових заходів захисту.",
+      "sourceHash": "4172a3671b77",
+      "target": "The Fund's Resources are intended for adults, partner organizations, and the general public. The Fund does not knowingly collect personal data from individuals under the age of 18 without parental or legal guardian consent, except where directly necessary to implement the Fund's humanitarian or educational programs involving minors, and subject to additional safeguards.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[15].title": {
+      "source": "Інформація про дітей",
+      "sourceHash": "436c57ea318c",
+      "target": "Children's Information",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[16].body": {
+      "source": "Деякі браузери можуть надсилати сигнали «не відстежувати» (Do Not Track). Наразі Фонд не вживає окремих заходів у відповідь на такі сигнали.",
+      "sourceHash": "f8e75d83b215",
+      "target": "Some browsers may transmit “Do Not Track” signals. The Fund does not currently take specific action in response to such signals.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[16].title": {
+      "source": "Сигнал «Не відстежувати»",
+      "sourceHash": "6381e984a09d",
+      "target": "Do Not Track Signals",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[17].body": {
+      "source": "У зв'язку зі змінами законодавства, технологій або діяльності Фонду ми можемо періодично оновлювати цю Політику. Актуальна редакція публікується на офіційному сайті Фонду із зазначенням дати останнього оновлення.",
+      "sourceHash": "07e07d389205",
+      "target": "Due to changes in legislation, technology, or the Fund's activities, we may update this Policy from time to time. The current version is published on the Fund's official website, indicating the date of the last update.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[17].title": {
+      "source": "Зміни до цієї Політики",
+      "sourceHash": "b8a2dc94ea01",
+      "target": "Changes to this Policy",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[1].body": {
+      "source": "За обробку персональних даних відповідає Благодійна організація «Фонд розвитку міжнародної співпраці» (вул. Межова, 23, Подільський район, м. Київ, 04123, Україна; ідентифікаційний код в Україні 45724663; co.icdf.ukraine@gmail.com).",
+      "sourceHash": "e7efe449fd7c",
+      "target": "The data controller responsible for processing personal data is the Charitable Organization “International Cooperation Development Fund” (23 Mezhova Street, Podil district, Kyiv, 04123, Ukraine; identification code in Ukraine 45724663; co.icdf.ukraine@gmail.com).",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[1].title": {
+      "source": "Хто відповідає за обробку даних",
+      "sourceHash": "e1ceac4b62a0",
+      "target": "Data Controller",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[2].body": {
+      "source": "Ми збираємо інформацію, яку ви надаєте нам добровільно та безпосередньо: зокрема, коли ви звертаєтеся через форму зворотного зв'язку на сайті, надсилаєте електронного листа, підписуєтеся на розсилку, подаєте заявку на участь у програмі чи волонтерство, робите пожертву або залишаєте коментар на сторінках Фонду в соціальних мережах.",
+      "sourceHash": "184ab27c65de",
+      "target": "We collect information that you provide to us voluntarily and directly, including when you contact us through the website feedback form, send us an email, subscribe to our newsletter, apply to participate in a program or volunteer, make a donation, or leave a comment on the Fund's social media pages.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[2].title": {
+      "source": "Інформація, яку ви надаєте безпосередньо",
+      "sourceHash": "c853f2cd4719",
+      "target": "Information You Provide Directly",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[3].body": {
+      "source": "Якщо Фонд використовує на своєму сайті файли cookie, веб-маяки чи подібні технології, наші сервери можуть автоматично фіксувати інформацію про використання сайту: IP-адресу, тип браузера й операційної системи, час і тривалість відвідування, переглянуті сторінки. Докладніше — у розділі «Файли cookie» нижче.",
+      "sourceHash": "aa28a1020377",
+      "target": "Where the Fund uses cookies, web beacons, or similar technologies on its website, our servers may automatically record information about your use of the site, such as your IP address, browser and operating system type, the time and duration of your visit, and the pages viewed. See the “Cookies” section below for more information.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[3].title": {
+      "source": "Інформація, яку ми збираємо автоматично",
+      "sourceHash": "78af8c801dc3",
+      "target": "Information We Collect Automatically",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[4].body": {
+      "source": "Ми можемо отримувати додаткову інформацію про вас від партнерських організацій, донорів або з публічно доступних джерел (наприклад, професійних мереж), якщо це дозволено законодавством, — зокрема під час перевірки заявок на співпрацю чи грантові програми.",
+      "sourceHash": "ddfcab384ae1",
+      "target": "We may receive additional information about you from partner organizations, donors, or publicly available sources (such as professional networks) where permitted by law, including when reviewing applications for cooperation or grant programs.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[4].title": {
+      "source": "Інформація від третіх сторін",
+      "sourceHash": "53e03477f89e",
+      "target": "Information from Third Parties",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[5].body": {
+      "source": "Залежно від характеру звернення ми можемо збирати такі категорії даних: ідентифікатори (ім'я, телефон, електронна адреса, поштова адреса) — для відповіді на звернення та надання послуг; комерційна інформація (деталі пожертви, історія співпраці) — для ведення фінансової та статутної звітності; інформація про використання сайту (IP-адреса, тип браузера, дані геолокації на основі IP) — для аналізу відвідуваності; професійна інформація (посада, організація, профіль у LinkedIn) — для розвитку партнерств; дані учасників заходів і навчальних програм (реєстраційні дані, результати навчання) — для організації та звітності за проєктами Фонду.",
+      "sourceHash": "4cd8b668cd6f",
+      "target": "Depending on the nature of your interaction, we may collect the following categories of data: identifiers (name, phone number, email address, mailing address) — to respond to inquiries and provide services; commercial information (donation details, cooperation history) — for financial and statutory reporting; website usage information (IP address, browser type, approximate IP-based location) — for traffic analysis; professional information (job title, organization, LinkedIn profile) — for partnership development; event and training program data (registration details, training outcomes) — to organize and report on the Fund's projects.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[5].title": {
+      "source": "Категорії персональних даних",
+      "sourceHash": "c7ea78c58d32",
+      "target": "Categories of Personal Data",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[6].body": {
+      "source": "Фонд обробляє персональні дані на одній із таких правових підстав: згода особи, надана добровільно; необхідність виконання договору чи вжиття заходів на запит особи до його укладення; виконання юридичного обов'язку Фонду; законний інтерес Фонду чи третьої сторони (зокрема ведення статутної діяльності, забезпечення безпеки Ресурсів, розвиток партнерств), якщо такий інтерес не переважає над правами й свободами суб'єкта даних.",
+      "sourceHash": "7b8944dccf3f",
+      "target": "The Fund processes personal data on one of the following legal bases: the individual's freely given consent; the necessity to perform a contract or to take steps at the individual's request prior to entering into one; compliance with a legal obligation of the Fund; or the legitimate interest of the Fund or a third party (including conducting the Fund's statutory activities, ensuring the security of the Resources, and developing partnerships), provided such interest does not override the data subject's rights and freedoms.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[6].title": {
+      "source": "Правові підстави обробки",
+      "sourceHash": "d2e5ae28d099",
+      "target": "Legal Basis for Processing",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[7].body": {
+      "source": "Отримані дані використовуються для: розгляду звернень і надання відповіді; організації співпраці з партнерами й донорами; обробки пожертв і ведення фінансової звітності; адміністрування програм, заходів і волонтерських ініціатив; надсилання інформаційних розсилок (за наявності згоди й можливості відмовитися); забезпечення безпеки Ресурсів; дотримання вимог законодавства та звітності перед донорами й державними органами.",
+      "sourceHash": "2ef5f6de84ad",
+      "target": "The data we receive is used to: review inquiries and provide responses; organize cooperation with partners and donors; process donations and maintain financial reporting; administer programs, events, and volunteer initiatives; send newsletters (subject to consent and an option to unsubscribe); ensure the security of the Resources; and comply with legal requirements and reporting to donors and government authorities.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[7].title": {
+      "source": "Використання персональних даних",
+      "sourceHash": "eac5969a0e31",
+      "target": "Use of Personal Data",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[8].body": {
+      "source": "Персональні дані зберігаються протягом строку, необхідного для досягнення мети їх збору, виконання договору, ведення звітності або відповідно до вимог законодавства України, після чого видаляються або знеособлюються.",
+      "sourceHash": "cefc66e9e5aa",
+      "target": "Personal data is retained for as long as necessary to achieve the purpose for which it was collected, to perform a contract, to maintain reporting, or as required by the legislation of Ukraine, after which it is deleted or anonymized.",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].sections[8].title": {
       "source": "Термін зберігання",
       "sourceHash": "7e9821a11d22",
-      "target": "Storage period",
+      "target": "Retention Period",
       "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
     },
-    "data/policy.sections[4].body": {
-      "source": "Особа, яка звернулася до фонду, має право запитати інформацію про свої дані, вимагати їх виправлення або видалення, звернувшись на контактну електронну адресу фонду.",
-      "sourceHash": "c2a6e655f9f8",
-      "target": "The person who applied to the Fund has the right to request information about his data, to request their correction or deletion, by contacting the email address of the Fund.",
+    "data/policy.parts[1].sections[9].body": {
+      "source": "У межах, дозволених законодавством, ми можемо ділитися вашою інформацією: з партнерськими організаціями та донорами, відповідальними за конкретний напрям співпраці; з постачальниками послуг (наприклад, хостинг, бухгалтерський супровід); з державними органами — коли цього вимагає закон; у разі реорганізації чи припинення діяльності Фонду; а також коли ви самі надали на це згоду. Фонд не продає персональні дані та не передає їх третім особам для їхніх незалежних маркетингових цілей.",
+      "sourceHash": "ee34b62043cc",
+      "target": "To the extent permitted by law, we may share your information with: partner organizations and donors responsible for a specific area of cooperation; service providers (e.g., hosting, accounting support); government authorities, where required by law; in the event of the Fund's reorganization or dissolution; and where you have given your consent. The Fund does not sell personal data and does not share it with third parties for their own independent marketing purposes.",
       "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
     },
-    "data/policy.sections[4].title": {
-      "source": "Права особи",
-      "sourceHash": "37212258a1f8",
-      "target": "Personal rights",
+    "data/policy.parts[1].sections[9].title": {
+      "source": "Обмін вашою інформацією",
+      "sourceHash": "423c7b03627d",
+      "target": "Sharing Your Information",
       "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
+    },
+    "data/policy.parts[1].title": {
+      "source": "Частина II. Політика конфіденційності",
+      "sourceHash": "755846bc32ca",
+      "target": "Part II. Privacy Policy",
+      "status": "human",
+      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
+      "updated": "2026-09-02"
     },
     "data/pronas.approach.eyebrow": {
       "source": "Наш підхід",
@@ -1404,12 +1692,12 @@
       "updated": "2026-08-18"
     },
     "data/site.cookie.text": {
-      "source": "Ми використовуємо файли cookie, щоб сайт працював коректно й запамʼятовував ваш вибір мови.",
-      "sourceHash": "f53a0ecc4033",
-      "target": "We use cookies to ensure that the website works properly and to remember your language preference.",
+      "source": "Сайт використовує лише необхідні та функціональні файли cookie: щоб працювати коректно й памʼятати ваш вибір мови. Статистичних і рекламних cookie тут немає.",
+      "sourceHash": "671672ca0a8b",
+      "target": "This website uses only essential and functional cookies: to work correctly and to remember your language choice. There are no statistical or advertising cookies here.",
       "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "note": "Формулювання за розділом «Файли cookie» офіційної політики фонду",
+      "updated": "2026-09-02"
     },
     "data/site.footerNavCol1[0].label": {
       "source": "Про нас",

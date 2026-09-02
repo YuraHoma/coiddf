@@ -22,13 +22,20 @@ eleventyComputed:
         </div>
       </section>
       <section class="section">
-        <div class="policy-body">
-          {%- for s in policy.sections %}
-          <div>
-            <h2>{{ s.title }}</h2>
+        {#- Офіційний документ фонду, затверджений наказом директора. Тому
+            він виводиться суцільним текстом за структурою самого документа
+            (дві частини, всередині — розділи), а не переказом: юридичний
+            текст не можна ні скорочувати, ні переставляти. -#}
+        <div class="legal-text">
+          <p class="policy-meta">{{ policy.meta }}</p>
+          {%- for part in policy.parts %}
+          <h2 class="policy-part">{{ part.title }}</h2>
+          {%- for s in part.sections %}
+          <div class="policy-section">
+            <h3>{{ s.title }}</h3>
             <p>{{ s.body }}</p>
           </div>
           {%- endfor %}
+          {%- endfor %}
         </div>
-        <p class="form-note">{{ policy.note }}</p>
       </section>
