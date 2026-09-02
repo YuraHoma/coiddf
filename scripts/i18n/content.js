@@ -59,6 +59,17 @@ function slugOf(file) {
   return ukSlug(file.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/\.md$/, ""));
 }
 
+// Дата матеріалу. Поля дати в CMS більше немає: імʼя файлу Pages CMS
+// складає з дати створення запису, тобто з фактичної дати першої
+// публікації. Eleventy читає її з імені файлу сам, а тут доводиться
+// повторити цю логіку — gray-matter бачить лише front matter.
+// Front matter лишається головним джерелом, поки він є у старих файлах.
+function dateOf(file, data) {
+  if (data.date) return data.date;
+  const m = file.match(/^(\d{4})-(\d{2})-(\d{2})-/);
+  return m ? new Date(`${m[1]}-${m[2]}-${m[3]}T00:00:00Z`) : undefined;
+}
+
 // translate(source, key) -> англійський рядок.
 // Повертає повністю зібраний англійський контент сайту.
 function buildContent(translate) {
@@ -80,6 +91,7 @@ function buildContent(translate) {
       .map((f) => {
         const { data, content } = matter(fs.readFileSync(path.join(dir, f), "utf8"));
         const slug = slugOf(f);
+        const date = dateOf(f, data);
         const key = `${kind}/${slug}`;
         const title = data.title ? translate(data.title, `${key}.title`) : data.title;
         const body = content.trim();
@@ -95,13 +107,13 @@ function buildContent(translate) {
           slug,
           title,
           excerpt,
-          date: data.date,
+          date,
           image: data.image,
           contentHtml,
           data: {
             title,
             excerpt,
-            date: data.date,
+            date,
             image: data.image,
             url,
             direction: data.direction,
