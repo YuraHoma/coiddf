@@ -1706,10 +1706,13 @@ main > article,
   object-position: center top;
   display: block;
 }
+/* h2, а не h3: рівень заголовка в розмітці підвищили заради структури
+   сторінки, а це правило лишилося зі старим селектором — і імʼя стояло
+   впритул до краю картки, тоді як посада під ним мала відступ 26px. */
 .team-grid > article > span,
-.team-grid > article > h3,
+.team-grid > article > h2,
 .team-grid > article > p { margin-inline: 26px; }
-.team-grid > article > h3 { margin-top: 18px; }
+.team-grid > article > h2 { margin-top: 18px; }
 .team-grid > article > span { color: var(--brand-deep); font-size: 14px; font-weight: 600; line-height: 1.4; }
 /* Рівень заголовка підвищено заради структури сторінки, а кегль
    лишається h3-івський — вигляд карток не змінюється. */
