@@ -515,30 +515,6 @@
       "note": "",
       "updated": "2026-08-18"
     },
-    "data/legal.hero.eyebrow": {
-      "source": "Правова інформація",
-      "sourceHash": "6df316c2895e",
-      "target": "Legal information",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
-    },
-    "data/legal.hero.heading": {
-      "source": "Реєстраційні дані та реквізити організації.",
-      "sourceHash": "92e8a8f749f1",
-      "target": "Registration data and details of the organization.",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
-    },
-    "data/legal.hero.lead": {
-      "source": "Офіційна юридична інформація благодійної організації для партнерів, донорів та контролюючих органів.",
-      "sourceHash": "cc11e78acea0",
-      "target": "Legal information of the Charity for partners, donors, and regulatory authorities.",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
-    },
     "data/legal.intro": {
       "source": "Благодійна організація «Фонд розвитку міжнародної співпраці» працює в Україні за напрямами гуманітарного реагування, радіаційного захисту, підвищення військової готовності та цифрової трансформації.",
       "sourceHash": "8097ed5a251a",
@@ -1122,6 +1098,30 @@
       "status": "human",
       "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
       "updated": "2026-09-02"
+    },
+    "data/pravova.hero.eyebrow": {
+      "source": "Правова інформація",
+      "sourceHash": "6df316c2895e",
+      "target": "Legal information",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-18"
+    },
+    "data/pravova.hero.heading": {
+      "source": "Реєстраційні дані та реквізити організації.",
+      "sourceHash": "92e8a8f749f1",
+      "target": "Registration data and details of the organization.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-18"
+    },
+    "data/pravova.hero.lead": {
+      "source": "Офіційна юридична інформація благодійної організації для партнерів, донорів та контролюючих органів.",
+      "sourceHash": "cc11e78acea0",
+      "target": "Legal information of the Charity for partners, donors, and regulatory authorities.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-18"
     },
     "data/pronas.approach.eyebrow": {
       "source": "Наш підхід",

@@ -36,6 +36,10 @@ const DATASETS = [
   { name: "proyekty", skipKeys: [] },
   // file — шлях до документа політики, не текст.
   { name: "legal", skipKeys: ["file"] },
+  // Банер сторінки правової інформації — окремо від реквізитів, з тієї ж
+  // причини, що й у команди та звітності: реквізити веде клієнт, тексти
+  // сторінки — розробник.
+  { name: "pravova", skipKeys: [] },
   { name: "policy", skipKeys: [] },
   // file — шлях до PDF, а не текст: перекладати його не можна.
   { name: "reports", skipKeys: ["file", "image", "date"] },

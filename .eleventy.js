@@ -77,6 +77,7 @@ module.exports = function (eleventyConfig) {
     "novyny",
     "proyekty",
     "legal",
+    "pravova",
     "policy",
     "reports",
     "zvitnist",
