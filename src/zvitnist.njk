@@ -16,9 +16,9 @@ eleventyComputed:
 ---
       <section class="page-hero">
         <div>
-          <p class="eyebrow">{{ reports.hero.eyebrow }}</p>
-          <h1>{{ reports.hero.heading }}</h1>
-          <p class="lead">{{ reports.hero.lead }}</p>
+          <p class="eyebrow">{{ zvitnist.hero.eyebrow }}</p>
+          <h1>{{ zvitnist.hero.heading }}</h1>
+          <p class="lead">{{ zvitnist.hero.lead }}</p>
         </div>
       </section>
       <section class="section">
@@ -31,6 +31,10 @@ eleventyComputed:
         <ul class="report-grid">
           {%- for r in reports.items %}
           {%- set year = r | coveryear %}
+          {#- Дата — день, коли документ зʼявився на сайті. Її веде
+              scripts/report-dates.js в окремому файлі, бо в CMS такого
+              поля немає (див. коментар у самому скрипті). -#}
+          {%- set published = reportDates[r.file] %}
           <li class="report-card">
             <a class="report-open" href="{{ loop.index0 | reporturl(locale) }}">
               {%- if r.image %}
@@ -54,9 +58,8 @@ eleventyComputed:
                 </span>
               </div>
               {%- endif %}
-              {%- if r.tag %}<span class="report-tag">{{ r.tag }}</span>{% endif %}
               <h2>{{ r.title }}</h2>
-              {%- if r.date %}<time datetime="{{ r.date }}">{{ r.date | uadate }}</time>{% endif %}
+              {%- if published %}<time datetime="{{ published }}">{{ published | uadate }}</time>{% endif %}
             </a>
           </li>
           {%- endfor %}

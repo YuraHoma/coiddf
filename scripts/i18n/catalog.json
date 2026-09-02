@@ -1635,50 +1635,10 @@
       "note": "",
       "updated": "2026-08-18"
     },
-    "data/reports.hero.eyebrow": {
-      "source": "Звітність",
-      "sourceHash": "484ef1ba8908",
-      "target": "Reporting",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
-    },
-    "data/reports.hero.heading": {
-      "source": "Відкритість і підзвітність є частиною довіри.",
-      "sourceHash": "f574b24564c9",
-      "target": "Transparency and accountability are part of trust.",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
-    },
-    "data/reports.hero.lead": {
-      "source": "Фонд публікує статистичні дані, аналітичні звіти, фінансову звітність і звіти неприбуткової організації.",
-      "sourceHash": "4318ef5e9536",
-      "target": "The Fund publishes statistical data, analytical reports, financial statements and reports of non-profit organizations.",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
-    },
-    "data/reports.items[0].tag": {
-      "source": "Річні звіти",
-      "sourceHash": "b39a5a918889",
-      "target": "Annual reports",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-28"
-    },
     "data/reports.items[0].title": {
       "source": "Звіт про використання доходів (прибутків) неприбуткової організації за 2025 рік",
       "sourceHash": "7549d11b7889",
       "target": "Report on the use of income (profits) of a non-profit organisation for 2025",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-28"
-    },
-    "data/reports.items[1].tag": {
-      "source": "Фінансова звітність",
-      "sourceHash": "9d93e7ceb131",
-      "target": "Financial statements",
       "status": "human",
       "note": "",
       "updated": "2026-08-28"
@@ -2047,6 +2007,30 @@
       "source": "Інспектор з вхідного контролю якості товарів",
       "sourceHash": "f5b234b3e2ed",
       "target": "Equipment incoming quality control specialist",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-18"
+    },
+    "data/zvitnist.hero.eyebrow": {
+      "source": "Звітність",
+      "sourceHash": "484ef1ba8908",
+      "target": "Reporting",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-18"
+    },
+    "data/zvitnist.hero.heading": {
+      "source": "Відкритість і підзвітність є частиною довіри.",
+      "sourceHash": "f574b24564c9",
+      "target": "Transparency and accountability are part of trust.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-18"
+    },
+    "data/zvitnist.hero.lead": {
+      "source": "Фонд публікує статистичні дані, аналітичні звіти, фінансову звітність і звіти неприбуткової організації.",
+      "sourceHash": "4318ef5e9536",
+      "target": "The Fund publishes statistical data, analytical reports, financial statements and reports of non-profit organizations.",
       "status": "human",
       "note": "",
       "updated": "2026-08-18"

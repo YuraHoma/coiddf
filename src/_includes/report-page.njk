@@ -14,8 +14,11 @@ layout: base.njk
             колонка (на 1512px лишалося 588px, на 1920 — менше двохсот). -#}
         <div class="doc-inner">
           <h1>{{ doc.title }}</h1>
-          {%- if doc.date %}
-          <time class="doc-date" datetime="{{ doc.date }}">{{ doc.date | uadate }}</time>
+          {#- Дата публікації документа — з reportDates.json (див.
+              scripts/report-dates.js), а не з поля в CMS. -#}
+          {%- set published = reportDates[doc.file] %}
+          {%- if published %}
+          <time class="doc-date" datetime="{{ published }}">{{ published | uadate }}</time>
           {%- endif %}
 
           <div class="doc-bar">

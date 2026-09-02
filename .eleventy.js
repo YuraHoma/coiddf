@@ -71,6 +71,7 @@ module.exports = function (eleventyConfig) {
     "legal",
     "policy",
     "reports",
+    "zvitnist",
     "feedback",
   ];
   const computed = {};

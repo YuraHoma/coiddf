@@ -33,15 +33,20 @@ jobs:
       - name: Translate new content
         run: npm run i18n:translate
 
-      - name: Commit catalog if changed
+      # Документ, доданий у CMS, датується днем публікації. Крок має йти
+      # ПЕРЕД збіркою: інакше новий звіт вийшов би на сайт без дати.
+      - name: Stamp publication dates for new reports
+        run: npm run report:dates
+
+      - name: Commit catalog and report dates if changed
         run: |
-          if git diff --quiet -- scripts/i18n/catalog.json; then
-            echo "Каталог не змінився."
+          if git diff --quiet -- scripts/i18n/catalog.json src/_data/reportDates.json; then
+            echo "Каталог і дати документів не змінилися."
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add scripts/i18n/catalog.json
-            git commit -m "Машинний переклад нового контенту з CMS [skip ci]"
+            git add scripts/i18n/catalog.json src/_data/reportDates.json
+            git commit -m "Переклад нового контенту з CMS і дати нових документів [skip ci]"
             # Клієнт може зберегти дві правки в CMS поспіль: поки йшов
             # цей деплой, у main уже лежить наступний коміт, і прямий
             # push відлетів би з non-fast-forward.

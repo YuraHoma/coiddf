@@ -39,6 +39,9 @@ const DATASETS = [
   { name: "policy", skipKeys: [] },
   // file — шлях до PDF, а не текст: перекладати його не можна.
   { name: "reports", skipKeys: ["file", "image", "date"] },
+  // Банер сторінки звітності — окремо від переліку документів, з тієї ж
+  // причини, що й у команди: перелік веде клієнт, тексти сторінки — ні.
+  { name: "zvitnist", skipKeys: [] },
   { name: "feedback", skipKeys: [] },
 ];
 
