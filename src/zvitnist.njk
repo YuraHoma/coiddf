@@ -65,8 +65,10 @@ eleventyComputed:
           {%- endfor %}
         </ul>
         {%- endif %}
-        {#- Примітка — заміна порожньому списку, а не доповнення до нього. -#}
-        {%- if not reports.items.length and reports.note %}
-        <p class="report-note">{{ reports.note }}</p>
+        {#- Примітка — заміна порожньому списку, а не доповнення до нього.
+            Живе в zvitnist.json разом із банером сторінки: це текст сайту,
+            а не дані, які веде клієнт. -#}
+        {%- if not reports.items.length and zvitnist.note %}
+        <p class="report-note">{{ zvitnist.note }}</p>
         {%- endif %}
       </section>

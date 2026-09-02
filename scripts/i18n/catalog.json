@@ -1651,14 +1651,6 @@
       "note": "",
       "updated": "2026-08-28"
     },
-    "data/reports.note": {
-      "source": "Звіти готуються до публікації і з'являться на цій сторінці найближчим часом.",
-      "sourceHash": "a1c9be7cdeb5",
-      "target": "The reports are being prepared for release and will be posted on this page shortly.",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
-    },
     "data/site.cookie.buttonLabel": {
       "source": "Зрозуміло",
       "sourceHash": "10971c82698e",
@@ -2031,6 +2023,14 @@
       "source": "Фонд публікує статистичні дані, аналітичні звіти, фінансову звітність і звіти неприбуткової організації.",
       "sourceHash": "4318ef5e9536",
       "target": "The Fund publishes statistical data, analytical reports, financial statements and reports of non-profit organizations.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-18"
+    },
+    "data/zvitnist.note": {
+      "source": "Звіти готуються до публікації і з'являться на цій сторінці найближчим часом.",
+      "sourceHash": "a1c9be7cdeb5",
+      "target": "The reports are being prepared for release and will be posted on this page shortly.",
       "status": "human",
       "note": "",
       "updated": "2026-08-18"
