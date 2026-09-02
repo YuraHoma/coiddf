@@ -88,36 +88,35 @@ content:
         required: true
 
   # ---------------------------------------------------------------- Команда
+  # Банер сторінки (мітка, заголовок, підзаголовок) навмисно не тут: він
+  # лежить у src/_data/komanda.json, який CMS не показує. Тексти сторінки
+  # веде розробник, перелік людей — клієнт. Тримати їх в одному файлі не
+  # можна: Pages CMS зберігає лише поля зі схеми й тихо стер би банер.
   - name: team
     label: Команда
     type: file
     path: src/_data/team.json
     fields:
-      - name: hero
-        label: Банер сторінки
-        type: object
-        fields:
-          - { name: eyebrow, label: Мітка, type: string, description: 'Коротке слово над заголовком, до 25 символів.' }
-          - { name: heading, label: Заголовок, type: text, required: true }
-          - { name: lead, label: Підзаголовок, type: text }
       - name: members
         label: Учасники команди
         type: object
         list: true
-        description: 'Перші двоє — засновники, вони стоять окремим верхнім рядом із великими фото. Решта йде сіткою по четверо; щоб ряди були рівні, тримайте їхню кількість кратною чотирьом.'
         fields:
+          - name: name
+            label: "Ім'я та прізвище"
+            type: string
+            required: true
           - name: role
             label: Роль
             type: string
             required: true
-            description: 'Показується завжди, навіть коли імені немає.'
           - name: photo
-            label: Фото
+            label: 'Фото — портрет, від 800 px, обличчя ближче до верху'
             type: image
             required: true
-            description: 'Портрет, від 800 px по ширині, обличчя ближче до верху — картка кадрує знизу. Без фото в сітці лишається порожня рамка.'
-          - { name: name, label: "Ім'я", type: string, description: "Необовʼязково — якщо порожнє, показується лише роль." }
-          - { name: bio, label: Опис, type: text, description: 'Необовʼязково. Показується лише у двох засновників у верхньому ряду; у решти команди опис на сторінку не виводиться.' }
+          - name: bio
+            label: 'Опис — необовʼязково, показується лише у засновників'
+            type: text
 
   # ---------------------------------------------------------------- Звіти
   - name: reports

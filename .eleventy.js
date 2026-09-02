@@ -64,6 +64,7 @@ module.exports = function (eleventyConfig) {
     "home",
     "pronas",
     "team",
+    "komanda",
     "partners",
     "novyny",
     "proyekty",

@@ -27,6 +27,10 @@ const DATASETS = [
   { name: "home", skipKeys: [] },
   { name: "pronas", skipKeys: [] },
   { name: "team", skipKeys: ["photo"] },
+  // Банер сторінки команди лежить окремо від переліку людей: перелік
+  // веде клієнт через CMS, а тексти сторінки — розробник. В одному
+  // файлі це не втримати, бо Pages CMS зберігає лише поля зі схеми.
+  { name: "komanda", skipKeys: [] },
   { name: "partners", skipKeys: ["key"] },
   { name: "novyny", skipKeys: [] },
   { name: "proyekty", skipKeys: [] },

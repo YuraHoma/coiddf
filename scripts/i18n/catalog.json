@@ -491,6 +491,30 @@
       "note": "",
       "updated": "2026-08-18"
     },
+    "data/komanda.hero.eyebrow": {
+      "source": "Наша команда",
+      "sourceHash": "a9ef903f87b6",
+      "target": "Our team",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-18"
+    },
+    "data/komanda.hero.heading": {
+      "source": "Єдина команда — від засновників до волонтерів — заради швидкої й прозорої допомоги",
+      "sourceHash": "3ebbea5b6f65",
+      "target": "One team—from the founders to the volunteers—working to provide fast and transparent assistance",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-18"
+    },
+    "data/komanda.hero.lead": {
+      "source": "Засновники, менеджери, бухгалтерія, склад, обробка звернень і волонтери працюють разом, щоб допомога доходила до людей швидко та прозоро.",
+      "sourceHash": "20778a2d7466",
+      "target": "The founders, managers, accounting staff, warehouse staff, customer service team, and volunteers work together to ensure that aid reaches people quickly and transparently.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-18"
+    },
     "data/legal.hero.eyebrow": {
       "source": "Правова інформація",
       "sourceHash": "6df316c2895e",
@@ -1847,30 +1871,6 @@
       "source": "Фонд розвитку міжнародної співпраці",
       "sourceHash": "caff9c75ce85",
       "target": "International Cooperation Development Fund",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
-    },
-    "data/team.hero.eyebrow": {
-      "source": "Наша команда",
-      "sourceHash": "a9ef903f87b6",
-      "target": "Our team",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
-    },
-    "data/team.hero.heading": {
-      "source": "Єдина команда — від засновників до волонтерів — заради швидкої й прозорої допомоги",
-      "sourceHash": "3ebbea5b6f65",
-      "target": "One team—from the founders to the volunteers—working to provide fast and transparent assistance",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
-    },
-    "data/team.hero.lead": {
-      "source": "Засновники, менеджери, бухгалтерія, склад, обробка звернень і волонтери працюють разом, щоб допомога доходила до людей швидко та прозоро.",
-      "sourceHash": "20778a2d7466",
-      "target": "The founders, managers, accounting staff, warehouse staff, customer service team, and volunteers work together to ensure that aid reaches people quickly and transparently.",
       "status": "human",
       "note": "",
       "updated": "2026-08-18"
