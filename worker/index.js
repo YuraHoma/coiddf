@@ -172,6 +172,16 @@ const CANONICAL_IS_TEMP = CANONICAL_HOST.endsWith(".workers.dev");
 export function redirectTarget(url) {
   const host = url.hostname;
   if (host === "localhost" || host === "127.0.0.1") return null;
+  // Незашифрований http віддавав сторінку як є. Заголовок HSTS захищає
+  // лише тих, хто вже був на сайті; перший візит за посиланням http://
+  // ішов відкритим текстом. Тепер такий запит одразу веде на https.
+  if (url.protocol === "http:") {
+    const secure = new URL(url);
+    secure.protocol = "https:";
+    secure.port = "";
+    secure.host = host === `www.${CANONICAL_HOST}` || host.endsWith(".workers.dev") ? CANONICAL_HOST : host;
+    return secure.toString();
+  }
   if (host === CANONICAL_HOST) return null;
   const isWww = host === `www.${CANONICAL_HOST}`;
   // Стару адресу лишаємо робочою, поки вона сама є головною.

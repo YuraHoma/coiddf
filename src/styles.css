@@ -288,8 +288,6 @@ main > article,
 }
 .section-heading.center p:not(.eyebrow) { margin-inline: auto; }
 
-
-
 /* ---------- 5. BUTTONS ---------- */
 .button {
   display: inline-flex;
@@ -349,20 +347,6 @@ main > article,
   background-image: var(--grad-cta);
   border-color: transparent;
 }
-
-.wide-action {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
-  color: var(--ink);
-  border-bottom: 2px solid var(--brand-bright);
-  padding-bottom: 3px;
-  transition: gap var(--t), color var(--t);
-}
-.wide-action span { transition: transform var(--t); }
-.wide-action:hover { color: var(--brand); }
-.wide-action:hover span { transform: translate(2px, -2px); }
 
 /* ---------- 6. HEADER (скляний, sticky) ---------- */
 .site-header {
@@ -596,32 +580,6 @@ main > article,
   object-fit: cover;
 }
 
-
-/* ---------- 9. MISSION / INTRO-STORY ---------- */
-.intro-story-top {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: clamp(28px, 5vw, 72px);
-  align-items: start;
-  margin-bottom: clamp(36px, 4vw, 56px);
-}
-.intro-story-top > div { align-self: start; }
-.intro-story-top > p { font-size: clamp(15px, 1.2vw, 17px); line-height: 1.55; color: var(--muted); margin: 0; }
-
-.intro-photos {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-auto-rows: clamp(180px, 22vw, 280px);
-  gap: 14px;
-}
-.intro-photo {
-  border-radius: var(--radius-card);
-  background-size: cover;
-  background-position: center;
-  background-color: var(--surface-2);
-}
-.intro-photo:not([style*="background-image"]) { display: none; }
-
 /* ---------- 10. FOCUS MAP (географія) ---------- */
 .focus-map h2 { color: var(--ink); }
 /* карта України без картки-контейнера — просто зображення, по центру */
@@ -727,48 +685,6 @@ main > article,
   border-color: transparent;
 }
 
-/* ---------- 14. RESOURCES (інфраструктура — світлий контейнер) ---------- */
-/* auto-fill: два документи не розтягуються на всю ширину, а стоять
-   у своїх колонках; назви звітів довгі, тож колонка не вужча за 340px */
-.report-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
-  gap: 16px;
-}
-.resource-card {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 26px;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-card);
-}
-.resource-icon {
-  display: grid;
-  place-items: center;
-  width: 52px; height: 52px;
-  border-radius: var(--radius-btn);
-  background: var(--brand-pale);
-  color: var(--brand-deep);
-}
-.resource-card > span:not(.resource-icon) {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  font-size: 15px;
-  color: var(--muted);
-  line-height: 1.4;
-}
-.resource-icon svg { width: 26px; height: 26px; }
-.resource-card > span strong {
-  font-family: var(--font-head);
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-}
-
 /* ---------- Правова інформація: реквізити й політики ---------- */
 .legal-page { display: flex; flex-direction: column; gap: clamp(24px, 3vw, 36px); }
 .legal-reg {
@@ -790,7 +706,6 @@ main > article,
 }
 .legal-codes span { color: var(--muted); }
 .legal-codes b { color: var(--ink); }
-.legal-intro { max-width: 62ch; color: var(--text); line-height: 1.7; }
 .legal-policies-heading { font-size: clamp(24px, 2.2vw, 30px); }
 
 .policy-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
@@ -970,15 +885,6 @@ main > article,
 .report-open:focus-visible .report-cover {
   border-color: var(--brand);
   transform: translateY(-2px);
-}
-.report-tag {
-  align-self: flex-start;
-  padding: 5px 12px;
-  border-radius: 999px;
-  background: var(--brand-pale);
-  color: var(--brand-deep);
-  font-size: 13px;
-  font-weight: 600;
 }
 .report-grid h2 {
   font-size: 18px;
@@ -1768,10 +1674,7 @@ main > article,
 
 .team-grid h2 { color: var(--ink); }
 .team-grid p { color: var(--muted); font-size: 15px; }
-
-
-.project-list,
-.contact-list {
+.project-list {
   display: grid;
   gap: 14px;
 }
@@ -1818,19 +1721,6 @@ main > article,
 .project-list > * .project-body { flex: 1 1 auto; }
 .project-list > * .project-more-link { margin-top: auto; }
 .project-list > * .project-body p { margin-bottom: 8px; }
-.contact-list span { overflow-wrap: break-word; }
-.contact-list { max-width: 860px; }
-.contact-list span {
-  display: block;
-  padding: 16px 22px;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-btn);
-  font-size: 15px;
-  color: var(--text);
-  transition: border-color var(--t);
-}
-.contact-list span:hover { border-color: var(--line-strong); }
 
 /* Сторінка «Контакти та зворотній зв'язок» — дві колонки:
    контакти ліворуч, форма праворуч. */
@@ -1946,7 +1836,6 @@ main > article,
 .form-row-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 @media (max-width: 560px) { .form-row-pair { grid-template-columns: 1fr; } }
 .feedback-form .button { align-self: flex-start; }
-.form-note { font-size: 13.5px; color: var(--muted); }
 /* Пастка для ботів — прибрана з потоку, але не display:none,
    бо частина ботів такі поля ігнорує. */
 .form-honeypot {
@@ -2121,7 +2010,6 @@ main > article,
 }
 .footer-bottom span { font-size: 13px; color: rgba(255, 255, 255, 0.45); }
 
-
 /* ---------- 22. SCROLL REVEAL ---------- */
 .js [data-reveal] {
   opacity: 0;
@@ -2175,19 +2063,16 @@ main > article,
 
   .hero-top { grid-template-columns: 1fr; gap: 28px; }
   .hero-headline .lead { max-width: 60ch; }
-  .about-hero,
-  .about-layout,
-  .intro-story-top,
-  .cta-band > div { grid-template-columns: 1fr; }
+.about-hero,
+.about-layout,
+.cta-band > div { grid-template-columns: 1fr; }
   .about-note { position: static; }
-  .cards-grid,
-  .report-list,
-  .news-mini-grid,
-  .news-grid,
-  .partners-grid,
-  .process-grid { grid-template-columns: repeat(2, 1fr); }
+.cards-grid,
+.news-mini-grid,
+.news-grid,
+.partners-grid,
+.process-grid { grid-template-columns: repeat(2, 1fr); }
   .principles-grid { grid-template-columns: 1fr; }
-  .intro-photos { grid-template-columns: 1fr 1fr; grid-auto-rows: clamp(150px, 30vw, 220px); }
 
   .footer-top { grid-template-columns: 1fr 1fr; gap: 36px 40px; }
   .footer-cta-col { grid-column: 1 / -1; }
@@ -2201,13 +2086,11 @@ main > article,
 
   .brand strong { font-size: 13px; }
   .cards-grid,
-  .report-list,
   .news-mini-grid,
   .news-grid,
   .partners-grid,
   .process-grid { grid-template-columns: 1fr; }
   .cards-grid article { min-height: 240px; }
-  .intro-photos { grid-template-columns: 1fr; }
   .partner-logo-card { width: 160px; padding: 14px 16px; }
 
   .footer-top { grid-template-columns: 1fr; gap: 34px; }

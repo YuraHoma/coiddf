@@ -10,6 +10,10 @@
 /*
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
+  # Рік: браузер, який хоч раз відкрив сайт, більше не піде на нього
+  # незашифрованим http навіть за прямим посиланням. includeSubDomains —
+  # бо www теж наш і теж має бути захищений ще до перенаправлення.
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'
