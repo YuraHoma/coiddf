@@ -78,11 +78,4 @@ eleventyComputed:
         <p class="report-note">{{ pravova.policiesNote }}</p>
         {%- endif %}
 
-        {%- if legal.items.length %}
-        <div class="contact-list">
-          {%- for c in legal.items %}
-          <span>{{ c.label }}: {{ c.value }}</span>
-          {%- endfor %}
-        </div>
-        {%- endif %}
       </section>
