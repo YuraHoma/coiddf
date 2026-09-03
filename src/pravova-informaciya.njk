@@ -22,6 +22,12 @@ eleventyComputed:
         </div>
       </section>
       <section class="section legal-page">
+        {#- Обгортка потрібна з тієї ж причини, що й на сторінці
+            документа: бокові відступи контейнера задає правило
+            main > section, і max-width на самій секції віднімався б
+            від них — колонка звужувалась би тим сильніше, чим
+            ширший екран. -#}
+        <div class="legal-inner">
         {#- Реєстраційна інформація зібрана з тих самих даних, що й решта
             сайту: назва з site.json, адреса з контактів, коди з legal.json.
             Дублювати їх окремо тут означало б, що колись вони розійдуться. -#}
@@ -56,7 +62,9 @@ eleventyComputed:
             <details class="policy">
               <summary>
                 <span class="policy-title">{{ p.title }}</span>
-                <span class="policy-toggle" aria-hidden="true">{{ "Read" if locale == "en" else "Дізнатись більше" }}</span>
+                <span class="policy-toggle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </span>
               </summary>
               <div class="policy-body">
                 {%- if p.description %}
@@ -65,7 +73,12 @@ eleventyComputed:
                 {%- if p.file %}
                 <div class="policy-doc">
                   <span>{{ p.title }}</span>
-                  <a class="button button-accent" href="{{ p.file }}" target="_blank" rel="noopener">{{ "Open" if locale == "en" else "Відкрити" }} ↗</a>
+                  {#- «download» зберігає файл, а не відкриває його ще раз
+                      поверх переглядача, який уже стоїть нижче. -#}
+                  <a class="button button-accent" href="{{ p.file }}" download>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/></svg>
+                    {{ "Download" if locale == "en" else "Завантажити" }}
+                  </a>
                 </div>
                 <iframe class="policy-viewer" src="{{ p.file }}#view=FitH" title="{{ p.title }}" loading="lazy"></iframe>
                 {%- endif %}

@@ -686,7 +686,18 @@ main > article,
 }
 
 /* ---------- Правова інформація: реквізити й політики ---------- */
-.legal-page { display: flex; flex-direction: column; gap: clamp(24px, 3vw, 36px); }
+.legal-page { display: flex; flex-direction: column; }
+/* Та сама ширина колонки, що й на сторінці документа звітності: сторінка
+   з реквізитами й політиками читається так само підряд, а не проглядається
+   сіткою, тож на всю ширину контейнера рядок стає задовгим. */
+.legal-inner {
+  max-width: 900px;
+  margin-inline: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(24px, 3vw, 36px);
+}
 .legal-reg {
   padding: clamp(24px, 3vw, 36px);
   background: var(--surface-2);
@@ -728,20 +739,25 @@ main > article,
 }
 .policy summary::-webkit-details-marker { display: none; }
 .policy-title { flex: 1 1 260px; font-weight: 500; }
-/* Підпис поводиться як кнопка, але лишається частиною summary: інакше
-   кнопка всередині клікабельного заголовка дає вкладену інтерактивність. */
+/* Стрілка, а не підпис: назва політики вже каже, що всередині, а кнопка
+   «Дізнатись більше» поруч із нею читалася як окреме посилання. Стрілка
+   лишається частиною summary — кнопка всередині клікабельного заголовка
+   дала б вкладену інтерактивність. Розвертається, коли картку розкрито. */
 .policy-toggle {
   flex: 0 0 auto;
-  padding: 10px 18px;
-  border-radius: var(--radius-btn);
-  background: var(--brand-deep);
-  color: #fff;
-  font-size: 14px;
-  font-weight: 600;
-  transition: background-color var(--t);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--brand-deep);
+  transition: background-color var(--t), transform var(--t);
 }
-.policy summary:hover .policy-toggle { background: var(--brand); }
-.policy[open] .policy-toggle { background: var(--brand); }
+.policy-toggle svg { width: 18px; height: 18px; }
+.policy summary:hover .policy-toggle { background: var(--brand-light); }
+.policy[open] .policy-toggle { transform: rotate(180deg); }
 .policy-body { padding: 0 22px 22px; display: grid; gap: 16px; }
 .policy-body p { color: var(--text); line-height: 1.7; max-width: 62ch; }
 .policy-doc {
