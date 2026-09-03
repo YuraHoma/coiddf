@@ -515,6 +515,22 @@
       "note": "",
       "updated": "2026-08-18"
     },
+    "data/legal.policies[0].description": {
+      "source": "Тимчасовий файл розробника, щоб перевірити, що розділ політик працює. Це не документ фонду; його буде видалено після перевірки.",
+      "sourceHash": "822a30f6a17a",
+      "target": "A temporary file from the developer to confirm that the policies section works. This is not a Fund document; it will be removed after the check.",
+      "status": "human",
+      "note": "Тимчасовий тестовий запис",
+      "updated": "2026-09-03"
+    },
+    "data/legal.policies[0].title": {
+      "source": "ТЕСТОВИЙ ДОКУМЕНТ — перевірка розділу",
+      "sourceHash": "bff572eb4432",
+      "target": "TEST DOCUMENT — checking the section",
+      "status": "human",
+      "note": "Тимчасовий тестовий запис",
+      "updated": "2026-09-03"
+    },
     "data/novyny.hero.eyebrow": {
       "source": "Новини",
       "sourceHash": "807eb4d2438b",
