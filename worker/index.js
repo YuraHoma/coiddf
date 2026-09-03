@@ -16,10 +16,16 @@ const RECIPIENT = contacts.formRecipient || contacts.general;
 // Причина звернення приходить із форми, але покластися на це не можна:
 // у Subject листа має потрапити лише те, що є в списку CMS.
 const CATEGORIES = new Set(feedback.categories || []);
-// Домен фонду ще не підтверджений у Resend, тож відправник — їхній
-// службовий. Коли coicdf.org підтвердять у Resend, сюди піде адреса
-// на власному домені (напр. site@coicdf.org).
-const SENDER = "ICDF site <onboarding@resend.dev>";
+// Відправник листів з форми.
+//
+// Поки поле mailFrom у site.json порожнє, лист іде від службової адреси
+// Resend. У неї є жорстке обмеження: вона доставляє ЛИШЕ на пошту
+// власника акаунта Resend. Тобто зі службовим відправником звернення з
+// сайту фізично не можуть прийти на пошту фонду — Resend відмовить.
+//
+// Після підтвердження домену coicdf.org у Resend сюди вписується адреса
+// на домені (напр. "ICDF <site@coicdf.org>") — і обмеження зникає.
+const SENDER = site.mailFrom || "ICDF site <onboarding@resend.dev>";
 
 const MAX = { name: 120, email: 200, phone: 60, category: 120, message: 5000 };
 
