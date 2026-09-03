@@ -80,10 +80,7 @@ eleventyComputed:
                     {{ "Download" if locale == "en" else "Завантажити" }}
                   </a>
                 </div>
-                {#- navpanes=0 прибирає бічну панель мініатюр: вона займала майже
-                    половину ширини, і сам документ лишався вузькою смужкою.
-                    view=FitH вписує сторінку по ширині переглядача. -#}
-                <iframe class="policy-viewer" src="{{ p.file }}#navpanes=0&amp;view=FitH" title="{{ p.title }}" loading="lazy"></iframe>
+                                <iframe class="policy-viewer" src="{{ p.file }}#view=FitH" title="{{ p.title }}" loading="lazy"></iframe>
                 {%- endif %}
               </div>
             </details>

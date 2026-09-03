@@ -33,9 +33,8 @@ layout: base.njk
 
           {#- Переглядач ховається на телефоні (див. styles.css): там він або
               показує саму лише першу сторінку без прокрутки, або лишає сіру
-              пляму. Замість нього — той самий документ окремим посиланням.
-              navpanes=0 прибирає панель мініатюр, яка забирала пів ширини. -#}
-          <iframe class="doc-viewer" src="{{ doc.file }}#navpanes=0&amp;view=FitH" title="{{ doc.title }}" loading="lazy"></iframe>
+              пляму. Замість нього — той самий документ окремим посиланням. -#}
+          <iframe class="doc-viewer" src="{{ doc.file }}#view=FitH" title="{{ doc.title }}" loading="lazy"></iframe>
           <p class="doc-fallback">
             {{ "Your browser cannot display the document on this screen." if locale == "en" else "Ваш браузер не показує документ на цьому екрані." }}
             <a href="{{ doc.file }}" target="_blank" rel="noopener">{{ "Open the document" if locale == "en" else "Відкрити документ" }} ↗</a>
