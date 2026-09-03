@@ -1838,6 +1838,10 @@ main > article,
 .feedback-form .button { align-self: flex-start; }
 /* Пастка для ботів — прибрана з потоку, але не display:none,
    бо частина ботів такі поля ігнорує. */
+/* Підпис під формою: показується лише в <noscript> на сторінці контактів. */
+.form-note { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
+.form-note a { font-weight: 600; color: var(--brand-deep); text-decoration: underline; text-underline-offset: 2px; }
+
 .form-honeypot {
   position: absolute;
   width: 1px; height: 1px;
@@ -2057,21 +2061,27 @@ main > article,
     border-top: 1px solid var(--line);
   }
   .site-header.nav-open .nav { display: flex; }
+  /* Без JS кнопка-бургер нічим не керує, і меню лишалося б недосяжним —
+     тож показуємо його одразу списком, а саму кнопку ховаємо. Клас js
+     ставить скрипт у base.njk, тому :not(.js) — це «скрипт не виконався»:
+     і коли його вимкнули, і коли корпоративний фільтр його вирізав. */
+  html:not(.js) .nav { display: flex; }
+  html:not(.js) .nav-toggle { display: none; }
   .site-header.nav-open { box-shadow: var(--shadow-card); }
   .nav a { padding: 13px 14px; font-size: 16px; border-radius: 12px; }
   .site-header.header-hidden { transform: none; }
 
   .hero-top { grid-template-columns: 1fr; gap: 28px; }
   .hero-headline .lead { max-width: 60ch; }
-.about-hero,
-.about-layout,
-.cta-band > div { grid-template-columns: 1fr; }
+  .about-hero,
+  .about-layout,
+  .cta-band > div { grid-template-columns: 1fr; }
   .about-note { position: static; }
-.cards-grid,
-.news-mini-grid,
-.news-grid,
-.partners-grid,
-.process-grid { grid-template-columns: repeat(2, 1fr); }
+  .cards-grid,
+  .news-mini-grid,
+  .news-grid,
+  .partners-grid,
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
   .principles-grid { grid-template-columns: 1fr; }
 
   .footer-top { grid-template-columns: 1fr 1fr; gap: 36px 40px; }
