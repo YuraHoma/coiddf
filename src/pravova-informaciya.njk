@@ -26,7 +26,7 @@ eleventyComputed:
             сайту: назва з site.json, адреса з контактів, коди з legal.json.
             Дублювати їх окремо тут означало б, що колись вони розійдуться. -#}
         <div class="legal-reg">
-          <h2>{{ legal.regHeading }}</h2>
+          <h2>{{ pravova.regHeading }}</h2>
           <p class="legal-reg-name">{{ site.orgFull }}</p>
           {%- if legal.edrpou %}
           <p>{{ "Registration code" if locale == "en" else "ЄДРПОУ" }}: <b>{{ legal.edrpou }}</b></p>
@@ -43,14 +43,7 @@ eleventyComputed:
           {%- endif %}
         </div>
 
-        {%- if legal.intro %}
-        <p class="legal-intro">{{ legal.intro }}</p>
-        {%- endif %}
-
-        <h2 class="legal-policies-heading">{{ legal.policiesHeading }}</h2>
-        {%- if legal.policiesLead %}
-        <p class="legal-intro">{{ legal.policiesLead }}</p>
-        {%- endif %}
+        <h2 class="legal-policies-heading">{{ pravova.policiesHeading }}</h2>
 
         {%- if legal.policies.length %}
         {#- <details> замість власного скрипта: розкривається з клавіатури,
@@ -81,8 +74,8 @@ eleventyComputed:
           </li>
           {%- endfor %}
         </ul>
-        {%- elif legal.policiesNote %}
-        <p class="report-note">{{ legal.policiesNote }}</p>
+        {%- elif pravova.policiesNote %}
+        <p class="report-note">{{ pravova.policiesNote }}</p>
         {%- endif %}
 
         {%- if legal.items.length %}

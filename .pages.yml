@@ -215,8 +215,9 @@ content:
 
   # ---------------------------------------------------------------- Юридичні дані
   #
-  # Банер сторінки лежить у src/_data/pravova.json, якого тут немає, —
-  # як і банери команди та звітності.
+  # Тут лише дані фонду. Усі тексти сторінки — банер, заголовки блоків і
+  # текст, що показується замість порожнього переліку політик, — лежать у
+  # src/_data/pravova.json, якого в CMS немає.
   #
   # Пояснення до полів:
   #   Реєстраційні коди — показуються тонкою стрічкою над меню на КОЖНІЙ
@@ -225,22 +226,16 @@ content:
   #   Реєстраційні дані — повний перелік для таблиці на самій сторінці.
   #   Код ЄДРПОУ — показується у блоці реєстрації, у футері та у
   #     структурованих даних для пошуковиків.
-  #   Вступний текст — абзац під реєстраційними даними: чим займається
-  #     організація.
   #   Політики — кожна стає карткою, яка розкривається: усередині опис,
   #     кнопка «Відкрити» і сам документ (PDF) для читання на сторінці.
   #     Опис необовʼязковий.
-  #   Тексти «поки немає» — показуються ЗАМІСТЬ переліку, поки він порожній.
   - name: legal
     label: Юридичні дані
     type: file
     path: src/_data/legal.json
     fields:
-      # Заголовок над блоком реєстраційних даних на сторінці. Поле було
-      # у файлі, але не в схемі — тобто перше ж збереження з CMS стерло б
-      # його, і блок лишився б без заголовка.
-      - name: regHeading
-        label: Заголовок блоку реєстраційних даних
+      - name: edrpou
+        label: Код ЄДРПОУ
         type: string
       - name: registration
         label: Реєстраційні коди (стрічка над меню)
@@ -249,25 +244,6 @@ content:
         fields:
           - { name: label, label: Назва коду, type: string, required: true }
           - { name: value, label: Значення, type: string, required: true }
-      - name: items
-        label: Реєстраційні дані (таблиця на сторінці)
-        type: object
-        list: true
-        fields:
-          - { name: label, label: Підпис, type: string, required: true }
-          - { name: value, label: Значення, type: string, required: true }
-      - name: edrpou
-        label: Код ЄДРПОУ
-        type: string
-      - name: intro
-        label: Вступний текст
-        type: text
-      - name: policiesHeading
-        label: Заголовок розділу політик
-        type: string
-      - name: policiesLead
-        label: Текст перед переліком політик
-        type: text
       - name: policies
         label: Політики організації
         type: object
@@ -284,9 +260,10 @@ content:
             label: Документ
             type: file
             required: true
-      - name: policiesNote
-        label: 'Текст, поки політик немає'
-        type: text
-      - name: note
-        label: 'Текст, поки список порожній'
-        type: text
+      - name: items
+        label: Реєстраційні дані (таблиця на сторінці)
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Підпис, type: string, required: true }
+          - { name: value, label: Значення, type: string, required: true }

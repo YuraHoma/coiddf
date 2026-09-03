@@ -515,54 +515,6 @@
       "note": "",
       "updated": "2026-08-18"
     },
-    "data/legal.intro": {
-      "source": "Благодійна організація «Фонд розвитку міжнародної співпраці» працює в Україні за напрямами гуманітарного реагування, радіаційного захисту, підвищення військової готовності та цифрової трансформації.",
-      "sourceHash": "8097ed5a251a",
-      "target": "The charitable organisation “International Cooperation Development Fund” works in Ukraine in humanitarian crisis response, radiation protection, military readiness and digital transformation.",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-28"
-    },
-    "data/legal.note": {
-      "source": "Реєстраційні дані та політики організації готуються до публікації і з'являться на цій сторінці найближчим часом.",
-      "sourceHash": "385bc66a3109",
-      "target": "Registration information and policies are in process for release and will be posted on this page shortly.",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
-    },
-    "data/legal.policiesHeading": {
-      "source": "Політики організації",
-      "sourceHash": "41d0efc8b7d2",
-      "target": "Organisation policies",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-28"
-    },
-    "data/legal.policiesLead": {
-      "source": "Наведені політики є невідʼємною частиною діяльності фонду та відповідають міжнародним гуманітарним принципам.",
-      "sourceHash": "e1d1ed418acd",
-      "target": "These policies are an integral part of the Fund's work and follow international humanitarian principles.",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-28"
-    },
-    "data/legal.policiesNote": {
-      "source": "Політики організації готуються до публікації і зʼявляться на цій сторінці найближчим часом.",
-      "sourceHash": "656d8a96a301",
-      "target": "The organisation's policies are being prepared and will appear on this page shortly.",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-28"
-    },
-    "data/legal.regHeading": {
-      "source": "Реєстраційна інформація",
-      "sourceHash": "745c688e4dbe",
-      "target": "Registration information",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-28"
-    },
     "data/novyny.hero.eyebrow": {
       "source": "Новини",
       "sourceHash": "807eb4d2438b",
@@ -1122,6 +1074,30 @@
       "status": "human",
       "note": "",
       "updated": "2026-08-18"
+    },
+    "data/pravova.policiesHeading": {
+      "source": "Політики організації",
+      "sourceHash": "41d0efc8b7d2",
+      "target": "Organisation policies",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-28"
+    },
+    "data/pravova.policiesNote": {
+      "source": "Політики організації готуються до публікації і зʼявляться на цій сторінці найближчим часом.",
+      "sourceHash": "656d8a96a301",
+      "target": "The organisation's policies are being prepared and will appear on this page shortly.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-28"
+    },
+    "data/pravova.regHeading": {
+      "source": "Реєстраційна інформація",
+      "sourceHash": "745c688e4dbe",
+      "target": "Registration information",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-28"
     },
     "data/pronas.approach.eyebrow": {
       "source": "Наш підхід",
