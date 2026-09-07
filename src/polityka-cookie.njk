@@ -18,14 +18,12 @@ eleventyComputed:
         <div>
           <p class="eyebrow">{{ cookie.hero.eyebrow }}</p>
           <h1>{{ cookie.hero.heading }}</h1>
-          <p class="lead">{{ cookie.hero.lead }}</p>
         </div>
       </section>
       <section class="section">
         {#- Та сама верстка, що й на сторінці політики конфіденційності:
             суцільний текст у вузькій колонці, бо його читають підряд. -#}
         <div class="legal-text">
-          <p class="policy-meta">{{ cookie.meta }}</p>
           {%- for s in cookie.sections %}
           <div class="policy-section">
             <h2>{{ s.title }}</h2>

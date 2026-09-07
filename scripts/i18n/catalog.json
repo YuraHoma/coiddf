@@ -20,8 +20,8 @@
       "updated": "2026-09-07"
     },
     "data/cookie.hero.heading": {
-      "source": "Політика використання файлів cookie",
-      "sourceHash": "adcd23f400f9",
+      "source": "Політика використання файлів Cookie",
+      "sourceHash": "b73f38859804",
       "target": "Cookie Policy",
       "status": "human",
       "note": "",
@@ -44,81 +44,81 @@
       "updated": "2026-09-07"
     },
     "data/cookie.sections[0].body": {
-      "source": "Файли cookie — це невеликі текстові файли, які зберігаються на вашому пристрої (компʼютері, смартфоні чи іншому) під час відвідування вебсайтів. Вони використовуються для забезпечення коректної роботи сайтів, а також для надання інформації власникам сайтів.",
-      "sourceHash": "8715e4700bc1",
+      "source": "Файли cookie – це невеликі текстові файли, які зберігаються на вашому пристрої (комп’ютері, смартфоні або іншому) під час відвідування вебсайтів. Вони використовуються для забезпечення коректної роботи сайтів, а також для надання інформації власникам сайтів.",
+      "sourceHash": "a86716ff1263",
       "target": "Cookies are small text files stored on your device (computer, smartphone or other) when you visit websites. They are used to make websites work correctly and to provide information to website owners.",
       "status": "human",
       "note": "",
       "updated": "2026-09-07"
     },
     "data/cookie.sections[0].title": {
-      "source": "Що таке файли cookie",
-      "sourceHash": "5a63b5f22f3c",
-      "target": "What cookies are",
+      "source": "Що таке файли Cookie?",
+      "sourceHash": "ee60ef013002",
+      "target": "What are cookies?",
       "status": "human",
       "note": "",
       "updated": "2026-09-07"
     },
     "data/cookie.sections[1].body": {
-      "source": "Сайт фонду використовує лише два типи файлів, і обидва потрібні для його роботи. Необхідні файли забезпечують саму роботу сайту й не можуть бути відключені в наших системах: вони встановлюються у відповідь на ваші дії, як-от заповнення форми чи вибір налаштувань. Функціональні файли запамʼятовують ваш вибір — зокрема мову, якою ви читаєте сайт, — щоб не питати про це щоразу.",
-      "sourceHash": "c5be5da051ef",
-      "target": "The Fund's website uses only two types of files, and both are needed for it to work. Essential cookies make the website itself function and cannot be switched off in our systems: they are set in response to your actions, such as submitting a form or choosing a setting. Functional cookies remember your choice — in particular the language you read the site in — so that you are not asked about it every time.",
+      "source": "Наш вебсайт використовує файли cookie з метою покращення вашого користувацького досвіду. Необхідні файли Cookie: ці файли необхідні для забезпечення роботи нашого вебсайту і не можуть бути відключені в наших системах. Вони зазвичай встановлюються у відповідь на ваші дії, такі як заповнення форм або налаштування конфіденційності.",
+      "sourceHash": "7ad8c90c111b",
+      "target": "Our website uses cookies in order to improve your user experience. Essential cookies: these files are necessary for our website to work and cannot be switched off in our systems. They are usually set in response to your actions, such as submitting forms or setting privacy preferences.",
       "status": "human",
       "note": "",
       "updated": "2026-09-07"
     },
     "data/cookie.sections[1].title": {
-      "source": "Які файли cookie використовує цей сайт",
-      "sourceHash": "e4e126fb9a2c",
-      "target": "Which cookies this website uses",
+      "source": "Як ми використовуємо файли Cookie?",
+      "sourceHash": "362ef180367b",
+      "target": "How do we use cookies?",
       "status": "human",
       "note": "",
       "updated": "2026-09-07"
     },
     "data/cookie.sections[2].body": {
-      "source": "Сайт не використовує аналітичних файлів cookie: систем на кшталт Google Analytics тут не встановлено, і ми не збираємо статистику про окремих відвідувачів. Сайт не використовує рекламних файлів cookie: реклами тут немає, і ми не відстежуємо вас на інших сайтах. Ми не передаємо жодних даних рекламним чи аналітичним мережам.",
-      "sourceHash": "6663f6b6ad90",
-      "target": "The website does not use analytics cookies: no system such as Google Analytics is installed here, and we do not collect statistics about individual visitors. The website does not use advertising cookies: there is no advertising here, and we do not track you across other sites. We do not pass any data to advertising or analytics networks.",
+      "source": "Ви можете налаштувати або відключити файли cookie через налаштування вашого браузера. Зверніть увагу, що відключення файлів cookie може вплинути на функціональність нашого вебсайту. Відповідні інструкції є в популярних браузерах: Google Chrome, Mozilla Firefox, Microsoft Edge, Safari.",
+      "sourceHash": "5ed921a8d146",
+      "target": "You can configure or disable cookies through your browser settings. Please note that disabling cookies may affect the functionality of our website. The relevant instructions are available in the common browsers: Google Chrome, Mozilla Firefox, Microsoft Edge, Safari.",
       "status": "human",
       "note": "",
       "updated": "2026-09-07"
     },
     "data/cookie.sections[2].title": {
-      "source": "Чого на цьому сайті немає",
-      "sourceHash": "54ba3d3b0d9e",
-      "target": "What this website does not have",
+      "source": "Управління файлами Cookie",
+      "sourceHash": "7e1e1b5b3c5a",
+      "target": "Managing cookies",
       "status": "human",
       "note": "",
       "updated": "2026-09-07"
     },
     "data/cookie.sections[3].body": {
-      "source": "Під час першого відвідування сайт показує повідомлення про використання файлів cookie. Ваш вибір зберігається на вашому ж пристрої, щоб повідомлення не зʼявлялося щоразу. Оскільки сайт використовує лише необхідні та функціональні файли, відмова від них зробила б неможливою саму роботу сайту — натомість ними можна керувати в браузері, як описано нижче.",
-      "sourceHash": "dd5c6fa2f405",
-      "target": "On your first visit the website shows a notice about the use of cookies. Your choice is stored on your own device so that the notice does not appear every time. Since the website uses only essential and functional cookies, refusing them would make the website itself unusable — instead, they can be managed in your browser as described below.",
+      "source": "Ми можемо оновлювати цю політику час від часу. Будь-які зміни будуть опубліковані на цій сторінці.",
+      "sourceHash": "09d089c5ef64",
+      "target": "We may update this policy from time to time. Any changes will be published on this page.",
       "status": "human",
       "note": "",
       "updated": "2026-09-07"
     },
     "data/cookie.sections[3].title": {
-      "source": "Згода",
-      "sourceHash": "7cf278790f9c",
-      "target": "Consent",
+      "source": "Зміни до Політики використання файлів Cookie",
+      "sourceHash": "b71c7c4e965d",
+      "target": "Changes to the Cookie Policy",
       "status": "human",
       "note": "",
       "updated": "2026-09-07"
     },
     "data/cookie.sections[4].body": {
-      "source": "Ви можете налаштувати або відключити файли cookie через налаштування вашого браузера. Зверніть увагу, що відключення файлів cookie може вплинути на роботу сайту — зокрема сайт перестане памʼятати обрану вами мову. Відповідні налаштування є в усіх поширених браузерах: Google Chrome, Mozilla Firefox, Microsoft Edge і Safari — зазвичай у розділі налаштувань конфіденційності.",
-      "sourceHash": "d960cf0131d5",
-      "target": "You can configure or disable cookies through your browser settings. Please note that disabling cookies may affect how the website works — in particular, the website will stop remembering the language you chose. The relevant settings exist in all common browsers: Google Chrome, Mozilla Firefox, Microsoft Edge and Safari — usually under privacy settings.",
+      "source": "Якщо у вас є будь-які питання або занепокоєння щодо нашого використання файлів cookie, будь ласка, зв’яжіться з нами через електронну пошту: co.icdf.ukraine@gmail.com",
+      "sourceHash": "e24cf3ba714e",
+      "target": "If you have any questions or concerns about our use of cookies, please contact us by email: co.icdf.ukraine@gmail.com",
       "status": "human",
       "note": "",
       "updated": "2026-09-07"
     },
     "data/cookie.sections[4].title": {
-      "source": "Як керувати файлами cookie",
-      "sourceHash": "f91b8ea4e6b2",
-      "target": "How to manage cookies",
+      "source": "Зв’язок з нами",
+      "sourceHash": "948798543bad",
+      "target": "Contact us",
       "status": "human",
       "note": "",
       "updated": "2026-09-07"
@@ -820,12 +820,12 @@
       "updated": "2026-09-02"
     },
     "data/policy.meta": {
-      "source": "Затверджено наказом директора БО «ФРМС» від 1 липня 2026 року. Останнє оновлення: 1 липня 2026 року.",
-      "sourceHash": "faaf491af94f",
-      "target": "Approved by Resolution of the Director of CO «ICDF» of July 1, 2026. Last updated: July 1, 2026.",
+      "source": "Затверджено наказом директора БО «ФРМС» від 1 липня 2026 року.",
+      "sourceHash": "e9e672171050",
+      "target": "Approved by order of the Director of the CO \"ICDF\" dated 1 July 2026.",
       "status": "human",
-      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
-      "updated": "2026-09-02"
+      "note": "",
+      "updated": "2026-09-07"
     },
     "data/policy.parts[0].sections[0].body": {
       "source": "Фонд прагне формувати культуру відкритості та створювати атмосферу, в якій працівники, волонтери, партнери й бенефіціари почуваються комфортно, повідомляючи про занепокоєння щодо недотримання вимог. Якщо ви знаєте або підозрюєте порушення політики, статуту чи законодавства України, будь ласка, повідомте про це.",
