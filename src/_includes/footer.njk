@@ -98,17 +98,18 @@
         </div>
       </div>
       <div class="footer-bottom">
-        {#- Повна юридична назва мовою сторінки. Код ЄДРПОУ прибрано до
-            підтвердження клієнтом; поле лишається в CMS. -#}
-        <span class="footer-legal">{{ site.orgFull }}{% if legal.edrpou %} ({{ "EDRPOU code: " if locale == "en" else "Код ЄДРПОУ: " }}{{ legal.edrpou }}){% endif %}</span>
-        {#- Посилання на політики стоять саме тут, у нижньому рядку: так їх
-            прийнято розміщувати, і вони мають бути на КОЖНІЙ сторінці —
-            інакше згода на обробку даних нічим не підкріплена. -#}
-        <nav class="footer-legal-links" aria-label="{{ 'Legal' if locale == 'en' else 'Правові документи' }}">
-          {%- for item in site.footerLegalLinks %}
-          <a href="{{ item.href }}">{{ item.label }}</a>
-          {%- endfor %}
-        </nav>
+        {#- Правовий блок одним краєм: посилання на політики і повна
+            юридична назва з кодом. Політики мають бути на КОЖНІЙ сторінці —
+            інакше згода на обробку даних нічим не підкріплена, — а назва
+            організації стоїть поруч як підпис під ними. -#}
+        <div class="footer-bottom-legal">
+          <nav class="footer-legal-links" aria-label="{{ 'Legal' if locale == 'en' else 'Правові документи' }}">
+            {%- for item in site.footerLegalLinks %}
+            <a href="{{ item.href }}">{{ item.label }}</a>
+            {%- endfor %}
+          </nav>
+          <span class="footer-legal">{{ site.orgFull }}{% if legal.edrpou %} ({{ "EDRPOU code: " if locale == "en" else "Код ЄДРПОУ: " }}{{ legal.edrpou }}){% endif %}</span>
+        </div>
         <span>© {{ buildYear }}. {{ "All rights reserved." if locale == "en" else "Всі права захищені." }}</span>
       </div>
     </footer>
