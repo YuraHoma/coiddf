@@ -1,0 +1,36 @@
+---
+layout: base.njk
+pagination:
+  data: locales
+  size: 1
+  alias: locale
+  addAllPagesToCollections: true
+permalink: "{{ '/en/polityka-cookie/' if locale == 'en' else '/polityka-cookie/' }}"
+title: Політика використання файлів cookie | Фонд розвитку міжнародної співпраці
+description: Які файли cookie використовує сайт фонду, навіщо вони потрібні і як ними керувати.
+enTitle: Cookie Policy | International Cooperation Development Fund
+enDescription: Which cookies the Fund's website uses, what they are for, and how to manage them.
+eleventyComputed:
+  title: "{{ (enTitle if locale == 'en' else title) | safe }}"
+  description: "{{ (enDescription if locale == 'en' else description) | safe }}"
+---
+      <section class="page-hero">
+        <div>
+          <p class="eyebrow">{{ cookie.hero.eyebrow }}</p>
+          <h1>{{ cookie.hero.heading }}</h1>
+          <p class="lead">{{ cookie.hero.lead }}</p>
+        </div>
+      </section>
+      <section class="section">
+        {#- Та сама верстка, що й на сторінці політики конфіденційності:
+            суцільний текст у вузькій колонці, бо його читають підряд. -#}
+        <div class="legal-text">
+          <p class="policy-meta">{{ cookie.meta }}</p>
+          {%- for s in cookie.sections %}
+          <div class="policy-section">
+            <h2>{{ s.title }}</h2>
+            <p>{{ s.body }}</p>
+          </div>
+          {%- endfor %}
+        </div>
+      </section>

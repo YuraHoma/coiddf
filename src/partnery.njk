@@ -17,19 +17,22 @@ eleventyComputed:
 {% import "partner-logos.njk" as logos %}
       <section class="page-hero">
         <div>
-          <p class="eyebrow">{{ partners.hero.eyebrow }}</p>
-          <h1>{{ partners.hero.heading }}</h1>
-          <p class="lead">{{ partners.hero.lead }}</p>
+          <p class="eyebrow">{{ partnery.hero.eyebrow }}</p>
+          <h1>{{ partnery.hero.heading }}</h1>
+          <p class="lead">{{ partnery.hero.lead }}</p>
         </div>
       </section>
       <section class="section">
         <div class="partners-grid">
-          {%- for p in partners.items %}
+          {#- Показуємо лише позначені як публічні: фонд називає партнером
+              публічно тільки того, з ким укладено угоду. Решта лишається
+              в CMS і вмикається галочкою, коли угода зʼявиться. -#}
+          {%- for p in partners.items %}{% if p.published %}
           <article class="partner-detail-card">
             <div class="partner-detail-mark">{{ logos.logo(p) }}</div>
             {% if p.description %}<p>{{ p.description }}</p>{% endif %}
           </article>
-          {%- endfor %}
+          {%- endif %}{% endfor %}
         </div>
         {%- if partners.note %}
         <p class="partners-note">{{ partners.note }}</p>

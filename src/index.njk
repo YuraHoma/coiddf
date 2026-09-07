@@ -36,16 +36,31 @@ eleventyComputed:
       </section>
       <section class="section partners-section">
         <div class="section-heading center"><p class="eyebrow">{{ home.partners.eyebrow }}</p></div>
+        {#- Публічних партнерів рахуємо заздалегідь: доки їх мало, нескінченна
+            стрічка виглядає зламаною — два знаки їдуть екраном, лишаючи за
+            собою порожнечу. Тому до чотирьох включно показуємо їх статичним
+            рядком по центру, а стрічку вмикаємо, коли логотипів справді
+            стільки, що вони не вміщаються. -#}
+        {%- set shown = [] %}
+        {%- for p in partners.items %}{% if p.published %}{% set _ = shown.push(p) %}{% endif %}{% endfor %}
+        {%- if shown.length > 4 %}
         <div class="partner-marquee">
           <div class="partner-track">
-            {%- for p in partners.items %}
+            {%- for p in shown %}
             <div class="partner-logo-card">{{ logos.logo(p, true) }}</div>
             {%- endfor %}
-            {%- for p in partners.items %}
+            {%- for p in shown %}
             <div class="partner-logo-card">{{ logos.logo(p, true) }}</div>
             {%- endfor %}
           </div>
         </div>
+        {%- else %}
+        <div class="partner-row">
+          {%- for p in shown %}
+          <div class="partner-logo-card">{{ logos.logo(p, true) }}</div>
+          {%- endfor %}
+        </div>
+        {%- endif %}
       </section>
       <section class="section">
         <div class="section-heading center">

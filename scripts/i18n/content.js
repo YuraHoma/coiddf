@@ -32,6 +32,9 @@ const DATASETS = [
   // файлі це не втримати, бо Pages CMS зберігає лише поля зі схеми.
   { name: "komanda", skipKeys: [] },
   { name: "partners", skipKeys: ["key"] },
+  // Банер сторінки партнерів — окремо від переліку: перелік веде клієнт
+  // через CMS, тексти сторінки — розробник.
+  { name: "partnery", skipKeys: [] },
   { name: "novyny", skipKeys: [] },
   { name: "proyekty", skipKeys: [] },
   // file — шлях до документа політики, не текст.
@@ -41,6 +44,7 @@ const DATASETS = [
   // сторінки — розробник.
   { name: "pravova", skipKeys: [] },
   { name: "policy", skipKeys: [] },
+  { name: "cookie", skipKeys: [] },
   // file — шлях до PDF, а не текст: перекладати його не можна.
   { name: "reports", skipKeys: ["file", "image", "date"] },
   // Банер сторінки звітності — окремо від переліку документів, з тієї ж

@@ -1,79 +1,74 @@
 {
-  "hero": {
-    "eyebrow": "Партнери",
-    "heading": "Працюємо разом з українськими та міжнародними партнерами.",
-    "lead": "Фонд співпрацює виключно з міжнародними партнерами через бюджетні програми гуманітарної допомоги — без приватних зборів коштів."
-  },
   "items": [
     {
-      "key": "minsoc",
-      "name": "Міністерство соціальної політики, сім'ї та єдності України",
-      "image": "/assets/partner-minsoc.png"
-    },
-    {
-      "key": "minvidnovlennya",
-      "name": "Міністерство з відновлення, інфраструктури та транспорту України",
-      "image": "/assets/partner-minvidnovlennya.png"
-    },
-    {
-      "key": "minenergo",
-      "name": "Міністерство енергетики України",
-      "image": "/assets/partner-minenergo.png"
-    },
-    {
-      "key": "minekonomiky",
-      "name": "Міністерство економіки та довкілля України",
-      "image": "/assets/partner-minekonomiky.png"
-    },
-    {
-      "key": "asociaciya-gromad",
-      "name": "Асоціація прифронтових міст та громад",
-      "image": "/assets/partner-asociaciya-gromad.png"
-    },
-    {
-      "key": "gidrometcentr",
-      "name": "Український гідрометеорологічний центр",
-      "image": "/assets/partner-gidrometcentr.png"
-    },
-    {
-      "key": "dsns",
-      "name": "Державна служба України з надзвичайних ситуацій",
-      "image": "/assets/partner-dsns.png"
-    },
-    {
-      "key": "minoborony",
-      "name": "Міністерство оборони України",
-      "image": "/assets/partner-minoborony.png"
-    },
-    {
-      "key": "mvs",
-      "name": "Міністерство внутрішніх справ України",
-      "image": "/assets/partner-mvs.png"
-    },
-    {
-      "key": "wgi-global",
       "name": "WGI Global Inc.",
-      "image": "/assets/partner-wgi-global.png"
+      "image": "/assets/partner-wgi-global.png",
+      "published": true
     },
     {
-      "key": "amentum",
       "name": "Amentum",
-      "image": "/assets/partner-amentum.png"
+      "image": "/assets/partner-amentum.png",
+      "published": true
     },
     {
-      "key": "derzhprykordonsluzhba",
+      "name": "Міністерство соціальної політики, сім'ї та єдності України",
+      "image": "/assets/partner-minsoc.png",
+      "published": false
+    },
+    {
+      "name": "Міністерство з відновлення, інфраструктури та транспорту України",
+      "image": "/assets/partner-minvidnovlennya.png",
+      "published": false
+    },
+    {
+      "name": "Міністерство енергетики України",
+      "image": "/assets/partner-minenergo.png",
+      "published": false
+    },
+    {
+      "name": "Міністерство економіки та довкілля України",
+      "image": "/assets/partner-minekonomiky.png",
+      "published": false
+    },
+    {
+      "name": "Асоціація прифронтових міст та громад",
+      "image": "/assets/partner-asociaciya-gromad.png",
+      "published": false
+    },
+    {
+      "name": "Український гідрометеорологічний центр",
+      "image": "/assets/partner-gidrometcentr.png",
+      "published": false
+    },
+    {
+      "name": "Державна служба України з надзвичайних ситуацій",
+      "image": "/assets/partner-dsns.png",
+      "published": false
+    },
+    {
+      "name": "Міністерство оборони України",
+      "image": "/assets/partner-minoborony.png",
+      "published": false
+    },
+    {
+      "name": "Міністерство внутрішніх справ України",
+      "image": "/assets/partner-mvs.png",
+      "published": false
+    },
+    {
       "name": "Державна прикордонна служба України",
-      "image": "/assets/partner-derzhprykordonsluzhba.png"
+      "image": "/assets/partner-derzhprykordonsluzhba.png",
+      "published": false
     },
     {
-      "key": "sbu",
       "name": "Служба безпеки України",
-      "image": "/assets/partner-sbu.png"
+      "image": "/assets/partner-sbu.png",
+      "published": false
     },
     {
-      "key": "ocha",
       "name": "OCHA",
-      "image": "/assets/partner-ocha.png"
+      "image": "/assets/partner-ocha.png",
+      "published": false
     }
   ]
 }

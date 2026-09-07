@@ -11,6 +11,150 @@
       "note": "Переклад надано клієнтом — як у реєстраційних документах",
       "updated": "2026-08-28"
     },
+    "data/cookie.hero.eyebrow": {
+      "source": "Політика",
+      "sourceHash": "c87ca3011872",
+      "target": "Policy",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.hero.heading": {
+      "source": "Політика використання файлів cookie",
+      "sourceHash": "adcd23f400f9",
+      "target": "Cookie Policy",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.hero.lead": {
+      "source": "Які файли cookie використовує сайт фонду, навіщо вони потрібні і як ними керувати.",
+      "sourceHash": "c7f72f171ed5",
+      "target": "Which cookies the Fund's website uses, what they are for, and how to manage them.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.meta": {
+      "source": "Останнє оновлення: 7 вересня 2026 року.",
+      "sourceHash": "b7d7d0cf6c76",
+      "target": "Last updated: 7 September 2026.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.sections[0].body": {
+      "source": "Файли cookie — це невеликі текстові файли, які зберігаються на вашому пристрої (компʼютері, смартфоні чи іншому) під час відвідування вебсайтів. Вони використовуються для забезпечення коректної роботи сайтів, а також для надання інформації власникам сайтів.",
+      "sourceHash": "8715e4700bc1",
+      "target": "Cookies are small text files stored on your device (computer, smartphone or other) when you visit websites. They are used to make websites work correctly and to provide information to website owners.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.sections[0].title": {
+      "source": "Що таке файли cookie",
+      "sourceHash": "5a63b5f22f3c",
+      "target": "What cookies are",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.sections[1].body": {
+      "source": "Сайт фонду використовує лише два типи файлів, і обидва потрібні для його роботи. Необхідні файли забезпечують саму роботу сайту й не можуть бути відключені в наших системах: вони встановлюються у відповідь на ваші дії, як-от заповнення форми чи вибір налаштувань. Функціональні файли запамʼятовують ваш вибір — зокрема мову, якою ви читаєте сайт, — щоб не питати про це щоразу.",
+      "sourceHash": "c5be5da051ef",
+      "target": "The Fund's website uses only two types of files, and both are needed for it to work. Essential cookies make the website itself function and cannot be switched off in our systems: they are set in response to your actions, such as submitting a form or choosing a setting. Functional cookies remember your choice — in particular the language you read the site in — so that you are not asked about it every time.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.sections[1].title": {
+      "source": "Які файли cookie використовує цей сайт",
+      "sourceHash": "e4e126fb9a2c",
+      "target": "Which cookies this website uses",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.sections[2].body": {
+      "source": "Сайт не використовує аналітичних файлів cookie: систем на кшталт Google Analytics тут не встановлено, і ми не збираємо статистику про окремих відвідувачів. Сайт не використовує рекламних файлів cookie: реклами тут немає, і ми не відстежуємо вас на інших сайтах. Ми не передаємо жодних даних рекламним чи аналітичним мережам.",
+      "sourceHash": "6663f6b6ad90",
+      "target": "The website does not use analytics cookies: no system such as Google Analytics is installed here, and we do not collect statistics about individual visitors. The website does not use advertising cookies: there is no advertising here, and we do not track you across other sites. We do not pass any data to advertising or analytics networks.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.sections[2].title": {
+      "source": "Чого на цьому сайті немає",
+      "sourceHash": "54ba3d3b0d9e",
+      "target": "What this website does not have",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.sections[3].body": {
+      "source": "Під час першого відвідування сайт показує повідомлення про використання файлів cookie. Ваш вибір зберігається на вашому ж пристрої, щоб повідомлення не зʼявлялося щоразу. Оскільки сайт використовує лише необхідні та функціональні файли, відмова від них зробила б неможливою саму роботу сайту — натомість ними можна керувати в браузері, як описано нижче.",
+      "sourceHash": "dd5c6fa2f405",
+      "target": "On your first visit the website shows a notice about the use of cookies. Your choice is stored on your own device so that the notice does not appear every time. Since the website uses only essential and functional cookies, refusing them would make the website itself unusable — instead, they can be managed in your browser as described below.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.sections[3].title": {
+      "source": "Згода",
+      "sourceHash": "7cf278790f9c",
+      "target": "Consent",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.sections[4].body": {
+      "source": "Ви можете налаштувати або відключити файли cookie через налаштування вашого браузера. Зверніть увагу, що відключення файлів cookie може вплинути на роботу сайту — зокрема сайт перестане памʼятати обрану вами мову. Відповідні налаштування є в усіх поширених браузерах: Google Chrome, Mozilla Firefox, Microsoft Edge і Safari — зазвичай у розділі налаштувань конфіденційності.",
+      "sourceHash": "d960cf0131d5",
+      "target": "You can configure or disable cookies through your browser settings. Please note that disabling cookies may affect how the website works — in particular, the website will stop remembering the language you chose. The relevant settings exist in all common browsers: Google Chrome, Mozilla Firefox, Microsoft Edge and Safari — usually under privacy settings.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.sections[4].title": {
+      "source": "Як керувати файлами cookie",
+      "sourceHash": "f91b8ea4e6b2",
+      "target": "How to manage cookies",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.sections[5].body": {
+      "source": "Ми можемо оновлювати цю політику час від часу. Будь-які зміни будуть опубліковані на цій сторінці із зазначенням дати останнього оновлення.",
+      "sourceHash": "efc82e9e0aaf",
+      "target": "We may update this policy from time to time. Any changes will be published on this page with the date of the last update.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.sections[5].title": {
+      "source": "Зміни до цієї політики",
+      "sourceHash": "b8e550588175",
+      "target": "Changes to this policy",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.sections[6].body": {
+      "source": "Якщо у вас є питання щодо використання файлів cookie на цьому сайті, напишіть нам на co.icdf.ukraine@gmail.com.",
+      "sourceHash": "ad1b59f7d204",
+      "target": "If you have any questions about the use of cookies on this website, write to us at co.icdf.ukraine@gmail.com.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/cookie.sections[6].title": {
+      "source": "Звʼязок з нами",
+      "sourceHash": "ae60ca7c481b",
+      "target": "Contact us",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
     "data/feedback.categories[0]": {
       "source": "Загальний запит",
       "sourceHash": "c2f79852adf2",
@@ -515,22 +659,6 @@
       "note": "",
       "updated": "2026-08-18"
     },
-    "data/legal.policies[0].description": {
-      "source": "Тимчасовий файл розробника, щоб перевірити, що розділ політик працює. Це не документ фонду; його буде видалено після перевірки.",
-      "sourceHash": "822a30f6a17a",
-      "target": "A temporary file from the developer to confirm that the policies section works. This is not a Fund document; it will be removed after the check.",
-      "status": "human",
-      "note": "Тимчасовий тестовий запис",
-      "updated": "2026-09-03"
-    },
-    "data/legal.policies[0].title": {
-      "source": "ТЕСТОВИЙ ДОКУМЕНТ — перевірка розділу",
-      "sourceHash": "bff572eb4432",
-      "target": "TEST DOCUMENT — checking the section",
-      "status": "human",
-      "note": "Тимчасовий тестовий запис",
-      "updated": "2026-09-03"
-    },
     "data/novyny.hero.eyebrow": {
       "source": "Новини",
       "sourceHash": "807eb4d2438b",
@@ -555,37 +683,13 @@
       "note": "",
       "updated": "2026-08-18"
     },
-    "data/partners.hero.eyebrow": {
-      "source": "Партнери",
-      "sourceHash": "f61eb11e6af3",
-      "target": "Partners",
+    "data/partners.items[10].name": {
+      "source": "Міністерство внутрішніх справ України",
+      "sourceHash": "0b3436907c8c",
+      "target": "Ministry of Internal Affairs of Ukraine",
       "status": "human",
       "note": "",
-      "updated": "2026-08-18"
-    },
-    "data/partners.hero.heading": {
-      "source": "Працюємо разом з українськими та міжнародними партнерами.",
-      "sourceHash": "bb0b39d2eb53",
-      "target": "We work together with Ukrainian and international partners.",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
-    },
-    "data/partners.hero.lead": {
-      "source": "Фонд співпрацює виключно з міжнародними партнерами через бюджетні програми гуманітарної допомоги — без приватних зборів коштів.",
-      "sourceHash": "df877fbe8f48",
-      "target": "The Fund cooperates exclusively with international partners through humanitarian aid budget programs — without private fundraising.",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
-    },
-    "data/partners.items[0].name": {
-      "source": "Міністерство соціальної політики, сім'ї та єдності України",
-      "sourceHash": "59685d5336f2",
-      "target": "Ministry of Social Policy, Family and Unity of Ukraine",
-      "status": "human",
-      "note": "",
-      "updated": "2026-08-18"
+      "updated": "2026-09-07"
     },
     "data/partners.items[11].name": {
       "source": "Державна прикордонна служба України",
@@ -603,66 +707,90 @@
       "note": "",
       "updated": "2026-08-18"
     },
-    "data/partners.items[1].name": {
+    "data/partners.items[2].name": {
+      "source": "Міністерство соціальної політики, сім'ї та єдності України",
+      "sourceHash": "59685d5336f2",
+      "target": "Ministry of Social Policy, Family and Unity of Ukraine",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/partners.items[3].name": {
       "source": "Міністерство з відновлення, інфраструктури та транспорту України",
       "sourceHash": "a03cab76c37d",
       "target": "Ministry of Reconstruction, Infrastructure and Transport of Ukraine",
       "status": "human",
       "note": "",
-      "updated": "2026-08-18"
+      "updated": "2026-09-07"
     },
-    "data/partners.items[2].name": {
+    "data/partners.items[4].name": {
       "source": "Міністерство енергетики України",
       "sourceHash": "73dae3c448f9",
       "target": "Ministry of Energy of Ukraine",
       "status": "human",
       "note": "",
-      "updated": "2026-08-18"
+      "updated": "2026-09-07"
     },
-    "data/partners.items[3].name": {
+    "data/partners.items[5].name": {
       "source": "Міністерство економіки та довкілля України",
       "sourceHash": "06fae0c50ae4",
       "target": "Ministry of Economy and Environment of Ukraine",
       "status": "human",
       "note": "",
-      "updated": "2026-08-18"
+      "updated": "2026-09-07"
     },
-    "data/partners.items[4].name": {
+    "data/partners.items[6].name": {
       "source": "Асоціація прифронтових міст та громад",
       "sourceHash": "c0d2f774c801",
       "target": "Association of Frontline Cities and Communities",
       "status": "human",
       "note": "",
-      "updated": "2026-08-18"
+      "updated": "2026-09-07"
     },
-    "data/partners.items[5].name": {
+    "data/partners.items[7].name": {
       "source": "Український гідрометеорологічний центр",
       "sourceHash": "57336373bf1b",
       "target": "Ukrainian Hydrometeorological center",
       "status": "human",
       "note": "",
-      "updated": "2026-08-18"
+      "updated": "2026-09-07"
     },
-    "data/partners.items[6].name": {
+    "data/partners.items[8].name": {
       "source": "Державна служба України з надзвичайних ситуацій",
       "sourceHash": "300ec3c2b17a",
       "target": "State Service of Ukraine for Emergency Situations",
       "status": "human",
       "note": "",
-      "updated": "2026-08-18"
+      "updated": "2026-09-07"
     },
-    "data/partners.items[7].name": {
+    "data/partners.items[9].name": {
       "source": "Міністерство оборони України",
       "sourceHash": "e211c005b682",
       "target": "Ministry of Defense of Ukraine",
       "status": "human",
       "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/partnery.hero.eyebrow": {
+      "source": "Партнери",
+      "sourceHash": "f61eb11e6af3",
+      "target": "Partners",
+      "status": "human",
+      "note": "",
       "updated": "2026-08-18"
     },
-    "data/partners.items[8].name": {
-      "source": "Міністерство внутрішніх справ України",
-      "sourceHash": "0b3436907c8c",
-      "target": "Ministry of Internal Affairs of Ukraine",
+    "data/partnery.hero.heading": {
+      "source": "Працюємо разом з українськими та міжнародними партнерами.",
+      "sourceHash": "bb0b39d2eb53",
+      "target": "We work together with Ukrainian and international partners.",
+      "status": "human",
+      "note": "",
+      "updated": "2026-08-18"
+    },
+    "data/partnery.hero.lead": {
+      "source": "Фонд співпрацює виключно з міжнародними партнерами через бюджетні програми гуманітарної допомоги — без приватних зборів коштів.",
+      "sourceHash": "df877fbe8f48",
+      "target": "The Fund cooperates exclusively with international partners through humanitarian aid budget programs — without private fundraising.",
       "status": "human",
       "note": "",
       "updated": "2026-08-18"
@@ -1666,6 +1794,22 @@
       "status": "human",
       "note": "Формулювання за розділом «Файли cookie» офіційної політики фонду",
       "updated": "2026-09-02"
+    },
+    "data/site.footerLegalLinks[0].label": {
+      "source": "Політика конфіденційності",
+      "sourceHash": "dfeaaa3c7d5f",
+      "target": "Privacy Policy",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
+    },
+    "data/site.footerLegalLinks[1].label": {
+      "source": "Політика використання файлів cookie",
+      "sourceHash": "adcd23f400f9",
+      "target": "Cookie Policy",
+      "status": "human",
+      "note": "",
+      "updated": "2026-09-07"
     },
     "data/site.footerNavCol1[0].label": {
       "source": "Про нас",

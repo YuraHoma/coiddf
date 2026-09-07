@@ -1024,6 +1024,14 @@ main > article,
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
+/* Статичний рядок замість стрічки, поки партнерів мало (див. index.njk). */
+.partner-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px clamp(24px, 5vw, 64px);
+}
 .partner-track {
   display: flex;
   width: max-content;
@@ -1698,6 +1706,7 @@ main > article,
 }
 .policy-part:first-of-type { margin-top: 0; }
 .policy-section { display: grid; gap: 8px; }
+.policy-section h2,
 .policy-section h3 {
   font-size: clamp(16.5px, 1.3vw, 18px);
   font-weight: 600;
@@ -2046,6 +2055,23 @@ main > article,
   padding-block: 22px;
 }
 .footer-bottom span { font-size: 13px; color: rgba(255, 255, 255, 0.45); }
+
+/* Посилання на політики в нижньому рядку футера. Окремою групою, а не в
+   загальному меню: це не розділи сайту, а обовʼязкові правові документи,
+   і вони мають бути на кожній сторінці. */
+.footer-legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  font-size: 13px;
+}
+.footer-legal-links a {
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--t);
+}
+.footer-legal-links a:hover { color: var(--on-dark); }
 
 /* ---------- 22. SCROLL REVEAL ---------- */
 .js [data-reveal] {
