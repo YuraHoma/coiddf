@@ -932,12 +932,12 @@
       "updated": "2026-09-02"
     },
     "data/policy.parts[1].sections[11].body": {
-      "source": "Якщо сайт Фонду використовує файли cookie, ми можемо застосовувати необхідні файли cookie (для роботи сайту), функціональні файли cookie (для запам'ятовування ваших налаштувань) і статистичні файли cookie, зокрема Google Analytics (для агрегованого аналізу відвідуваності). Ми також можемо вбудовувати відео (наприклад, з YouTube), яке завантажує сторонній контент лише після натискання на попередній перегляд. Керувати файлами cookie можна через налаштування вашого браузера.",
-      "sourceHash": "8b3871b59eee",
-      "target": "Where the Fund's website uses cookies, we may use essential cookies (for the site to function), functional cookies (to remember your preferences), and statistical cookies, including Google Analytics (for aggregated traffic analysis). We may also embed videos (for example, from YouTube), which load third-party content only after you click to play. Cookies can be managed through your browser settings.",
+      "source": "Якщо сайт Фонду використовує файли cookie, ми можемо застосовувати необхідні файли cookie (для роботи сайту) і функціональні файли cookie (для запам'ятовування ваших налаштувань). Ми також можемо вбудовувати відео (наприклад, з YouTube), яке завантажує сторонній контент лише після натискання на попередній перегляд. Керувати файлами cookie можна через налаштування вашого браузера.",
+      "sourceHash": "d1bd37c96e11",
+      "target": "If the Fund's website uses cookies, we may use essential cookies (to make the website work) and functional cookies (to remember your settings). We may also embed video (for example from YouTube), which loads third-party content only after you click the preview. You can manage cookies through your browser settings.",
       "status": "human",
-      "note": "Офіційний двомовний документ фонду — переклад надано клієнтом",
-      "updated": "2026-09-02"
+      "note": "",
+      "updated": "2026-09-07"
     },
     "data/policy.parts[1].sections[11].title": {
       "source": "Файли cookie та подібні технології",
