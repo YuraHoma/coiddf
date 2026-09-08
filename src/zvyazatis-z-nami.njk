@@ -81,6 +81,20 @@ eleventyComputed:
             <label for="fb-message">{{ "Message" if locale == "en" else "Повідомлення" }}</label>
             <textarea id="fb-message" name="message" rows="6" required></textarea>
           </div>
+          {#- Згода на обробку персональних даних — вимога договору (п. 9.2)
+              і Закону «Про захист персональних даних»: до надсилання форми
+              людина має бачити, куди йдуть її дані, і підтвердити це дією.
+              Поле required, тож без позначки браузер не дасть надіслати. -#}
+          <div class="form-consent">
+            <input type="checkbox" id="fb-consent" name="consent" required>
+            <label for="fb-consent">
+              {%- if locale == "en" %}
+              I consent to the processing of my personal data for the purpose of handling this enquiry and I have read the <a href="/en/polityka/">Privacy Policy</a>.
+              {%- else %}
+              Даю згоду на обробку моїх персональних даних для розгляду цього звернення та ознайомлений(-а) з <a href="/polityka/">Політикою конфіденційності</a>.
+              {%- endif %}
+            </label>
+          </div>
           {#- Приховане поле-пастка для ботів: люди його не бачать і не заповнюють. -#}
           <div class="form-honeypot" aria-hidden="true"><label for="fb-website">Website</label><input type="text" id="fb-website" name="website" tabindex="-1" autocomplete="off"></div>
           {#- Підпис окремим <span>: скрипт міняє текст лише в ньому, тож
@@ -171,7 +185,8 @@ eleventyComputed:
               firstname: val("firstname"), lastname: val("lastname"),
               email: val("email"), phone: val("phone"),
               category: val("category"), message: val("message"),
-              website: val("website")
+              website: val("website"),
+              consent: !!(form.consent && form.consent.checked)
             };
 
             lastFocus = btn;

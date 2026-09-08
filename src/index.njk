@@ -99,7 +99,7 @@ eleventyComputed:
         <div class="map-card">
           <img src="/assets/map-ukraine-oblasts.svg" width="700" height="480" alt="{{ "Map of Ukraine's oblasts with the regions where the fund works marked" if locale == 'en' else 'Карта областей України з позначеними регіонами, де працює фонд' }}" loading="lazy" eleventy:ignore>
           {%- for m in home.geography.markers %}
-          <span class="map-pin" style="left: {{ m.left }}%; top: {{ m.top }}%;" aria-label="{{ m.label }}"></span>
+          <span class="map-pin" role="img" style="left: {{ m.left }}%; top: {{ m.top }}%;" aria-label="{{ m.label }}"></span>
           {%- endfor %}
         </div>
       </section>

@@ -110,6 +110,10 @@ async function handleContact(request, env) {
   const message = clean(body.message, MAX.message);
 
   if (!firstname || !lastname || !email || !message) return json({ error: "missing_fields" }, 400);
+  // Згода на обробку персональних даних — умова договору (п. 9.2). Позначку
+  // в браузері перевіряє required, але запит можна надіслати й повз форму,
+  // тому те саме питаємо на сервері: без згоди лист не йде.
+  if (body.consent !== true) return json({ error: "consent_required" }, 400);
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return json({ error: "bad_email" }, 400);
 
   // Лічильник ведемо тільки на листах, що справді пішли б: інакше

@@ -257,6 +257,9 @@ p { text-wrap: pretty; }
 }
 /* на темній панелі — світлий відтінок бренду */
 .process-panel .eyebrow { color: var(--brand-light); }
+/* на світло-зеленій панелі базовий --brand дає 4.07:1 при потрібних 4.5:1
+   для 12px — беремо темніший відтінок того самого кольору (5.8:1). */
+.capacity-panel .eyebrow { color: var(--brand-deep); }
 
 /* ---------- 4. LAYOUT PRIMITIVES ---------- */
 /* Ритм Sonarum: кожен блок несе лише нижній відступ 120px,
@@ -1801,12 +1804,14 @@ main > article,
 .contact-card:last-child { border-bottom: 0; }
 .contact-card:hover strong,
 .contact-card:focus-visible strong { color: var(--brand-deep); }
+/* --muted, а не --faint: на 12,5px приглушений сірий давав контраст 3.2:1
+   при потрібних 4.5:1 — підпис «Email/Телефон/Адреса» не проходив WCAG AA. */
 .contact-card span {
   font-size: 12.5px;
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--faint);
+  color: var(--muted);
 }
 .contact-card strong {
   font-size: 16px;
@@ -2075,6 +2080,58 @@ main > article,
   transition: color var(--t);
 }
 .footer-legal-links a:hover { color: var(--on-dark); }
+
+/* згода на обробку даних під формою */
+.form-consent {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: start;
+}
+.form-consent input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--brand);
+  flex: none;
+}
+.form-consent label {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+  font-weight: 400;
+}
+.form-consent a { color: var(--brand-deep); text-decoration: underline; text-underline-offset: 2px; }
+.form-consent a:hover { color: var(--ink); }
+
+/* ---------- Плаваючі кнопки месенджерів ---------- */
+/* Праворуч знизу, над контентом. Смуга згоди на cookie теж стоїть унизу,
+   тому скрипт у base.njk піднімає док на її висоту, поки вона видима —
+   інакше вони накладаються на телефоні. */
+.chat-dock {
+  position: fixed;
+  right: clamp(14px, 3vw, 26px);
+  bottom: clamp(14px, 3vw, 26px);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.chat-dock-btn {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(18, 23, 13, 0.22);
+  transition: transform var(--t), box-shadow var(--t);
+}
+.chat-dock-btn:hover,
+.chat-dock-btn:focus-visible { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(18, 23, 13, 0.3); }
+.chat-dock-btn.is-viber { background: #7360F2; }
+.chat-dock-btn.is-whatsapp { background: #25D366; }
+@media print { .chat-dock { display: none; } }
 
 /* ---------- 22. SCROLL REVEAL ---------- */
 .js [data-reveal] {

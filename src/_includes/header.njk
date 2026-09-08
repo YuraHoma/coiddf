@@ -24,6 +24,6 @@
       <div class="header-right">
         {#- Кнопки «Зв'язатися з нами» в хедері немає: контакти окремим
             пунктом меню, як у ТЗ. -#}
-        <a class="lang-toggle" href="{{ altUrl }}" aria-label="Switch language / Змінити мову">{{ "UA" if locale == "en" else "EN" }}</a>
+        <a class="lang-toggle" href="{{ altUrl }}" aria-label="{{ 'UA — перейти на українську' if locale == 'en' else 'EN — switch to English' }}">{{ "UA" if locale == "en" else "EN" }}</a>
       </div>
     </header>

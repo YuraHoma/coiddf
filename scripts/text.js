@@ -55,7 +55,11 @@ function autoExcerpt(body, limit = 180) {
 function seoTitle(title, limit = 58) {
   const t = String(title || "").trim();
   if (t.length <= limit) return t;
-  const headLimit = Math.round(limit * 0.5);
+  /* 0.6, а не половина: при рівному розрізі два проєкти автопарку —
+     для ЗСУ і для НГУ — давали однаковий заголовок, бо різниця між
+     назвами стоїть одразу після середини. Довший початок її зберігає.
+     Дублі заголовків ловить перевірка у scripts/check-build.js. */
+  const headLimit = Math.round(limit * 0.6);
   const head = cutAt(t, headLimit);
   const tailLimit = limit - head.length - 2;
   const words = t.split(" ");

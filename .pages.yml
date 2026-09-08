@@ -249,6 +249,7 @@ content:
         type: object
         fields:
           - { name: facebook, label: Facebook, type: string }
+          - { name: instagram, label: Instagram, type: string }
           - { name: twitter, label: Twitter / X, type: string }
           - { name: linkedin, label: LinkedIn, type: string }
           - { name: viber, label: Viber, type: string }

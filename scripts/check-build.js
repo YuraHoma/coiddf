@@ -153,12 +153,37 @@ for (const [host, pages] of external) {
   errors.push(`[external] зовнішній ресурс ${host} на ${pages.size} сторінках`);
 }
 
+// --- Заголовки сторінок ----------------------------------------------------
+// Довгі офіційні назви проєктів ріжуться фільтром seotitle, і два різні
+// проєкти вже одного разу отримали однаковий <title> — для пошуку це одна
+// сторінка-дубль. Ловимо це на збірці, а не в чужому звіті через півроку.
+const titles = new Map();
+for (const file of htmlFiles) {
+  const rel = path.relative(SITE, file);
+  const html = fs.readFileSync(file, "utf8");
+  const m = html.match(/<title>([\s\S]*?)<\/title>/i);
+  if (!m || !m[1].trim()) {
+    errors.push(`[title] ${rel}: немає <title>`);
+    continue;
+  }
+  const t = m[1].trim();
+  if (!titles.has(t)) titles.set(t, []);
+  titles.get(t).push(rel);
+}
+let dupTitles = 0;
+for (const [t, pages] of titles) {
+  if (pages.length < 2) continue;
+  dupTitles++;
+  errors.push(`[title] однаковий заголовок «${t}» на: ${pages.join(", ")}`);
+}
+
 // --- Підсумок --------------------------------------------------------------
 const noLd = htmlFiles.filter((f) => !pagesWithLd.has(path.relative(SITE, f)));
 console.log(`HTML-сторінок:        ${htmlFiles.length}`);
 console.log(`JSON-LD блоків:       ${ldBlocks} (сторінок без розмітки: ${noLd.length}${noLd.length ? " — " + noLd.map((f) => path.relative(SITE, f)).join(", ") : ""})`);
 console.log(`Посилань на /assets/: ${assetRefs}, унікальних битих: ${missing.size}`);
 console.log(`Зовнішніх доменів:    ${external.size}`);
+console.log(`Унікальних <title>:   ${titles.size} (дублів: ${dupTitles})`);
 
 if (errors.length) {
   console.error(`\n✗ Помилок: ${errors.length}`);
