@@ -19,6 +19,21 @@ module.exports = function (eleventyConfig) {
     },
   });
 
+  // sizes без srcset — невалідний HTML. Так виходить у двох випадках:
+  // фото вужче за найменший з наших розмірів (плагін віддає один файл
+  // без srcset, а sizes із htmlOptions лишається) і sizes="auto" на
+  // зображенні з loading="eager". Обидва прибираємо тут, після збірки
+  // розмітки, щоб не тримати виняток у кожному шаблоні.
+  eleventyConfig.addTransform("fix-img-sizes", function (content) {
+    if (!(this.page.outputPath || "").endsWith(".html")) return content;
+    return content.replace(/<img\b[^>]*>/g, (tag) => {
+      if (!/\ssizes=/.test(tag)) return tag;
+      const noSrcset = !/\ssrcset=/.test(tag);
+      const eagerAuto = /\ssizes="auto"/.test(tag) && /\sloading="eager"/.test(tag);
+      return noSrcset || eagerAuto ? tag.replace(/\ssizes="[^"]*"/, "") : tag;
+    });
+  });
+
   // Тіло новин і проєктів пише редактор через CMS, тож сирий HTML з
   // markdown у сторінку не пускаємо: інакше вставлений у текст <script>
   // виконався б нарівні з нашим власним. Жоден матеріал розмітки не

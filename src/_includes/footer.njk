@@ -50,7 +50,7 @@
           {#- Іконки стоять заглушками, поки клієнт не дасть посилання:
               з URL — посилання, без URL — приглушений значок без дії. -#}
           <div class="footer-social-label">{{ "Follow us" if locale == "en" else "Ми в соц. мережах" }}</div>
-          <div class="footer-socials" aria-label="{{ 'Social media' if locale == 'en' else 'Соціальні мережі' }}">
+          <div class="footer-socials" role="group" aria-label="{{ 'Social media' if locale == 'en' else 'Соціальні мережі' }}">
             {%- if contacts.socials.facebook %}
             <a href="{{ contacts.socials.facebook }}" target="_blank" rel="noopener" aria-label="Facebook">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>

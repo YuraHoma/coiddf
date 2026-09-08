@@ -10,7 +10,7 @@
 {#- loading задається явно в обох гілках: коли атрибута немає, плагін
     зображень підставляє власний lazy. fetchpriority=low — щоб логотипи
     не конкурували з головним зображенням банера. -#}
-<img src="{{ p.image }}" alt="{{ p.name }}" loading="{{ 'eager' if eager else 'lazy' }}"{% if eager %} fetchpriority="low"{% endif %}>
+<img src="{{ p.image }}" alt="{{ p.name }}" loading="{{ 'eager' if eager else 'lazy' }}"{% if eager %} fetchpriority="low" sizes="160px"{% endif %}>
 {%- else -%}
 <span class="partner-logo-text">{{ p.name }}</span>
 {%- endif -%}
