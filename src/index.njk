@@ -50,7 +50,7 @@ eleventyComputed:
             <div class="partner-logo-card">{{ logos.logo(p, true) }}</div>
             {%- endfor %}
             {%- for p in shown %}
-            <div class="partner-logo-card">{{ logos.logo(p, true) }}</div>
+            <div class="partner-logo-card" aria-hidden="true">{{ logos.logo(p, true, true) }}</div>
             {%- endfor %}
           </div>
         </div>

@@ -3,71 +3,85 @@
     {
       "name": "WGI Global Inc.",
       "image": "/assets/partner-wgi-global.png",
+      "url": "",
       "published": true
     },
     {
       "name": "Amentum",
       "image": "/assets/partner-amentum.png",
+      "url": "https://www.amentum.com/",
       "published": true
     },
     {
       "name": "Міністерство соціальної політики, сім'ї та єдності України",
       "image": "/assets/partner-minsoc.png",
+      "url": "",
       "published": false
     },
     {
       "name": "Міністерство з відновлення, інфраструктури та транспорту України",
       "image": "/assets/partner-minvidnovlennya.png",
+      "url": "",
       "published": false
     },
     {
       "name": "Міністерство енергетики України",
       "image": "/assets/partner-minenergo.png",
+      "url": "",
       "published": false
     },
     {
       "name": "Міністерство економіки та довкілля України",
       "image": "/assets/partner-minekonomiky.png",
+      "url": "",
       "published": false
     },
     {
       "name": "Асоціація прифронтових міст та громад",
       "image": "/assets/partner-asociaciya-gromad.png",
+      "url": "",
       "published": false
     },
     {
       "name": "Український гідрометеорологічний центр",
       "image": "/assets/partner-gidrometcentr.png",
+      "url": "",
       "published": false
     },
     {
       "name": "Державна служба України з надзвичайних ситуацій",
       "image": "/assets/partner-dsns.png",
+      "url": "",
       "published": false
     },
     {
       "name": "Міністерство оборони України",
       "image": "/assets/partner-minoborony.png",
+      "url": "",
       "published": false
     },
     {
       "name": "Міністерство внутрішніх справ України",
       "image": "/assets/partner-mvs.png",
+      "url": "",
       "published": false
     },
     {
       "name": "Державна прикордонна служба України",
       "image": "/assets/partner-derzhprykordonsluzhba.png",
+      "url": "",
       "published": false
     },
     {
       "name": "Служба безпеки України",
       "image": "/assets/partner-sbu.png",
+      "url": "",
       "published": false
     },
     {
       "name": "OCHA",
       "image": "/assets/partner-ocha.png",
+      "url": "",
       "published": false
     }
   ]

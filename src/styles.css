@@ -1058,6 +1058,23 @@ main > article,
 }
 .partner-logo-card svg { width: 100%; height: auto; max-height: 48px; }
 .partner-logo-card img { max-width: 100%; max-height: 44px; width: auto; height: auto; object-fit: contain; }
+/* Логотип із заповненою адресою стає посиланням. Уся картка приглушена
+   й знебарвлена — при наведенні на посилання повертаємо колір, щоб було
+   видно, що воно клікабельне. */
+.partner-logo-link { display: grid; place-items: center; width: 100%; }
+.partner-logo-card:has(.partner-logo-link:hover),
+.partner-logo-card:has(.partner-logo-link:focus-visible) { filter: none; opacity: 1; }
+.partner-detail-mark .partner-logo-link { transition: transform var(--t); }
+.partner-detail-mark .partner-logo-link:hover,
+.partner-detail-mark .partner-logo-link:focus-visible { transform: scale(1.04); }
+/* На сторінці партнерів картка сама по собі нічого не робить, тож на
+   наведення відгукується вся вона — інакше незрозуміло, що логотип
+   можна натиснути. Партнер без адреси сайту лишається нерухомим. */
+.partner-detail-card:has(.partner-logo-link:hover),
+.partner-detail-card:has(.partner-logo-link:focus-visible) {
+  border-color: var(--brand);
+  box-shadow: var(--shadow-card);
+}
 
 /* окрема сторінка /partnery/ — повнокольорові картки з назвою й описом */
 .partners-grid {

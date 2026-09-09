@@ -164,6 +164,12 @@ content:
             label: Логотип
             type: image
             required: true
+          # Порожньо — логотип показується просто картинкою. Із адресою —
+          # стає посиланням і відкривається в новій вкладці. У WGI Global
+          # власного сайту немає, тому поле лишається порожнім.
+          - name: url
+            label: Сайт партнера
+            type: string
           - name: published
             label: Показувати на сайті
             type: boolean
