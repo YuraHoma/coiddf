@@ -17,5 +17,11 @@
       "label": "SAM.gov unique entity ID",
       "value": "EQ98UV8F1W73"
     }
+  ],
+  "policies": [
+    {
+      "title": "Інструкція з розгляду скарг",
+      "file": "/assets/Інструкція з розгляду скарг - ICDF _ENGL_UKR.pdf"
+    }
   ]
 }
