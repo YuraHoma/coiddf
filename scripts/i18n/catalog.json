@@ -659,6 +659,14 @@
       "note": "",
       "updated": "2026-08-18"
     },
+    "data/legal.policies[0].title": {
+      "source": "Інструкція з розгляду скарг",
+      "sourceHash": "807debb8ced8",
+      "target": "Instructions for handling complaints",
+      "status": "machine",
+      "note": "",
+      "updated": "2026-10-13"
+    },
     "data/novyny.hero.eyebrow": {
       "source": "Новини",
       "sourceHash": "807eb4d2438b",
