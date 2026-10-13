@@ -667,6 +667,70 @@
       "note": "",
       "updated": "2026-10-13"
     },
+    "data/legal.policies[1].title": {
+      "source": "Кодекс етики, поведінки та гуманітарної політики",
+      "sourceHash": "19984e55d735",
+      "target": "Code of ethics, conduct and humanitarian policy",
+      "status": "machine",
+      "note": "",
+      "updated": "2026-10-13"
+    },
+    "data/legal.policies[2].title": {
+      "source": "Кодекс поведінки постачальників",
+      "sourceHash": "aa06868ee1f2",
+      "target": "Supplier code of conduct",
+      "status": "machine",
+      "note": "",
+      "updated": "2026-10-13"
+    },
+    "data/legal.policies[3].title": {
+      "source": "Політика CHS-Основний гуманітарний стандарт якості, прозорості та підзвітності",
+      "sourceHash": "abc2621210e2",
+      "target": "Policy CHS-A core humanitarian standard for quality, transparency and accountability",
+      "status": "machine",
+      "note": "",
+      "updated": "2026-10-13"
+    },
+    "data/legal.policies[4].title": {
+      "source": "Політика запобігання конфлікту інтересів",
+      "sourceHash": "cbe45ca2592a",
+      "target": "Conflict of interest prevention policy",
+      "status": "machine",
+      "note": "",
+      "updated": "2026-10-13"
+    },
+    "data/legal.policies[5].title": {
+      "source": "Політика конфіденційності та обробки звернень",
+      "sourceHash": "a0ae7500c9dd",
+      "target": "Speak-Up and Privacy Policy",
+      "status": "human",
+      "note": "",
+      "updated": "2026-10-13"
+    },
+    "data/legal.policies[6].title": {
+      "source": "Політика протидії дискримінації та захисту від домагань, сексуальної експлуатації і наруги",
+      "sourceHash": "d04dcecbc6c5",
+      "target": "Anti-discrimination policy and protection against harassment, sexual exploitation and abuse",
+      "status": "machine",
+      "note": "",
+      "updated": "2026-10-13"
+    },
+    "data/legal.policies[7].title": {
+      "source": "Політика протидії корупції та шахрайству",
+      "sourceHash": "51357c641bde",
+      "target": "Anti-corruption and fraud policy",
+      "status": "machine",
+      "note": "",
+      "updated": "2026-10-13"
+    },
+    "data/legal.policies[8].title": {
+      "source": "Політика рівності, різноманітності та інклюзивності",
+      "sourceHash": "e8eb944ff9ae",
+      "target": "Equality, Diversity and Inclusion Policy",
+      "status": "machine",
+      "note": "",
+      "updated": "2026-10-13"
+    },
     "data/novyny.hero.eyebrow": {
       "source": "Новини",
       "sourceHash": "807eb4d2438b",
